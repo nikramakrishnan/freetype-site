@@ -1,57 +1,57 @@
 {
     "docs": [
         {
-            "location": "/ft2-toc/",
+            "location": "/",
             "text": "FreeType-2.9.1 API Reference\n\u00b6\n\n\nTable of Contents\n\u00b6\n\n\nGeneral Remarks\n\u00b6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFreeType's header inclusion scheme\n\n\nHow client applications should include FreeType header files.\n\n\n\n\n\n\nUser allocation\n\n\nHow client applications should allocate FreeType data structures.\n\n\n\n\n\n\n\n\n\nCore API\n\u00b6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFreeType Version\n\n\nFunctions and macros related to FreeType versions.\n\n\n\n\n\n\nBasic Data Types\n\n\nThe basic data types defined by the library.\n\n\n\n\n\n\nBase Interface\n\n\nThe FreeType\u00a02 base font interface.\n\n\n\n\n\n\nUnicode Variation Sequences\n\n\nThe FreeType\u00a02 interface to Unicode Variation Sequences (UVS), using the SFNT cmap format\u00a014.\n\n\n\n\n\n\nGlyph Management\n\n\nGeneric interface to manage individual glyph data.\n\n\n\n\n\n\nMac Specific Interface\n\n\nOnly available on the Macintosh.\n\n\n\n\n\n\nSize Management\n\n\nManaging multiple sizes per face.\n\n\n\n\n\n\nHeader File Macros\n\n\nMacro definitions used to #include specific header files.\n\n\n\n\n\n\n\n\n\nFormat-Specific API\n\u00b6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMultiple Masters\n\n\nHow to manage Multiple Masters fonts.\n\n\n\n\n\n\nTrueType Tables\n\n\nTrueType specific table types and functions.\n\n\n\n\n\n\nType 1 Tables\n\n\nType\u00a01 (PostScript) specific font tables.\n\n\n\n\n\n\nSFNT Names\n\n\nAccess the names embedded in TrueType and OpenType files.\n\n\n\n\n\n\nBDF and PCF Files\n\n\nBDF and PCF specific API.\n\n\n\n\n\n\nCID Fonts\n\n\nCID-keyed font specific API.\n\n\n\n\n\n\nPFR Fonts\n\n\nPFR/TrueDoc specific API.\n\n\n\n\n\n\nWindow FNT Files\n\n\nWindows FNT specific API.\n\n\n\n\n\n\nFont Formats\n\n\nGetting the font format.\n\n\n\n\n\n\nGasp Table\n\n\nRetrieving TrueType \u2018gasp\u2019 table entries.\n\n\n\n\n\n\n\n\n\nControlling FreeType Modules\n\u00b6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe auto-hinter\n\n\nControlling the auto-hinting module.\n\n\n\n\n\n\nThe CFF driver\n\n\nControlling the CFF driver module.\n\n\n\n\n\n\nThe Type 1 and CID drivers\n\n\nControlling the Type\u00a01 and CID driver modules.\n\n\n\n\n\n\nThe TrueType driver\n\n\nControlling the TrueType driver module.\n\n\n\n\n\n\nThe PCF driver\n\n\nControlling the PCF driver module.\n\n\n\n\n\n\nDriver properties\n\n\nControlling driver modules.\n\n\n\n\n\n\nParameter Tags\n\n\nMacros for driver property and font loading parameter tags.\n\n\n\n\n\n\n\n\n\nCache Sub-System\n\u00b6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCache Sub-System\n\n\nHow to cache face, size, and glyph data with FreeType\u00a02.\n\n\n\n\n\n\n\n\n\nSupport API\n\u00b6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputations\n\n\nCrunching fixed numbers and vectors.\n\n\n\n\n\n\nList Processing\n\n\nSimple management of lists.\n\n\n\n\n\n\nOutline Processing\n\n\nFunctions to create, transform, and render vectorial glyph images.\n\n\n\n\n\n\nQuick retrieval of advance values\n\n\nRetrieve horizontal and vertical advance values without processing glyph outlines, if possible.\n\n\n\n\n\n\nBitmap Handling\n\n\nHandling FT_Bitmap objects.\n\n\n\n\n\n\nScanline Converter\n\n\nHow vectorial outlines are converted into bitmaps and pixmaps.\n\n\n\n\n\n\nGlyph Stroker\n\n\nGenerating bordered and stroked glyphs.\n\n\n\n\n\n\nSystem Interface\n\n\nHow FreeType manages memory and i/o.\n\n\n\n\n\n\nModule Management\n\n\nHow to add, upgrade, remove, and control modules from FreeType.\n\n\n\n\n\n\nGZIP Streams\n\n\nUsing gzip-compressed font files.\n\n\n\n\n\n\nLZW Streams\n\n\nUsing LZW-compressed font files.\n\n\n\n\n\n\nBZIP2 Streams\n\n\nUsing bzip2-compressed font files.\n\n\n\n\n\n\nLCD Filtering\n\n\nReduce color fringes of subpixel-rendered bitmaps.\n\n\n\n\n\n\n\n\n\nError Codes\n\u00b6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nError Enumerations\n\n\nHow to handle errors and error strings.\n\n\n\n\n\n\nError Code Values\n\n\nAll possible error codes returned by FreeType functions.\n\n\n\n\n\n\n\n\n\nMiscellaneous\n\u00b6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOpenType Validation\n\n\nAn API to validate OpenType tables.\n\n\n\n\n\n\nIncremental Loading\n\n\nCustom Glyph Loading.\n\n\n\n\n\n\nThe TrueType Engine\n\n\nTrueType bytecode support.\n\n\n\n\n\n\nGlyph Color Management\n\n\nRetrieving and manipulating OpenType's \u2018CPAL\u2019 table entries.\n\n\n\n\n\n\nTrueTypeGX/AAT Validation\n\n\nAn API to validate TrueTypeGX/AAT tables.",
             "title": "Home"
         },
         {
-            "location": "/ft2-toc/#freetype-291-api-reference",
+            "location": "/#freetype-291-api-reference",
             "text": "",
             "title": "FreeType-2.9.1 API Reference"
         },
         {
-            "location": "/ft2-toc/#table-of-contents",
+            "location": "/#table-of-contents",
             "text": "",
             "title": "Table of Contents"
         },
         {
-            "location": "/ft2-toc/#general-remarks",
+            "location": "/#general-remarks",
             "text": "FreeType's header inclusion scheme  How client applications should include FreeType header files.    User allocation  How client applications should allocate FreeType data structures.",
             "title": "General Remarks"
         },
         {
-            "location": "/ft2-toc/#core-api",
+            "location": "/#core-api",
             "text": "FreeType Version  Functions and macros related to FreeType versions.    Basic Data Types  The basic data types defined by the library.    Base Interface  The FreeType\u00a02 base font interface.    Unicode Variation Sequences  The FreeType\u00a02 interface to Unicode Variation Sequences (UVS), using the SFNT cmap format\u00a014.    Glyph Management  Generic interface to manage individual glyph data.    Mac Specific Interface  Only available on the Macintosh.    Size Management  Managing multiple sizes per face.    Header File Macros  Macro definitions used to #include specific header files.",
             "title": "Core API"
         },
         {
-            "location": "/ft2-toc/#format-specific-api",
+            "location": "/#format-specific-api",
             "text": "Multiple Masters  How to manage Multiple Masters fonts.    TrueType Tables  TrueType specific table types and functions.    Type 1 Tables  Type\u00a01 (PostScript) specific font tables.    SFNT Names  Access the names embedded in TrueType and OpenType files.    BDF and PCF Files  BDF and PCF specific API.    CID Fonts  CID-keyed font specific API.    PFR Fonts  PFR/TrueDoc specific API.    Window FNT Files  Windows FNT specific API.    Font Formats  Getting the font format.    Gasp Table  Retrieving TrueType \u2018gasp\u2019 table entries.",
             "title": "Format-Specific API"
         },
         {
-            "location": "/ft2-toc/#controlling-freetype-modules",
+            "location": "/#controlling-freetype-modules",
             "text": "The auto-hinter  Controlling the auto-hinting module.    The CFF driver  Controlling the CFF driver module.    The Type 1 and CID drivers  Controlling the Type\u00a01 and CID driver modules.    The TrueType driver  Controlling the TrueType driver module.    The PCF driver  Controlling the PCF driver module.    Driver properties  Controlling driver modules.    Parameter Tags  Macros for driver property and font loading parameter tags.",
             "title": "Controlling FreeType Modules"
         },
         {
-            "location": "/ft2-toc/#cache-sub-system",
+            "location": "/#cache-sub-system",
             "text": "Cache Sub-System  How to cache face, size, and glyph data with FreeType\u00a02.",
             "title": "Cache Sub-System"
         },
         {
-            "location": "/ft2-toc/#support-api",
+            "location": "/#support-api",
             "text": "Computations  Crunching fixed numbers and vectors.    List Processing  Simple management of lists.    Outline Processing  Functions to create, transform, and render vectorial glyph images.    Quick retrieval of advance values  Retrieve horizontal and vertical advance values without processing glyph outlines, if possible.    Bitmap Handling  Handling FT_Bitmap objects.    Scanline Converter  How vectorial outlines are converted into bitmaps and pixmaps.    Glyph Stroker  Generating bordered and stroked glyphs.    System Interface  How FreeType manages memory and i/o.    Module Management  How to add, upgrade, remove, and control modules from FreeType.    GZIP Streams  Using gzip-compressed font files.    LZW Streams  Using LZW-compressed font files.    BZIP2 Streams  Using bzip2-compressed font files.    LCD Filtering  Reduce color fringes of subpixel-rendered bitmaps.",
             "title": "Support API"
         },
         {
-            "location": "/ft2-toc/#error-codes",
+            "location": "/#error-codes",
             "text": "Error Enumerations  How to handle errors and error strings.    Error Code Values  All possible error codes returned by FreeType functions.",
             "title": "Error Codes"
         },
         {
-            "location": "/ft2-toc/#miscellaneous",
+            "location": "/#miscellaneous",
             "text": "OpenType Validation  An API to validate OpenType tables.    Incremental Loading  Custom Glyph Loading.    The TrueType Engine  TrueType bytecode support.    Glyph Color Management  Retrieving and manipulating OpenType's \u2018CPAL\u2019 table entries.    TrueTypeGX/AAT Validation  An API to validate TrueTypeGX/AAT tables.",
             "title": "Miscellaneous"
         },
