@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="FreeType Contributors">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Home - FreeType-2.9.1 API Reference</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">FreeType-2.9.1 API Reference</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="./">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">General Remarks <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../ft2-header_inclusion/">Header Inclusion</a>
+</li>
+                            
+<li >
+    <a href="../ft2-user_allocation/">User allocation</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core API <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../ft2-version/">FreeType Version</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li class="disabled">
+                        <a rel="next" >
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../ft2-header_inclusion/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#freetype-291-api-reference">FreeType-2.9.1 API Reference</a></li>
+        <li class="main "><a href="#table-of-contents">Table of Contents</a></li>
+            <li><a href="#general-remarks">General Remarks</a></li>
+            <li><a href="#core-api">Core API</a></li>
+            <li><a href="#format-specific-api">Format-Specific API</a></li>
+            <li><a href="#controlling-freetype-modules">Controlling FreeType Modules</a></li>
+            <li><a href="#cache-sub-system">Cache Sub-System</a></li>
+            <li><a href="#support-api">Support API</a></li>
+            <li><a href="#error-codes">Error Codes</a></li>
+            <li><a href="#miscellaneous">Miscellaneous</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="freetype-291-api-reference">FreeType-2.9.1 API Reference<a class="headerlink" href="#freetype-291-api-reference" title="Permanent link">&para;</a></h1>
+<h1 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h1>
+<h2 id="general-remarks">General Remarks<a class="headerlink" href="#general-remarks" title="Permanent link">&para;</a></h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><a href="/ft2-header_inclusion">FreeType's header inclusion scheme</a></td>
+<td><p>How client applications should include FreeType header files.</p></td>
+</tr>
+<tr class="even">
+<td><a href="/ft2-user_allocation">User allocation</a></td>
+<td><p>How client applications should allocate FreeType data structures.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="core-api">Core API<a class="headerlink" href="#core-api" title="Permanent link">&para;</a></h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><a href="/ft2-version">FreeType Version</a></td>
+<td><p>Functions and macros related to FreeType versions.</p></td>
+</tr>
+<tr class="even">
+<td><a>Basic Data Types</a></td>
+<td><p>The basic data types defined by the library.</p></td>
+</tr>
+<tr class="odd">
+<td><a>Base Interface</a></td>
+<td><p>The FreeType 2 base font interface.</p></td>
+</tr>
+<tr class="even">
+<td><a>Unicode Variation Sequences</a></td>
+<td><p>The FreeType 2 interface to Unicode Variation Sequences (UVS), using the SFNT cmap format 14.</p></td>
+</tr>
+<tr class="odd">
+<td><a>Glyph Management</a></td>
+<td><p>Generic interface to manage individual glyph data.</p></td>
+</tr>
+<tr class="even">
+<td><a>Mac Specific Interface</a></td>
+<td><p>Only available on the Macintosh.</p></td>
+</tr>
+<tr class="odd">
+<td><a>Size Management</a></td>
+<td><p>Managing multiple sizes per face.</p></td>
+</tr>
+<tr class="even">
+<td><a>Header File Macros</a></td>
+<td><p>Macro definitions used to #include specific header files.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="format-specific-api">Format-Specific API<a class="headerlink" href="#format-specific-api" title="Permanent link">&para;</a></h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><a>Multiple Masters</a></td>
+<td><p>How to manage Multiple Masters fonts.</p></td>
+</tr>
+<tr class="even">
+<td><a>TrueType Tables</a></td>
+<td><p>TrueType specific table types and functions.</p></td>
+</tr>
+<tr class="odd">
+<td><a>Type 1 Tables</a></td>
+<td><p>Type 1 (PostScript) specific font tables.</p></td>
+</tr>
+<tr class="even">
+<td><a>SFNT Names</a></td>
+<td><p>Access the names embedded in TrueType and OpenType files.</p></td>
+</tr>
+<tr class="odd">
+<td><a>BDF and PCF Files</a></td>
+<td><p>BDF and PCF specific API.</p></td>
+</tr>
+<tr class="even">
+<td><a>CID Fonts</a></td>
+<td><p>CID-keyed font specific API.</p></td>
+</tr>
+<tr class="odd">
+<td><a>PFR Fonts</a></td>
+<td><p>PFR/TrueDoc specific API.</p></td>
+</tr>
+<tr class="even">
+<td><a>Window FNT Files</a></td>
+<td><p>Windows FNT specific API.</p></td>
+</tr>
+<tr class="odd">
+<td><a>Font Formats</a></td>
+<td><p>Getting the font format.</p></td>
+</tr>
+<tr class="even">
+<td><a>Gasp Table</a></td>
+<td><p>Retrieving TrueType ‘gasp’ table entries.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="controlling-freetype-modules">Controlling FreeType Modules<a class="headerlink" href="#controlling-freetype-modules" title="Permanent link">&para;</a></h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><a>The auto-hinter</a></td>
+<td><p>Controlling the auto-hinting module.</p></td>
+</tr>
+<tr class="even">
+<td><a>The CFF driver</a></td>
+<td><p>Controlling the CFF driver module.</p></td>
+</tr>
+<tr class="odd">
+<td><a>The Type 1 and CID drivers</a></td>
+<td><p>Controlling the Type 1 and CID driver modules.</p></td>
+</tr>
+<tr class="even">
+<td><a>The TrueType driver</a></td>
+<td><p>Controlling the TrueType driver module.</p></td>
+</tr>
+<tr class="odd">
+<td><a>The PCF driver</a></td>
+<td><p>Controlling the PCF driver module.</p></td>
+</tr>
+<tr class="even">
+<td><a>Driver properties</a></td>
+<td><p>Controlling driver modules.</p></td>
+</tr>
+<tr class="odd">
+<td><a>Parameter Tags</a></td>
+<td><p>Macros for driver property and font loading parameter tags.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="cache-sub-system">Cache Sub-System<a class="headerlink" href="#cache-sub-system" title="Permanent link">&para;</a></h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><a>Cache Sub-System</a></td>
+<td><p>How to cache face, size, and glyph data with FreeType 2.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="support-api">Support API<a class="headerlink" href="#support-api" title="Permanent link">&para;</a></h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><a>Computations</a></td>
+<td><p>Crunching fixed numbers and vectors.</p></td>
+</tr>
+<tr class="even">
+<td><a>List Processing</a></td>
+<td><p>Simple management of lists.</p></td>
+</tr>
+<tr class="odd">
+<td><a>Outline Processing</a></td>
+<td><p>Functions to create, transform, and render vectorial glyph images.</p></td>
+</tr>
+<tr class="even">
+<td><a>Quick retrieval of advance values</a></td>
+<td><p>Retrieve horizontal and vertical advance values without processing glyph outlines, if possible.</p></td>
+</tr>
+<tr class="odd">
+<td><a>Bitmap Handling</a></td>
+<td><p>Handling FT_Bitmap objects.</p></td>
+</tr>
+<tr class="even">
+<td><a>Scanline Converter</a></td>
+<td><p>How vectorial outlines are converted into bitmaps and pixmaps.</p></td>
+</tr>
+<tr class="odd">
+<td><a>Glyph Stroker</a></td>
+<td><p>Generating bordered and stroked glyphs.</p></td>
+</tr>
+<tr class="even">
+<td><a>System Interface</a></td>
+<td><p>How FreeType manages memory and i/o.</p></td>
+</tr>
+<tr class="odd">
+<td><a>Module Management</a></td>
+<td><p>How to add, upgrade, remove, and control modules from FreeType.</p></td>
+</tr>
+<tr class="even">
+<td><a>GZIP Streams</a></td>
+<td><p>Using gzip-compressed font files.</p></td>
+</tr>
+<tr class="odd">
+<td><a>LZW Streams</a></td>
+<td><p>Using LZW-compressed font files.</p></td>
+</tr>
+<tr class="even">
+<td><a>BZIP2 Streams</a></td>
+<td><p>Using bzip2-compressed font files.</p></td>
+</tr>
+<tr class="odd">
+<td><a>LCD Filtering</a></td>
+<td><p>Reduce color fringes of subpixel-rendered bitmaps.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="error-codes">Error Codes<a class="headerlink" href="#error-codes" title="Permanent link">&para;</a></h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><a>Error Enumerations</a></td>
+<td><p>How to handle errors and error strings.</p></td>
+</tr>
+<tr class="even">
+<td><a>Error Code Values</a></td>
+<td><p>All possible error codes returned by FreeType functions.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="miscellaneous">Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permanent link">&para;</a></h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><a>OpenType Validation</a></td>
+<td><p>An API to validate OpenType tables.</p></td>
+</tr>
+<tr class="even">
+<td><a>Incremental Loading</a></td>
+<td><p>Custom Glyph Loading.</p></td>
+</tr>
+<tr class="odd">
+<td><a>The TrueType Engine</a></td>
+<td><p>TrueType bytecode support.</p></td>
+</tr>
+<tr class="even">
+<td><a>Glyph Color Management</a></td>
+<td><p>Retrieving and manipulating OpenType's ‘CPAL’ table entries.</p></td>
+</tr>
+<tr class="odd">
+<td><a>TrueTypeGX/AAT Validation</a></td>
+<td><p>An API to validate TrueTypeGX/AAT tables.</p></td>
+</tr>
+</tbody>
+</table></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright 2018 <a href = "http://git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/LICENSE.TXT">The FreeType Project</a>.</p>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script src="../js/base.js"></script>
+        <script src="../search/require.js"></script>
+        <script src="../search/search.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&larr;</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&rarr;</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>
