@@ -1,0 +1,41 @@
+site_name:  FreeType-2.9.1 API Reference
+site_description: Reference documentation for FreeType 2.9.1
+site_author: FreeType Contributors
+
+theme:
+  name: 'material'
+  logo: 'images/favico.ico'
+
+pages:
+  - TOC: ft2-toc.md
+  - Index: ft2-index.md
+  - General Remarks:   
+    - Header Inclusion: ft2-header_inclusion.md
+    - User allocation: ft2-user_allocation.md
+  
+  - Core API:
+    - FreeType Version: ft2-version.md
+    - Basic Types: ft2-basic_types.md
+    - Base Interface: ft2-base_interface.md
+    - Unicode Variation Sequences: ft2-glyph_variants.md
+    - Glyph Management: ft2-glyph_management.md
+    - Mac Specific Interface: ft2-mac_specific.md
+    - Size Management: ft2-sizes_management.md
+    - Header File Macros: ft2-header_file_macros.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      disable_indented_code_blocks: true
+      preserve_tabs: true
+
+extra_css:
+  - 'stylesheets/extra.css'
+
+extra_javascript:
+  - 'javascripts/jquery-3.3.1.min.js'
+  - 'javascripts/extra.js'
+
+
+copyright: Copyright 2018 <a href = "http://git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/LICENSE.TXT">The FreeType Project</a>.
