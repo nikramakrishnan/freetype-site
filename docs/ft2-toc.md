@@ -222,4 +222,4 @@ An API to validate TrueTypeGX/AAT tables.
 </td></tr>
 </table>
 ## [Global Index](ft2-index.md)
-<div class="timestamp">generated on Thu Jun  7 18:42:14 2018</div>
+<div class="timestamp">generated on Thu Jun  7 18:44:12 2018</div>
