@@ -70,7 +70,7 @@ A macro used in #include statements to name the file containing FreeType&nbsp;2 
 </pre>
 
 
-A macro used in #include statements to name the file containing the list of FreeType&nbsp;2 modules that are statically linked to new library instances in <a href="/ft2-base_interface/#ft_init_freetype">FT_Init_FreeType</a>.
+A macro used in #include statements to name the file containing the list of FreeType&nbsp;2 modules that are statically linked to new library instances in <a href="/../ft2-base_interface/#ft_init_freetype">FT_Init_FreeType</a>.
 
 <hr />
 
@@ -96,7 +96,7 @@ A macro used in #include statements to name the file containing the base FreeTyp
 
 A macro used in #include statements to name the file containing the list of FreeType&nbsp;2 error codes (and messages).
 
-It is included by <a href="/ft2-header_file_macros/#ft_freetype_h">FT_FREETYPE_H</a>.
+It is included by <a href="/../ft2-header_file_macros/#ft_freetype_h">FT_FREETYPE_H</a>.
 
 <hr />
 
@@ -122,7 +122,7 @@ A macro used in #include statements to name the file containing the list of Free
 
 A macro used in #include statements to name the file containing the FreeType&nbsp;2 interface to low-level operations (i.e., memory management and stream i/o).
 
-It is included by <a href="/ft2-header_file_macros/#ft_freetype_h">FT_FREETYPE_H</a>.
+It is included by <a href="/../ft2-header_file_macros/#ft_freetype_h">FT_FREETYPE_H</a>.
 
 <hr />
 
@@ -136,7 +136,7 @@ It is included by <a href="/ft2-header_file_macros/#ft_freetype_h">FT_FREETYPE_H
 
 A macro used in #include statements to name the file containing type definitions related to glyph images (i.e., bitmaps, outlines, scan-converter parameters).
 
-It is included by <a href="/ft2-header_file_macros/#ft_freetype_h">FT_FREETYPE_H</a>.
+It is included by <a href="/../ft2-header_file_macros/#ft_freetype_h">FT_FREETYPE_H</a>.
 
 <hr />
 
@@ -150,7 +150,7 @@ It is included by <a href="/ft2-header_file_macros/#ft_freetype_h">FT_FREETYPE_H
 
 A macro used in #include statements to name the file containing the basic data types defined by FreeType&nbsp;2.
 
-It is included by <a href="/ft2-header_file_macros/#ft_freetype_h">FT_FREETYPE_H</a>.
+It is included by <a href="/../ft2-header_file_macros/#ft_freetype_h">FT_FREETYPE_H</a>.
 
 <hr />
 
@@ -188,7 +188,7 @@ A macro used in #include statements to name the file containing the scalable out
 </pre>
 
 
-A macro used in #include statements to name the file containing the API which manages multiple <a href="/ft2-base_interface/#ft_size">FT_Size</a> objects per face.
+A macro used in #include statements to name the file containing the API which manages multiple <a href="/../ft2-base_interface/#ft_size">FT_Size</a> objects per face.
 
 <hr />
 
@@ -232,13 +232,13 @@ A macro used in #include statements to name the file containing structures and m
 
 
 <pre>
-#define <b>FT_AUTOHINTER_H</b>  <a href="/ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a>
+#define <b>FT_AUTOHINTER_H</b>  <a href="/../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a>
 </pre>
 
 
 A macro used in #include statements to name the file containing structures and macros related to the auto-hinting module.
 
-Deprecated since version 2.9; use <a href="/ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a> instead.
+Deprecated since version 2.9; use <a href="/../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a> instead.
 
 <hr />
 
@@ -246,13 +246,13 @@ Deprecated since version 2.9; use <a href="/ft2-header_file_macros/#ft_driver_h"
 
 
 <pre>
-#define <b>FT_CFF_DRIVER_H</b>  <a href="/ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a>
+#define <b>FT_CFF_DRIVER_H</b>  <a href="/../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a>
 </pre>
 
 
 A macro used in #include statements to name the file containing structures and macros related to the CFF driver module.
 
-Deprecated since version 2.9; use <a href="/ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a> instead.
+Deprecated since version 2.9; use <a href="/../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a> instead.
 
 <hr />
 
@@ -260,13 +260,13 @@ Deprecated since version 2.9; use <a href="/ft2-header_file_macros/#ft_driver_h"
 
 
 <pre>
-#define <b>FT_TRUETYPE_DRIVER_H</b>  <a href="/ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a>
+#define <b>FT_TRUETYPE_DRIVER_H</b>  <a href="/../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a>
 </pre>
 
 
 A macro used in #include statements to name the file containing structures and macros related to the TrueType driver module.
 
-Deprecated since version 2.9; use <a href="/ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a> instead.
+Deprecated since version 2.9; use <a href="/../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a> instead.
 
 <hr />
 
@@ -274,13 +274,13 @@ Deprecated since version 2.9; use <a href="/ft2-header_file_macros/#ft_driver_h"
 
 
 <pre>
-#define <b>FT_PCF_DRIVER_H</b>  <a href="/ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a>
+#define <b>FT_PCF_DRIVER_H</b>  <a href="/../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a>
 </pre>
 
 
 A macro used in #include statements to name the file containing structures and macros related to the PCF driver module.
 
-Deprecated since version 2.9; use <a href="/ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a> instead.
+Deprecated since version 2.9; use <a href="/../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a> instead.
 
 <hr />
 
