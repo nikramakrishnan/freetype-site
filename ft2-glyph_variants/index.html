@@ -528,10 +528,10 @@
 <h2 id="ft_face_getcharvariantindex">FT_Face_GetCharVariantIndex<a class="headerlink" href="#ft_face_getcharvariantindex" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_FREETYPE_H (freetype/freetype.h).</p>
 <pre>
-  FT_EXPORT( <a href="/../ft2-basic_types/#ft_uint">FT_UInt</a> )
-  <b>FT_Face_GetCharVariantIndex</b>( <a href="/../ft2-base_interface/#ft_face">FT_Face</a>   face,
-                               <a href="/../ft2-basic_types/#ft_ulong">FT_ULong</a>  charcode,
-                               <a href="/../ft2-basic_types/#ft_ulong">FT_ULong</a>  variantSelector );
+  FT_EXPORT( <a href="../ft2-basic_types/#ft_uint">FT_UInt</a> )
+  <b>FT_Face_GetCharVariantIndex</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
+                               <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  charcode,
+                               <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  variantSelector );
 </pre>
 
 <p>Return the glyph index of a given character code as modified by the variation selector.</p>
@@ -567,10 +567,10 @@ The Unicode code point of the variation selector.
 <h2 id="ft_face_getcharvariantisdefault">FT_Face_GetCharVariantIsDefault<a class="headerlink" href="#ft_face_getcharvariantisdefault" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_FREETYPE_H (freetype/freetype.h).</p>
 <pre>
-  FT_EXPORT( <a href="/../ft2-basic_types/#ft_int">FT_Int</a> )
-  <b>FT_Face_GetCharVariantIsDefault</b>( <a href="/../ft2-base_interface/#ft_face">FT_Face</a>   face,
-                                   <a href="/../ft2-basic_types/#ft_ulong">FT_ULong</a>  charcode,
-                                   <a href="/../ft2-basic_types/#ft_ulong">FT_ULong</a>  variantSelector );
+  FT_EXPORT( <a href="../ft2-basic_types/#ft_int">FT_Int</a> )
+  <b>FT_Face_GetCharVariantIsDefault</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
+                                   <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  charcode,
+                                   <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  variantSelector );
 </pre>
 
 <p>Check whether this variation of this Unicode character is the one to be found in the &lsquo;cmap&rsquo;.</p>
@@ -605,8 +605,8 @@ The Unicode codepoint of the variation selector.
 <h2 id="ft_face_getvariantselectors">FT_Face_GetVariantSelectors<a class="headerlink" href="#ft_face_getvariantselectors" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_FREETYPE_H (freetype/freetype.h).</p>
 <pre>
-  FT_EXPORT( <a href="/../ft2-basic_types/#ft_uint32">FT_UInt32</a>* )
-  <b>FT_Face_GetVariantSelectors</b>( <a href="/../ft2-base_interface/#ft_face">FT_Face</a>  face );
+  FT_EXPORT( <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>* )
+  <b>FT_Face_GetVariantSelectors</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>  face );
 </pre>
 
 <p>Return a zero-terminated list of Unicode variation selectors found in the font.</p>
@@ -624,7 +624,7 @@ A handle to the source face object.
 <p>A pointer to an array of selector code points, or NULL if there is no valid variation selector cmap subtable.</p>
 <h4>note</h4>
 
-<p>The last item in the array is&nbsp;0; the array is owned by the <a href="/../ft2-base_interface/#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.</p>
+<p>The last item in the array is&nbsp;0; the array is owned by the <a href="../ft2-base_interface/#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.</p>
 <h4>since</h4>
 
 <p>2.3.6</p>
@@ -633,9 +633,9 @@ A handle to the source face object.
 <h2 id="ft_face_getvariantsofchar">FT_Face_GetVariantsOfChar<a class="headerlink" href="#ft_face_getvariantsofchar" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_FREETYPE_H (freetype/freetype.h).</p>
 <pre>
-  FT_EXPORT( <a href="/../ft2-basic_types/#ft_uint32">FT_UInt32</a>* )
-  <b>FT_Face_GetVariantsOfChar</b>( <a href="/../ft2-base_interface/#ft_face">FT_Face</a>   face,
-                             <a href="/../ft2-basic_types/#ft_ulong">FT_ULong</a>  charcode );
+  FT_EXPORT( <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>* )
+  <b>FT_Face_GetVariantsOfChar</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
+                             <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  charcode );
 </pre>
 
 <p>Return a zero-terminated list of Unicode variation selectors found for the specified character code.</p>
@@ -657,7 +657,7 @@ The character codepoint in Unicode.
 <p>A pointer to an array of variation selector code points that are active for the given character, or NULL if the corresponding list is empty.</p>
 <h4>note</h4>
 
-<p>The last item in the array is&nbsp;0; the array is owned by the <a href="/../ft2-base_interface/#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.</p>
+<p>The last item in the array is&nbsp;0; the array is owned by the <a href="../ft2-base_interface/#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.</p>
 <h4>since</h4>
 
 <p>2.3.6</p>
@@ -666,9 +666,9 @@ The character codepoint in Unicode.
 <h2 id="ft_face_getcharsofvariant">FT_Face_GetCharsOfVariant<a class="headerlink" href="#ft_face_getcharsofvariant" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_FREETYPE_H (freetype/freetype.h).</p>
 <pre>
-  FT_EXPORT( <a href="/../ft2-basic_types/#ft_uint32">FT_UInt32</a>* )
-  <b>FT_Face_GetCharsOfVariant</b>( <a href="/../ft2-base_interface/#ft_face">FT_Face</a>   face,
-                             <a href="/../ft2-basic_types/#ft_ulong">FT_ULong</a>  variantSelector );
+  FT_EXPORT( <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>* )
+  <b>FT_Face_GetCharsOfVariant</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
+                             <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  variantSelector );
 </pre>
 
 <p>Return a zero-terminated list of Unicode character codes found for the specified variation selector.</p>
@@ -690,7 +690,7 @@ The variation selector code point in Unicode.
 <p>A list of all the code points that are specified by this selector (both default and non-default codes are returned) or NULL if there is no valid cmap or the variation selector is invalid.</p>
 <h4>note</h4>
 
-<p>The last item in the array is&nbsp;0; the array is owned by the <a href="/../ft2-base_interface/#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.</p>
+<p>The last item in the array is&nbsp;0; the array is owned by the <a href="../ft2-base_interface/#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.</p>
 <h4>since</h4>
 
 <p>2.3.6</p>
