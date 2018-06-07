@@ -1,4 +1,4 @@
-[Docs](index.md) &raquo; [Core API](ft2-toc.md#core-api) &raquo; Glyph Management
+[Docs](ft2-index.md) &raquo; [Core API](ft2-toc.md#core-api) &raquo; Glyph Management
 
 -------------------------------
 

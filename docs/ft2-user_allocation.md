@@ -1,4 +1,4 @@
-[Docs](index.md) &raquo; [General Remarks](ft2-toc.md#general-remarks) &raquo; User allocation
+[Docs](ft2-index.md) &raquo; [General Remarks](ft2-toc.md#general-remarks) &raquo; User allocation
 
 -------------------------------
 

@@ -1,4 +1,4 @@
-[Docs](index.md) &raquo; [General Remarks](ft2-toc.md#general-remarks) &raquo; FreeType's header inclusion scheme
+[Docs](ft2-index.md) &raquo; [General Remarks](ft2-toc.md#general-remarks) &raquo; FreeType's header inclusion scheme
 
 -------------------------------
 
