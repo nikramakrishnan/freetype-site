@@ -10,8 +10,6 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Reference documentation for FreeType 2.9.1">
-      
       
       
         <meta name="author" content="FreeType Contributors">
@@ -36,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.8.0">
     
     
       
@@ -44,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.8d40d89b.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.e8ff00e1.css">
       
     
     
@@ -56,8 +54,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
@@ -72,9 +70,9 @@
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
       <a href="#freetype-291-api-reference" tabindex="1" class="md-skip">
         Skip to content
@@ -92,7 +90,7 @@
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
@@ -111,14 +109,14 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
             
 <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
+  <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
+      <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
       </button>
@@ -156,7 +154,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
     <span class="md-nav__button md-logo">
       
         <img src="../images/favico.ico" width="48" height="48">
@@ -176,7 +174,7 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
@@ -225,8 +223,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ft2-header_inclusion/" title="Header Inclusion" class="md-nav__link">
-      Header Inclusion
+    <a href="../ft2-header_inclusion/" title="FreeType's header inclusion scheme" class="md-nav__link">
+      FreeType's header inclusion scheme
     </a>
   </li>
 
@@ -285,8 +283,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ft2-basic_types/" title="Basic Types" class="md-nav__link">
-      Basic Types
+    <a href="../ft2-basic_types/" title="Basic Data Types" class="md-nav__link">
+      Basic Data Types
     </a>
   </li>
 
@@ -368,6 +366,606 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Format-Specific API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Format-Specific API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-multiple_masters/" title="Multiple Masters" class="md-nav__link">
+      Multiple Masters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-truetype_tables/" title="TrueType Tables" class="md-nav__link">
+      TrueType Tables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-type1_tables/" title="Type 1 Tables" class="md-nav__link">
+      Type 1 Tables
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-sfnt_names/" title="SFNT Names" class="md-nav__link">
+      SFNT Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-bdf_fonts/" title="BDF and PCF Files" class="md-nav__link">
+      BDF and PCF Files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-cid_fonts/" title="CID Fonts" class="md-nav__link">
+      CID Fonts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-pfr_fonts/" title="PFR Fonts" class="md-nav__link">
+      PFR Fonts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-winfnt_fonts/" title="Window FNT Files" class="md-nav__link">
+      Window FNT Files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-font_formats/" title="Font Formats" class="md-nav__link">
+      Font Formats
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-gasp_table/" title="Gasp Table" class="md-nav__link">
+      Gasp Table
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Controlling FreeType Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Controlling FreeType Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-auto_hinter/" title="The auto-hinter" class="md-nav__link">
+      The auto-hinter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-cff_driver/" title="The CFF driver" class="md-nav__link">
+      The CFF driver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-t1_cid_driver/" title="The Type 1 and CID drivers" class="md-nav__link">
+      The Type 1 and CID drivers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-tt_driver/" title="The TrueType driver" class="md-nav__link">
+      The TrueType driver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-pcf_driver/" title="The PCF driver" class="md-nav__link">
+      The PCF driver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-properties/" title="Driver properties" class="md-nav__link">
+      Driver properties
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-parameter_tags/" title="Parameter Tags" class="md-nav__link">
+      Parameter Tags
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Cache Sub-System
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Cache Sub-System
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-cache_subsystem/" title="Cache Sub-System" class="md-nav__link">
+      Cache Sub-System
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Support API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Support API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-computations/" title="Computations" class="md-nav__link">
+      Computations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-list_processing/" title="List Processing" class="md-nav__link">
+      List Processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-outline_processing/" title="Outline Processing" class="md-nav__link">
+      Outline Processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-quick_advance/" title="Quick retrieval of advance values" class="md-nav__link">
+      Quick retrieval of advance values
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-bitmap_handling/" title="Bitmap Handling" class="md-nav__link">
+      Bitmap Handling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-raster/" title="Scanline Converter" class="md-nav__link">
+      Scanline Converter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-glyph_stroker/" title="Glyph Stroker" class="md-nav__link">
+      Glyph Stroker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-system_interface/" title="System Interface" class="md-nav__link">
+      System Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-module_management/" title="Module Management" class="md-nav__link">
+      Module Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-gzip/" title="GZIP Streams" class="md-nav__link">
+      GZIP Streams
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-lzw/" title="LZW Streams" class="md-nav__link">
+      LZW Streams
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-bzip2/" title="BZIP2 Streams" class="md-nav__link">
+      BZIP2 Streams
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-lcd_rendering/" title="Subpixel Rendering" class="md-nav__link">
+      Subpixel Rendering
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Error Codes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Error Codes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-error_enumerations/" title="Error Enumerations" class="md-nav__link">
+      Error Enumerations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-error_code_values/" title="Error Code Values" class="md-nav__link">
+      Error Code Values
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Miscellaneous
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Miscellaneous
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-ot_validation/" title="OpenType Validation" class="md-nav__link">
+      OpenType Validation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-incremental/" title="Incremental Loading" class="md-nav__link">
+      Incremental Loading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-truetype_engine/" title="The TrueType Engine" class="md-nav__link">
+      The TrueType Engine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-color_management/" title="Glyph Color Management" class="md-nav__link">
+      Glyph Color Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ft2-gx_validation/" title="TrueTypeGX/AAT Validation" class="md-nav__link">
+      TrueTypeGX/AAT Validation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -401,175 +999,183 @@
 <h1 id="freetype-291-api-reference">FreeType-2.9.1 API Reference<a class="headerlink" href="#freetype-291-api-reference" title="Permanent link">&para;</a></h1>
 <h1 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h1>
 <h2 id="general-remarks">General Remarks<a class="headerlink" href="#general-remarks" title="Permanent link">&para;</a></h2>
-<p><table class="toc">
-<tr><td class="link"><a href="../ft2-header_inclusion/">FreeType's header inclusion scheme</a></td><td class="desc"></p>
-<p>How client applications should include FreeType header files.
+<table class="toc">
+<tr><td class="link"><a href="../ft2-header_inclusion/">FreeType's header inclusion scheme</a></td><td class="desc">
+<p>How client applications should include FreeType header files.</p>
 </td></tr>
-<tr><td class="link"><a href="../ft2-user_allocation/">User allocation</a></td><td class="desc"></p>
-<p>How client applications should allocate FreeType data structures.
+<tr><td class="link"><a href="../ft2-user_allocation/">User allocation</a></td><td class="desc">
+<p>How client applications should allocate FreeType data structures.</p>
 </td></tr>
-</table></p>
+</table>
+
 <h2 id="core-api">Core API<a class="headerlink" href="#core-api" title="Permanent link">&para;</a></h2>
-<p><table class="toc">
-<tr><td class="link"><a href="../ft2-version/">FreeType Version</a></td><td class="desc"></p>
-<p>Functions and macros related to FreeType versions.
+<table class="toc">
+<tr><td class="link"><a href="../ft2-version/">FreeType Version</a></td><td class="desc">
+<p>Functions and macros related to FreeType versions.</p>
 </td></tr>
-<tr><td class="link"><a href="../ft2-basic_types/">Basic Data Types</a></td><td class="desc"></p>
-<p>The basic data types defined by the library.
+<tr><td class="link"><a href="../ft2-basic_types/">Basic Data Types</a></td><td class="desc">
+<p>The basic data types defined by the library.</p>
 </td></tr>
-<tr><td class="link"><a href="../ft2-base_interface/">Base Interface</a></td><td class="desc"></p>
-<p>The FreeType&nbsp;2 base font interface.
+<tr><td class="link"><a href="../ft2-base_interface/">Base Interface</a></td><td class="desc">
+<p>The FreeType&nbsp;2 base font interface.</p>
 </td></tr>
-<tr><td class="link"><a href="../ft2-glyph_variants/">Unicode Variation Sequences</a></td><td class="desc"></p>
-<p>The FreeType&nbsp;2 interface to Unicode Variation Sequences (UVS), using the SFNT cmap format&nbsp;14.
+<tr><td class="link"><a href="../ft2-glyph_variants/">Unicode Variation Sequences</a></td><td class="desc">
+<p>The FreeType&nbsp;2 interface to Unicode Variation Sequences (UVS), using the SFNT cmap format&nbsp;14.</p>
 </td></tr>
-<tr><td class="link"><a href="../ft2-glyph_management/">Glyph Management</a></td><td class="desc"></p>
-<p>Generic interface to manage individual glyph data.
+<tr><td class="link"><a href="../ft2-glyph_management/">Glyph Management</a></td><td class="desc">
+<p>Generic interface to manage individual glyph data.</p>
 </td></tr>
-<tr><td class="link"><a href="../ft2-mac_specific/">Mac Specific Interface</a></td><td class="desc"></p>
-<p>Only available on the Macintosh.
+<tr><td class="link"><a href="../ft2-mac_specific/">Mac Specific Interface</a></td><td class="desc">
+<p>Only available on the Macintosh.</p>
 </td></tr>
-<tr><td class="link"><a href="../ft2-sizes_management/">Size Management</a></td><td class="desc"></p>
-<p>Managing multiple sizes per face.
+<tr><td class="link"><a href="../ft2-sizes_management/">Size Management</a></td><td class="desc">
+<p>Managing multiple sizes per face.</p>
 </td></tr>
-<tr><td class="link"><a href="../ft2-header_file_macros/">Header File Macros</a></td><td class="desc"></p>
-<p>Macro definitions used to #include specific header files.
+<tr><td class="link"><a href="../ft2-header_file_macros/">Header File Macros</a></td><td class="desc">
+<p>Macro definitions used to #include specific header files.</p>
 </td></tr>
-</table></p>
+</table>
+
 <h2 id="format-specific-api">Format-Specific API<a class="headerlink" href="#format-specific-api" title="Permanent link">&para;</a></h2>
-<p><table class="toc">
-<tr><td class="link"><a href="ft2-multiple_masters.md">Multiple Masters</a></td><td class="desc"></p>
-<p>How to manage Multiple Masters fonts.
+<table class="toc">
+<tr><td class="link"><a href="../ft2-multiple_masters/">Multiple Masters</a></td><td class="desc">
+<p>How to manage Multiple Masters fonts.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-truetype_tables.md">TrueType Tables</a></td><td class="desc"></p>
-<p>TrueType specific table types and functions.
+<tr><td class="link"><a href="../ft2-truetype_tables/">TrueType Tables</a></td><td class="desc">
+<p>TrueType specific table types and functions.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-type1_tables.md">Type 1 Tables</a></td><td class="desc"></p>
-<p>Type&nbsp;1 (PostScript) specific font tables.
+<tr><td class="link"><a href="../ft2-type1_tables/">Type 1 Tables</a></td><td class="desc">
+<p>Type&nbsp;1 (PostScript) specific font tables.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-sfnt_names.md">SFNT Names</a></td><td class="desc"></p>
-<p>Access the names embedded in TrueType and OpenType files.
+<tr><td class="link"><a href="../ft2-sfnt_names/">SFNT Names</a></td><td class="desc">
+<p>Access the names embedded in TrueType and OpenType files.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-bdf_fonts.md">BDF and PCF Files</a></td><td class="desc"></p>
-<p>BDF and PCF specific API.
+<tr><td class="link"><a href="../ft2-bdf_fonts/">BDF and PCF Files</a></td><td class="desc">
+<p>BDF and PCF specific API.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-cid_fonts.md">CID Fonts</a></td><td class="desc"></p>
-<p>CID-keyed font specific API.
+<tr><td class="link"><a href="../ft2-cid_fonts/">CID Fonts</a></td><td class="desc">
+<p>CID-keyed font specific API.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-pfr_fonts.md">PFR Fonts</a></td><td class="desc"></p>
-<p>PFR/TrueDoc specific API.
+<tr><td class="link"><a href="../ft2-pfr_fonts/">PFR Fonts</a></td><td class="desc">
+<p>PFR/TrueDoc specific API.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-winfnt_fonts.md">Window FNT Files</a></td><td class="desc"></p>
-<p>Windows FNT specific API.
+<tr><td class="link"><a href="../ft2-winfnt_fonts/">Window FNT Files</a></td><td class="desc">
+<p>Windows FNT specific API.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-font_formats.md">Font Formats</a></td><td class="desc"></p>
-<p>Getting the font format.
+<tr><td class="link"><a href="../ft2-font_formats/">Font Formats</a></td><td class="desc">
+<p>Getting the font format.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-gasp_table.md">Gasp Table</a></td><td class="desc"></p>
-<p>Retrieving TrueType &lsquo;gasp&rsquo; table entries.
+<tr><td class="link"><a href="../ft2-gasp_table/">Gasp Table</a></td><td class="desc">
+<p>Retrieving TrueType &lsquo;gasp&rsquo; table entries.</p>
 </td></tr>
-</table></p>
+</table>
+
 <h2 id="controlling-freetype-modules">Controlling FreeType Modules<a class="headerlink" href="#controlling-freetype-modules" title="Permanent link">&para;</a></h2>
-<p><table class="toc">
-<tr><td class="link"><a href="ft2-auto_hinter.md">The auto-hinter</a></td><td class="desc"></p>
-<p>Controlling the auto-hinting module.
+<table class="toc">
+<tr><td class="link"><a href="../ft2-auto_hinter/">The auto-hinter</a></td><td class="desc">
+<p>Controlling the auto-hinting module.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-cff_driver.md">The CFF driver</a></td><td class="desc"></p>
-<p>Controlling the CFF driver module.
+<tr><td class="link"><a href="../ft2-cff_driver/">The CFF driver</a></td><td class="desc">
+<p>Controlling the CFF driver module.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-t1_cid_driver.md">The Type 1 and CID drivers</a></td><td class="desc"></p>
-<p>Controlling the Type&nbsp;1 and CID driver modules.
+<tr><td class="link"><a href="../ft2-t1_cid_driver/">The Type 1 and CID drivers</a></td><td class="desc">
+<p>Controlling the Type&nbsp;1 and CID driver modules.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-tt_driver.md">The TrueType driver</a></td><td class="desc"></p>
-<p>Controlling the TrueType driver module.
+<tr><td class="link"><a href="../ft2-tt_driver/">The TrueType driver</a></td><td class="desc">
+<p>Controlling the TrueType driver module.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-pcf_driver.md">The PCF driver</a></td><td class="desc"></p>
-<p>Controlling the PCF driver module.
+<tr><td class="link"><a href="../ft2-pcf_driver/">The PCF driver</a></td><td class="desc">
+<p>Controlling the PCF driver module.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-properties.md">Driver properties</a></td><td class="desc"></p>
-<p>Controlling driver modules.
+<tr><td class="link"><a href="../ft2-properties/">Driver properties</a></td><td class="desc">
+<p>Controlling driver modules.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-parameter_tags.md">Parameter Tags</a></td><td class="desc"></p>
-<p>Macros for driver property and font loading parameter tags.
+<tr><td class="link"><a href="../ft2-parameter_tags/">Parameter Tags</a></td><td class="desc">
+<p>Macros for driver property and font loading parameter tags.</p>
 </td></tr>
-</table></p>
+</table>
+
 <h2 id="cache-sub-system">Cache Sub-System<a class="headerlink" href="#cache-sub-system" title="Permanent link">&para;</a></h2>
-<p><table class="toc">
-<tr><td class="link"><a href="ft2-cache_subsystem.md">Cache Sub-System</a></td><td class="desc"></p>
-<p>How to cache face, size, and glyph data with FreeType&nbsp;2.
+<table class="toc">
+<tr><td class="link"><a href="../ft2-cache_subsystem/">Cache Sub-System</a></td><td class="desc">
+<p>How to cache face, size, and glyph data with FreeType&nbsp;2.</p>
 </td></tr>
-</table></p>
+</table>
+
 <h2 id="support-api">Support API<a class="headerlink" href="#support-api" title="Permanent link">&para;</a></h2>
-<p><table class="toc">
-<tr><td class="link"><a href="ft2-computations.md">Computations</a></td><td class="desc"></p>
-<p>Crunching fixed numbers and vectors.
+<table class="toc">
+<tr><td class="link"><a href="../ft2-computations/">Computations</a></td><td class="desc">
+<p>Crunching fixed numbers and vectors.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-list_processing.md">List Processing</a></td><td class="desc"></p>
-<p>Simple management of lists.
+<tr><td class="link"><a href="../ft2-list_processing/">List Processing</a></td><td class="desc">
+<p>Simple management of lists.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-outline_processing.md">Outline Processing</a></td><td class="desc"></p>
-<p>Functions to create, transform, and render vectorial glyph images.
+<tr><td class="link"><a href="../ft2-outline_processing/">Outline Processing</a></td><td class="desc">
+<p>Functions to create, transform, and render vectorial glyph images.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-quick_advance.md">Quick retrieval of advance values</a></td><td class="desc"></p>
-<p>Retrieve horizontal and vertical advance values without processing glyph outlines, if possible.
+<tr><td class="link"><a href="../ft2-quick_advance/">Quick retrieval of advance values</a></td><td class="desc">
+<p>Retrieve horizontal and vertical advance values without processing glyph outlines, if possible.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-bitmap_handling.md">Bitmap Handling</a></td><td class="desc"></p>
-<p>Handling FT_Bitmap objects.
+<tr><td class="link"><a href="../ft2-bitmap_handling/">Bitmap Handling</a></td><td class="desc">
+<p>Handling FT_Bitmap objects.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-raster.md">Scanline Converter</a></td><td class="desc"></p>
-<p>How vectorial outlines are converted into bitmaps and pixmaps.
+<tr><td class="link"><a href="../ft2-raster/">Scanline Converter</a></td><td class="desc">
+<p>How vectorial outlines are converted into bitmaps and pixmaps.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-glyph_stroker.md">Glyph Stroker</a></td><td class="desc"></p>
-<p>Generating bordered and stroked glyphs.
+<tr><td class="link"><a href="../ft2-glyph_stroker/">Glyph Stroker</a></td><td class="desc">
+<p>Generating bordered and stroked glyphs.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-system_interface.md">System Interface</a></td><td class="desc"></p>
-<p>How FreeType manages memory and i/o.
+<tr><td class="link"><a href="../ft2-system_interface/">System Interface</a></td><td class="desc">
+<p>How FreeType manages memory and i/o.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-module_management.md">Module Management</a></td><td class="desc"></p>
-<p>How to add, upgrade, remove, and control modules from FreeType.
+<tr><td class="link"><a href="../ft2-module_management/">Module Management</a></td><td class="desc">
+<p>How to add, upgrade, remove, and control modules from FreeType.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-gzip.md">GZIP Streams</a></td><td class="desc"></p>
-<p>Using gzip-compressed font files.
+<tr><td class="link"><a href="../ft2-gzip/">GZIP Streams</a></td><td class="desc">
+<p>Using gzip-compressed font files.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-lzw.md">LZW Streams</a></td><td class="desc"></p>
-<p>Using LZW-compressed font files.
+<tr><td class="link"><a href="../ft2-lzw/">LZW Streams</a></td><td class="desc">
+<p>Using LZW-compressed font files.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-bzip2.md">BZIP2 Streams</a></td><td class="desc"></p>
-<p>Using bzip2-compressed font files.
+<tr><td class="link"><a href="../ft2-bzip2/">BZIP2 Streams</a></td><td class="desc">
+<p>Using bzip2-compressed font files.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-lcd_filtering.md">LCD Filtering</a></td><td class="desc"></p>
-<p>Remove color fringes of subpixel-rendered bitmaps.
+<tr><td class="link"><a href="../ft2-lcd_rendering/">Subpixel Rendering</a></td><td class="desc">
+<p>API to control subpixel rendering.</p>
 </td></tr>
-</table></p>
+</table>
+
 <h2 id="error-codes">Error Codes<a class="headerlink" href="#error-codes" title="Permanent link">&para;</a></h2>
-<p><table class="toc">
-<tr><td class="link"><a href="ft2-error_enumerations.md">Error Enumerations</a></td><td class="desc"></p>
-<p>How to handle errors and error strings.
+<table class="toc">
+<tr><td class="link"><a href="../ft2-error_enumerations/">Error Enumerations</a></td><td class="desc">
+<p>How to handle errors and error strings.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-error_code_values.md">Error Code Values</a></td><td class="desc"></p>
-<p>All possible error codes returned by FreeType functions.
+<tr><td class="link"><a href="../ft2-error_code_values/">Error Code Values</a></td><td class="desc">
+<p>All possible error codes returned by FreeType functions.</p>
 </td></tr>
-</table></p>
+</table>
+
 <h2 id="miscellaneous">Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permanent link">&para;</a></h2>
-<p><table class="toc">
-<tr><td class="link"><a href="ft2-ot_validation.md">OpenType Validation</a></td><td class="desc"></p>
-<p>An API to validate OpenType tables.
+<table class="toc">
+<tr><td class="link"><a href="../ft2-ot_validation/">OpenType Validation</a></td><td class="desc">
+<p>An API to validate OpenType tables.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-incremental.md">Incremental Loading</a></td><td class="desc"></p>
-<p>Custom Glyph Loading.
+<tr><td class="link"><a href="../ft2-incremental/">Incremental Loading</a></td><td class="desc">
+<p>Custom Glyph Loading.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-truetype_engine.md">The TrueType Engine</a></td><td class="desc"></p>
-<p>TrueType bytecode support.
+<tr><td class="link"><a href="../ft2-truetype_engine/">The TrueType Engine</a></td><td class="desc">
+<p>TrueType bytecode support.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-color_management.md">Glyph Color Management</a></td><td class="desc"></p>
-<p>Retrieving and manipulating OpenType's &lsquo;CPAL&rsquo; table entries.
+<tr><td class="link"><a href="../ft2-color_management/">Glyph Color Management</a></td><td class="desc">
+<p>Retrieving and manipulating OpenType's &lsquo;CPAL&rsquo; table data.</p>
 </td></tr>
-<tr><td class="link"><a href="ft2-gx_validation.md">TrueTypeGX/AAT Validation</a></td><td class="desc"></p>
-<p>An API to validate TrueTypeGX/AAT tables.
+<tr><td class="link"><a href="../ft2-gx_validation/">TrueTypeGX/AAT Validation</a></td><td class="desc">
+<p>An API to validate TrueTypeGX/AAT tables.</p>
 </td></tr>
-</table></p>
+</table>
+
 <h2 id="global-index"><a href="../ft2-index/">Global Index</a><a class="headerlink" href="#global-index" title="Permanent link">&para;</a></h2>
-<p><div class="timestamp">generated on Thu Jun  7 18:44:12 2018</div></p>
+<p><div class="timestamp">generated on Tue Jun 12 06:00:44 2018 UTC</div></p>
                 
                   
                 
@@ -617,7 +1223,7 @@
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
@@ -631,9 +1237,9 @@
       
     </div>
     
-      <script src="../assets/javascripts/application.b438e6c5.js"></script>
+      <script src="../assets/javascripts/application.a59e2a89.js"></script>
       
-      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
+      <script>app.initialize({version:"0.17.4",url:{base:".."}})</script>
       
         <script src="../javascripts/jquery-3.3.1.min.js"></script>
       
