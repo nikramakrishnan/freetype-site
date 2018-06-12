@@ -2,7 +2,6 @@
 
 -------------------------------
 
-
 # Size Management
 
 ## Synopsis
@@ -19,11 +18,13 @@ Note that <a href="../ft2-base_interface/#ft_set_pixel_sizes">FT_Set_Pixel_Sizes
 
 Defined in FT_SIZES_H (freetype/ftsizes.h).
 
+<div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_New_Size</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
                <a href="../ft2-base_interface/#ft_size">FT_Size</a>*  size );
 </pre>
+</div>
 
 
 Create a new size object from a given face object.
@@ -31,16 +32,14 @@ Create a new size object from a given face object.
 <h4>input</h4>
 <table class="fields">
 <tr><td class="val" id="face">face</td><td class="desc">
-
-A handle to a parent face object.
+<p>A handle to a parent face object.</p>
 </td></tr>
 </table>
 
 <h4>output</h4>
 <table class="fields">
 <tr><td class="val" id="asize">asize</td><td class="desc">
-
-A handle to a new size object.
+<p>A handle to a new size object.</p>
 </td></tr>
 </table>
 
@@ -52,16 +51,18 @@ FreeType error code. 0&nbsp;means success.
 
 You need to call <a href="../ft2-sizes_management/#ft_activate_size">FT_Activate_Size</a> in order to select the new size for upcoming calls to <a href="../ft2-base_interface/#ft_set_pixel_sizes">FT_Set_Pixel_Sizes</a>, <a href="../ft2-base_interface/#ft_set_char_size">FT_Set_Char_Size</a>, <a href="../ft2-base_interface/#ft_load_glyph">FT_Load_Glyph</a>, <a href="../ft2-base_interface/#ft_load_char">FT_Load_Char</a>, etc.
 
-<hr />
+<hr>
 
 ## FT_Done_Size
 
 Defined in FT_SIZES_H (freetype/ftsizes.h).
 
+<div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Done_Size</b>( <a href="../ft2-base_interface/#ft_size">FT_Size</a>  size );
 </pre>
+</div>
 
 
 Discard a given size object. Note that <a href="../ft2-base_interface/#ft_done_face">FT_Done_Face</a> automatically discards all size objects allocated with <a href="../ft2-sizes_management/#ft_new_size">FT_New_Size</a>.
@@ -69,8 +70,7 @@ Discard a given size object. Note that <a href="../ft2-base_interface/#ft_done_f
 <h4>input</h4>
 <table class="fields">
 <tr><td class="val" id="size">size</td><td class="desc">
-
-A handle to a target size object.
+<p>A handle to a target size object.</p>
 </td></tr>
 </table>
 
@@ -78,16 +78,18 @@ A handle to a target size object.
 
 FreeType error code. 0&nbsp;means success.
 
-<hr />
+<hr>
 
 ## FT_Activate_Size
 
 Defined in FT_SIZES_H (freetype/ftsizes.h).
 
+<div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Activate_Size</b>( <a href="../ft2-base_interface/#ft_size">FT_Size</a>  size );
 </pre>
+</div>
 
 
 Even though it is possible to create several size objects for a given face (see <a href="../ft2-sizes_management/#ft_new_size">FT_New_Size</a> for details), functions like <a href="../ft2-base_interface/#ft_load_glyph">FT_Load_Glyph</a> or <a href="../ft2-base_interface/#ft_load_char">FT_Load_Char</a> only use the one that has been activated last to determine the &lsquo;current character pixel size&rsquo;.
@@ -97,8 +99,7 @@ This function can be used to &lsquo;activate&rsquo; a previously created size ob
 <h4>input</h4>
 <table class="fields">
 <tr><td class="val" id="size">size</td><td class="desc">
-
-A handle to a target size object.
+<p>A handle to a target size object.</p>
 </td></tr>
 </table>
 
@@ -110,5 +111,5 @@ FreeType error code. 0&nbsp;means success.
 
 If &lsquo;face&rsquo; is the size's parent face object, this function changes the value of &lsquo;face-&gt;size&rsquo; to the input size handle.
 
-<hr />
+<hr>
 
