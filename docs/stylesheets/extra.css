@@ -54,11 +54,11 @@ table.fields td.val {
     text-align: right;
     width: 30%;
     vertical-align: baseline;
-    padding: 1em 1em 1em 0;
+    padding: 1em 1em 0 0;
 }
 table.fields td.desc {
     vertical-align: baseline;
-    padding: 1ex 0 1ex 1em;
+    padding: 1ex 0 0 1em;
 }
 table.fields td.desc p:first-child {
     margin: 0;
