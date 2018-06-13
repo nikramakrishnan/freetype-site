@@ -1129,17 +1129,17 @@
 <hr />
 <h1 id="bitmap-handling">Bitmap Handling<a class="headerlink" href="#bitmap-handling" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
-<p>This section contains functions for handling <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a> objects. Note that none of the functions changes the bitmap's &lsquo;flow&rsquo; (as indicated by the sign of the &lsquo;pitch&rsquo; field in &lsquo;FT_Bitmap&rsquo;).</p>
+<p>This section contains functions for handling <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a> objects. Note that none of the functions changes the bitmap's &lsquo;flow&rsquo; (as indicated by the sign of the &lsquo;pitch&rsquo; field in <code>FT_Bitmap</code>).</p>
 <h2 id="ft_bitmap_init">FT_Bitmap_Init<a class="headerlink" href="#ft_bitmap_init" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_BITMAP_H (freetype/ftbitmap.h).</p>
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Bitmap_Init</b>( <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  *abitmap );
+  <b>FT_Bitmap_Init</b>( <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  &#42;abitmap );
 
-  /* deprecated */
+  /&#42; deprecated &#42;/
   FT_EXPORT( <span class="keyword">void</span> )
-  FT_Bitmap_New( <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  *abitmap );
+  FT_Bitmap_New( <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  &#42;abitmap );
 </pre>
 </div>
 
@@ -1154,7 +1154,7 @@
 
 <h4>note</h4>
 
-<p>A deprecated name for the same function is &lsquo;FT_Bitmap_New&rsquo;.</p>
+<p>A deprecated name for the same function is <code>FT_Bitmap_New</code>.</p>
 <hr>
 
 <h2 id="ft_bitmap_copy">FT_Bitmap_Copy<a class="headerlink" href="#ft_bitmap_copy" title="Permanent link">&para;</a></h2>
@@ -1163,8 +1163,8 @@
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Bitmap_Copy</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>        library,
-                  <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  *source,
-                  <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>        *target );
+                  <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  &#42;source,
+                  <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>        &#42;target );
 </pre>
 </div>
 
@@ -1199,13 +1199,13 @@
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Bitmap_Embolden</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>  library,
-                      <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>*  bitmap,
+                      <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>&#42;  bitmap,
                       <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>      xStrength,
                       <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>      yStrength );
 </pre>
 </div>
 
-<p>Embolden a bitmap. The new bitmap will be about &lsquo;xStrength&rsquo; pixels wider and &lsquo;yStrength&rsquo; pixels higher. The left and bottom borders are kept unchanged.</p>
+<p>Embolden a bitmap. The new bitmap will be about <code>xStrength</code> pixels wider and <code>yStrength</code> pixels higher. The left and bottom borders are kept unchanged.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1233,7 +1233,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p>The current implementation restricts &lsquo;xStrength&rsquo; to be less than or equal to&nbsp;8 if bitmap is of pixel_mode <a href="../ft2-basic_types/#ft_pixel_mode">FT_PIXEL_MODE_MONO</a>.</p>
+<p>The current implementation restricts <code>xStrength</code> to be less than or equal to&nbsp;8 if bitmap is of pixel_mode <a href="../ft2-basic_types/#ft_pixel_mode">FT_PIXEL_MODE_MONO</a>.</p>
 <p>If you want to embolden the bitmap owned by a <a href="../ft2-base_interface/#ft_glyphslotrec">FT_GlyphSlotRec</a>, you should call <a href="../ft2-bitmap_handling/#ft_glyphslot_own_bitmap">FT_GlyphSlot_Own_Bitmap</a> on the slot first.</p>
 <p>Bitmaps in <a href="../ft2-basic_types/#ft_pixel_mode">FT_PIXEL_MODE_GRAY2</a> and <a href="../ft2-basic_types/#ft_pixel_mode">FT_PIXEL_MODE_GRAY</a>@ format are converted to <a href="../ft2-basic_types/#ft_pixel_mode">FT_PIXEL_MODE_GRAY</a> format (i.e., 8bpp).</p>
 <hr>
@@ -1244,8 +1244,8 @@
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Bitmap_Convert</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>        library,
-                     <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  *source,
-                     <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>        *target,
+                     <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  &#42;source,
+                     <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>        &#42;target,
                      <a href="../ft2-basic_types/#ft_int">FT_Int</a>            alignment );
 </pre>
 </div>
@@ -1292,7 +1292,7 @@
 </pre>
 </div>
 
-<p>Make sure that a glyph slot owns &lsquo;slot-&gt;bitmap&rsquo;.</p>
+<p>Make sure that a glyph slot owns <code>slot-&gt;bitmap</code>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1315,7 +1315,7 @@
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Bitmap_Done</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>  library,
-                  <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  *bitmap );
+                  <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  &#42;bitmap );
 </pre>
 </div>
 

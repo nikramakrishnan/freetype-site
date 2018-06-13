@@ -1736,7 +1736,7 @@
   #include FT_MULTIPLE_MASTERS_H
   #include FT_GLYPH_H
 </pre></div></p>
-<p>There are several reasons why we are now using macros to name public header files. The first one is that such macros are not limited to the infamous 8.3&nbsp;naming rule required by DOS (and &lsquo;FT_MULTIPLE_MASTERS_H&rsquo; is a lot more meaningful than &lsquo;ftmm.h&rsquo;).</p>
+<p>There are several reasons why we are now using macros to name public header files. The first one is that such macros are not limited to the infamous 8.3&nbsp;naming rule required by DOS (and <code>FT_MULTIPLE_MASTERS_H</code> is a lot more meaningful than <code>ftmm.h</code>).</p>
 <p>The second reason is that it allows for more flexibility in the way FreeType&nbsp;2 is installed on a given system.</p>
 <h2 id="ft_config_config_h">FT_CONFIG_CONFIG_H<a class="headerlink" href="#ft_config_config_h" title="Permanent link">&para;</a></h2>
 <div class = "codehilite">
@@ -2181,7 +2181,7 @@
 <pre>
 #<span class="keyword">define</span> <b>FT_FONT_FORMATS_H</b>  &lt;freetype/ftfntfmt.h&gt;
 
-  /* deprecated */
+  /&#42; deprecated &#42;/
 #<span class="keyword">define</span> FT_XFREE86_H  <b>FT_FONT_FORMATS_H</b>
 </pre>
 </div>

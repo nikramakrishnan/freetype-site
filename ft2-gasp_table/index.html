@@ -1094,7 +1094,7 @@
 <p>This special value means that there is no GASP table in this face. It is up to the client to decide what to do.</p>
 </td></tr>
 <tr><td class="val" id="ft_gasp_do_gridfit">FT_GASP_DO_GRIDFIT</td><td class="desc">
-<p>Grid-fitting and hinting should be performed at the specified ppem. This <strong>really</strong> means TrueType bytecode interpretation. If this bit is not set, no hinting gets applied.</p>
+<p>Grid-fitting and hinting should be performed at the specified ppem. This &#42;&#42;really&#42;&#42; means TrueType bytecode interpretation. If this bit is not set, no hinting gets applied.</p>
 </td></tr>
 <tr><td class="val" id="ft_gasp_do_gray">FT_GASP_DO_GRAY</td><td class="desc">
 <p>Anti-aliased rendering should be performed at the specified ppem. If not set, do monochrome rendering.</p>
@@ -1109,7 +1109,7 @@
 
 <h4>note</h4>
 
-<p>The bit-flags &lsquo;FT_GASP_DO_GRIDFIT&rsquo; and &lsquo;FT_GASP_DO_GRAY&rsquo; are to be used for standard font rasterization only. Independently of that, &lsquo;FT_GASP_SYMMETRIC_SMOOTHING&rsquo; and &lsquo;FT_GASP_SYMMETRIC_GRIDFIT&rsquo; are to be used if ClearType is enabled (and &lsquo;FT_GASP_DO_GRIDFIT&rsquo; and &lsquo;FT_GASP_DO_GRAY&rsquo; are consequently ignored).</p>
+<p>The bit-flags <code>FT_GASP_DO_GRIDFIT</code> and <code>FT_GASP_DO_GRAY</code> are to be used for standard font rasterization only. Independently of that, <code>FT_GASP_SYMMETRIC_SMOOTHING</code> and <code>FT_GASP_SYMMETRIC_GRIDFIT</code> are to be used if ClearType is enabled (and <code>FT_GASP_DO_GRIDFIT</code> and <code>FT_GASP_DO_GRAY</code> are consequently ignored).</p>
 <p>&lsquo;ClearType&rsquo; is Microsoft's implementation of LCD rendering, partly protected by patents.</p>
 <h4>since</h4>
 
@@ -1143,7 +1143,7 @@
 <p>Bit flags (see <a href="../ft2-gasp_table/#ft_gasp_xxx">FT_GASP_XXX</a>), or <a href="../ft2-gasp_table/#ft_gasp_xxx">FT_GASP_NO_TABLE</a> if there is no &lsquo;gasp&rsquo; table in the face.</p>
 <h4>note</h4>
 
-<p>If you want to use the MM functionality of OpenType variation fonts (i.e., using <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> and friends), call this function <strong>after</strong> setting an instance since the return values can change.</p>
+<p>If you want to use the MM functionality of OpenType variation fonts (i.e., using <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> and friends), call this function &#42;&#42;after&#42;&#42; setting an instance since the return values can change.</p>
 <h4>since</h4>
 
 <p>2.3.0</p>

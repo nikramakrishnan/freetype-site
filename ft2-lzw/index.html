@@ -1070,7 +1070,7 @@
 </pre>
 </div>
 
-<p>Open a new stream to parse LZW-compressed font files. This is mainly used to support the compressed &lsquo;*.pcf.Z&rsquo; fonts that come with XFree86.</p>
+<p>Open a new stream to parse LZW-compressed font files. This is mainly used to support the compressed <code>*.pcf.Z</code> fonts that come with XFree86.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1088,10 +1088,10 @@
 <h4>note</h4>
 
 <p>The source stream must be opened <em>before</em> calling this function.</p>
-<p>Calling the internal function &lsquo;FT_Stream_Close&rsquo; on the new stream will <strong>not</strong> call &lsquo;FT_Stream_Close&rsquo; on the source stream. None of the stream objects will be released to the heap.</p>
+<p>Calling the internal function <code>FT_Stream_Close</code> on the new stream will &#42;&#42;not&#42;&#42; call <code>FT_Stream_Close</code> on the source stream. None of the stream objects will be released to the heap.</p>
 <p>The stream implementation is very basic and resets the decompression process each time seeking backwards is needed within the stream</p>
 <p>In certain builds of the library, LZW compression recognition is automatically handled when calling <a href="../ft2-base_interface/#ft_new_face">FT_New_Face</a> or <a href="../ft2-base_interface/#ft_open_face">FT_Open_Face</a>. This means that if no font driver is capable of handling the raw compressed file, the library will try to open a LZW stream from it and re-open the face with it.</p>
-<p>This function may return &lsquo;FT_Err_Unimplemented_Feature&rsquo; if your build of FreeType was not compiled with LZW support.</p>
+<p>This function may return <code>FT_Err_Unimplemented_Feature</code> if your build of FreeType was not compiled with LZW support.</p>
 <hr>
                 
                   
