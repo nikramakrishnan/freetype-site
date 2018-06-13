@@ -6,18 +6,18 @@
 
 ## Synopsis
 
-The list below is taken verbatim from the file &lsquo;fterrdef.h&rsquo; (loaded automatically by including &lsquo;FT_FREETYPE_H&rsquo;). The first argument of the &lsquo;FT_ERROR_DEF_&rsquo; macro is the error label; by default, the prefix &lsquo;FT_Err_&rsquo; gets added so that you get error names like &lsquo;FT_Err_Cannot_Open_Resource&rsquo;. The second argument is the error code, and the last argument an error string, which is not used by FreeType.
+The list below is taken verbatim from the file `fterrdef.h` (loaded automatically by including `FT_FREETYPE_H`). The first argument of the `FT_ERROR_DEF_` macro is the error label; by default, the prefix `FT_Err_` gets added so that you get error names like `FT_Err_Cannot_Open_Resource`. The second argument is the error code, and the last argument an error string, which is not used by FreeType.
 
-Within your application you should **only** use error names and **never** its numeric values! The latter might (and actually do) change in forthcoming FreeType versions.
+Within your application you should &#42;&#42;only&#42;&#42; use error names and &#42;&#42;never&#42;&#42; its numeric values! The latter might (and actually do) change in forthcoming FreeType versions.
 
-Macro &lsquo;FT_NOERRORDEF_&rsquo; defines &lsquo;FT_Err_Ok&rsquo;, which is always zero. See the &lsquo;Error Enumerations&rsquo; subsection how to automatically generate a list of error strings.
+Macro `FT_NOERRORDEF_` defines `FT_Err_Ok`, which is always zero. See the &lsquo;Error Enumerations&rsquo; subsection how to automatically generate a list of error strings.
 
 ## FT_Err_XXX
 
 
 <div class = "codehilite">
 <pre>
-  /* generic errors */
+  /&#42; generic errors &#42;/
 
   FT_NOERRORDEF_( Ok,                                        0x00,
                   "no error" )
@@ -47,7 +47,7 @@ Macro &lsquo;FT_NOERRORDEF_&rsquo; defines &lsquo;FT_Err_Ok&rsquo;, which is alw
   FT_ERRORDEF_( Missing_Property,                            0x0C,
                 "missing property" )
 
-  /* glyph/character errors */
+  /&#42; glyph/character errors &#42;/
 
   FT_ERRORDEF_( Invalid_Glyph_Index,                         0x10,
                 "invalid glyph index" )
@@ -66,7 +66,7 @@ Macro &lsquo;FT_NOERRORDEF_&rsquo; defines &lsquo;FT_Err_Ok&rsquo;, which is alw
   FT_ERRORDEF_( Invalid_Pixel_Size,                          0x17,
                 "invalid pixel size" )
 
-  /* handle errors */
+  /&#42; handle errors &#42;/
 
   FT_ERRORDEF_( Invalid_Handle,                              0x20,
                 "invalid object handle" )
@@ -87,21 +87,21 @@ Macro &lsquo;FT_NOERRORDEF_&rsquo; defines &lsquo;FT_Err_Ok&rsquo;, which is alw
   FT_ERRORDEF_( Invalid_Stream_Handle,                       0x28,
                 "invalid stream handle" )
 
-  /* driver errors */
+  /&#42; driver errors &#42;/
 
   FT_ERRORDEF_( Too_Many_Drivers,                            0x30,
                 "too many modules" )
   FT_ERRORDEF_( Too_Many_Extensions,                         0x31,
                 "too many extensions" )
 
-  /* memory errors */
+  /&#42; memory errors &#42;/
 
   FT_ERRORDEF_( Out_Of_Memory,                               0x40,
                 "out of memory" )
   FT_ERRORDEF_( Unlisted_Object,                             0x41,
                 "unlisted object" )
 
-  /* stream errors */
+  /&#42; stream errors &#42;/
 
   FT_ERRORDEF_( Cannot_Open_Stream,                          0x51,
                 "cannot open stream" )
@@ -120,7 +120,7 @@ Macro &lsquo;FT_NOERRORDEF_&rsquo; defines &lsquo;FT_Err_Ok&rsquo;, which is alw
   FT_ERRORDEF_( Invalid_Frame_Read,                          0x58,
                 "invalid frame read" )
 
-  /* raster errors */
+  /&#42; raster errors &#42;/
 
   FT_ERRORDEF_( Raster_Uninitialized,                        0x60,
                 "raster uninitialized" )
@@ -131,12 +131,12 @@ Macro &lsquo;FT_NOERRORDEF_&rsquo; defines &lsquo;FT_Err_Ok&rsquo;, which is alw
   FT_ERRORDEF_( Raster_Negative_Height,                      0x63,
                 "negative height while rastering" )
 
-  /* cache errors */
+  /&#42; cache errors &#42;/
 
   FT_ERRORDEF_( Too_Many_Caches,                             0x70,
                 "too many registered caches" )
 
-  /* TrueType and SFNT errors */
+  /&#42; TrueType and SFNT errors &#42;/
 
   FT_ERRORDEF_( Invalid_Opcode,                              0x80,
                 "invalid opcode" )
@@ -199,7 +199,7 @@ Macro &lsquo;FT_NOERRORDEF_&rsquo; defines &lsquo;FT_Err_Ok&rsquo;, which is alw
   FT_ERRORDEF_( Missing_Bitmap,                              0x9D,
                 "missing bitmap in strike" )
 
-  /* CFF, CID, and Type 1 errors */
+  /&#42; CFF, CID, and Type 1 errors &#42;/
 
   FT_ERRORDEF_( Syntax_Error,                                0xA0,
                 "opcode syntax error" )
@@ -212,7 +212,7 @@ Macro &lsquo;FT_NOERRORDEF_&rsquo; defines &lsquo;FT_Err_Ok&rsquo;, which is alw
   FT_ERRORDEF_( Glyph_Too_Big,                               0xA4,
                 "glyph too big for hinting" )
 
-  /* BDF errors */
+  /&#42; BDF errors &#42;/
 
   FT_ERRORDEF_( Missing_Startfont_Field,                     0xB0,
                 "`STARTFONT' field missing" )

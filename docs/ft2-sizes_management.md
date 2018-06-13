@@ -6,7 +6,7 @@
 
 ## Synopsis
 
-When creating a new face object (e.g., with <a href="../ft2-base_interface/#ft_new_face">FT_New_Face</a>), an <a href="../ft2-base_interface/#ft_size">FT_Size</a> object is automatically created and used to store all pixel-size dependent information, available in the &lsquo;face-&gt;size&rsquo; field.
+When creating a new face object (e.g., with <a href="../ft2-base_interface/#ft_new_face">FT_New_Face</a>), an <a href="../ft2-base_interface/#ft_size">FT_Size</a> object is automatically created and used to store all pixel-size dependent information, available in the `face->size` field.
 
 It is however possible to create more sizes for a given face, mostly in order to manage several character pixel sizes of the same font family and style. See <a href="../ft2-sizes_management/#ft_new_size">FT_New_Size</a> and <a href="../ft2-sizes_management/#ft_done_size">FT_Done_Size</a>.
 
@@ -22,7 +22,7 @@ Defined in FT_SIZES_H (freetype/ftsizes.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_New_Size</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
-               <a href="../ft2-base_interface/#ft_size">FT_Size</a>*  size );
+               <a href="../ft2-base_interface/#ft_size">FT_Size</a>&#42;  size );
 </pre>
 </div>
 
@@ -109,7 +109,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-If &lsquo;face&rsquo; is the size's parent face object, this function changes the value of &lsquo;face-&gt;size&rsquo; to the input size handle.
+If &lsquo;face&rsquo; is the size's parent face object, this function changes the value of `face->size` to the input size handle.
 
 <hr>
 

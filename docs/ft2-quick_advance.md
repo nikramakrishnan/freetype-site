@@ -18,7 +18,7 @@ Defined in FT_ADVANCES_H (freetype/ftadvanc.h).
   <b>FT_Get_Advance</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
                   <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    gindex,
                   <a href="../ft2-basic_types/#ft_int32">FT_Int32</a>   load_flags,
-                  <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  *padvance );
+                  <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  &#42;padvance );
 </pre>
 </div>
 
@@ -41,7 +41,7 @@ Retrieve the advance value of a given glyph outline in an <a href="../ft2-base_i
 <h4>output</h4>
 <table class="fields">
 <tr><td class="val" id="padvance">padvance</td><td class="desc">
-<p>The advance value. If scaling is performed (based on the value of &lsquo;load_flags&rsquo;), the advance value is in 16.16 format. Otherwise, it is in font units.</p>
+<p>The advance value. If scaling is performed (based on the value of <code>load_flags</code>), the advance value is in 16.16 format. Otherwise, it is in font units.</p>
 <p>If <a href="../ft2-base_interface/#ft_load_xxx">FT_LOAD_VERTICAL_LAYOUT</a> is set, this is the vertical advance corresponding to a vertical layout. Otherwise, it is the horizontal advance in a horizontal layout.</p>
 </td></tr>
 </table>
@@ -69,7 +69,7 @@ Defined in FT_ADVANCES_H (freetype/ftadvanc.h).
                    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    start,
                    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    count,
                    <a href="../ft2-basic_types/#ft_int32">FT_Int32</a>   load_flags,
-                   <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  *padvances );
+                   <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  &#42;padvances );
 </pre>
 </div>
 
@@ -96,7 +96,7 @@ Retrieve the advance values of several glyph outlines in an <a href="../ft2-base
 <table class="fields">
 <tr><td class="val" id="padvance">padvance</td><td class="desc">
 <p>The advance values. This array, to be provided by the caller, must contain at least &lsquo;count&rsquo; elements.</p>
-<p>If scaling is performed (based on the value of &lsquo;load_flags&rsquo;), the advance values are in 16.16 format. Otherwise, they are in font units.</p>
+<p>If scaling is performed (based on the value of <code>load_flags</code>), the advance values are in 16.16 format. Otherwise, they are in font units.</p>
 <p>If <a href="../ft2-base_interface/#ft_load_xxx">FT_LOAD_VERTICAL_LAYOUT</a> is set, these are the vertical advances corresponding to a vertical layout. Otherwise, they are the horizontal advances in a horizontal layout.</p>
 </td></tr>
 </table>

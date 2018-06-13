@@ -62,11 +62,11 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Descender;
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Line_Gap;
 
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  advance_Width_Max;      /* advance width maximum */
+    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  advance_Width_Max;      /&#42; advance width maximum &#42;/
 
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   min_Left_Side_Bearing;  /* minimum left-sb       */
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   min_Right_Side_Bearing; /* minimum right-sb      */
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   xMax_Extent;            /* xmax extents          */
+    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   min_Left_Side_Bearing;  /&#42; minimum left-sb       &#42;/
+    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   min_Right_Side_Bearing; /&#42; minimum right-sb      &#42;/
+    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   xMax_Extent;            /&#42; xmax extents          &#42;/
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   caret_Slope_Rise;
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   caret_Slope_Run;
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   caret_Offset;
@@ -76,12 +76,12 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   metric_Data_Format;
     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  number_Of_HMetrics;
 
-    /* The following fields are not defined by the OpenType specification */
-    /* but they are used to connect the metrics header to the relevant    */
-    /* `hmtx' table.                                                      */
+    /&#42; The following fields are not defined by the OpenType specification &#42;/
+    /&#42; but they are used to connect the metrics header to the relevant    &#42;/
+    /* `hmtx' table.                                                      &#42;/
 
-    <span class="keyword">void</span>*      long_metrics;
-    <span class="keyword">void</span>*      short_metrics;
+    <span class="keyword">void</span>&#42;      long_metrics;
+    <span class="keyword">void</span>&#42;      short_metrics;
 
   } <b>TT_HoriHeader</b>;
 </pre>
@@ -98,12 +98,12 @@ A structure to model a TrueType horizontal header, the &lsquo;hhea&rsquo; table,
 <tr><td class="val" id="ascender">Ascender</td><td class="desc">
 <p>The font's ascender, i.e., the distance from the baseline to the top-most of all glyph points found in the font.</p>
 <p>This value is invalid in many fonts, as it is usually set by the font designer, and often reflects only a portion of the glyphs found in the font (maybe ASCII).</p>
-<p>You should use the &lsquo;sTypoAscender&rsquo; field of the &lsquo;OS/2&rsquo; table instead if you want the correct one.</p>
+<p>You should use the <code>sTypoAscender</code> field of the &lsquo;OS/2&rsquo; table instead if you want the correct one.</p>
 </td></tr>
 <tr><td class="val" id="descender">Descender</td><td class="desc">
 <p>The font's descender, i.e., the distance from the baseline to the bottom-most of all glyph points found in the font. It is negative.</p>
 <p>This value is invalid in many fonts, as it is usually set by the font designer, and often reflects only a portion of the glyphs found in the font (maybe ASCII).</p>
-<p>You should use the &lsquo;sTypoDescender&rsquo; field of the &lsquo;OS/2&rsquo; table instead if you want the correct one.</p>
+<p>You should use the <code>sTypoDescender</code> field of the &lsquo;OS/2&rsquo; table instead if you want the correct one.</p>
 </td></tr>
 <tr><td class="val" id="line_gap">Line_Gap</td><td class="desc">
 <p>The font's line gap, i.e., the distance to add to the ascender and descender to get the BTB, i.e., the baseline-to-baseline distance for the font.</p>
@@ -148,7 +148,7 @@ A structure to model a TrueType horizontal header, the &lsquo;hhea&rsquo; table,
 
 <h4>note</h4>
 
-For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: &lsquo;caret_Slope_Rise&rsquo;, &lsquo;caret_Slope_Run&rsquo;, and &lsquo;caret_Offset&rsquo;.
+For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: `caret_Slope_Rise`, `caret_Slope_Run`, and `caret_Offset`.
 
 <hr>
 
@@ -165,11 +165,11 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Descender;
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Line_Gap;
 
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  advance_Height_Max;      /* advance height maximum */
+    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  advance_Height_Max;      /&#42; advance height maximum &#42;/
 
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   min_Top_Side_Bearing;    /* minimum top-sb          */
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   min_Bottom_Side_Bearing; /* minimum bottom-sb       */
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   yMax_Extent;             /* ymax extents            */
+    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   min_Top_Side_Bearing;    /&#42; minimum top-sb          &#42;/
+    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   min_Bottom_Side_Bearing; /&#42; minimum bottom-sb       &#42;/
+    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   yMax_Extent;             /&#42; ymax extents            &#42;/
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   caret_Slope_Rise;
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   caret_Slope_Run;
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   caret_Offset;
@@ -179,12 +179,12 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   metric_Data_Format;
     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  number_Of_VMetrics;
 
-    /* The following fields are not defined by the OpenType specification */
-    /* but they are used to connect the metrics header to the relevant    */
-    /* `vmtx' table.                                                      */
+    /&#42; The following fields are not defined by the OpenType specification &#42;/
+    /&#42; but they are used to connect the metrics header to the relevant    &#42;/
+    /* `vmtx' table.                                                      &#42;/
 
-    <span class="keyword">void</span>*      long_metrics;
-    <span class="keyword">void</span>*      short_metrics;
+    <span class="keyword">void</span>&#42;      long_metrics;
+    <span class="keyword">void</span>&#42;      short_metrics;
 
   } <b>TT_VertHeader</b>;
 </pre>
@@ -201,12 +201,12 @@ A structure used to model a TrueType vertical header, the &lsquo;vhea&rsquo; tab
 <tr><td class="val" id="ascender">Ascender</td><td class="desc">
 <p>The font's ascender, i.e., the distance from the baseline to the top-most of all glyph points found in the font.</p>
 <p>This value is invalid in many fonts, as it is usually set by the font designer, and often reflects only a portion of the glyphs found in the font (maybe ASCII).</p>
-<p>You should use the &lsquo;sTypoAscender&rsquo; field of the &lsquo;OS/2&rsquo; table instead if you want the correct one.</p>
+<p>You should use the <code>sTypoAscender</code> field of the &lsquo;OS/2&rsquo; table instead if you want the correct one.</p>
 </td></tr>
 <tr><td class="val" id="descender">Descender</td><td class="desc">
 <p>The font's descender, i.e., the distance from the baseline to the bottom-most of all glyph points found in the font. It is negative.</p>
 <p>This value is invalid in many fonts, as it is usually set by the font designer, and often reflects only a portion of the glyphs found in the font (maybe ASCII).</p>
-<p>You should use the &lsquo;sTypoDescender&rsquo; field of the &lsquo;OS/2&rsquo; table instead if you want the correct one.</p>
+<p>You should use the <code>sTypoDescender</code> field of the &lsquo;OS/2&rsquo; table instead if you want the correct one.</p>
 </td></tr>
 <tr><td class="val" id="line_gap">Line_Gap</td><td class="desc">
 <p>The font's line gap, i.e., the distance to add to the ascender and descender to get the BTB, i.e., the baseline-to-baseline distance for the font.</p>
@@ -251,7 +251,7 @@ A structure used to model a TrueType vertical header, the &lsquo;vhea&rsquo; tab
 
 <h4>note</h4>
 
-For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: &lsquo;Ascender&rsquo;, &lsquo;Descender&rsquo;, &lsquo;Line_Gap&rsquo;, &lsquo;caret_Slope_Rise&rsquo;, &lsquo;caret_Slope_Run&rsquo;, and &lsquo;caret_Offset&rsquo;.
+For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: &lsquo;Ascender&rsquo;, &lsquo;Descender&rsquo;, `Line_Gap`, `caret_Slope_Rise`, `caret_Slope_Run`, and `caret_Offset`.
 
 <hr>
 
@@ -263,7 +263,7 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  TT_OS2_
   {
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  version;                /* 0x0001 - more or 0xFFFF */
+    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  version;                /&#42; 0x0001 - more or 0xFFFF &#42;/
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   xAvgCharWidth;
     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usWeightClass;
     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usWidthClass;
@@ -282,10 +282,10 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 
     <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    panose[10];
 
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulUnicodeRange1;        /* Bits 0-31   */
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulUnicodeRange2;        /* Bits 32-63  */
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulUnicodeRange3;        /* Bits 64-95  */
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulUnicodeRange4;        /* Bits 96-127 */
+    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulUnicodeRange1;        /&#42; Bits 0-31   &#42;/
+    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulUnicodeRange2;        /&#42; Bits 32-63  &#42;/
+    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulUnicodeRange3;        /&#42; Bits 64-95  &#42;/
+    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulUnicodeRange4;        /&#42; Bits 96-127 &#42;/
 
     <a href="../ft2-basic_types/#ft_char">FT_Char</a>    achVendID[4];
 
@@ -298,12 +298,12 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usWinAscent;
     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usWinDescent;
 
-    /* only version 1 and higher: */
+    /&#42; only version 1 and higher: &#42;/
 
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulCodePageRange1;       /* Bits 0-31   */
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulCodePageRange2;       /* Bits 32-63  */
+    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulCodePageRange1;       /&#42; Bits 0-31   &#42;/
+    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulCodePageRange2;       /&#42; Bits 32-63  &#42;/
 
-    /* only version 2 and higher: */
+    /&#42; only version 2 and higher: &#42;/
 
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   sxHeight;
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>   sCapHeight;
@@ -311,10 +311,10 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usBreakChar;
     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usMaxContext;
 
-    /* only version 5 and higher: */
+    /&#42; only version 5 and higher: &#42;/
 
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usLowerOpticalPointSize;       /* in twips (1/20th points) */
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usUpperOpticalPointSize;       /* in twips (1/20th points) */
+    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usLowerOpticalPointSize;       /&#42; in twips (1/20th points) &#42;/
+    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usUpperOpticalPointSize;       /&#42; in twips (1/20th points) &#42;/
 
   } <b>TT_OS2</b>;
 </pre>
@@ -327,9 +327,9 @@ Note that we now support old Mac fonts that do not include an &lsquo;OS/2&rsquo;
 
 <h4>note</h4>
 
-For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: &lsquo;sCapHeight&rsquo;, &lsquo;sTypoAscender&rsquo;, &lsquo;sTypoDescender&rsquo;, &lsquo;sTypoLineGap&rsquo;, &lsquo;sxHeight&rsquo;, &lsquo;usWinAscent&rsquo;, &lsquo;usWinDescent&rsquo;, &lsquo;yStrikeoutPosition&rsquo;, &lsquo;yStrikeoutSize&rsquo;, &lsquo;ySubscriptXOffset&rsquo;, &lsquo;ySubScriptXSize&rsquo;, &lsquo;ySubscriptYOffset&rsquo;, &lsquo;ySubscriptYSize&rsquo;, &lsquo;ySuperscriptXOffset&rsquo;, &lsquo;ySuperscriptXSize&rsquo;, &lsquo;ySuperscriptYOffset&rsquo;, and &lsquo;ySuperscriptYSize&rsquo;.
+For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: `sCapHeight`, `sTypoAscender`, `sTypoDescender`, `sTypoLineGap`, `sxHeight`, `usWinAscent`, `usWinDescent`, `yStrikeoutPosition`, `yStrikeoutSize`, `ySubscriptXOffset`, `ySubScriptXSize`, `ySubscriptYOffset`, `ySubscriptYSize`, `ySuperscriptXOffset`, `ySuperscriptXSize`, `ySuperscriptYOffset`, and `ySuperscriptYSize`.
 
-Possible values for bits in the &lsquo;ulUnicodeRangeX&rsquo; fields are given by the <a href="../ft2-truetype_tables/#tt_ucr_xxx">TT_UCR_XXX</a> macros.
+Possible values for bits in the `ulUnicodeRangeX` fields are given by the <a href="../ft2-truetype_tables/#tt_ucr_xxx">TT_UCR_XXX</a> macros.
 
 <hr>
 
@@ -351,8 +351,8 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
     <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  minMemType1;
     <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  maxMemType1;
 
-    /* Glyph names follow in the `post' table, but we don't */
-    /* load them by default.                                */
+    /&#42; Glyph names follow in the `post' table, but we don't &#42;/
+    /&#42; load them by default.                                &#42;/
 
   } <b>TT_Postscript</b>;
 </pre>
@@ -363,7 +363,7 @@ A structure to model a TrueType &lsquo;post&rsquo; table. All fields comply to t
 
 <h4>note</h4>
 
-For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: &lsquo;underlinePosition&rsquo; and &lsquo;underlineThickness&rsquo;.
+For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: `underlinePosition` and `underlineThickness`.
 
 <hr>
 
@@ -440,16 +440,16 @@ The maximum profile (&lsquo;maxp&rsquo;) table contains many max values, which c
 <p>The number of glyphs in this TrueType font.</p>
 </td></tr>
 <tr><td class="val" id="maxpoints">maxPoints</td><td class="desc">
-<p>The maximum number of points in a non-composite TrueType glyph. See also &lsquo;maxCompositePoints&rsquo;.</p>
+<p>The maximum number of points in a non-composite TrueType glyph. See also <code>maxCompositePoints</code>.</p>
 </td></tr>
 <tr><td class="val" id="maxcontours">maxContours</td><td class="desc">
-<p>The maximum number of contours in a non-composite TrueType glyph. See also &lsquo;maxCompositeContours&rsquo;.</p>
+<p>The maximum number of contours in a non-composite TrueType glyph. See also <code>maxCompositeContours</code>.</p>
 </td></tr>
 <tr><td class="val" id="maxcompositepoints">maxCompositePoints</td><td class="desc">
-<p>The maximum number of points in a composite TrueType glyph. See also &lsquo;maxPoints&rsquo;.</p>
+<p>The maximum number of points in a composite TrueType glyph. See also <code>maxPoints</code>.</p>
 </td></tr>
 <tr><td class="val" id="maxcompositecontours">maxCompositeContours</td><td class="desc">
-<p>The maximum number of contours in a composite TrueType glyph. See also &lsquo;maxContours&rsquo;.</p>
+<p>The maximum number of contours in a composite TrueType glyph. See also <code>maxContours</code>.</p>
 </td></tr>
 <tr><td class="val" id="maxzones">maxZones</td><td class="desc">
 <p>The maximum number of zones used for glyph hinting.</p>
@@ -506,8 +506,8 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 
   } <b>FT_Sfnt_Tag</b>;
 
-  /* these constants are deprecated; use the corresponding `<b>FT_Sfnt_Tag</b>' */
-  /* values instead                                                      */
+  /&#42; these constants are deprecated; use the corresponding `<b>FT_Sfnt_Tag</b>' &#42;/
+  /&#42; values instead                                                      &#42;/
 #<span class="keyword">define</span> ft_sfnt_head  <a href="../ft2-truetype_tables/#ft_sfnt_head">FT_SFNT_HEAD</a>
 #<span class="keyword">define</span> ft_sfnt_maxp  <a href="../ft2-truetype_tables/#ft_sfnt_maxp">FT_SFNT_MAXP</a>
 #<span class="keyword">define</span> ft_sfnt_os2   <a href="../ft2-truetype_tables/#ft_sfnt_os2">FT_SFNT_OS2</a>
@@ -554,7 +554,7 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <span class="keyword">void</span>* )
+  FT_EXPORT( <span class="keyword">void</span>&#42; )
   <b>FT_Get_Sfnt_Table</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>      face,
                      <a href="../ft2-truetype_tables/#ft_sfnt_tag">FT_Sfnt_Tag</a>  tag );
 </pre>
@@ -575,7 +575,7 @@ Return a pointer to a given SFNT table stored within a face.
 
 <h4>return</h4>
 
-A type-less pointer to the table. This will be NULL in case of error, or if the corresponding table was not found **OR** loaded from the file.
+A type-less pointer to the table. This will be NULL in case of error, or if the corresponding table was not found &#42;&#42;OR&#42;&#42; loaded from the file.
 
 Use a typecast according to &lsquo;tag&rsquo; to access the structure elements.
 
@@ -606,8 +606,8 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
   <b>FT_Load_Sfnt_Table</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
                       <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   tag,
                       <a href="../ft2-basic_types/#ft_long">FT_Long</a>    offset,
-                      <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*   buffer,
-                      <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>*  length );
+                      <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>&#42;   buffer,
+                      <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>&#42;  length );
 </pre>
 </div>
 
@@ -638,7 +638,7 @@ Load any SFNT font table into client memory.
 <table class="fields">
 <tr><td class="val" id="length">length</td><td class="desc">
 <p>If the &lsquo;length&rsquo; parameter is NULL, try to load the whole table. Return an error code if it fails.</p>
-<p>Else, if &lsquo;*length&rsquo; is&nbsp;0, exit immediately while returning the table's (or file) full size in it.</p>
+<p>Else, if &lsquo;&#42;length&rsquo; is&nbsp;0, exit immediately while returning the table's (or file) full size in it.</p>
 <p>Else the number of bytes to read from the table or file, from the starting offset.</p>
 </td></tr>
 </table>
@@ -649,7 +649,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-If you need to determine the table's length you should first call this function with &lsquo;*length&rsquo; set to&nbsp;0, as in the following example:
+If you need to determine the table's length you should first call this function with &lsquo;&#42;length&rsquo; set to&nbsp;0, as in the following example:
 ```
   FT_ULong  length = 0;
 
@@ -677,8 +677,8 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Sfnt_Table_Info</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
                       <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    table_index,
-                      <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  *tag,
-                      <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  *length );
+                      <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  &#42;tag,
+                      <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  &#42;length );
 </pre>
 </div>
 
@@ -698,7 +698,7 @@ Return information on an SFNT table.
 <h4>inout</h4>
 <table class="fields">
 <tr><td class="val" id="tag">tag</td><td class="desc">
-<p>The name tag of the SFNT table. If the value is NULL, &lsquo;table_index&rsquo; is ignored, and &lsquo;length&rsquo; returns the number of SFNT tables in the font.</p>
+<p>The name tag of the SFNT table. If the value is NULL, <code>table_index</code> is ignored, and &lsquo;length&rsquo; returns the number of SFNT tables in the font.</p>
 </td></tr>
 </table>
 
@@ -800,29 +800,29 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 <pre>
 #<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_platform_apple_unicode">TT_PLATFORM_APPLE_UNICODE</a>  0
 #<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_platform_macintosh">TT_PLATFORM_MACINTOSH</a>      1
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_platform_iso">TT_PLATFORM_ISO</a>            2 /* deprecated */
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_platform_iso">TT_PLATFORM_ISO</a>            2 /&#42; deprecated &#42;/
 #<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_platform_microsoft">TT_PLATFORM_MICROSOFT</a>      3
 #<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_platform_custom">TT_PLATFORM_CUSTOM</a>         4
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_platform_adobe">TT_PLATFORM_ADOBE</a>          7 /* artificial */
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_platform_adobe">TT_PLATFORM_ADOBE</a>          7 /&#42; artificial &#42;/
 </pre>
 </div>
 
 
-A list of valid values for the &lsquo;platform_id&rsquo; identifier code in <a href="../ft2-base_interface/#ft_charmaprec">FT_CharMapRec</a> and <a href="../ft2-sfnt_names/#ft_sfntname">FT_SfntName</a> structures.
+A list of valid values for the `platform_id` identifier code in <a href="../ft2-base_interface/#ft_charmaprec">FT_CharMapRec</a> and <a href="../ft2-sfnt_names/#ft_sfntname">FT_SfntName</a> structures.
 
 <h4>values</h4>
 <table class="fields">
 <tr><td class="val" id="tt_platform_apple_unicode">TT_PLATFORM_APPLE_UNICODE</td><td class="desc">
-<p>Used by Apple to indicate a Unicode character map and/or name entry. See <a href="../ft2-truetype_tables/#tt_apple_id_xxx">TT_APPLE_ID_XXX</a> for corresponding &lsquo;encoding_id&rsquo; values. Note that name entries in this format are coded as big-endian UCS-2 character codes <em>only</em>.</p>
+<p>Used by Apple to indicate a Unicode character map and/or name entry. See <a href="../ft2-truetype_tables/#tt_apple_id_xxx">TT_APPLE_ID_XXX</a> for corresponding <code>encoding_id</code> values. Note that name entries in this format are coded as big-endian UCS-2 character codes <em>only</em>.</p>
 </td></tr>
 <tr><td class="val" id="tt_platform_macintosh">TT_PLATFORM_MACINTOSH</td><td class="desc">
-<p>Used by Apple to indicate a MacOS-specific charmap and/or name entry. See <a href="../ft2-truetype_tables/#tt_mac_id_xxx">TT_MAC_ID_XXX</a> for corresponding &lsquo;encoding_id&rsquo; values. Note that most TrueType fonts contain an Apple roman charmap to be usable on MacOS systems (even if they contain a Microsoft charmap as well).</p>
+<p>Used by Apple to indicate a MacOS-specific charmap and/or name entry. See <a href="../ft2-truetype_tables/#tt_mac_id_xxx">TT_MAC_ID_XXX</a> for corresponding <code>encoding_id</code> values. Note that most TrueType fonts contain an Apple roman charmap to be usable on MacOS systems (even if they contain a Microsoft charmap as well).</p>
 </td></tr>
 <tr><td class="val" id="tt_platform_iso">TT_PLATFORM_ISO</td><td class="desc">
-<p>This value was used to specify ISO/IEC 10646 charmaps. It is however now deprecated. See <a href="../ft2-truetype_tables/#tt_iso_id_xxx">TT_ISO_ID_XXX</a> for a list of corresponding &lsquo;encoding_id&rsquo; values.</p>
+<p>This value was used to specify ISO/IEC 10646 charmaps. It is however now deprecated. See <a href="../ft2-truetype_tables/#tt_iso_id_xxx">TT_ISO_ID_XXX</a> for a list of corresponding <code>encoding_id</code> values.</p>
 </td></tr>
 <tr><td class="val" id="tt_platform_microsoft">TT_PLATFORM_MICROSOFT</td><td class="desc">
-<p>Used by Microsoft to indicate Windows-specific charmaps. See <a href="../ft2-truetype_tables/#tt_ms_id_xxx">TT_MS_ID_XXX</a> for a list of corresponding &lsquo;encoding_id&rsquo; values. Note that most fonts contain a Unicode charmap using (TT_PLATFORM_MICROSOFT, <a href="../ft2-truetype_tables/#tt_ms_id_xxx">TT_MS_ID_UNICODE_CS</a>).</p>
+<p>Used by Microsoft to indicate Windows-specific charmaps. See <a href="../ft2-truetype_tables/#tt_ms_id_xxx">TT_MS_ID_XXX</a> for a list of corresponding <code>encoding_id</code> values. Note that most fonts contain a Unicode charmap using (TT_PLATFORM_MICROSOFT, <a href="../ft2-truetype_tables/#tt_ms_id_xxx">TT_MS_ID_UNICODE_CS</a>).</p>
 </td></tr>
 <tr><td class="val" id="tt_platform_custom">TT_PLATFORM_CUSTOM</td><td class="desc">
 <p>Used to indicate application-specific charmaps.</p>
@@ -840,18 +840,18 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_default">TT_APPLE_ID_DEFAULT</a>           0 /* Unicode 1.0                   */
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_unicode_1_1">TT_APPLE_ID_UNICODE_1_1</a>       1 /* specify Hangul at U+34xx      */
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_iso_10646">TT_APPLE_ID_ISO_10646</a>         2 /* deprecated                    */
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_unicode_2_0">TT_APPLE_ID_UNICODE_2_0</a>       3 /* or later                      */
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_unicode_32">TT_APPLE_ID_UNICODE_32</a>        4 /* 2.0 or later, full repertoire */
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_variant_selector">TT_APPLE_ID_VARIANT_SELECTOR</a>  5 /* variation selector data       */
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_full_unicode">TT_APPLE_ID_FULL_UNICODE</a>      6 /* used with type 13 cmaps       */
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_default">TT_APPLE_ID_DEFAULT</a>           0 /&#42; Unicode 1.0                   &#42;/
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_unicode_1_1">TT_APPLE_ID_UNICODE_1_1</a>       1 /&#42; specify Hangul at U+34xx      &#42;/
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_iso_10646">TT_APPLE_ID_ISO_10646</a>         2 /&#42; deprecated                    &#42;/
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_unicode_2_0">TT_APPLE_ID_UNICODE_2_0</a>       3 /&#42; or later                      &#42;/
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_unicode_32">TT_APPLE_ID_UNICODE_32</a>        4 /&#42; 2.0 or later, full repertoire &#42;/
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_variant_selector">TT_APPLE_ID_VARIANT_SELECTOR</a>  5 /&#42; variation selector data       &#42;/
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_full_unicode">TT_APPLE_ID_FULL_UNICODE</a>      6 /&#42; used with type 13 cmaps       &#42;/
 </pre>
 </div>
 
 
-A list of valid values for the &lsquo;encoding_id&rsquo; for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_APPLE_UNICODE</a> charmaps and name entries.
+A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_APPLE_UNICODE</a> charmaps and name entries.
 
 <h4>values</h4>
 <table class="fields">
@@ -924,7 +924,7 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 </div>
 
 
-A list of valid values for the &lsquo;encoding_id&rsquo; for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_MACINTOSH</a> charmaps and name entries.
+A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_MACINTOSH</a> charmaps and name entries.
 
 <hr>
 
@@ -941,7 +941,7 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 </div>
 
 
-A list of valid values for the &lsquo;encoding_id&rsquo; for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_ISO</a> charmaps and name entries.
+A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_ISO</a> charmaps and name entries.
 
 Their use is now deprecated.
 
@@ -975,13 +975,13 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 #<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_ms_id_johab">TT_MS_ID_JOHAB</a>        6
 #<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_ms_id_ucs_4">TT_MS_ID_UCS_4</a>       10
 
-  /* this value is deprecated */
+  /&#42; this value is deprecated &#42;/
 #<span class="keyword">define</span> TT_MS_ID_GB2312  <a href="../ft2-truetype_tables/#tt_ms_id_prc">TT_MS_ID_PRC</a>
 </pre>
 </div>
 
 
-A list of valid values for the &lsquo;encoding_id&rsquo; for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_MICROSOFT</a> charmaps and name entries.
+A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_MICROSOFT</a> charmaps and name entries.
 
 <h4>values</h4>
 <table class="fields">
@@ -1027,7 +1027,7 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 </div>
 
 
-A list of valid values for the &lsquo;encoding_id&rsquo; for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_ADOBE</a> charmaps. This is a FreeType-specific extension!
+A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_ADOBE</a> charmaps. This is a FreeType-specific extension!
 
 <h4>values</h4>
 <table class="fields">
@@ -1163,7 +1163,7 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 #<span class="keyword">define</span> TT_MAC_LANGID_JAVANESE                    138
 #<span class="keyword">define</span> TT_MAC_LANGID_SUNDANESE                   139
 
-  /* The following codes are new as of 2000-03-10 */
+  /&#42; The following codes are new as of 2000-03-10 &#42;/
 #<span class="keyword">define</span> TT_MAC_LANGID_GALICIAN                    140
 #<span class="keyword">define</span> TT_MAC_LANGID_AFRIKAANS                   141
 #<span class="keyword">define</span> TT_MAC_LANGID_BRETON                      142
@@ -1337,7 +1337,7 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 #<span class="keyword">define</span> TT_MS_LANGID_MALAY_MALAYSIA                    0x043E
 #<span class="keyword">define</span> TT_MS_LANGID_MALAY_BRUNEI_DARUSSALAM           0x083E
 #<span class="keyword">define</span> TT_MS_LANGID_KAZAKH_KAZAKHSTAN                 0x043F
-#<span class="keyword">define</span> TT_MS_LANGID_KYRGYZ_KYRGYZSTAN /* Cyrillic*/   0x0440
+#<span class="keyword">define</span> TT_MS_LANGID_KYRGYZ_KYRGYZSTAN /&#42; Cyrillic&#42;/   0x0440
 #<span class="keyword">define</span> TT_MS_LANGID_KISWAHILI_KENYA                   0x0441
 #<span class="keyword">define</span> TT_MS_LANGID_TURKMEN_TURKMENISTAN              0x0442
 #<span class="keyword">define</span> TT_MS_LANGID_UZBEK_UZBEKISTAN_LATIN            0x0443
@@ -1355,7 +1355,7 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 #<span class="keyword">define</span> TT_MS_LANGID_ASSAMESE_INDIA                    0x044D
 #<span class="keyword">define</span> TT_MS_LANGID_MARATHI_INDIA                     0x044E
 #<span class="keyword">define</span> TT_MS_LANGID_SANSKRIT_INDIA                    0x044F
-#<span class="keyword">define</span> TT_MS_LANGID_MONGOLIAN_MONGOLIA /* Cyrillic */ 0x0450
+#<span class="keyword">define</span> TT_MS_LANGID_MONGOLIAN_MONGOLIA /&#42; Cyrillic &#42;/ 0x0450
 #<span class="keyword">define</span> TT_MS_LANGID_MONGOLIAN_PRC                     0x0850
 #<span class="keyword">define</span> TT_MS_LANGID_TIBETAN_PRC                       0x0451
 #<span class="keyword">define</span> TT_MS_LANGID_WELSH_UNITED_KINGDOM              0x0452
@@ -1429,7 +1429,7 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 #<span class="keyword">define</span> TT_NAME_ID_PS_NAME                6
 #<span class="keyword">define</span> TT_NAME_ID_TRADEMARK              7
 
-  /* the following values are from the OpenType spec */
+  /&#42; the following values are from the OpenType spec &#42;/
 #<span class="keyword">define</span> TT_NAME_ID_MANUFACTURER           8
 #<span class="keyword">define</span> TT_NAME_ID_DESIGNER               9
 #<span class="keyword">define</span> TT_NAME_ID_DESCRIPTION            10
@@ -1437,29 +1437,29 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 #<span class="keyword">define</span> TT_NAME_ID_DESIGNER_URL           12
 #<span class="keyword">define</span> TT_NAME_ID_LICENSE                13
 #<span class="keyword">define</span> TT_NAME_ID_LICENSE_URL            14
-  /* number 15 is reserved */
+  /&#42; number 15 is reserved &#42;/
 #<span class="keyword">define</span> TT_NAME_ID_TYPOGRAPHIC_FAMILY     16
 #<span class="keyword">define</span> TT_NAME_ID_TYPOGRAPHIC_SUBFAMILY  17
 #<span class="keyword">define</span> TT_NAME_ID_MAC_FULL_NAME          18
 
-  /* The following code is new as of 2000-01-21 */
+  /&#42; The following code is new as of 2000-01-21 &#42;/
 #<span class="keyword">define</span> TT_NAME_ID_SAMPLE_TEXT            19
 
-  /* This is new in OpenType 1.3 */
+  /&#42; This is new in OpenType 1.3 &#42;/
 #<span class="keyword">define</span> TT_NAME_ID_CID_FINDFONT_NAME      20
 
-  /* This is new in OpenType 1.5 */
+  /&#42; This is new in OpenType 1.5 &#42;/
 #<span class="keyword">define</span> TT_NAME_ID_WWS_FAMILY             21
 #<span class="keyword">define</span> TT_NAME_ID_WWS_SUBFAMILY          22
 
-  /* This is new in OpenType 1.7 */
+  /&#42; This is new in OpenType 1.7 &#42;/
 #<span class="keyword">define</span> TT_NAME_ID_LIGHT_BACKGROUND       23
 #<span class="keyword">define</span> TT_NAME_ID_DARK_BACKGROUND        24
 
-  /* This is new in OpenType 1.8 */
+  /&#42; This is new in OpenType 1.8 &#42;/
 #<span class="keyword">define</span> TT_NAME_ID_VARIATIONS_PREFIX      25
 
-  /* these two values are deprecated */
+  /&#42; these two values are deprecated &#42;/
 #<span class="keyword">define</span> TT_NAME_ID_PREFERRED_FAMILY     TT_NAME_ID_TYPOGRAPHIC_FAMILY
 #<span class="keyword">define</span> TT_NAME_ID_PREFERRED_SUBFAMILY  TT_NAME_ID_TYPOGRAPHIC_SUBFAMILY
 </pre>
@@ -1476,380 +1476,380 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 
 <div class = "codehilite">
 <pre>
-  /* ulUnicodeRange1 */
-  /* --------------- */
+  /&#42; ulUnicodeRange1 &#42;/
+  /&#42; --------------- &#42;/
 
-  /* Bit  0   Basic Latin */
-#<span class="keyword">define</span> TT_UCR_BASIC_LATIN                     (1L &lt;&lt;  0) /* U+0020-U+007E */
-  /* Bit  1   C1 Controls and Latin-1 Supplement */
-#<span class="keyword">define</span> TT_UCR_LATIN1_SUPPLEMENT               (1L &lt;&lt;  1) /* U+0080-U+00FF */
-  /* Bit  2   Latin Extended-A */
-#<span class="keyword">define</span> TT_UCR_LATIN_EXTENDED_A                (1L &lt;&lt;  2) /* U+0100-U+017F */
-  /* Bit  3   Latin Extended-B */
-#<span class="keyword">define</span> TT_UCR_LATIN_EXTENDED_B                (1L &lt;&lt;  3) /* U+0180-U+024F */
-  /* Bit  4   IPA Extensions                 */
-  /*          Phonetic Extensions            */
-  /*          Phonetic Extensions Supplement */
-#<span class="keyword">define</span> TT_UCR_IPA_EXTENSIONS                  (1L &lt;&lt;  4) /* U+0250-U+02AF */
-                                                          /* U+1D00-U+1D7F */
-                                                          /* U+1D80-U+1DBF */
-  /* Bit  5   Spacing Modifier Letters */
-  /*          Modifier Tone Letters    */
-#<span class="keyword">define</span> TT_UCR_SPACING_MODIFIER                (1L &lt;&lt;  5) /* U+02B0-U+02FF */
-                                                          /* U+A700-U+A71F */
-  /* Bit  6   Combining Diacritical Marks            */
-  /*          Combining Diacritical Marks Supplement */
-#<span class="keyword">define</span> TT_UCR_COMBINING_DIACRITICAL_MARKS     (1L &lt;&lt;  6) /* U+0300-U+036F */
-                                                          /* U+1DC0-U+1DFF */
-  /* Bit  7   Greek and Coptic */
-#<span class="keyword">define</span> TT_UCR_GREEK                           (1L &lt;&lt;  7) /* U+0370-U+03FF */
-  /* Bit  8   Coptic */
-#<span class="keyword">define</span> TT_UCR_COPTIC                          (1L &lt;&lt;  8) /* U+2C80-U+2CFF */
-  /* Bit  9   Cyrillic            */
-  /*          Cyrillic Supplement */
-  /*          Cyrillic Extended-A */
-  /*          Cyrillic Extended-B */
-#<span class="keyword">define</span> TT_UCR_CYRILLIC                        (1L &lt;&lt;  9) /* U+0400-U+04FF */
-                                                          /* U+0500-U+052F */
-                                                          /* U+2DE0-U+2DFF */
-                                                          /* U+A640-U+A69F */
-  /* Bit 10   Armenian */
-#<span class="keyword">define</span> TT_UCR_ARMENIAN                        (1L &lt;&lt; 10) /* U+0530-U+058F */
-  /* Bit 11   Hebrew */
-#<span class="keyword">define</span> TT_UCR_HEBREW                          (1L &lt;&lt; 11) /* U+0590-U+05FF */
-  /* Bit 12   Vai */
-#<span class="keyword">define</span> TT_UCR_VAI                             (1L &lt;&lt; 12) /* U+A500-U+A63F */
-  /* Bit 13   Arabic            */
-  /*          Arabic Supplement */
-#<span class="keyword">define</span> TT_UCR_ARABIC                          (1L &lt;&lt; 13) /* U+0600-U+06FF */
-                                                          /* U+0750-U+077F */
-  /* Bit 14   NKo */
-#<span class="keyword">define</span> TT_UCR_NKO                             (1L &lt;&lt; 14) /* U+07C0-U+07FF */
-  /* Bit 15   Devanagari */
-#<span class="keyword">define</span> TT_UCR_DEVANAGARI                      (1L &lt;&lt; 15) /* U+0900-U+097F */
-  /* Bit 16   Bengali */
-#<span class="keyword">define</span> TT_UCR_BENGALI                         (1L &lt;&lt; 16) /* U+0980-U+09FF */
-  /* Bit 17   Gurmukhi */
-#<span class="keyword">define</span> TT_UCR_GURMUKHI                        (1L &lt;&lt; 17) /* U+0A00-U+0A7F */
-  /* Bit 18   Gujarati */
-#<span class="keyword">define</span> TT_UCR_GUJARATI                        (1L &lt;&lt; 18) /* U+0A80-U+0AFF */
-  /* Bit 19   Oriya */
-#<span class="keyword">define</span> TT_UCR_ORIYA                           (1L &lt;&lt; 19) /* U+0B00-U+0B7F */
-  /* Bit 20   Tamil */
-#<span class="keyword">define</span> TT_UCR_TAMIL                           (1L &lt;&lt; 20) /* U+0B80-U+0BFF */
-  /* Bit 21   Telugu */
-#<span class="keyword">define</span> TT_UCR_TELUGU                          (1L &lt;&lt; 21) /* U+0C00-U+0C7F */
-  /* Bit 22   Kannada */
-#<span class="keyword">define</span> TT_UCR_KANNADA                         (1L &lt;&lt; 22) /* U+0C80-U+0CFF */
-  /* Bit 23   Malayalam */
-#<span class="keyword">define</span> TT_UCR_MALAYALAM                       (1L &lt;&lt; 23) /* U+0D00-U+0D7F */
-  /* Bit 24   Thai */
-#<span class="keyword">define</span> TT_UCR_THAI                            (1L &lt;&lt; 24) /* U+0E00-U+0E7F */
-  /* Bit 25   Lao */
-#<span class="keyword">define</span> TT_UCR_LAO                             (1L &lt;&lt; 25) /* U+0E80-U+0EFF */
-  /* Bit 26   Georgian            */
-  /*          Georgian Supplement */
-#<span class="keyword">define</span> TT_UCR_GEORGIAN                        (1L &lt;&lt; 26) /* U+10A0-U+10FF */
-                                                          /* U+2D00-U+2D2F */
-  /* Bit 27   Balinese */
-#<span class="keyword">define</span> TT_UCR_BALINESE                        (1L &lt;&lt; 27) /* U+1B00-U+1B7F */
-  /* Bit 28   Hangul Jamo */
-#<span class="keyword">define</span> TT_UCR_HANGUL_JAMO                     (1L &lt;&lt; 28) /* U+1100-U+11FF */
-  /* Bit 29   Latin Extended Additional */
-  /*          Latin Extended-C          */
-  /*          Latin Extended-D          */
-#<span class="keyword">define</span> TT_UCR_LATIN_EXTENDED_ADDITIONAL       (1L &lt;&lt; 29) /* U+1E00-U+1EFF */
-                                                          /* U+2C60-U+2C7F */
-                                                          /* U+A720-U+A7FF */
-  /* Bit 30   Greek Extended */
-#<span class="keyword">define</span> TT_UCR_GREEK_EXTENDED                  (1L &lt;&lt; 30) /* U+1F00-U+1FFF */
-  /* Bit 31   General Punctuation      */
-  /*          Supplemental Punctuation */
-#<span class="keyword">define</span> TT_UCR_GENERAL_PUNCTUATION             (1L &lt;&lt; 31) /* U+2000-U+206F */
-                                                          /* U+2E00-U+2E7F */
+  /&#42; Bit  0   Basic Latin &#42;/
+#<span class="keyword">define</span> TT_UCR_BASIC_LATIN                     (1L &lt;&lt;  0) /&#42; U+0020-U+007E &#42;/
+  /&#42; Bit  1   C1 Controls and Latin-1 Supplement &#42;/
+#<span class="keyword">define</span> TT_UCR_LATIN1_SUPPLEMENT               (1L &lt;&lt;  1) /&#42; U+0080-U+00FF &#42;/
+  /&#42; Bit  2   Latin Extended-A &#42;/
+#<span class="keyword">define</span> TT_UCR_LATIN_EXTENDED_A                (1L &lt;&lt;  2) /&#42; U+0100-U+017F &#42;/
+  /&#42; Bit  3   Latin Extended-B &#42;/
+#<span class="keyword">define</span> TT_UCR_LATIN_EXTENDED_B                (1L &lt;&lt;  3) /&#42; U+0180-U+024F &#42;/
+  /&#42; Bit  4   IPA Extensions                 &#42;/
+  /&#42;          Phonetic Extensions            &#42;/
+  /&#42;          Phonetic Extensions Supplement &#42;/
+#<span class="keyword">define</span> TT_UCR_IPA_EXTENSIONS                  (1L &lt;&lt;  4) /&#42; U+0250-U+02AF &#42;/
+                                                          /&#42; U+1D00-U+1D7F &#42;/
+                                                          /&#42; U+1D80-U+1DBF &#42;/
+  /&#42; Bit  5   Spacing Modifier Letters &#42;/
+  /&#42;          Modifier Tone Letters    &#42;/
+#<span class="keyword">define</span> TT_UCR_SPACING_MODIFIER                (1L &lt;&lt;  5) /&#42; U+02B0-U+02FF &#42;/
+                                                          /&#42; U+A700-U+A71F &#42;/
+  /&#42; Bit  6   Combining Diacritical Marks            &#42;/
+  /&#42;          Combining Diacritical Marks Supplement &#42;/
+#<span class="keyword">define</span> TT_UCR_COMBINING_DIACRITICAL_MARKS     (1L &lt;&lt;  6) /&#42; U+0300-U+036F &#42;/
+                                                          /&#42; U+1DC0-U+1DFF &#42;/
+  /&#42; Bit  7   Greek and Coptic &#42;/
+#<span class="keyword">define</span> TT_UCR_GREEK                           (1L &lt;&lt;  7) /&#42; U+0370-U+03FF &#42;/
+  /&#42; Bit  8   Coptic &#42;/
+#<span class="keyword">define</span> TT_UCR_COPTIC                          (1L &lt;&lt;  8) /&#42; U+2C80-U+2CFF &#42;/
+  /&#42; Bit  9   Cyrillic            &#42;/
+  /&#42;          Cyrillic Supplement &#42;/
+  /&#42;          Cyrillic Extended-A &#42;/
+  /&#42;          Cyrillic Extended-B &#42;/
+#<span class="keyword">define</span> TT_UCR_CYRILLIC                        (1L &lt;&lt;  9) /&#42; U+0400-U+04FF &#42;/
+                                                          /&#42; U+0500-U+052F &#42;/
+                                                          /&#42; U+2DE0-U+2DFF &#42;/
+                                                          /&#42; U+A640-U+A69F &#42;/
+  /&#42; Bit 10   Armenian &#42;/
+#<span class="keyword">define</span> TT_UCR_ARMENIAN                        (1L &lt;&lt; 10) /&#42; U+0530-U+058F &#42;/
+  /&#42; Bit 11   Hebrew &#42;/
+#<span class="keyword">define</span> TT_UCR_HEBREW                          (1L &lt;&lt; 11) /&#42; U+0590-U+05FF &#42;/
+  /&#42; Bit 12   Vai &#42;/
+#<span class="keyword">define</span> TT_UCR_VAI                             (1L &lt;&lt; 12) /&#42; U+A500-U+A63F &#42;/
+  /&#42; Bit 13   Arabic            &#42;/
+  /&#42;          Arabic Supplement &#42;/
+#<span class="keyword">define</span> TT_UCR_ARABIC                          (1L &lt;&lt; 13) /&#42; U+0600-U+06FF &#42;/
+                                                          /&#42; U+0750-U+077F &#42;/
+  /&#42; Bit 14   NKo &#42;/
+#<span class="keyword">define</span> TT_UCR_NKO                             (1L &lt;&lt; 14) /&#42; U+07C0-U+07FF &#42;/
+  /&#42; Bit 15   Devanagari &#42;/
+#<span class="keyword">define</span> TT_UCR_DEVANAGARI                      (1L &lt;&lt; 15) /&#42; U+0900-U+097F &#42;/
+  /&#42; Bit 16   Bengali &#42;/
+#<span class="keyword">define</span> TT_UCR_BENGALI                         (1L &lt;&lt; 16) /&#42; U+0980-U+09FF &#42;/
+  /&#42; Bit 17   Gurmukhi &#42;/
+#<span class="keyword">define</span> TT_UCR_GURMUKHI                        (1L &lt;&lt; 17) /&#42; U+0A00-U+0A7F &#42;/
+  /&#42; Bit 18   Gujarati &#42;/
+#<span class="keyword">define</span> TT_UCR_GUJARATI                        (1L &lt;&lt; 18) /&#42; U+0A80-U+0AFF &#42;/
+  /&#42; Bit 19   Oriya &#42;/
+#<span class="keyword">define</span> TT_UCR_ORIYA                           (1L &lt;&lt; 19) /&#42; U+0B00-U+0B7F &#42;/
+  /&#42; Bit 20   Tamil &#42;/
+#<span class="keyword">define</span> TT_UCR_TAMIL                           (1L &lt;&lt; 20) /&#42; U+0B80-U+0BFF &#42;/
+  /&#42; Bit 21   Telugu &#42;/
+#<span class="keyword">define</span> TT_UCR_TELUGU                          (1L &lt;&lt; 21) /&#42; U+0C00-U+0C7F &#42;/
+  /&#42; Bit 22   Kannada &#42;/
+#<span class="keyword">define</span> TT_UCR_KANNADA                         (1L &lt;&lt; 22) /&#42; U+0C80-U+0CFF &#42;/
+  /&#42; Bit 23   Malayalam &#42;/
+#<span class="keyword">define</span> TT_UCR_MALAYALAM                       (1L &lt;&lt; 23) /&#42; U+0D00-U+0D7F &#42;/
+  /&#42; Bit 24   Thai &#42;/
+#<span class="keyword">define</span> TT_UCR_THAI                            (1L &lt;&lt; 24) /&#42; U+0E00-U+0E7F &#42;/
+  /&#42; Bit 25   Lao &#42;/
+#<span class="keyword">define</span> TT_UCR_LAO                             (1L &lt;&lt; 25) /&#42; U+0E80-U+0EFF &#42;/
+  /&#42; Bit 26   Georgian            &#42;/
+  /&#42;          Georgian Supplement &#42;/
+#<span class="keyword">define</span> TT_UCR_GEORGIAN                        (1L &lt;&lt; 26) /&#42; U+10A0-U+10FF &#42;/
+                                                          /&#42; U+2D00-U+2D2F &#42;/
+  /&#42; Bit 27   Balinese &#42;/
+#<span class="keyword">define</span> TT_UCR_BALINESE                        (1L &lt;&lt; 27) /&#42; U+1B00-U+1B7F &#42;/
+  /&#42; Bit 28   Hangul Jamo &#42;/
+#<span class="keyword">define</span> TT_UCR_HANGUL_JAMO                     (1L &lt;&lt; 28) /&#42; U+1100-U+11FF &#42;/
+  /&#42; Bit 29   Latin Extended Additional &#42;/
+  /&#42;          Latin Extended-C          &#42;/
+  /&#42;          Latin Extended-D          &#42;/
+#<span class="keyword">define</span> TT_UCR_LATIN_EXTENDED_ADDITIONAL       (1L &lt;&lt; 29) /&#42; U+1E00-U+1EFF &#42;/
+                                                          /&#42; U+2C60-U+2C7F &#42;/
+                                                          /&#42; U+A720-U+A7FF &#42;/
+  /&#42; Bit 30   Greek Extended &#42;/
+#<span class="keyword">define</span> TT_UCR_GREEK_EXTENDED                  (1L &lt;&lt; 30) /&#42; U+1F00-U+1FFF &#42;/
+  /&#42; Bit 31   General Punctuation      &#42;/
+  /&#42;          Supplemental Punctuation &#42;/
+#<span class="keyword">define</span> TT_UCR_GENERAL_PUNCTUATION             (1L &lt;&lt; 31) /&#42; U+2000-U+206F &#42;/
+                                                          /&#42; U+2E00-U+2E7F &#42;/
 
-  /* ulUnicodeRange2 */
-  /* --------------- */
+  /&#42; ulUnicodeRange2 &#42;/
+  /&#42; --------------- &#42;/
 
-  /* Bit 32   Superscripts And Subscripts */
-#<span class="keyword">define</span> TT_UCR_SUPERSCRIPTS_SUBSCRIPTS         (1L &lt;&lt;  0) /* U+2070-U+209F */
-  /* Bit 33   Currency Symbols */
-#<span class="keyword">define</span> TT_UCR_CURRENCY_SYMBOLS                (1L &lt;&lt;  1) /* U+20A0-U+20CF */
-  /* Bit 34   Combining Diacritical Marks For Symbols */
+  /&#42; Bit 32   Superscripts And Subscripts &#42;/
+#<span class="keyword">define</span> TT_UCR_SUPERSCRIPTS_SUBSCRIPTS         (1L &lt;&lt;  0) /&#42; U+2070-U+209F &#42;/
+  /&#42; Bit 33   Currency Symbols &#42;/
+#<span class="keyword">define</span> TT_UCR_CURRENCY_SYMBOLS                (1L &lt;&lt;  1) /&#42; U+20A0-U+20CF &#42;/
+  /&#42; Bit 34   Combining Diacritical Marks For Symbols &#42;/
 #<span class="keyword">define</span> TT_UCR_COMBINING_DIACRITICAL_MARKS_SYMB \
-                                               (1L &lt;&lt;  2) /* U+20D0-U+20FF */
-  /* Bit 35   Letterlike Symbols */
-#<span class="keyword">define</span> TT_UCR_LETTERLIKE_SYMBOLS              (1L &lt;&lt;  3) /* U+2100-U+214F */
-  /* Bit 36   Number Forms */
-#<span class="keyword">define</span> TT_UCR_NUMBER_FORMS                    (1L &lt;&lt;  4) /* U+2150-U+218F */
-  /* Bit 37   Arrows                           */
-  /*          Supplemental Arrows-A            */
-  /*          Supplemental Arrows-B            */
-  /*          Miscellaneous Symbols and Arrows */
-#<span class="keyword">define</span> TT_UCR_ARROWS                          (1L &lt;&lt;  5) /* U+2190-U+21FF */
-                                                          /* U+27F0-U+27FF */
-                                                          /* U+2900-U+297F */
-                                                          /* U+2B00-U+2BFF */
-  /* Bit 38   Mathematical Operators               */
-  /*          Supplemental Mathematical Operators  */
-  /*          Miscellaneous Mathematical Symbols-A */
-  /*          Miscellaneous Mathematical Symbols-B */
-#<span class="keyword">define</span> TT_UCR_MATHEMATICAL_OPERATORS          (1L &lt;&lt;  6) /* U+2200-U+22FF */
-                                                          /* U+2A00-U+2AFF */
-                                                          /* U+27C0-U+27EF */
-                                                          /* U+2980-U+29FF */
-  /* Bit 39 Miscellaneous Technical */
-#<span class="keyword">define</span> TT_UCR_MISCELLANEOUS_TECHNICAL         (1L &lt;&lt;  7) /* U+2300-U+23FF */
-  /* Bit 40   Control Pictures */
-#<span class="keyword">define</span> TT_UCR_CONTROL_PICTURES                (1L &lt;&lt;  8) /* U+2400-U+243F */
-  /* Bit 41   Optical Character Recognition */
-#<span class="keyword">define</span> TT_UCR_OCR                             (1L &lt;&lt;  9) /* U+2440-U+245F */
-  /* Bit 42   Enclosed Alphanumerics */
-#<span class="keyword">define</span> TT_UCR_ENCLOSED_ALPHANUMERICS          (1L &lt;&lt; 10) /* U+2460-U+24FF */
-  /* Bit 43   Box Drawing */
-#<span class="keyword">define</span> TT_UCR_BOX_DRAWING                     (1L &lt;&lt; 11) /* U+2500-U+257F */
-  /* Bit 44   Block Elements */
-#<span class="keyword">define</span> TT_UCR_BLOCK_ELEMENTS                  (1L &lt;&lt; 12) /* U+2580-U+259F */
-  /* Bit 45   Geometric Shapes */
-#<span class="keyword">define</span> TT_UCR_GEOMETRIC_SHAPES                (1L &lt;&lt; 13) /* U+25A0-U+25FF */
-  /* Bit 46   Miscellaneous Symbols */
-#<span class="keyword">define</span> TT_UCR_MISCELLANEOUS_SYMBOLS           (1L &lt;&lt; 14) /* U+2600-U+26FF */
-  /* Bit 47   Dingbats */
-#<span class="keyword">define</span> TT_UCR_DINGBATS                        (1L &lt;&lt; 15) /* U+2700-U+27BF */
-  /* Bit 48   CJK Symbols and Punctuation */
-#<span class="keyword">define</span> TT_UCR_CJK_SYMBOLS                     (1L &lt;&lt; 16) /* U+3000-U+303F */
-  /* Bit 49   Hiragana */
-#<span class="keyword">define</span> TT_UCR_HIRAGANA                        (1L &lt;&lt; 17) /* U+3040-U+309F */
-  /* Bit 50   Katakana                     */
-  /*          Katakana Phonetic Extensions */
-#<span class="keyword">define</span> TT_UCR_KATAKANA                        (1L &lt;&lt; 18) /* U+30A0-U+30FF */
-                                                          /* U+31F0-U+31FF */
-  /* Bit 51   Bopomofo          */
-  /*          Bopomofo Extended */
-#<span class="keyword">define</span> TT_UCR_BOPOMOFO                        (1L &lt;&lt; 19) /* U+3100-U+312F */
-                                                          /* U+31A0-U+31BF */
-  /* Bit 52   Hangul Compatibility Jamo */
-#<span class="keyword">define</span> TT_UCR_HANGUL_COMPATIBILITY_JAMO       (1L &lt;&lt; 20) /* U+3130-U+318F */
-  /* Bit 53   Phags-Pa */
-#<span class="keyword">define</span> TT_UCR_CJK_MISC                        (1L &lt;&lt; 21) /* U+A840-U+A87F */
-#<span class="keyword">define</span> TT_UCR_KANBUN  TT_UCR_CJK_MISC /* deprecated */
+                                               (1L &lt;&lt;  2) /&#42; U+20D0-U+20FF &#42;/
+  /&#42; Bit 35   Letterlike Symbols &#42;/
+#<span class="keyword">define</span> TT_UCR_LETTERLIKE_SYMBOLS              (1L &lt;&lt;  3) /&#42; U+2100-U+214F &#42;/
+  /&#42; Bit 36   Number Forms &#42;/
+#<span class="keyword">define</span> TT_UCR_NUMBER_FORMS                    (1L &lt;&lt;  4) /&#42; U+2150-U+218F &#42;/
+  /&#42; Bit 37   Arrows                           &#42;/
+  /&#42;          Supplemental Arrows-A            &#42;/
+  /&#42;          Supplemental Arrows-B            &#42;/
+  /&#42;          Miscellaneous Symbols and Arrows &#42;/
+#<span class="keyword">define</span> TT_UCR_ARROWS                          (1L &lt;&lt;  5) /&#42; U+2190-U+21FF &#42;/
+                                                          /&#42; U+27F0-U+27FF &#42;/
+                                                          /&#42; U+2900-U+297F &#42;/
+                                                          /&#42; U+2B00-U+2BFF &#42;/
+  /&#42; Bit 38   Mathematical Operators               &#42;/
+  /&#42;          Supplemental Mathematical Operators  &#42;/
+  /&#42;          Miscellaneous Mathematical Symbols-A &#42;/
+  /&#42;          Miscellaneous Mathematical Symbols-B &#42;/
+#<span class="keyword">define</span> TT_UCR_MATHEMATICAL_OPERATORS          (1L &lt;&lt;  6) /&#42; U+2200-U+22FF &#42;/
+                                                          /&#42; U+2A00-U+2AFF &#42;/
+                                                          /&#42; U+27C0-U+27EF &#42;/
+                                                          /&#42; U+2980-U+29FF &#42;/
+  /&#42; Bit 39 Miscellaneous Technical &#42;/
+#<span class="keyword">define</span> TT_UCR_MISCELLANEOUS_TECHNICAL         (1L &lt;&lt;  7) /&#42; U+2300-U+23FF &#42;/
+  /&#42; Bit 40   Control Pictures &#42;/
+#<span class="keyword">define</span> TT_UCR_CONTROL_PICTURES                (1L &lt;&lt;  8) /&#42; U+2400-U+243F &#42;/
+  /&#42; Bit 41   Optical Character Recognition &#42;/
+#<span class="keyword">define</span> TT_UCR_OCR                             (1L &lt;&lt;  9) /&#42; U+2440-U+245F &#42;/
+  /&#42; Bit 42   Enclosed Alphanumerics &#42;/
+#<span class="keyword">define</span> TT_UCR_ENCLOSED_ALPHANUMERICS          (1L &lt;&lt; 10) /&#42; U+2460-U+24FF &#42;/
+  /&#42; Bit 43   Box Drawing &#42;/
+#<span class="keyword">define</span> TT_UCR_BOX_DRAWING                     (1L &lt;&lt; 11) /&#42; U+2500-U+257F &#42;/
+  /&#42; Bit 44   Block Elements &#42;/
+#<span class="keyword">define</span> TT_UCR_BLOCK_ELEMENTS                  (1L &lt;&lt; 12) /&#42; U+2580-U+259F &#42;/
+  /&#42; Bit 45   Geometric Shapes &#42;/
+#<span class="keyword">define</span> TT_UCR_GEOMETRIC_SHAPES                (1L &lt;&lt; 13) /&#42; U+25A0-U+25FF &#42;/
+  /&#42; Bit 46   Miscellaneous Symbols &#42;/
+#<span class="keyword">define</span> TT_UCR_MISCELLANEOUS_SYMBOLS           (1L &lt;&lt; 14) /&#42; U+2600-U+26FF &#42;/
+  /&#42; Bit 47   Dingbats &#42;/
+#<span class="keyword">define</span> TT_UCR_DINGBATS                        (1L &lt;&lt; 15) /&#42; U+2700-U+27BF &#42;/
+  /&#42; Bit 48   CJK Symbols and Punctuation &#42;/
+#<span class="keyword">define</span> TT_UCR_CJK_SYMBOLS                     (1L &lt;&lt; 16) /&#42; U+3000-U+303F &#42;/
+  /&#42; Bit 49   Hiragana &#42;/
+#<span class="keyword">define</span> TT_UCR_HIRAGANA                        (1L &lt;&lt; 17) /&#42; U+3040-U+309F &#42;/
+  /&#42; Bit 50   Katakana                     &#42;/
+  /&#42;          Katakana Phonetic Extensions &#42;/
+#<span class="keyword">define</span> TT_UCR_KATAKANA                        (1L &lt;&lt; 18) /&#42; U+30A0-U+30FF &#42;/
+                                                          /&#42; U+31F0-U+31FF &#42;/
+  /&#42; Bit 51   Bopomofo          &#42;/
+  /&#42;          Bopomofo Extended &#42;/
+#<span class="keyword">define</span> TT_UCR_BOPOMOFO                        (1L &lt;&lt; 19) /&#42; U+3100-U+312F &#42;/
+                                                          /&#42; U+31A0-U+31BF &#42;/
+  /&#42; Bit 52   Hangul Compatibility Jamo &#42;/
+#<span class="keyword">define</span> TT_UCR_HANGUL_COMPATIBILITY_JAMO       (1L &lt;&lt; 20) /&#42; U+3130-U+318F &#42;/
+  /&#42; Bit 53   Phags-Pa &#42;/
+#<span class="keyword">define</span> TT_UCR_CJK_MISC                        (1L &lt;&lt; 21) /&#42; U+A840-U+A87F &#42;/
+#<span class="keyword">define</span> TT_UCR_KANBUN  TT_UCR_CJK_MISC /&#42; deprecated &#42;/
 #<span class="keyword">define</span> TT_UCR_PHAGSPA
-  /* Bit 54   Enclosed CJK Letters and Months */
-#<span class="keyword">define</span> TT_UCR_ENCLOSED_CJK_LETTERS_MONTHS     (1L &lt;&lt; 22) /* U+3200-U+32FF */
-  /* Bit 55   CJK Compatibility */
-#<span class="keyword">define</span> TT_UCR_CJK_COMPATIBILITY               (1L &lt;&lt; 23) /* U+3300-U+33FF */
-  /* Bit 56   Hangul Syllables */
-#<span class="keyword">define</span> TT_UCR_HANGUL                          (1L &lt;&lt; 24) /* U+AC00-U+D7A3 */
-  /* Bit 57   High Surrogates              */
-  /*          High Private Use Surrogates  */
-  /*          Low Surrogates               */
+  /&#42; Bit 54   Enclosed CJK Letters and Months &#42;/
+#<span class="keyword">define</span> TT_UCR_ENCLOSED_CJK_LETTERS_MONTHS     (1L &lt;&lt; 22) /&#42; U+3200-U+32FF &#42;/
+  /&#42; Bit 55   CJK Compatibility &#42;/
+#<span class="keyword">define</span> TT_UCR_CJK_COMPATIBILITY               (1L &lt;&lt; 23) /&#42; U+3300-U+33FF &#42;/
+  /&#42; Bit 56   Hangul Syllables &#42;/
+#<span class="keyword">define</span> TT_UCR_HANGUL                          (1L &lt;&lt; 24) /&#42; U+AC00-U+D7A3 &#42;/
+  /&#42; Bit 57   High Surrogates              &#42;/
+  /&#42;          High Private Use Surrogates  &#42;/
+  /&#42;          Low Surrogates               &#42;/
 
-  /* According to OpenType specs v.1.3+,   */
-  /* setting bit 57 implies that there is  */
-  /* at least one codepoint beyond the     */
-  /* Basic Multilingual Plane that is      */
-  /* supported by this font.  So it really */
-  /* means &gt;= U+10000.                     */
-#<span class="keyword">define</span> TT_UCR_SURROGATES                      (1L &lt;&lt; 25) /* U+D800-U+DB7F */
-                                                          /* U+DB80-U+DBFF */
-                                                          /* U+DC00-U+DFFF */
+  /&#42; According to OpenType specs v.1.3+,   &#42;/
+  /&#42; setting bit 57 implies that there is  &#42;/
+  /&#42; at least one codepoint beyond the     &#42;/
+  /&#42; Basic Multilingual Plane that is      &#42;/
+  /&#42; supported by this font.  So it really &#42;/
+  /&#42; means &gt;= U+10000.                     &#42;/
+#<span class="keyword">define</span> TT_UCR_SURROGATES                      (1L &lt;&lt; 25) /&#42; U+D800-U+DB7F &#42;/
+                                                          /&#42; U+DB80-U+DBFF &#42;/
+                                                          /&#42; U+DC00-U+DFFF &#42;/
 #<span class="keyword">define</span> TT_UCR_NON_PLANE_0  TT_UCR_SURROGATES
-  /* Bit 58  Phoenician */
-#<span class="keyword">define</span> TT_UCR_PHOENICIAN                      (1L &lt;&lt; 26) /*U+10900-U+1091F*/
-  /* Bit 59   CJK Unified Ideographs             */
-  /*          CJK Radicals Supplement            */
-  /*          Kangxi Radicals                    */
-  /*          Ideographic Description Characters */
-  /*          CJK Unified Ideographs Extension A */
-  /*          CJK Unified Ideographs Extension B */
-  /*          Kanbun                             */
-#<span class="keyword">define</span> TT_UCR_CJK_UNIFIED_IDEOGRAPHS          (1L &lt;&lt; 27) /* U+4E00-U+9FFF */
-                                                          /* U+2E80-U+2EFF */
-                                                          /* U+2F00-U+2FDF */
-                                                          /* U+2FF0-U+2FFF */
-                                                          /* U+3400-U+4DB5 */
-                                                          /*U+20000-U+2A6DF*/
-                                                          /* U+3190-U+319F */
-  /* Bit 60   Private Use */
-#<span class="keyword">define</span> TT_UCR_PRIVATE_USE                     (1L &lt;&lt; 28) /* U+E000-U+F8FF */
-  /* Bit 61   CJK Strokes                             */
-  /*          CJK Compatibility Ideographs            */
-  /*          CJK Compatibility Ideographs Supplement */
-#<span class="keyword">define</span> TT_UCR_CJK_COMPATIBILITY_IDEOGRAPHS    (1L &lt;&lt; 29) /* U+31C0-U+31EF */
-                                                          /* U+F900-U+FAFF */
-                                                          /*U+2F800-U+2FA1F*/
-  /* Bit 62   Alphabetic Presentation Forms */
-#<span class="keyword">define</span> TT_UCR_ALPHABETIC_PRESENTATION_FORMS   (1L &lt;&lt; 30) /* U+FB00-U+FB4F */
-  /* Bit 63   Arabic Presentation Forms-A */
-#<span class="keyword">define</span> TT_UCR_ARABIC_PRESENTATION_FORMS_A     (1L &lt;&lt; 31) /* U+FB50-U+FDFF */
+  /&#42; Bit 58  Phoenician &#42;/
+#<span class="keyword">define</span> TT_UCR_PHOENICIAN                      (1L &lt;&lt; 26) /&#42;U+10900-U+1091F&#42;/
+  /&#42; Bit 59   CJK Unified Ideographs             &#42;/
+  /&#42;          CJK Radicals Supplement            &#42;/
+  /&#42;          Kangxi Radicals                    &#42;/
+  /&#42;          Ideographic Description Characters &#42;/
+  /&#42;          CJK Unified Ideographs Extension A &#42;/
+  /&#42;          CJK Unified Ideographs Extension B &#42;/
+  /&#42;          Kanbun                             &#42;/
+#<span class="keyword">define</span> TT_UCR_CJK_UNIFIED_IDEOGRAPHS          (1L &lt;&lt; 27) /&#42; U+4E00-U+9FFF &#42;/
+                                                          /&#42; U+2E80-U+2EFF &#42;/
+                                                          /&#42; U+2F00-U+2FDF &#42;/
+                                                          /&#42; U+2FF0-U+2FFF &#42;/
+                                                          /&#42; U+3400-U+4DB5 &#42;/
+                                                          /&#42;U+20000-U+2A6DF&#42;/
+                                                          /&#42; U+3190-U+319F &#42;/
+  /&#42; Bit 60   Private Use &#42;/
+#<span class="keyword">define</span> TT_UCR_PRIVATE_USE                     (1L &lt;&lt; 28) /&#42; U+E000-U+F8FF &#42;/
+  /&#42; Bit 61   CJK Strokes                             &#42;/
+  /&#42;          CJK Compatibility Ideographs            &#42;/
+  /&#42;          CJK Compatibility Ideographs Supplement &#42;/
+#<span class="keyword">define</span> TT_UCR_CJK_COMPATIBILITY_IDEOGRAPHS    (1L &lt;&lt; 29) /&#42; U+31C0-U+31EF &#42;/
+                                                          /&#42; U+F900-U+FAFF &#42;/
+                                                          /&#42;U+2F800-U+2FA1F&#42;/
+  /&#42; Bit 62   Alphabetic Presentation Forms &#42;/
+#<span class="keyword">define</span> TT_UCR_ALPHABETIC_PRESENTATION_FORMS   (1L &lt;&lt; 30) /&#42; U+FB00-U+FB4F &#42;/
+  /&#42; Bit 63   Arabic Presentation Forms-A &#42;/
+#<span class="keyword">define</span> TT_UCR_ARABIC_PRESENTATION_FORMS_A     (1L &lt;&lt; 31) /&#42; U+FB50-U+FDFF &#42;/
 
-  /* ulUnicodeRange3 */
-  /* --------------- */
+  /&#42; ulUnicodeRange3 &#42;/
+  /&#42; --------------- &#42;/
 
-  /* Bit 64   Combining Half Marks */
-#<span class="keyword">define</span> TT_UCR_COMBINING_HALF_MARKS            (1L &lt;&lt;  0) /* U+FE20-U+FE2F */
-  /* Bit 65   Vertical forms          */
-  /*          CJK Compatibility Forms */
-#<span class="keyword">define</span> TT_UCR_CJK_COMPATIBILITY_FORMS         (1L &lt;&lt;  1) /* U+FE10-U+FE1F */
-                                                          /* U+FE30-U+FE4F */
-  /* Bit 66   Small Form Variants */
-#<span class="keyword">define</span> TT_UCR_SMALL_FORM_VARIANTS             (1L &lt;&lt;  2) /* U+FE50-U+FE6F */
-  /* Bit 67   Arabic Presentation Forms-B */
-#<span class="keyword">define</span> TT_UCR_ARABIC_PRESENTATION_FORMS_B     (1L &lt;&lt;  3) /* U+FE70-U+FEFE */
-  /* Bit 68   Halfwidth and Fullwidth Forms */
-#<span class="keyword">define</span> TT_UCR_HALFWIDTH_FULLWIDTH_FORMS       (1L &lt;&lt;  4) /* U+FF00-U+FFEF */
-  /* Bit 69   Specials */
-#<span class="keyword">define</span> TT_UCR_SPECIALS                        (1L &lt;&lt;  5) /* U+FFF0-U+FFFD */
-  /* Bit 70   Tibetan */
-#<span class="keyword">define</span> TT_UCR_TIBETAN                         (1L &lt;&lt;  6) /* U+0F00-U+0FFF */
-  /* Bit 71   Syriac */
-#<span class="keyword">define</span> TT_UCR_SYRIAC                          (1L &lt;&lt;  7) /* U+0700-U+074F */
-  /* Bit 72   Thaana */
-#<span class="keyword">define</span> TT_UCR_THAANA                          (1L &lt;&lt;  8) /* U+0780-U+07BF */
-  /* Bit 73   Sinhala */
-#<span class="keyword">define</span> TT_UCR_SINHALA                         (1L &lt;&lt;  9) /* U+0D80-U+0DFF */
-  /* Bit 74   Myanmar */
-#<span class="keyword">define</span> TT_UCR_MYANMAR                         (1L &lt;&lt; 10) /* U+1000-U+109F */
-  /* Bit 75   Ethiopic            */
-  /*          Ethiopic Supplement */
-  /*          Ethiopic Extended   */
-#<span class="keyword">define</span> TT_UCR_ETHIOPIC                        (1L &lt;&lt; 11) /* U+1200-U+137F */
-                                                          /* U+1380-U+139F */
-                                                          /* U+2D80-U+2DDF */
-  /* Bit 76   Cherokee */
-#<span class="keyword">define</span> TT_UCR_CHEROKEE                        (1L &lt;&lt; 12) /* U+13A0-U+13FF */
-  /* Bit 77   Unified Canadian Aboriginal Syllabics */
-#<span class="keyword">define</span> TT_UCR_CANADIAN_ABORIGINAL_SYLLABICS   (1L &lt;&lt; 13) /* U+1400-U+167F */
-  /* Bit 78   Ogham */
-#<span class="keyword">define</span> TT_UCR_OGHAM                           (1L &lt;&lt; 14) /* U+1680-U+169F */
-  /* Bit 79   Runic */
-#<span class="keyword">define</span> TT_UCR_RUNIC                           (1L &lt;&lt; 15) /* U+16A0-U+16FF */
-  /* Bit 80   Khmer         */
-  /*          Khmer Symbols */
-#<span class="keyword">define</span> TT_UCR_KHMER                           (1L &lt;&lt; 16) /* U+1780-U+17FF */
-                                                          /* U+19E0-U+19FF */
-  /* Bit 81   Mongolian */
-#<span class="keyword">define</span> TT_UCR_MONGOLIAN                       (1L &lt;&lt; 17) /* U+1800-U+18AF */
-  /* Bit 82   Braille Patterns */
-#<span class="keyword">define</span> TT_UCR_BRAILLE                         (1L &lt;&lt; 18) /* U+2800-U+28FF */
-  /* Bit 83   Yi Syllables */
-  /*          Yi Radicals  */
-#<span class="keyword">define</span> TT_UCR_YI                              (1L &lt;&lt; 19) /* U+A000-U+A48F */
-                                                          /* U+A490-U+A4CF */
-  /* Bit 84   Tagalog  */
-  /*          Hanunoo  */
-  /*          Buhid    */
-  /*          Tagbanwa */
-#<span class="keyword">define</span> TT_UCR_PHILIPPINE                      (1L &lt;&lt; 20) /* U+1700-U+171F */
-                                                          /* U+1720-U+173F */
-                                                          /* U+1740-U+175F */
-                                                          /* U+1760-U+177F */
-  /* Bit 85   Old Italic */
-#<span class="keyword">define</span> TT_UCR_OLD_ITALIC                      (1L &lt;&lt; 21) /*U+10300-U+1032F*/
-  /* Bit 86   Gothic */
-#<span class="keyword">define</span> TT_UCR_GOTHIC                          (1L &lt;&lt; 22) /*U+10330-U+1034F*/
-  /* Bit 87   Deseret */
-#<span class="keyword">define</span> TT_UCR_DESERET                         (1L &lt;&lt; 23) /*U+10400-U+1044F*/
-  /* Bit 88   Byzantine Musical Symbols      */
-  /*          Musical Symbols                */
-  /*          Ancient Greek Musical Notation */
-#<span class="keyword">define</span> TT_UCR_MUSICAL_SYMBOLS                 (1L &lt;&lt; 24) /*U+1D000-U+1D0FF*/
-                                                          /*U+1D100-U+1D1FF*/
-                                                          /*U+1D200-U+1D24F*/
-  /* Bit 89   Mathematical Alphanumeric Symbols */
-#<span class="keyword">define</span> TT_UCR_MATH_ALPHANUMERIC_SYMBOLS       (1L &lt;&lt; 25) /*U+1D400-U+1D7FF*/
-  /* Bit 90   Private Use (plane 15) */
-  /*          Private Use (plane 16) */
-#<span class="keyword">define</span> TT_UCR_PRIVATE_USE_SUPPLEMENTARY       (1L &lt;&lt; 26) /*U+F0000-U+FFFFD*/
-                                                        /*U+100000-U+10FFFD*/
-  /* Bit 91   Variation Selectors            */
-  /*          Variation Selectors Supplement */
-#<span class="keyword">define</span> TT_UCR_VARIATION_SELECTORS             (1L &lt;&lt; 27) /* U+FE00-U+FE0F */
-                                                          /*U+E0100-U+E01EF*/
-  /* Bit 92   Tags */
-#<span class="keyword">define</span> TT_UCR_TAGS                            (1L &lt;&lt; 28) /*U+E0000-U+E007F*/
-  /* Bit 93   Limbu */
-#<span class="keyword">define</span> TT_UCR_LIMBU                           (1L &lt;&lt; 29) /* U+1900-U+194F */
-  /* Bit 94   Tai Le */
-#<span class="keyword">define</span> TT_UCR_TAI_LE                          (1L &lt;&lt; 30) /* U+1950-U+197F */
-  /* Bit 95   New Tai Lue */
-#<span class="keyword">define</span> TT_UCR_NEW_TAI_LUE                     (1L &lt;&lt; 31) /* U+1980-U+19DF */
+  /&#42; Bit 64   Combining Half Marks &#42;/
+#<span class="keyword">define</span> TT_UCR_COMBINING_HALF_MARKS            (1L &lt;&lt;  0) /&#42; U+FE20-U+FE2F &#42;/
+  /&#42; Bit 65   Vertical forms          &#42;/
+  /&#42;          CJK Compatibility Forms &#42;/
+#<span class="keyword">define</span> TT_UCR_CJK_COMPATIBILITY_FORMS         (1L &lt;&lt;  1) /&#42; U+FE10-U+FE1F &#42;/
+                                                          /&#42; U+FE30-U+FE4F &#42;/
+  /&#42; Bit 66   Small Form Variants &#42;/
+#<span class="keyword">define</span> TT_UCR_SMALL_FORM_VARIANTS             (1L &lt;&lt;  2) /&#42; U+FE50-U+FE6F &#42;/
+  /&#42; Bit 67   Arabic Presentation Forms-B &#42;/
+#<span class="keyword">define</span> TT_UCR_ARABIC_PRESENTATION_FORMS_B     (1L &lt;&lt;  3) /&#42; U+FE70-U+FEFE &#42;/
+  /&#42; Bit 68   Halfwidth and Fullwidth Forms &#42;/
+#<span class="keyword">define</span> TT_UCR_HALFWIDTH_FULLWIDTH_FORMS       (1L &lt;&lt;  4) /&#42; U+FF00-U+FFEF &#42;/
+  /&#42; Bit 69   Specials &#42;/
+#<span class="keyword">define</span> TT_UCR_SPECIALS                        (1L &lt;&lt;  5) /&#42; U+FFF0-U+FFFD &#42;/
+  /&#42; Bit 70   Tibetan &#42;/
+#<span class="keyword">define</span> TT_UCR_TIBETAN                         (1L &lt;&lt;  6) /&#42; U+0F00-U+0FFF &#42;/
+  /&#42; Bit 71   Syriac &#42;/
+#<span class="keyword">define</span> TT_UCR_SYRIAC                          (1L &lt;&lt;  7) /&#42; U+0700-U+074F &#42;/
+  /&#42; Bit 72   Thaana &#42;/
+#<span class="keyword">define</span> TT_UCR_THAANA                          (1L &lt;&lt;  8) /&#42; U+0780-U+07BF &#42;/
+  /&#42; Bit 73   Sinhala &#42;/
+#<span class="keyword">define</span> TT_UCR_SINHALA                         (1L &lt;&lt;  9) /&#42; U+0D80-U+0DFF &#42;/
+  /&#42; Bit 74   Myanmar &#42;/
+#<span class="keyword">define</span> TT_UCR_MYANMAR                         (1L &lt;&lt; 10) /&#42; U+1000-U+109F &#42;/
+  /&#42; Bit 75   Ethiopic            &#42;/
+  /&#42;          Ethiopic Supplement &#42;/
+  /&#42;          Ethiopic Extended   &#42;/
+#<span class="keyword">define</span> TT_UCR_ETHIOPIC                        (1L &lt;&lt; 11) /&#42; U+1200-U+137F &#42;/
+                                                          /&#42; U+1380-U+139F &#42;/
+                                                          /&#42; U+2D80-U+2DDF &#42;/
+  /&#42; Bit 76   Cherokee &#42;/
+#<span class="keyword">define</span> TT_UCR_CHEROKEE                        (1L &lt;&lt; 12) /&#42; U+13A0-U+13FF &#42;/
+  /&#42; Bit 77   Unified Canadian Aboriginal Syllabics &#42;/
+#<span class="keyword">define</span> TT_UCR_CANADIAN_ABORIGINAL_SYLLABICS   (1L &lt;&lt; 13) /&#42; U+1400-U+167F &#42;/
+  /&#42; Bit 78   Ogham &#42;/
+#<span class="keyword">define</span> TT_UCR_OGHAM                           (1L &lt;&lt; 14) /&#42; U+1680-U+169F &#42;/
+  /&#42; Bit 79   Runic &#42;/
+#<span class="keyword">define</span> TT_UCR_RUNIC                           (1L &lt;&lt; 15) /&#42; U+16A0-U+16FF &#42;/
+  /&#42; Bit 80   Khmer         &#42;/
+  /&#42;          Khmer Symbols &#42;/
+#<span class="keyword">define</span> TT_UCR_KHMER                           (1L &lt;&lt; 16) /&#42; U+1780-U+17FF &#42;/
+                                                          /&#42; U+19E0-U+19FF &#42;/
+  /&#42; Bit 81   Mongolian &#42;/
+#<span class="keyword">define</span> TT_UCR_MONGOLIAN                       (1L &lt;&lt; 17) /&#42; U+1800-U+18AF &#42;/
+  /&#42; Bit 82   Braille Patterns &#42;/
+#<span class="keyword">define</span> TT_UCR_BRAILLE                         (1L &lt;&lt; 18) /&#42; U+2800-U+28FF &#42;/
+  /&#42; Bit 83   Yi Syllables &#42;/
+  /&#42;          Yi Radicals  &#42;/
+#<span class="keyword">define</span> TT_UCR_YI                              (1L &lt;&lt; 19) /&#42; U+A000-U+A48F &#42;/
+                                                          /&#42; U+A490-U+A4CF &#42;/
+  /&#42; Bit 84   Tagalog  &#42;/
+  /&#42;          Hanunoo  &#42;/
+  /&#42;          Buhid    &#42;/
+  /&#42;          Tagbanwa &#42;/
+#<span class="keyword">define</span> TT_UCR_PHILIPPINE                      (1L &lt;&lt; 20) /&#42; U+1700-U+171F &#42;/
+                                                          /&#42; U+1720-U+173F &#42;/
+                                                          /&#42; U+1740-U+175F &#42;/
+                                                          /&#42; U+1760-U+177F &#42;/
+  /&#42; Bit 85   Old Italic &#42;/
+#<span class="keyword">define</span> TT_UCR_OLD_ITALIC                      (1L &lt;&lt; 21) /&#42;U+10300-U+1032F&#42;/
+  /&#42; Bit 86   Gothic &#42;/
+#<span class="keyword">define</span> TT_UCR_GOTHIC                          (1L &lt;&lt; 22) /&#42;U+10330-U+1034F&#42;/
+  /&#42; Bit 87   Deseret &#42;/
+#<span class="keyword">define</span> TT_UCR_DESERET                         (1L &lt;&lt; 23) /&#42;U+10400-U+1044F&#42;/
+  /&#42; Bit 88   Byzantine Musical Symbols      &#42;/
+  /&#42;          Musical Symbols                &#42;/
+  /&#42;          Ancient Greek Musical Notation &#42;/
+#<span class="keyword">define</span> TT_UCR_MUSICAL_SYMBOLS                 (1L &lt;&lt; 24) /&#42;U+1D000-U+1D0FF&#42;/
+                                                          /&#42;U+1D100-U+1D1FF&#42;/
+                                                          /&#42;U+1D200-U+1D24F&#42;/
+  /&#42; Bit 89   Mathematical Alphanumeric Symbols &#42;/
+#<span class="keyword">define</span> TT_UCR_MATH_ALPHANUMERIC_SYMBOLS       (1L &lt;&lt; 25) /&#42;U+1D400-U+1D7FF&#42;/
+  /&#42; Bit 90   Private Use (plane 15) &#42;/
+  /&#42;          Private Use (plane 16) &#42;/
+#<span class="keyword">define</span> TT_UCR_PRIVATE_USE_SUPPLEMENTARY       (1L &lt;&lt; 26) /&#42;U+F0000-U+FFFFD&#42;/
+                                                        /&#42;U+100000-U+10FFFD&#42;/
+  /&#42; Bit 91   Variation Selectors            &#42;/
+  /&#42;          Variation Selectors Supplement &#42;/
+#<span class="keyword">define</span> TT_UCR_VARIATION_SELECTORS             (1L &lt;&lt; 27) /&#42; U+FE00-U+FE0F &#42;/
+                                                          /&#42;U+E0100-U+E01EF&#42;/
+  /&#42; Bit 92   Tags &#42;/
+#<span class="keyword">define</span> TT_UCR_TAGS                            (1L &lt;&lt; 28) /&#42;U+E0000-U+E007F&#42;/
+  /&#42; Bit 93   Limbu &#42;/
+#<span class="keyword">define</span> TT_UCR_LIMBU                           (1L &lt;&lt; 29) /&#42; U+1900-U+194F &#42;/
+  /&#42; Bit 94   Tai Le &#42;/
+#<span class="keyword">define</span> TT_UCR_TAI_LE                          (1L &lt;&lt; 30) /&#42; U+1950-U+197F &#42;/
+  /&#42; Bit 95   New Tai Lue &#42;/
+#<span class="keyword">define</span> TT_UCR_NEW_TAI_LUE                     (1L &lt;&lt; 31) /&#42; U+1980-U+19DF &#42;/
 
-  /* ulUnicodeRange4 */
-  /* --------------- */
+  /&#42; ulUnicodeRange4 &#42;/
+  /&#42; --------------- &#42;/
 
-  /* Bit 96   Buginese */
-#<span class="keyword">define</span> TT_UCR_BUGINESE                        (1L &lt;&lt;  0) /* U+1A00-U+1A1F */
-  /* Bit 97   Glagolitic */
-#<span class="keyword">define</span> TT_UCR_GLAGOLITIC                      (1L &lt;&lt;  1) /* U+2C00-U+2C5F */
-  /* Bit 98   Tifinagh */
-#<span class="keyword">define</span> TT_UCR_TIFINAGH                        (1L &lt;&lt;  2) /* U+2D30-U+2D7F */
-  /* Bit 99   Yijing Hexagram Symbols */
-#<span class="keyword">define</span> TT_UCR_YIJING                          (1L &lt;&lt;  3) /* U+4DC0-U+4DFF */
-  /* Bit 100  Syloti Nagri */
-#<span class="keyword">define</span> TT_UCR_SYLOTI_NAGRI                    (1L &lt;&lt;  4) /* U+A800-U+A82F */
-  /* Bit 101  Linear B Syllabary */
-  /*          Linear B Ideograms */
-  /*          Aegean Numbers     */
-#<span class="keyword">define</span> TT_UCR_LINEAR_B                        (1L &lt;&lt;  5) /*U+10000-U+1007F*/
-                                                          /*U+10080-U+100FF*/
-                                                          /*U+10100-U+1013F*/
-  /* Bit 102  Ancient Greek Numbers */
-#<span class="keyword">define</span> TT_UCR_ANCIENT_GREEK_NUMBERS           (1L &lt;&lt;  6) /*U+10140-U+1018F*/
-  /* Bit 103  Ugaritic */
-#<span class="keyword">define</span> TT_UCR_UGARITIC                        (1L &lt;&lt;  7) /*U+10380-U+1039F*/
-  /* Bit 104  Old Persian */
-#<span class="keyword">define</span> TT_UCR_OLD_PERSIAN                     (1L &lt;&lt;  8) /*U+103A0-U+103DF*/
-  /* Bit 105  Shavian */
-#<span class="keyword">define</span> TT_UCR_SHAVIAN                         (1L &lt;&lt;  9) /*U+10450-U+1047F*/
-  /* Bit 106  Osmanya */
-#<span class="keyword">define</span> TT_UCR_OSMANYA                         (1L &lt;&lt; 10) /*U+10480-U+104AF*/
-  /* Bit 107  Cypriot Syllabary */
-#<span class="keyword">define</span> TT_UCR_CYPRIOT_SYLLABARY               (1L &lt;&lt; 11) /*U+10800-U+1083F*/
-  /* Bit 108  Kharoshthi */
-#<span class="keyword">define</span> TT_UCR_KHAROSHTHI                      (1L &lt;&lt; 12) /*U+10A00-U+10A5F*/
-  /* Bit 109  Tai Xuan Jing Symbols */
-#<span class="keyword">define</span> TT_UCR_TAI_XUAN_JING                   (1L &lt;&lt; 13) /*U+1D300-U+1D35F*/
-  /* Bit 110  Cuneiform                         */
-  /*          Cuneiform Numbers and Punctuation */
-#<span class="keyword">define</span> TT_UCR_CUNEIFORM                       (1L &lt;&lt; 14) /*U+12000-U+123FF*/
-                                                          /*U+12400-U+1247F*/
-  /* Bit 111  Counting Rod Numerals */
-#<span class="keyword">define</span> TT_UCR_COUNTING_ROD_NUMERALS           (1L &lt;&lt; 15) /*U+1D360-U+1D37F*/
-  /* Bit 112  Sundanese */
-#<span class="keyword">define</span> TT_UCR_SUNDANESE                       (1L &lt;&lt; 16) /* U+1B80-U+1BBF */
-  /* Bit 113  Lepcha */
-#<span class="keyword">define</span> TT_UCR_LEPCHA                          (1L &lt;&lt; 17) /* U+1C00-U+1C4F */
-  /* Bit 114  Ol Chiki */
-#<span class="keyword">define</span> TT_UCR_OL_CHIKI                        (1L &lt;&lt; 18) /* U+1C50-U+1C7F */
-  /* Bit 115  Saurashtra */
-#<span class="keyword">define</span> TT_UCR_SAURASHTRA                      (1L &lt;&lt; 19) /* U+A880-U+A8DF */
-  /* Bit 116  Kayah Li */
-#<span class="keyword">define</span> TT_UCR_KAYAH_LI                        (1L &lt;&lt; 20) /* U+A900-U+A92F */
-  /* Bit 117  Rejang */
-#<span class="keyword">define</span> TT_UCR_REJANG                          (1L &lt;&lt; 21) /* U+A930-U+A95F */
-  /* Bit 118  Cham */
-#<span class="keyword">define</span> TT_UCR_CHAM                            (1L &lt;&lt; 22) /* U+AA00-U+AA5F */
-  /* Bit 119  Ancient Symbols */
-#<span class="keyword">define</span> TT_UCR_ANCIENT_SYMBOLS                 (1L &lt;&lt; 23) /*U+10190-U+101CF*/
-  /* Bit 120  Phaistos Disc */
-#<span class="keyword">define</span> TT_UCR_PHAISTOS_DISC                   (1L &lt;&lt; 24) /*U+101D0-U+101FF*/
-  /* Bit 121  Carian */
-  /*          Lycian */
-  /*          Lydian */
-#<span class="keyword">define</span> TT_UCR_OLD_ANATOLIAN                   (1L &lt;&lt; 25) /*U+102A0-U+102DF*/
-                                                          /*U+10280-U+1029F*/
-                                                          /*U+10920-U+1093F*/
-  /* Bit 122  Domino Tiles  */
-  /*          Mahjong Tiles */
-#<span class="keyword">define</span> TT_UCR_GAME_TILES                      (1L &lt;&lt; 26) /*U+1F030-U+1F09F*/
-                                                          /*U+1F000-U+1F02F*/
-  /* Bit 123-127 Reserved for process-internal usage */
+  /&#42; Bit 96   Buginese &#42;/
+#<span class="keyword">define</span> TT_UCR_BUGINESE                        (1L &lt;&lt;  0) /&#42; U+1A00-U+1A1F &#42;/
+  /&#42; Bit 97   Glagolitic &#42;/
+#<span class="keyword">define</span> TT_UCR_GLAGOLITIC                      (1L &lt;&lt;  1) /&#42; U+2C00-U+2C5F &#42;/
+  /&#42; Bit 98   Tifinagh &#42;/
+#<span class="keyword">define</span> TT_UCR_TIFINAGH                        (1L &lt;&lt;  2) /&#42; U+2D30-U+2D7F &#42;/
+  /&#42; Bit 99   Yijing Hexagram Symbols &#42;/
+#<span class="keyword">define</span> TT_UCR_YIJING                          (1L &lt;&lt;  3) /&#42; U+4DC0-U+4DFF &#42;/
+  /&#42; Bit 100  Syloti Nagri &#42;/
+#<span class="keyword">define</span> TT_UCR_SYLOTI_NAGRI                    (1L &lt;&lt;  4) /&#42; U+A800-U+A82F &#42;/
+  /&#42; Bit 101  Linear B Syllabary &#42;/
+  /&#42;          Linear B Ideograms &#42;/
+  /&#42;          Aegean Numbers     &#42;/
+#<span class="keyword">define</span> TT_UCR_LINEAR_B                        (1L &lt;&lt;  5) /&#42;U+10000-U+1007F&#42;/
+                                                          /&#42;U+10080-U+100FF&#42;/
+                                                          /&#42;U+10100-U+1013F&#42;/
+  /&#42; Bit 102  Ancient Greek Numbers &#42;/
+#<span class="keyword">define</span> TT_UCR_ANCIENT_GREEK_NUMBERS           (1L &lt;&lt;  6) /&#42;U+10140-U+1018F&#42;/
+  /&#42; Bit 103  Ugaritic &#42;/
+#<span class="keyword">define</span> TT_UCR_UGARITIC                        (1L &lt;&lt;  7) /&#42;U+10380-U+1039F&#42;/
+  /&#42; Bit 104  Old Persian &#42;/
+#<span class="keyword">define</span> TT_UCR_OLD_PERSIAN                     (1L &lt;&lt;  8) /&#42;U+103A0-U+103DF&#42;/
+  /&#42; Bit 105  Shavian &#42;/
+#<span class="keyword">define</span> TT_UCR_SHAVIAN                         (1L &lt;&lt;  9) /&#42;U+10450-U+1047F&#42;/
+  /&#42; Bit 106  Osmanya &#42;/
+#<span class="keyword">define</span> TT_UCR_OSMANYA                         (1L &lt;&lt; 10) /&#42;U+10480-U+104AF&#42;/
+  /&#42; Bit 107  Cypriot Syllabary &#42;/
+#<span class="keyword">define</span> TT_UCR_CYPRIOT_SYLLABARY               (1L &lt;&lt; 11) /&#42;U+10800-U+1083F&#42;/
+  /&#42; Bit 108  Kharoshthi &#42;/
+#<span class="keyword">define</span> TT_UCR_KHAROSHTHI                      (1L &lt;&lt; 12) /&#42;U+10A00-U+10A5F&#42;/
+  /&#42; Bit 109  Tai Xuan Jing Symbols &#42;/
+#<span class="keyword">define</span> TT_UCR_TAI_XUAN_JING                   (1L &lt;&lt; 13) /&#42;U+1D300-U+1D35F&#42;/
+  /&#42; Bit 110  Cuneiform                         &#42;/
+  /&#42;          Cuneiform Numbers and Punctuation &#42;/
+#<span class="keyword">define</span> TT_UCR_CUNEIFORM                       (1L &lt;&lt; 14) /&#42;U+12000-U+123FF&#42;/
+                                                          /&#42;U+12400-U+1247F&#42;/
+  /&#42; Bit 111  Counting Rod Numerals &#42;/
+#<span class="keyword">define</span> TT_UCR_COUNTING_ROD_NUMERALS           (1L &lt;&lt; 15) /&#42;U+1D360-U+1D37F&#42;/
+  /&#42; Bit 112  Sundanese &#42;/
+#<span class="keyword">define</span> TT_UCR_SUNDANESE                       (1L &lt;&lt; 16) /&#42; U+1B80-U+1BBF &#42;/
+  /&#42; Bit 113  Lepcha &#42;/
+#<span class="keyword">define</span> TT_UCR_LEPCHA                          (1L &lt;&lt; 17) /&#42; U+1C00-U+1C4F &#42;/
+  /&#42; Bit 114  Ol Chiki &#42;/
+#<span class="keyword">define</span> TT_UCR_OL_CHIKI                        (1L &lt;&lt; 18) /&#42; U+1C50-U+1C7F &#42;/
+  /&#42; Bit 115  Saurashtra &#42;/
+#<span class="keyword">define</span> TT_UCR_SAURASHTRA                      (1L &lt;&lt; 19) /&#42; U+A880-U+A8DF &#42;/
+  /&#42; Bit 116  Kayah Li &#42;/
+#<span class="keyword">define</span> TT_UCR_KAYAH_LI                        (1L &lt;&lt; 20) /&#42; U+A900-U+A92F &#42;/
+  /&#42; Bit 117  Rejang &#42;/
+#<span class="keyword">define</span> TT_UCR_REJANG                          (1L &lt;&lt; 21) /&#42; U+A930-U+A95F &#42;/
+  /&#42; Bit 118  Cham &#42;/
+#<span class="keyword">define</span> TT_UCR_CHAM                            (1L &lt;&lt; 22) /&#42; U+AA00-U+AA5F &#42;/
+  /&#42; Bit 119  Ancient Symbols &#42;/
+#<span class="keyword">define</span> TT_UCR_ANCIENT_SYMBOLS                 (1L &lt;&lt; 23) /&#42;U+10190-U+101CF&#42;/
+  /&#42; Bit 120  Phaistos Disc &#42;/
+#<span class="keyword">define</span> TT_UCR_PHAISTOS_DISC                   (1L &lt;&lt; 24) /&#42;U+101D0-U+101FF&#42;/
+  /&#42; Bit 121  Carian &#42;/
+  /&#42;          Lycian &#42;/
+  /&#42;          Lydian &#42;/
+#<span class="keyword">define</span> TT_UCR_OLD_ANATOLIAN                   (1L &lt;&lt; 25) /&#42;U+102A0-U+102DF&#42;/
+                                                          /&#42;U+10280-U+1029F&#42;/
+                                                          /&#42;U+10920-U+1093F&#42;/
+  /&#42; Bit 122  Domino Tiles  &#42;/
+  /&#42;          Mahjong Tiles &#42;/
+#<span class="keyword">define</span> TT_UCR_GAME_TILES                      (1L &lt;&lt; 26) /&#42;U+1F030-U+1F09F&#42;/
+                                                          /&#42;U+1F000-U+1F02F&#42;/
+  /&#42; Bit 123-127 Reserved for process-internal usage &#42;/
 </pre>
 </div>
 
 
-Possible bit mask values for the &lsquo;ulUnicodeRangeX&rsquo; fields in an SFNT &lsquo;OS/2&rsquo; table.
+Possible bit mask values for the `ulUnicodeRangeX` fields in an SFNT &lsquo;OS/2&rsquo; table.
 
 <hr>
 

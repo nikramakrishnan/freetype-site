@@ -52,7 +52,7 @@ A list of valid values for the &lsquo;charset&rsquo; byte in <a href="../ft2-win
 </td></tr>
 <tr><td class="val" id="ft_winfnt_id_oem">FT_WinFNT_ID_OEM</td><td class="desc">
 <p>From Michael Poettgen &lt;michael@poettgen.de&gt;:</p>
-<p>The &lsquo;Windows Font Mapping&rsquo; article says that FT_WinFNT_ID_OEM is used for the charset of vector fonts, like &lsquo;modern.fon&rsquo;, &lsquo;roman.fon&rsquo;, and &lsquo;script.fon&rsquo; on Windows.</p>
+<p>The &lsquo;Windows Font Mapping&rsquo; article says that FT_WinFNT_ID_OEM is used for the charset of vector fonts, like <code>modern.fon</code>, <code>roman.fon</code>, and <code>script.fon</code> on Windows.</p>
 <p>The &lsquo;CreateFont&rsquo; documentation says: The FT_WinFNT_ID_OEM value specifies a character set that is operating-system dependent.</p>
 <p>The &lsquo;IFIMETRICS&rsquo; documentation from the &lsquo;Windows Driver Development Kit&rsquo; says: This font supports an OEM-specific character set. The OEM character set is system dependent.</p>
 <p>In general OEM, as opposed to ANSI (i.e., cp1252), denotes the second default codepage that most international versions of Windows have. It is one of the OEM codepages from</p>
@@ -168,7 +168,7 @@ Defined in FT_WINFONTS_H (freetype/ftwinfnt.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_WinFNT_HeaderRec_*  <b>FT_WinFNT_Header</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_WinFNT_HeaderRec_&#42;  <b>FT_WinFNT_Header</b>;
 </pre>
 </div>
 
@@ -185,7 +185,7 @@ Defined in FT_WINFONTS_H (freetype/ftwinfnt.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_WinFNT_Header</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>               face,
-                        <a href="../ft2-winfnt_fonts/#ft_winfnt_headerrec">FT_WinFNT_HeaderRec</a>  *aheader );
+                        <a href="../ft2-winfnt_fonts/#ft_winfnt_headerrec">FT_WinFNT_HeaderRec</a>  &#42;aheader );
 </pre>
 </div>
 

@@ -18,7 +18,7 @@ Second, the cache calls, only when needed, a client-provided function to convert
 
 Clients are free to map face IDs to anything else. The most simple usage is to associate them to a (pathname,face_index) pair that is used to call <a href="../ft2-base_interface/#ft_new_face">FT_New_Face</a>. However, more complex schemes are also possible.
 
-Note that for the cache to work correctly, the face ID values must be **persistent**, which means that the contents they point to should not change at runtime, or that their value should not become invalid.
+Note that for the cache to work correctly, the face ID values must be &#42;&#42;persistent&#42;&#42;, which means that the contents they point to should not change at runtime, or that their value should not become invalid.
 
 If this is unavoidable (e.g., when a font is uninstalled at runtime), you should call <a href="../ft2-cache_subsystem/#ftc_manager_removefaceid">FTC_Manager_RemoveFaceID</a> as soon as possible, to let the cache get rid of any references to the old <a href="../ft2-cache_subsystem/#ftc_faceid">FTC_FaceID</a> it may keep internally. Failure to do so will lead to incorrect behaviour or even crashes.
 
@@ -38,14 +38,14 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ManagerRec_*  <b>FTC_Manager</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ManagerRec_&#42;  <b>FTC_Manager</b>;
 </pre>
 </div>
 
 
 This object corresponds to one instance of the cache-subsystem. It is used to cache one or more <a href="../ft2-base_interface/#ft_face">FT_Face</a> objects, along with corresponding <a href="../ft2-base_interface/#ft_size">FT_Size</a> objects.
 
-The manager intentionally limits the total number of opened <a href="../ft2-base_interface/#ft_face">FT_Face</a> and <a href="../ft2-base_interface/#ft_size">FT_Size</a> objects to control memory usage. See the &lsquo;max_faces&rsquo; and &lsquo;max_sizes&rsquo; parameters of <a href="../ft2-cache_subsystem/#ftc_manager_new">FTC_Manager_New</a>.
+The manager intentionally limits the total number of opened <a href="../ft2-base_interface/#ft_face">FT_Face</a> and <a href="../ft2-base_interface/#ft_size">FT_Size</a> objects to control memory usage. See the `max_faces` and `max_sizes` parameters of <a href="../ft2-cache_subsystem/#ftc_manager_new">FTC_Manager_New</a>.
 
 The manager is also used to cache &lsquo;nodes&rsquo; of various types while limiting their total memory usage.
 
@@ -87,10 +87,10 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <a href="../ft2-basic_types/#ft_error">FT_Error</a>
-  (*<b>FTC_Face_Requester</b>)( <a href="../ft2-cache_subsystem/#ftc_faceid">FTC_FaceID</a>  face_id,
+  (&#42;<b>FTC_Face_Requester</b>)( <a href="../ft2-cache_subsystem/#ftc_faceid">FTC_FaceID</a>  face_id,
                          <a href="../ft2-base_interface/#ft_library">FT_Library</a>  library,
                          <a href="../ft2-basic_types/#ft_pointer">FT_Pointer</a>  req_data,
-                         <a href="../ft2-base_interface/#ft_face">FT_Face</a>*    aface );
+                         <a href="../ft2-base_interface/#ft_face">FT_Face</a>&#42;    aface );
 </pre>
 </div>
 
@@ -123,7 +123,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-The third parameter &lsquo;req_data&rsquo; is the same as the one passed by the client when <a href="../ft2-cache_subsystem/#ftc_manager_new">FTC_Manager_New</a> is called.
+The third parameter `req_data` is the same as the one passed by the client when <a href="../ft2-cache_subsystem/#ftc_manager_new">FTC_Manager_New</a> is called.
 
 The face requester should not perform funny things on the returned face object, like creating a new <a href="../ft2-base_interface/#ft_size">FT_Size</a> for it, or setting a transformation through <a href="../ft2-base_interface/#ft_set_transform">FT_Set_Transform</a>!
 
@@ -142,7 +142,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
                    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>            max_bytes,
                    <a href="../ft2-cache_subsystem/#ftc_face_requester">FTC_Face_Requester</a>  requester,
                    <a href="../ft2-basic_types/#ft_pointer">FT_Pointer</a>          req_data,
-                   <a href="../ft2-cache_subsystem/#ftc_manager">FTC_Manager</a>        *amanager );
+                   <a href="../ft2-cache_subsystem/#ftc_manager">FTC_Manager</a>        &#42;amanager );
 </pre>
 </div>
 
@@ -239,7 +239,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FTC_Manager_LookupFace</b>( <a href="../ft2-cache_subsystem/#ftc_manager">FTC_Manager</a>  manager,
                           <a href="../ft2-cache_subsystem/#ftc_faceid">FTC_FaceID</a>   face_id,
-                          <a href="../ft2-base_interface/#ft_face">FT_Face</a>     *aface );
+                          <a href="../ft2-base_interface/#ft_face">FT_Face</a>     &#42;aface );
 </pre>
 </div>
 
@@ -277,7 +277,7 @@ Never change the face's transformation matrix (i.e., never call the <a href="../
 
 When you perform a lookup, out-of-memory errors are detected _within_ the lookup and force incremental flushes of the cache until enough memory is released for the lookup to succeed.
 
-If a lookup fails with &lsquo;FT_Err_Out_Of_Memory&rsquo; the cache has already been completely flushed, and still no memory was available for the operation.
+If a lookup fails with `FT_Err_Out_Of_Memory` the cache has already been completely flushed, and still no memory was available for the operation.
 
 <hr>
 
@@ -290,7 +290,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FTC_Manager_LookupSize</b>( <a href="../ft2-cache_subsystem/#ftc_manager">FTC_Manager</a>  manager,
                           <a href="../ft2-cache_subsystem/#ftc_scaler">FTC_Scaler</a>   scaler,
-                          <a href="../ft2-base_interface/#ft_size">FT_Size</a>     *asize );
+                          <a href="../ft2-base_interface/#ft_size">FT_Size</a>     &#42;asize );
 </pre>
 </div>
 
@@ -322,13 +322,13 @@ FreeType error code. 0&nbsp;means success.
 
 The returned <a href="../ft2-base_interface/#ft_size">FT_Size</a> object is always owned by the manager. You should never try to discard it by yourself.
 
-You can access the parent <a href="../ft2-base_interface/#ft_face">FT_Face</a> object simply as &lsquo;size-&gt;face&rsquo; if you need it. Note that this object is also owned by the manager.
+You can access the parent <a href="../ft2-base_interface/#ft_face">FT_Face</a> object simply as `size->face` if you need it. Note that this object is also owned by the manager.
 
 <h4>note</h4>
 
 When you perform a lookup, out-of-memory errors are detected _within_ the lookup and force incremental flushes of the cache until enough memory is released for the lookup to succeed.
 
-If a lookup fails with &lsquo;FT_Err_Out_Of_Memory&rsquo; the cache has already been completely flushed, and still no memory is available for the operation.
+If a lookup fails with `FT_Err_Out_Of_Memory` the cache has already been completely flushed, and still no memory is available for the operation.
 
 <hr>
 
@@ -359,9 +359,9 @@ A special function used to indicate to the cache manager that a given <a href=".
 
 <h4>note</h4>
 
-This function flushes all nodes from the cache corresponding to this &lsquo;face_id&rsquo;, with the exception of nodes with a non-null reference count.
+This function flushes all nodes from the cache corresponding to this `face_id`, with the exception of nodes with a non-null reference count.
 
-Such nodes are however modified internally so as to never appear in later lookups with the same &lsquo;face_id&rsquo; value, and to be immediately destroyed when released by all their users.
+Such nodes are however modified internally so as to never appear in later lookups with the same `face_id` value, and to be immediately destroyed when released by all their users.
 
 <hr>
 
@@ -371,7 +371,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_NodeRec_*  <b>FTC_Node</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_NodeRec_&#42;  <b>FTC_Node</b>;
 </pre>
 </div>
 
@@ -417,7 +417,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ImageCacheRec_*  <b>FTC_ImageCache</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ImageCacheRec_&#42;  <b>FTC_ImageCache</b>;
 </pre>
 </div>
 
@@ -434,7 +434,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FTC_ImageCache_New</b>( <a href="../ft2-cache_subsystem/#ftc_manager">FTC_Manager</a>      manager,
-                      <a href="../ft2-cache_subsystem/#ftc_imagecache">FTC_ImageCache</a>  *acache );
+                      <a href="../ft2-cache_subsystem/#ftc_imagecache">FTC_ImageCache</a>  &#42;acache );
 </pre>
 </div>
 
@@ -471,8 +471,8 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
   <b>FTC_ImageCache_Lookup</b>( <a href="../ft2-cache_subsystem/#ftc_imagecache">FTC_ImageCache</a>  cache,
                          <a href="../ft2-cache_subsystem/#ftc_imagetype">FTC_ImageType</a>   type,
                          <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>         gindex,
-                         <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>       *aglyph,
-                         <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>       *anode );
+                         <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>       &#42;aglyph,
+                         <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>       &#42;anode );
 </pre>
 </div>
 
@@ -522,7 +522,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_SBitRec_*  <b>FTC_SBit</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_SBitRec_&#42;  <b>FTC_SBit</b>;
 </pre>
 </div>
 
@@ -537,7 +537,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_SBitCacheRec_*  <b>FTC_SBitCache</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_SBitCacheRec_&#42;  <b>FTC_SBitCache</b>;
 </pre>
 </div>
 
@@ -554,7 +554,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FTC_SBitCache_New</b>( <a href="../ft2-cache_subsystem/#ftc_manager">FTC_Manager</a>     manager,
-                     <a href="../ft2-cache_subsystem/#ftc_sbitcache">FTC_SBitCache</a>  *acache );
+                     <a href="../ft2-cache_subsystem/#ftc_sbitcache">FTC_SBitCache</a>  &#42;acache );
 </pre>
 </div>
 
@@ -591,8 +591,8 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
   <b>FTC_SBitCache_Lookup</b>( <a href="../ft2-cache_subsystem/#ftc_sbitcache">FTC_SBitCache</a>    cache,
                         <a href="../ft2-cache_subsystem/#ftc_imagetype">FTC_ImageType</a>    type,
                         <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>          gindex,
-                        <a href="../ft2-cache_subsystem/#ftc_sbit">FTC_SBit</a>        *sbit,
-                        <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>        *anode );
+                        <a href="../ft2-cache_subsystem/#ftc_sbit">FTC_SBit</a>        &#42;sbit,
+                        <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>        &#42;anode );
 </pre>
 </div>
 
@@ -644,7 +644,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_CMapCacheRec_*  <b>FTC_CMapCache</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_CMapCacheRec_&#42;  <b>FTC_CMapCache</b>;
 </pre>
 </div>
 
@@ -661,7 +661,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FTC_CMapCache_New</b>( <a href="../ft2-cache_subsystem/#ftc_manager">FTC_Manager</a>     manager,
-                     <a href="../ft2-cache_subsystem/#ftc_cmapcache">FTC_CMapCache</a>  *acache );
+                     <a href="../ft2-cache_subsystem/#ftc_cmapcache">FTC_CMapCache</a>  &#42;acache );
 </pre>
 </div>
 
@@ -787,7 +787,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ScalerRec_*  <b>FTC_Scaler</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ScalerRec_&#42;  <b>FTC_Scaler</b>;
 </pre>
 </div>
 
@@ -840,7 +840,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ImageTypeRec_*  <b>FTC_ImageType</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ImageTypeRec_&#42;  <b>FTC_ImageType</b>;
 </pre>
 </div>
 
@@ -860,8 +860,8 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
                                <a href="../ft2-cache_subsystem/#ftc_scaler">FTC_Scaler</a>      scaler,
                                <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>        load_flags,
                                <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>         gindex,
-                               <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>       *aglyph,
-                               <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>       *anode );
+                               <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>       &#42;aglyph,
+                               <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>       &#42;anode );
 </pre>
 </div>
 
@@ -929,7 +929,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
     <a href="../ft2-basic_types/#ft_char">FT_Char</a>   xadvance;
     <a href="../ft2-basic_types/#ft_char">FT_Char</a>   yadvance;
 
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*  buffer;
+    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>&#42;  buffer;
 
   } <b>FTC_SBitRec</b>;
 </pre>
@@ -985,8 +985,8 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
                               <a href="../ft2-cache_subsystem/#ftc_scaler">FTC_Scaler</a>     scaler,
                               <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>       load_flags,
                               <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>        gindex,
-                              <a href="../ft2-cache_subsystem/#ftc_sbit">FTC_SBit</a>      *sbit,
-                              <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>      *anode );
+                              <a href="../ft2-cache_subsystem/#ftc_sbit">FTC_SBit</a>      &#42;sbit,
+                              <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>      &#42;anode );
 </pre>
 </div>
 

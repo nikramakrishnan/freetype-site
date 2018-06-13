@@ -52,7 +52,7 @@ Defined in FT_BDF_H (freetype/ftbdf.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> BDF_PropertyRec_*  <b>BDF_Property</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> BDF_PropertyRec_&#42;  <b>BDF_Property</b>;
 </pre>
 </div>
 
@@ -71,7 +71,7 @@ Defined in FT_BDF_H (freetype/ftbdf.h).
   {
     <a href="../ft2-bdf_fonts/#bdf_propertytype">BDF_PropertyType</a>  type;
     <span class="keyword">union</span> {
-      <span class="keyword">const</span> <span class="keyword">char</span>*     atom;
+      <span class="keyword">const</span> <span class="keyword">char</span>&#42;     atom;
       <a href="../ft2-basic_types/#ft_int32">FT_Int32</a>        integer;
       <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>       cardinal;
 
@@ -110,8 +110,8 @@ Defined in FT_BDF_H (freetype/ftbdf.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_BDF_Charset_ID</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>       face,
-                         <span class="keyword">const</span> <span class="keyword">char</span>*  *acharset_encoding,
-                         <span class="keyword">const</span> <span class="keyword">char</span>*  *acharset_registry );
+                         <span class="keyword">const</span> <span class="keyword">char</span>&#42;  &#42;acharset_encoding,
+                         <span class="keyword">const</span> <span class="keyword">char</span>&#42;  &#42;acharset_registry );
 </pre>
 </div>
 
@@ -153,8 +153,8 @@ Defined in FT_BDF_H (freetype/ftbdf.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_BDF_Property</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>           face,
-                       <span class="keyword">const</span> <span class="keyword">char</span>*       prop_name,
-                       <a href="../ft2-bdf_fonts/#bdf_propertyrec">BDF_PropertyRec</a>  *aproperty );
+                       <span class="keyword">const</span> <span class="keyword">char</span>&#42;       prop_name,
+                       <a href="../ft2-bdf_fonts/#bdf_propertyrec">BDF_PropertyRec</a>  &#42;aproperty );
 </pre>
 </div>
 
@@ -186,11 +186,11 @@ FreeType error code. 0&nbsp;means success.
 
 This function works with BDF _and_ PCF fonts. It returns an error otherwise. It also returns an error if the property is not in the font.
 
-A &lsquo;property&rsquo; is a either key-value pair within the STARTPROPERTIES ... ENDPROPERTIES block of a BDF font or a key-value pair from the &lsquo;info-&gt;props&rsquo; array within a &lsquo;FontRec&rsquo; structure of a PCF font.
+A &lsquo;property&rsquo; is a either key-value pair within the STARTPROPERTIES ... ENDPROPERTIES block of a BDF font or a key-value pair from the `info->props` array within a &lsquo;FontRec&rsquo; structure of a PCF font.
 
 Integer properties are always stored as &lsquo;signed&rsquo; within PCF fonts; consequently, <a href="../ft2-bdf_fonts/#bdf_propertytype">BDF_PROPERTY_TYPE_CARDINAL</a> is a possible return value for BDF fonts only.
 
-In case of error, &lsquo;aproperty-&gt;type&rsquo; is always set to <a href="../ft2-bdf_fonts/#bdf_propertytype">BDF_PROPERTY_TYPE_NONE</a>.
+In case of error, `aproperty->type` is always set to <a href="../ft2-bdf_fonts/#bdf_propertytype">BDF_PROPERTY_TYPE_NONE</a>.
 
 <hr>
 

@@ -100,6 +100,9 @@
 <tr><td class="link"><a href="../ft2-parameter_tags/">Parameter Tags</a></td><td class="desc">
 <p>Macros for driver property and font loading parameter tags.</p>
 </td></tr>
+<tr><td class="link"><a href="../ft2-lcd_rendering/">Subpixel Rendering</a></td><td class="desc">
+<p>API to control subpixel rendering.</p>
+</td></tr>
 </table>
 ## Cache Sub-System
 
@@ -147,9 +150,6 @@
 <tr><td class="link"><a href="../ft2-bzip2/">BZIP2 Streams</a></td><td class="desc">
 <p>Using bzip2-compressed font files.</p>
 </td></tr>
-<tr><td class="link"><a href="../ft2-lcd_rendering/">Subpixel Rendering</a></td><td class="desc">
-<p>API to control subpixel rendering.</p>
-</td></tr>
 </table>
 ## Error Codes
 
@@ -181,4 +181,4 @@
 </td></tr>
 </table>
 ## [Global Index](ft2-index.md)
-<div class="timestamp">generated on Tue Jun 12 11:44:22 2018 UTC</div>
+<div class="timestamp">generated on Wed Jun 13 19:39:31 2018 UTC</div>

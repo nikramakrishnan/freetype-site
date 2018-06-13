@@ -14,12 +14,12 @@ Defined in FT_FONT_FORMATS_H (freetype/ftfntfmt.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <span class="keyword">const</span> <span class="keyword">char</span>* )
+  FT_EXPORT( <span class="keyword">const</span> <span class="keyword">char</span>&#42; )
   <b>FT_Get_Font_Format</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>  face );
 
 
-  /* deprecated */
-  FT_EXPORT( <span class="keyword">const</span> <span class="keyword">char</span>* )
+  /&#42; deprecated &#42;/
+  FT_EXPORT( <span class="keyword">const</span> <span class="keyword">char</span>&#42; )
   FT_Get_X11_Font_Format( <a href="../ft2-base_interface/#ft_face">FT_Face</a>  face );
 </pre>
 </div>
@@ -42,7 +42,7 @@ Font format string. NULL in case of error.
 
 <h4>note</h4>
 
-A deprecated name for the same function is &lsquo;FT_Get_X11_Font_Format&rsquo;.
+A deprecated name for the same function is `FT_Get_X11_Font_Format`.
 
 <hr>
 

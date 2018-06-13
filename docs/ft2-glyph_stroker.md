@@ -16,7 +16,7 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_StrokerRec_*  <b>FT_Stroker</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_StrokerRec_&#42;  <b>FT_Stroker</b>;
 </pre>
 </div>
 
@@ -144,7 +144,7 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-glyph_stroker/#ft_strokerborder">FT_StrokerBorder</a> )
-  <b>FT_Outline_GetInsideBorder</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline );
+  <b>FT_Outline_GetInsideBorder</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline );
 </pre>
 </div>
 
@@ -171,7 +171,7 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-glyph_stroker/#ft_strokerborder">FT_StrokerBorder</a> )
-  <b>FT_Outline_GetOutsideBorder</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline );
+  <b>FT_Outline_GetOutsideBorder</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline );
 </pre>
 </div>
 
@@ -198,7 +198,7 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Glyph_Stroke</b>( <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>    *pglyph,
+  <b>FT_Glyph_Stroke</b>( <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>    &#42;pglyph,
                    <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>   stroker,
                    <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>      destroy );
 </pre>
@@ -243,7 +243,7 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Glyph_StrokeBorder</b>( <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>    *pglyph,
+  <b>FT_Glyph_StrokeBorder</b>( <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>    &#42;pglyph,
                          <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>   stroker,
                          <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>      inside,
                          <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>      destroy );
@@ -293,7 +293,7 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Stroker_New</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>   library,
-                  <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  *astroker );
+                  <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  &#42;astroker );
 </pre>
 </div>
 
@@ -396,7 +396,7 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Stroker_ParseOutline</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>   stroker,
-                           <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline,
+                           <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline,
                            <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>      opened );
 </pre>
 </div>
@@ -462,7 +462,7 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Stroker_BeginSubPath</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  stroker,
-                           <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  to,
+                           <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  to,
                            <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>     open );
 </pre>
 </div>
@@ -532,7 +532,7 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Stroker_LineTo</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  stroker,
-                     <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  to );
+                     <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  to );
 </pre>
 </div>
 
@@ -567,8 +567,8 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Stroker_ConicTo</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  stroker,
-                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  control,
-                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  to );
+                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  control,
+                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  to );
 </pre>
 </div>
 
@@ -606,9 +606,9 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Stroker_CubicTo</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  stroker,
-                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  control1,
-                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  control2,
-                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  to );
+                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  control1,
+                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  control2,
+                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  to );
 </pre>
 </div>
 
@@ -650,8 +650,8 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Stroker_GetBorderCounts</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>        stroker,
                               <a href="../ft2-glyph_stroker/#ft_strokerborder">FT_StrokerBorder</a>  border,
-                              <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>          *anum_points,
-                              <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>          *anum_contours );
+                              <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>          &#42;anum_points,
+                              <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>          &#42;anum_contours );
 </pre>
 </div>
 
@@ -701,7 +701,7 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
   FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_Stroker_ExportBorder</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>        stroker,
                            <a href="../ft2-glyph_stroker/#ft_strokerborder">FT_StrokerBorder</a>  border,
-                           <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*       outline );
+                           <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;       outline );
 </pre>
 </div>
 
@@ -743,8 +743,8 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Stroker_GetCounts</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  stroker,
-                        <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    *anum_points,
-                        <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    *anum_contours );
+                        <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    &#42;anum_points,
+                        <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    &#42;anum_contours );
 </pre>
 </div>
 
@@ -782,7 +782,7 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_Stroker_Export</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>   stroker,
-                     <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline );
+                     <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline );
 </pre>
 </div>
 

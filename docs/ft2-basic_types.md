@@ -29,7 +29,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*  <b>FT_Bytes</b>;
+  <span class="keyword">typedef</span> <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>&#42;  <b>FT_Bytes</b>;
 </pre>
 </div>
 
@@ -247,7 +247,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 </div>
 
 
-This is equivalent to the ANSI&nbsp;C &lsquo;size_t&rsquo; type, i.e., the largest _unsigned_ integer type used to express a file size or position, or a memory block size.
+This is equivalent to the ANSI&nbsp;C `size_t` type, i.e., the largest _unsigned_ integer type used to express a file size or position, or a memory block size.
 
 <hr>
 
@@ -262,7 +262,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 </div>
 
 
-This is equivalent to the ANSI&nbsp;C &lsquo;ptrdiff_t&rsquo; type, i.e., the largest _signed_ integer type used to express the distance between two pointers.
+This is equivalent to the ANSI&nbsp;C `ptrdiff_t` type, i.e., the largest _signed_ integer type used to express the distance between two pointers.
 
 <hr>
 
@@ -332,7 +332,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">void</span>*  <b>FT_Pointer</b>;
+  <span class="keyword">typedef</span> <span class="keyword">void</span>&#42;  <b>FT_Pointer</b>;
 </pre>
 </div>
 
@@ -424,9 +424,9 @@ A structure used to hold an outline's bounding box, i.e., the coordinates of its
 
 The bounding box is specified with the coordinates of the lower left and the upper right corner. In PostScript, those values are often called (llx,lly) and (urx,ury), respectively.
 
-If &lsquo;yMin&rsquo; is negative, this value gives the glyph's descender. Otherwise, the glyph doesn't descend below the baseline. Similarly, if &lsquo;ymax&rsquo; is positive, this value gives the glyph's ascender.
+If `yMin` is negative, this value gives the glyph's descender. Otherwise, the glyph doesn't descend below the baseline. Similarly, if &lsquo;ymax&rsquo; is positive, this value gives the glyph's ascender.
 
-&lsquo;xMin&rsquo; gives the horizontal distance from the glyph's origin to the left edge of the glyph's bounding box. If &lsquo;xMin&rsquo; is negative, the glyph extends to the left of the origin.
+`xMin` gives the horizontal distance from the glyph's origin to the left edge of the glyph's bounding box. If `xMin` is negative, the glyph extends to the left of the origin.
 
 <hr>
 
@@ -476,7 +476,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">signed</span> <span class="keyword">short</span>  <b>FT_FWord</b>;   /* distance in FUnits */
+  <span class="keyword">typedef</span> <span class="keyword">signed</span> <span class="keyword">short</span>  <b>FT_FWord</b>;   /&#42; distance in FUnits &#42;/
 </pre>
 </div>
 
@@ -491,7 +491,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">short</span>  <b>FT_UFWord</b>;  /* <span class="keyword">unsigned</span> distance */
+  <span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">short</span>  <b>FT_UFWord</b>;  /&#42; <span class="keyword">unsigned</span> distance &#42;/
 </pre>
 </div>
 
@@ -568,7 +568,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Data_
   {
-    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*  pointer;
+    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>&#42;  pointer;
     <a href="../ft2-basic_types/#ft_int">FT_Int</a>          length;
 
   } <b>FT_Data</b>;
@@ -610,7 +610,7 @@ This macro converts four-letter tags that are used to label TrueType tables into
 
 <h4>note</h4>
 
-The produced values **must** be 32-bit integers. Don't redefine this macro.
+The produced values &#42;&#42;must&#42;&#42; be 32-bit integers. Don't redefine this macro.
 
 <hr>
 
@@ -622,7 +622,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Generic_
   {
-    <span class="keyword">void</span>*                 data;
+    <span class="keyword">void</span>&#42;                 data;
     <a href="../ft2-basic_types/#ft_generic_finalizer">FT_Generic_Finalizer</a>  finalizer;
 
   } <b>FT_Generic</b>;
@@ -654,7 +654,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">void</span>  (*<b>FT_Generic_Finalizer</b>)( <span class="keyword">void</span>*  object );
+  <span class="keyword">typedef</span> <span class="keyword">void</span>  (&#42;<b>FT_Generic_Finalizer</b>)( <span class="keyword">void</span>&#42;  object );
 </pre>
 </div>
 
@@ -678,18 +678,18 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
     <span class="keyword">unsigned</span> <span class="keyword">int</span>    rows;
     <span class="keyword">unsigned</span> <span class="keyword">int</span>    width;
     <span class="keyword">int</span>             pitch;
-    <span class="keyword">unsigned</span> <span class="keyword">char</span>*  buffer;
+    <span class="keyword">unsigned</span> <span class="keyword">char</span>&#42;  buffer;
     <span class="keyword">unsigned</span> <span class="keyword">short</span>  num_grays;
     <span class="keyword">unsigned</span> <span class="keyword">char</span>   pixel_mode;
     <span class="keyword">unsigned</span> <span class="keyword">char</span>   palette_mode;
-    <span class="keyword">void</span>*           palette;
+    <span class="keyword">void</span>&#42;           palette;
 
   } <b>FT_Bitmap</b>;
 </pre>
 </div>
 
 
-A structure used to describe a bitmap or pixmap to the raster. Note that we now manage pixmaps of various depths through the &lsquo;pixel_mode&rsquo; field.
+A structure used to describe a bitmap or pixmap to the raster. Note that we now manage pixmaps of various depths through the `pixel_mode` field.
 
 <h4>fields</h4>
 <table class="fields">
@@ -703,7 +703,7 @@ A structure used to describe a bitmap or pixmap to the raster. Note that we now 
 <p>The pitch's absolute value is the number of bytes taken by one bitmap row, including padding. However, the pitch is positive when the bitmap has a &lsquo;down&rsquo; flow, and negative when it has an &lsquo;up&rsquo; flow. In all cases, the pitch is an offset to add to a bitmap pointer in order to go down one row.</p>
 <p>Note that &lsquo;padding&rsquo; means the alignment of a bitmap to a byte border, and FreeType functions normally align to the smallest possible integer value.</p>
 <p>For the B/W rasterizer, &lsquo;pitch&rsquo; is always an even number.</p>
-<p>To change the pitch of a bitmap (say, to make it a multiple of 4), use <a href="../ft2-bitmap_handling/#ft_bitmap_convert">FT_Bitmap_Convert</a>. Alternatively, you might use callback functions to directly render to the application's surface; see the file &lsquo;example2.cpp&rsquo; in the tutorial for a demonstration.</p>
+<p>To change the pitch of a bitmap (say, to make it a multiple of 4), use <a href="../ft2-bitmap_handling/#ft_bitmap_convert">FT_Bitmap_Convert</a>. Alternatively, you might use callback functions to directly render to the application's surface; see the file <code>example2.cpp</code> in the tutorial for a demonstration.</p>
 </td></tr>
 <tr><td class="val" id="buffer">buffer</td><td class="desc">
 <p>A typeless pointer to the bitmap buffer. This value should be aligned on 32-bit boundaries in most cases.</p>
@@ -741,13 +741,13 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
     <a href="../ft2-basic_types/#ft_pixel_mode_lcd_v">FT_PIXEL_MODE_LCD_V</a>,
     <a href="../ft2-basic_types/#ft_pixel_mode_bgra">FT_PIXEL_MODE_BGRA</a>,
 
-    FT_PIXEL_MODE_MAX      /* do not remove */
+    FT_PIXEL_MODE_MAX      /&#42; do not remove &#42;/
 
   } <b>FT_Pixel_Mode</b>;
 
 
-  /* these constants are deprecated; use the corresponding `<b>FT_Pixel_Mode</b>' */
-  /* values instead.                                                       */
+  /&#42; these constants are deprecated; use the corresponding `<b>FT_Pixel_Mode</b>' &#42;/
+  /&#42; values instead.                                                       &#42;/
 #<span class="keyword">define</span> ft_pixel_mode_none   <a href="../ft2-basic_types/#ft_pixel_mode_none">FT_PIXEL_MODE_NONE</a>
 #<span class="keyword">define</span> ft_pixel_mode_mono   <a href="../ft2-basic_types/#ft_pixel_mode_mono">FT_PIXEL_MODE_MONO</a>
 #<span class="keyword">define</span> ft_pixel_mode_grays  <a href="../ft2-basic_types/#ft_pixel_mode_gray">FT_PIXEL_MODE_GRAY</a>
@@ -768,7 +768,7 @@ An enumeration type used to describe the format of pixels in a given bitmap. Not
 <p>A monochrome bitmap, using 1&nbsp;bit per pixel. Note that pixels are stored in most-significant order (MSB), which means that the left-most pixel in a byte has value 128.</p>
 </td></tr>
 <tr><td class="val" id="ft_pixel_mode_gray">FT_PIXEL_MODE_GRAY</td><td class="desc">
-<p>An 8-bit bitmap, generally used to represent anti-aliased glyph images. Each pixel is stored in one byte. Note that the number of &lsquo;gray&rsquo; levels is stored in the &lsquo;num_grays&rsquo; field of the <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a> structure (it generally is 256).</p>
+<p>An 8-bit bitmap, generally used to represent anti-aliased glyph images. Each pixel is stored in one byte. Note that the number of &lsquo;gray&rsquo; levels is stored in the <code>num_grays</code> field of the <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a> structure (it generally is 256).</p>
 </td></tr>
 <tr><td class="val" id="ft_pixel_mode_gray2">FT_PIXEL_MODE_GRAY2</td><td class="desc">
 <p>A 2-bit per pixel bitmap, used to represent embedded anti-aliased bitmaps in font files according to the OpenType specification. We haven't found a single font using this format, however.</p>
@@ -807,8 +807,8 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
   } <b>FT_Glyph_Format</b>;
 
 
-  /* these constants are deprecated; use the corresponding */
-  /* `<b>FT_Glyph_Format</b>' values instead.                     */
+  /&#42; these constants are deprecated; use the corresponding &#42;/
+  /* `<b>FT_Glyph_Format</b>' values instead.                     &#42;/
 #<span class="keyword">define</span> ft_glyph_format_none       <a href="../ft2-basic_types/#ft_glyph_format_none">FT_GLYPH_FORMAT_NONE</a>
 #<span class="keyword">define</span> ft_glyph_format_composite  <a href="../ft2-basic_types/#ft_glyph_format_composite">FT_GLYPH_FORMAT_COMPOSITE</a>
 #<span class="keyword">define</span> ft_glyph_format_bitmap     <a href="../ft2-basic_types/#ft_glyph_format_bitmap">FT_GLYPH_FORMAT_BITMAP</a>
@@ -853,7 +853,7 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
                     ( (<span class="keyword">unsigned</span> <span class="keyword">long</span>)_x2 &lt;&lt; 16 ) | \
                     ( (<span class="keyword">unsigned</span> <span class="keyword">long</span>)_x3 &lt;&lt; 8  ) | \
                       (<span class="keyword">unsigned</span> <span class="keyword">long</span>)_x4         )
-#<span class="keyword">endif</span> /* <b>FT_IMAGE_TAG</b> */
+#<span class="keyword">endif</span> /&#42; <b>FT_IMAGE_TAG</b> &#42;/
 </pre>
 </div>
 

@@ -6,13 +6,13 @@
 
 ## Synopsis
 
-The header file &lsquo;fterrors.h&rsquo; (which is automatically included by &lsquo;freetype.h&rsquo; defines the handling of FreeType's enumeration constants. It can also be used to generate error message strings with a small macro trick explained below.
+The header file `fterrors.h` (which is automatically included by `freetype.h` defines the handling of FreeType's enumeration constants. It can also be used to generate error message strings with a small macro trick explained below.
 
-**Error Formats**
+&#42;&#42;Error Formats&#42;&#42;
 
-The configuration macro FT_CONFIG_OPTION_USE_MODULE_ERRORS can be defined in &lsquo;ftoption.h&rsquo; in order to make the higher byte indicate the module where the error has happened (this is not compatible with standard builds of FreeType&nbsp;2, however). See the file &lsquo;ftmoderr.h&rsquo; for more details.
+The configuration macro FT_CONFIG_OPTION_USE_MODULE_ERRORS can be defined in `ftoption.h` in order to make the higher byte indicate the module where the error has happened (this is not compatible with standard builds of FreeType&nbsp;2, however). See the file `ftmoderr.h` for more details.
 
-**Error Message Strings**
+&#42;&#42;Error Message Strings&#42;&#42;
 
 Error definitions are set up with special macros that allow client applications to build a table of error message strings. The strings are not included in a normal build of FreeType&nbsp;2 to save space (most client applications do not use them).
 
@@ -26,14 +26,14 @@ This macro is called before anything else to define the start of the error list.
   FT_ERROR_DEF( e, v, s )
 ```
 
-This macro is called to define one single error. &lsquo;e&rsquo; is the error code identifier (e.g., &lsquo;Invalid_Argument&rsquo;), &lsquo;v&rsquo; is the error's numerical value, and &lsquo;s&rsquo; is the corresponding error string.
+This macro is called to define one single error. &lsquo;e&rsquo; is the error code identifier (e.g., `Invalid_Argument`), &lsquo;v&rsquo; is the error's numerical value, and &lsquo;s&rsquo; is the corresponding error string.
 ```
   FT_ERROR_END_LIST
 ```
 
 This macro ends the list.
 
-Additionally, you have to undefine &lsquo;FTERRORS_H_&rsquo; before #including this file.
+Additionally, you have to undefine `FTERRORS_H_` before #including this file.
 
 Here is a simple example.
 ```
@@ -51,5 +51,5 @@ Here is a simple example.
   #include FT_ERRORS_H
 ```
 
-Note that &lsquo;FT_Err_Ok&rsquo; is _not_ defined with &lsquo;FT_ERRORDEF&rsquo; but with &lsquo;FT_NOERRORDEF&rsquo;; it is always zero.
+Note that `FT_Err_Ok` is _not_ defined with `FT_ERRORDEF` but with `FT_NOERRORDEF`; it is always zero.
 

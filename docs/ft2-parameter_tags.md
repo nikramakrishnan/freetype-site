@@ -17,7 +17,7 @@ This section contains macros for the <a href="../ft2-base_interface/#ft_paramete
           <a href="../ft2-basic_types/#ft_make_tag">FT_MAKE_TAG</a>( 'i', 'g', 'p', 'f' )
 
 
-  /* this constant is deprecated */
+  /&#42; this constant is deprecated &#42;/
 #<span class="keyword">define</span> FT_PARAM_TAG_IGNORE_PREFERRED_FAMILY \
           <b>FT_PARAM_TAG_IGNORE_TYPOGRAPHIC_FAMILY</b>
 </pre>
@@ -41,7 +41,7 @@ A tag for <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a> to make
           <a href="../ft2-basic_types/#ft_make_tag">FT_MAKE_TAG</a>( 'i', 'g', 'p', 's' )
 
 
-  /* this constant is deprecated */
+  /&#42; this constant is deprecated &#42;/
 #<span class="keyword">define</span> FT_PARAM_TAG_IGNORE_PREFERRED_SUBFAMILY \
           <b>FT_PARAM_TAG_IGNORE_TYPOGRAPHIC_SUBFAMILY</b>
 </pre>

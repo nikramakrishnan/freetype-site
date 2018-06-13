@@ -18,7 +18,7 @@ Defined in FT_INCREMENTAL_H (freetype/ftincrem.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_IncrementalRec_*  <b>FT_Incremental</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_IncrementalRec_&#42;  <b>FT_Incremental</b>;
 </pre>
 </div>
 
@@ -44,7 +44,7 @@ Defined in FT_INCREMENTAL_H (freetype/ftincrem.h).
     <a href="../ft2-basic_types/#ft_long">FT_Long</a>  bearing_x;
     <a href="../ft2-basic_types/#ft_long">FT_Long</a>  bearing_y;
     <a href="../ft2-basic_types/#ft_long">FT_Long</a>  advance;
-    <a href="../ft2-basic_types/#ft_long">FT_Long</a>  advance_v;     /* since 2.3.12 */
+    <a href="../ft2-basic_types/#ft_long">FT_Long</a>  advance_v;     /&#42; since 2.3.12 &#42;/
 
   } <b>FT_Incremental_MetricsRec</b>;
 </pre>
@@ -81,7 +81,7 @@ Defined in FT_INCREMENTAL_H (freetype/ftincrem.h).
 
 <div class = "codehilite">
 <pre>
-   <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_Incremental_MetricsRec_*  <b>FT_Incremental_Metrics</b>;
+   <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_Incremental_MetricsRec_&#42;  <b>FT_Incremental_Metrics</b>;
 </pre>
 </div>
 
@@ -97,16 +97,16 @@ Defined in FT_INCREMENTAL_H (freetype/ftincrem.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <a href="../ft2-basic_types/#ft_error">FT_Error</a>
-  (*<b>FT_Incremental_GetGlyphDataFunc</b>)( <a href="../ft2-incremental/#ft_incremental">FT_Incremental</a>  incremental,
+  (&#42;<b>FT_Incremental_GetGlyphDataFunc</b>)( <a href="../ft2-incremental/#ft_incremental">FT_Incremental</a>  incremental,
                                       <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>         glyph_index,
-                                      <a href="../ft2-basic_types/#ft_data">FT_Data</a>*        adata );
+                                      <a href="../ft2-basic_types/#ft_data">FT_Data</a>&#42;        adata );
 </pre>
 </div>
 
 
 A function called by FreeType to access a given glyph's data bytes during <a href="../ft2-base_interface/#ft_load_glyph">FT_Load_Glyph</a> or <a href="../ft2-base_interface/#ft_load_char">FT_Load_Char</a> if incremental loading is enabled.
 
-Note that the format of the glyph's data bytes depends on the font file format. For TrueType, it must correspond to the raw bytes within the &lsquo;glyf&rsquo; table. For PostScript formats, it must correspond to the **unencrypted** charstring bytes, without any &lsquo;lenIV&rsquo; header. It is undefined for any other format.
+Note that the format of the glyph's data bytes depends on the font file format. For TrueType, it must correspond to the raw bytes within the &lsquo;glyf&rsquo; table. For PostScript formats, it must correspond to the &#42;&#42;unencrypted&#42;&#42; charstring bytes, without any `lenIV` header. It is undefined for any other format.
 
 <h4>input</h4>
 <table class="fields">
@@ -144,8 +144,8 @@ Defined in FT_INCREMENTAL_H (freetype/ftincrem.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (*<b>FT_Incremental_FreeGlyphDataFunc</b>)( <a href="../ft2-incremental/#ft_incremental">FT_Incremental</a>  incremental,
-                                       <a href="../ft2-basic_types/#ft_data">FT_Data</a>*        data );
+  (&#42;<b>FT_Incremental_FreeGlyphDataFunc</b>)( <a href="../ft2-incremental/#ft_incremental">FT_Incremental</a>  incremental,
+                                       <a href="../ft2-basic_types/#ft_data">FT_Data</a>&#42;        data );
 </pre>
 </div>
 
@@ -171,11 +171,11 @@ Defined in FT_INCREMENTAL_H (freetype/ftincrem.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <a href="../ft2-basic_types/#ft_error">FT_Error</a>
-  (*<b>FT_Incremental_GetGlyphMetricsFunc</b>)
+  (&#42;<b>FT_Incremental_GetGlyphMetricsFunc</b>)
                       ( <a href="../ft2-incremental/#ft_incremental">FT_Incremental</a>              incremental,
                         <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>                     glyph_index,
                         <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>                     vertical,
-                        <a href="../ft2-incremental/#ft_incremental_metricsrec">FT_Incremental_MetricsRec</a>  *ametrics );
+                        <a href="../ft2-incremental/#ft_incremental_metricsrec">FT_Incremental_MetricsRec</a>  &#42;ametrics );
 </pre>
 </div>
 
@@ -249,7 +249,7 @@ Defined in FT_INCREMENTAL_H (freetype/ftincrem.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Incremental_InterfaceRec_
   {
-    <span class="keyword">const</span> <a href="../ft2-incremental/#ft_incremental_funcsrec">FT_Incremental_FuncsRec</a>*  funcs;
+    <span class="keyword">const</span> <a href="../ft2-incremental/#ft_incremental_funcsrec">FT_Incremental_FuncsRec</a>&#42;  funcs;
     <a href="../ft2-incremental/#ft_incremental">FT_Incremental</a>                  object;
 
   } <b>FT_Incremental_InterfaceRec</b>;
@@ -291,7 +291,7 @@ Defined in FT_INCREMENTAL_H (freetype/ftincrem.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <a href="../ft2-incremental/#ft_incremental_interfacerec">FT_Incremental_InterfaceRec</a>*   <b>FT_Incremental_Interface</b>;
+  <span class="keyword">typedef</span> <a href="../ft2-incremental/#ft_incremental_interfacerec">FT_Incremental_InterfaceRec</a>&#42;   <b>FT_Incremental_Interface</b>;
 </pre>
 </div>
 

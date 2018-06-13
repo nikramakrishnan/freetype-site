@@ -13,7 +13,7 @@ The following macros are defined to the name of specific FreeType&nbsp;2 header 
   #include FT_GLYPH_H
 ```
 
-There are several reasons why we are now using macros to name public header files. The first one is that such macros are not limited to the infamous 8.3&nbsp;naming rule required by DOS (and &lsquo;FT_MULTIPLE_MASTERS_H&rsquo; is a lot more meaningful than &lsquo;ftmm.h&rsquo;).
+There are several reasons why we are now using macros to name public header files. The first one is that such macros are not limited to the infamous 8.3&nbsp;naming rule required by DOS (and `FT_MULTIPLE_MASTERS_H` is a lot more meaningful than `ftmm.h`).
 
 The second reason is that it allows for more flexibility in the way FreeType&nbsp;2 is installed on a given system.
 
@@ -640,7 +640,7 @@ A macro used in #include statements to name the file containing the FreeType&nbs
 <pre>
 #<span class="keyword">define</span> <b>FT_FONT_FORMATS_H</b>  &lt;freetype/ftfntfmt.h&gt;
 
-  /* deprecated */
+  /&#42; deprecated &#42;/
 #<span class="keyword">define</span> FT_XFREE86_H  <b>FT_FONT_FORMATS_H</b>
 </pre>
 </div>

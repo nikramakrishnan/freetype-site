@@ -14,7 +14,7 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_MemoryRec_*  <b>FT_Memory</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_MemoryRec_&#42;  <b>FT_Memory</b>;
 </pre>
 </div>
 
@@ -29,8 +29,8 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">void</span>*
-  (*<b>FT_Alloc_Func</b>)( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>  memory,
+  <span class="keyword">typedef</span> <span class="keyword">void</span>&#42;
+  (&#42;<b>FT_Alloc_Func</b>)( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>  memory,
                     <span class="keyword">long</span>       size );
 </pre>
 </div>
@@ -61,8 +61,8 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (*<b>FT_Free_Func</b>)( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>  memory,
-                   <span class="keyword">void</span>*      block );
+  (&#42;<b>FT_Free_Func</b>)( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>  memory,
+                   <span class="keyword">void</span>&#42;      block );
 </pre>
 </div>
 
@@ -87,11 +87,11 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">void</span>*
-  (*<b>FT_Realloc_Func</b>)( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>  memory,
+  <span class="keyword">typedef</span> <span class="keyword">void</span>&#42;
+  (&#42;<b>FT_Realloc_Func</b>)( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>  memory,
                       <span class="keyword">long</span>       cur_size,
                       <span class="keyword">long</span>       new_size,
-                      <span class="keyword">void</span>*      block );
+                      <span class="keyword">void</span>&#42;      block );
 </pre>
 </div>
 
@@ -132,7 +132,7 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 <pre>
   <span class="keyword">struct</span>  FT_MemoryRec_
   {
-    <span class="keyword">void</span>*            user;
+    <span class="keyword">void</span>&#42;            user;
     <a href="../ft2-system_interface/#ft_alloc_func">FT_Alloc_Func</a>    alloc;
     <a href="../ft2-system_interface/#ft_free_func">FT_Free_Func</a>     free;
     <a href="../ft2-system_interface/#ft_realloc_func">FT_Realloc_Func</a>  realloc;
@@ -167,7 +167,7 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_StreamRec_*  <b>FT_Stream</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_StreamRec_&#42;  <b>FT_Stream</b>;
 </pre>
 </div>
 
@@ -189,14 +189,14 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
   <span class="keyword">typedef</span> <span class="keyword">union</span>  FT_StreamDesc_
   {
     <span class="keyword">long</span>   value;
-    <span class="keyword">void</span>*  pointer;
+    <span class="keyword">void</span>&#42;  pointer;
 
   } <b>FT_StreamDesc</b>;
 </pre>
 </div>
 
 
-A union type used to store either a long or a pointer. This is used to store a file descriptor or a &lsquo;FILE*&rsquo; in an input stream.
+A union type used to store either a long or a pointer. This is used to store a file descriptor or a &lsquo;FILE&#42;&rsquo; in an input stream.
 
 <hr>
 
@@ -207,9 +207,9 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span>
-  (*<b>FT_Stream_IoFunc</b>)( <a href="../ft2-system_interface/#ft_stream">FT_Stream</a>       stream,
+  (&#42;<b>FT_Stream_IoFunc</b>)( <a href="../ft2-system_interface/#ft_stream">FT_Stream</a>       stream,
                        <span class="keyword">unsigned</span> <span class="keyword">long</span>   offset,
-                       <span class="keyword">unsigned</span> <span class="keyword">char</span>*  buffer,
+                       <span class="keyword">unsigned</span> <span class="keyword">char</span>&#42;  buffer,
                        <span class="keyword">unsigned</span> <span class="keyword">long</span>   count );
 </pre>
 </div>
@@ -250,7 +250,7 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (*<b>FT_Stream_CloseFunc</b>)( <a href="../ft2-system_interface/#ft_stream">FT_Stream</a>  stream );
+  (&#42;<b>FT_Stream_CloseFunc</b>)( <a href="../ft2-system_interface/#ft_stream">FT_Stream</a>  stream );
 </pre>
 </div>
 
@@ -274,7 +274,7 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_StreamRec_
   {
-    <span class="keyword">unsigned</span> <span class="keyword">char</span>*       base;
+    <span class="keyword">unsigned</span> <span class="keyword">char</span>&#42;       base;
     <span class="keyword">unsigned</span> <span class="keyword">long</span>        size;
     <span class="keyword">unsigned</span> <span class="keyword">long</span>        pos;
 
@@ -284,8 +284,8 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
     <a href="../ft2-system_interface/#ft_stream_closefunc">FT_Stream_CloseFunc</a>  close;
 
     <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>            memory;
-    <span class="keyword">unsigned</span> <span class="keyword">char</span>*       cursor;
-    <span class="keyword">unsigned</span> <span class="keyword">char</span>*       limit;
+    <span class="keyword">unsigned</span> <span class="keyword">char</span>&#42;       cursor;
+    <span class="keyword">unsigned</span> <span class="keyword">char</span>&#42;       limit;
 
   } <b>FT_StreamRec</b>;
 </pre>
@@ -307,7 +307,7 @@ A structure used to describe an input stream.
 <p>The current position within the stream.</p>
 </td></tr>
 <tr><td class="val" id="descriptor">descriptor</td><td class="desc">
-<p>This field is a union that can hold an integer or a pointer. It is used by stream implementations to store file descriptors or &lsquo;FILE*&rsquo; pointers.</p>
+<p>This field is a union that can hold an integer or a pointer. It is used by stream implementations to store file descriptors or &lsquo;FILE&#42;&rsquo; pointers.</p>
 </td></tr>
 <tr><td class="val" id="pathname">pathname</td><td class="desc">
 <p>This field is completely ignored by FreeType. However, it is often useful during debugging to use it to store the stream's filename (where available).</p>

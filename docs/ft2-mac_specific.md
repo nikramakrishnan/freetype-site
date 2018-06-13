@@ -18,7 +18,7 @@ Defined in FT_MAC_H (freetype/ftmac.h).
   <b>FT_New_Face_From_FOND</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>  library,
                          Handle      fond,
                          <a href="../ft2-basic_types/#ft_long">FT_Long</a>     face_index,
-                         <a href="../ft2-base_interface/#ft_face">FT_Face</a>    *aface )
+                         <a href="../ft2-base_interface/#ft_face">FT_Face</a>    &#42;aface )
                        FT_DEPRECATED_ATTRIBUTE;
 </pre>
 </div>
@@ -71,9 +71,9 @@ Defined in FT_MAC_H (freetype/ftmac.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_GetFile_From_Mac_Name</b>( <span class="keyword">const</span> <span class="keyword">char</span>*  fontName,
-                            FSSpec*      pathSpec,
-                            <a href="../ft2-basic_types/#ft_long">FT_Long</a>*     face_index )
+  <b>FT_GetFile_From_Mac_Name</b>( <span class="keyword">const</span> <span class="keyword">char</span>&#42;  fontName,
+                            FSSpec&#42;      pathSpec,
+                            <a href="../ft2-basic_types/#ft_long">FT_Long</a>&#42;     face_index )
                           FT_DEPRECATED_ATTRIBUTE;
 </pre>
 </div>
@@ -111,9 +111,9 @@ Defined in FT_MAC_H (freetype/ftmac.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_GetFile_From_Mac_ATS_Name</b>( <span class="keyword">const</span> <span class="keyword">char</span>*  fontName,
-                                FSSpec*      pathSpec,
-                                <a href="../ft2-basic_types/#ft_long">FT_Long</a>*     face_index )
+  <b>FT_GetFile_From_Mac_ATS_Name</b>( <span class="keyword">const</span> <span class="keyword">char</span>&#42;  fontName,
+                                FSSpec&#42;      pathSpec,
+                                <a href="../ft2-basic_types/#ft_long">FT_Long</a>&#42;     face_index )
                               FT_DEPRECATED_ATTRIBUTE;
 </pre>
 </div>
@@ -151,10 +151,10 @@ Defined in FT_MAC_H (freetype/ftmac.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_GetFilePath_From_Mac_ATS_Name</b>( <span class="keyword">const</span> <span class="keyword">char</span>*  fontName,
-                                    UInt8*       path,
+  <b>FT_GetFilePath_From_Mac_ATS_Name</b>( <span class="keyword">const</span> <span class="keyword">char</span>&#42;  fontName,
+                                    UInt8&#42;       path,
                                     UInt32       maxPathSize,
-                                    <a href="../ft2-basic_types/#ft_long">FT_Long</a>*     face_index )
+                                    <a href="../ft2-basic_types/#ft_long">FT_Long</a>&#42;     face_index )
                                   FT_DEPRECATED_ATTRIBUTE;
 </pre>
 </div>
@@ -196,9 +196,9 @@ Defined in FT_MAC_H (freetype/ftmac.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_New_Face_From_FSSpec</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>     library,
-                           <span class="keyword">const</span> FSSpec  *spec,
+                           <span class="keyword">const</span> FSSpec  &#42;spec,
                            <a href="../ft2-basic_types/#ft_long">FT_Long</a>        face_index,
-                           <a href="../ft2-base_interface/#ft_face">FT_Face</a>       *aface )
+                           <a href="../ft2-base_interface/#ft_face">FT_Face</a>       &#42;aface )
                          FT_DEPRECATED_ATTRIBUTE;
 </pre>
 </div>
@@ -248,9 +248,9 @@ Defined in FT_MAC_H (freetype/ftmac.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_New_Face_From_FSRef</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>    library,
-                          <span class="keyword">const</span> FSRef  *ref,
+                          <span class="keyword">const</span> FSRef  &#42;ref,
                           <a href="../ft2-basic_types/#ft_long">FT_Long</a>       face_index,
-                          <a href="../ft2-base_interface/#ft_face">FT_Face</a>      *aface )
+                          <a href="../ft2-base_interface/#ft_face">FT_Face</a>      &#42;aface )
                         FT_DEPRECATED_ATTRIBUTE;
 </pre>
 </div>

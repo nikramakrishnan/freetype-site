@@ -8,7 +8,7 @@
 
 The definitions below are used to manage modules within FreeType. Modules can be added, upgraded, and removed at runtime. Additionally, some module properties can be controlled also.
 
-Here is a list of possible values of the &lsquo;module_name&rsquo; field in the <a href="../ft2-module_management/#ft_module_class">FT_Module_Class</a> structure.
+Here is a list of possible values of the `module_name` field in the <a href="../ft2-module_management/#ft_module_class">FT_Module_Class</a> structure.
 ```
   autofitter
   bdf
@@ -38,7 +38,7 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_ModuleRec_*  <b>FT_Module</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_ModuleRec_&#42;  <b>FT_Module</b>;
 </pre>
 </div>
 
@@ -54,7 +54,7 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <a href="../ft2-basic_types/#ft_error">FT_Error</a>
-  (*<b>FT_Module_Constructor</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>  module );
+  (&#42;<b>FT_Module_Constructor</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>  module );
 </pre>
 </div>
 
@@ -77,7 +77,7 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (*<b>FT_Module_Destructor</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>  module );
+  (&#42;<b>FT_Module_Destructor</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>  module );
 </pre>
 </div>
 
@@ -100,8 +100,8 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> FT_Module_Interface
-  (*<b>FT_Module_Requester</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>    module,
-                          <span class="keyword">const</span> <span class="keyword">char</span>*  name );
+  (&#42;<b>FT_Module_Requester</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>    module,
+                          <span class="keyword">const</span> <span class="keyword">char</span>&#42;  name );
 </pre>
 </div>
 
@@ -130,11 +130,11 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
   {
     <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>               module_flags;
     <a href="../ft2-basic_types/#ft_long">FT_Long</a>                module_size;
-    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*       module_name;
+    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;       module_name;
     <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>               module_version;
     <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>               module_requires;
 
-    <span class="keyword">const</span> <span class="keyword">void</span>*            module_interface;
+    <span class="keyword">const</span> <span class="keyword">void</span>&#42;            module_interface;
 
     <a href="../ft2-module_management/#ft_module_constructor">FT_Module_Constructor</a>  module_init;
     <a href="../ft2-module_management/#ft_module_destructor">FT_Module_Destructor</a>   module_done;
@@ -185,7 +185,7 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Add_Module</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>              library,
-                 <span class="keyword">const</span> <a href="../ft2-module_management/#ft_module_class">FT_Module_Class</a>*  clazz );
+                 <span class="keyword">const</span> <a href="../ft2-module_management/#ft_module_class">FT_Module_Class</a>&#42;  clazz );
 </pre>
 </div>
 
@@ -224,7 +224,7 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <pre>
   FT_EXPORT( <a href="../ft2-module_management/#ft_module">FT_Module</a> )
   <b>FT_Get_Module</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>   library,
-                 <span class="keyword">const</span> <span class="keyword">char</span>*  module_name );
+                 <span class="keyword">const</span> <span class="keyword">char</span>&#42;  module_name );
 </pre>
 </div>
 
@@ -321,9 +321,9 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Property_Set</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>        library,
-                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*  module_name,
-                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*  property_name,
-                   <span class="keyword">const</span> <span class="keyword">void</span>*       value );
+                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;  module_name,
+                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;  property_name,
+                   <span class="keyword">const</span> <span class="keyword">void</span>&#42;       value );
 </pre>
 </div>
 
@@ -353,7 +353,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-If &lsquo;module_name&rsquo; isn't a valid module name, or &lsquo;property_name&rsquo; doesn't specify a valid property, or if &lsquo;value&rsquo; doesn't represent a valid value for the given property, an error is returned.
+If `module_name` isn't a valid module name, or `property_name` doesn't specify a valid property, or if &lsquo;value&rsquo; doesn't represent a valid value for the given property, an error is returned.
 
 The following example sets property &lsquo;bar&rsquo; (a simple integer) in module &lsquo;foo&rsquo; to value&nbsp;1.
 ```
@@ -382,9 +382,9 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Property_Get</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>        library,
-                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*  module_name,
-                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*  property_name,
-                   <span class="keyword">void</span>*             value );
+                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;  module_name,
+                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;  property_name,
+                   <span class="keyword">void</span>&#42;             value );
 </pre>
 </div>
 
@@ -417,7 +417,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-If &lsquo;module_name&rsquo; isn't a valid module name, or &lsquo;property_name&rsquo; doesn't specify a valid property, or if &lsquo;value&rsquo; doesn't represent a valid value for the given property, an error is returned.
+If `module_name` isn't a valid module name, or `property_name` doesn't specify a valid property, or if &lsquo;value&rsquo; doesn't represent a valid value for the given property, an error is returned.
 
 The following example gets property &lsquo;baz&rsquo; (a range) in module &lsquo;foo&rsquo;.
 ```
@@ -454,11 +454,11 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 </div>
 
 
-If compilation option FT_CONFIG_OPTION_ENVIRONMENT_PROPERTIES is set, this function reads the &lsquo;FREETYPE_PROPERTIES&rsquo; environment variable to control driver properties. See section &lsquo;<a href="../ft2-properties/#properties">Driver properties</a>&rsquo; for more.
+If compilation option FT_CONFIG_OPTION_ENVIRONMENT_PROPERTIES is set, this function reads the `FREETYPE_PROPERTIES` environment variable to control driver properties. See section &lsquo;<a href="../ft2-properties/#properties">Driver properties</a>&rsquo; for more.
 
 If the compilation option is not set, this function does nothing.
 
-&lsquo;FREETYPE_PROPERTIES&rsquo; has the following syntax form (broken here into multiple lines for better readability).
+`FREETYPE_PROPERTIES` has the following syntax form (broken here into multiple lines for better readability).
 ```
   <optional whitespace>
   <module-name1> ':'
@@ -497,7 +497,7 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_New_Library</b>( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>    memory,
-                  <a href="../ft2-base_interface/#ft_library">FT_Library</a>  *alibrary );
+                  <a href="../ft2-base_interface/#ft_library">FT_Library</a>  &#42;alibrary );
 </pre>
 </div>
 
@@ -602,7 +602,7 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_RendererRec_*  <b>FT_Renderer</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_RendererRec_&#42;  <b>FT_Renderer</b>;
 </pre>
 </div>
 
@@ -628,7 +628,7 @@ Defined in FT_RENDER_H (freetype/ftrender.h).
     FT_Renderer_GetCBoxFunc    get_glyph_cbox;
     FT_Renderer_SetModeFunc    set_mode;
 
-    <a href="../ft2-raster/#ft_raster_funcs">FT_Raster_Funcs</a>*           raster_class;
+    <a href="../ft2-raster/#ft_raster_funcs">FT_Raster_Funcs</a>&#42;           raster_class;
 
   } <b>FT_Renderer_Class</b>;
 </pre>
@@ -711,7 +711,7 @@ Defined in FT_RENDER_H (freetype/ftrender.h).
   <b>FT_Set_Renderer</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>     library,
                    <a href="../ft2-module_management/#ft_renderer">FT_Renderer</a>    renderer,
                    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>        num_params,
-                   <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a>*  parameters );
+                   <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a>&#42;  parameters );
 </pre>
 </div>
 
@@ -778,7 +778,7 @@ Set a debug hook function for debugging the interpreter of a font format.
 <h4>input</h4>
 <table class="fields">
 <tr><td class="val" id="hook_index">hook_index</td><td class="desc">
-<p>The index of the debug hook. You should use the values defined in &lsquo;ftobjs.h&rsquo;, e.g., &lsquo;FT_DEBUG_HOOK_TRUETYPE&rsquo;.</p>
+<p>The index of the debug hook. You should use the values defined in <code>ftobjs.h</code>, e.g., <code>FT_DEBUG_HOOK_TRUETYPE</code>.</p>
 </td></tr>
 <tr><td class="val" id="debug_hook">debug_hook</td><td class="desc">
 <p>The function used to debug the interpreter.</p>
@@ -789,7 +789,7 @@ Set a debug hook function for debugging the interpreter of a font format.
 
 Currently, four debug hook slots are available, but only two (for the TrueType and the Type&nbsp;1 interpreter) are defined.
 
-Since the internal headers of FreeType are no longer installed, the symbol &lsquo;FT_DEBUG_HOOK_TRUETYPE&rsquo; isn't available publicly. This is a bug and will be fixed in a forthcoming release.
+Since the internal headers of FreeType are no longer installed, the symbol `FT_DEBUG_HOOK_TRUETYPE` isn't available publicly. This is a bug and will be fixed in a forthcoming release.
 
 <hr>
 
@@ -799,7 +799,7 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_DriverRec_*  <b>FT_Driver</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_DriverRec_&#42;  <b>FT_Driver</b>;
 </pre>
 </div>
 

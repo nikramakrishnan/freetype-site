@@ -25,8 +25,8 @@ Defined in FT_SFNT_NAMES_H (freetype/ftsnames.h).
     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  language_id;
     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  name_id;
 
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*   string;      /* this string is *not* null-terminated! */
-    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    string_len;  /* in bytes                              */
+    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>&#42;   string;      /&#42; this string is &#42;not&#42; null-terminated! &#42;/
+    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    string_len;  /&#42; in bytes                              &#42;/
 
   } <b>FT_SfntName</b>;
 </pre>
@@ -45,7 +45,7 @@ A structure used to model an SFNT &lsquo;name&rsquo; table entry.
 </td></tr>
 <tr><td class="val" id="language_id">language_id</td><td class="desc">
 <p>The language ID for &lsquo;string&rsquo;. See <a href="../ft2-truetype_tables/#tt_mac_langid_xxx">TT_MAC_LANGID_XXX</a> and <a href="../ft2-truetype_tables/#tt_ms_langid_xxx">TT_MS_LANGID_XXX</a> for possible values.</p>
-<p>Registered OpenType values for &lsquo;language_id&rsquo; are always smaller than 0x8000; values equal or larger than 0x8000 usually indicate a language tag string (introduced in OpenType version 1.6). Use function <a href="../ft2-sfnt_names/#ft_get_sfnt_langtag">FT_Get_Sfnt_LangTag</a> with &lsquo;language_id&rsquo; as its argument to retrieve the associated language tag.</p>
+<p>Registered OpenType values for <code>language_id</code> are always smaller than 0x8000; values equal or larger than 0x8000 usually indicate a language tag string (introduced in OpenType version 1.6). Use function <a href="../ft2-sfnt_names/#ft_get_sfnt_langtag">FT_Get_Sfnt_LangTag</a> with <code>language_id</code> as its argument to retrieve the associated language tag.</p>
 </td></tr>
 <tr><td class="val" id="name_id">name_id</td><td class="desc">
 <p>An identifier for &lsquo;string&rsquo;. See <a href="../ft2-truetype_tables/#tt_name_id_xxx">TT_NAME_ID_XXX</a> for possible values.</p>
@@ -91,7 +91,7 @@ The number of strings in the &lsquo;name&rsquo; table.
 
 <h4>note</h4>
 
-This function always returns an error if the config macro &lsquo;TT_CONFIG_OPTION_SFNT_NAMES&rsquo; is not defined in &lsquo;ftoption.h&rsquo;.
+This function always returns an error if the config macro `TT_CONFIG_OPTION_SFNT_NAMES` is not defined in `ftoption.h`.
 
 <hr>
 
@@ -104,7 +104,7 @@ Defined in FT_SFNT_NAMES_H (freetype/ftsnames.h).
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_Sfnt_Name</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>       face,
                     <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>       idx,
-                    <a href="../ft2-sfnt_names/#ft_sfntname">FT_SfntName</a>  *aname );
+                    <a href="../ft2-sfnt_names/#ft_sfntname">FT_SfntName</a>  &#42;aname );
 </pre>
 </div>
 
@@ -140,7 +140,7 @@ Use <a href="../ft2-sfnt_names/#ft_get_sfnt_name_count">FT_Get_Sfnt_Name_Count</
 
 &lsquo;name&rsquo; table format&nbsp;1 entries can use language tags also, see <a href="../ft2-sfnt_names/#ft_get_sfnt_langtag">FT_Get_Sfnt_LangTag</a>.
 
-This function always returns an error if the config macro &lsquo;TT_CONFIG_OPTION_SFNT_NAMES&rsquo; is not defined in &lsquo;ftoption.h&rsquo;.
+This function always returns an error if the config macro `TT_CONFIG_OPTION_SFNT_NAMES` is not defined in `ftoption.h`.
 
 <hr>
 
@@ -152,8 +152,8 @@ Defined in FT_SFNT_NAMES_H (freetype/ftsnames.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_SfntLangTag_
   {
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*  string;      /* this string is *not* null-terminated! */
-    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   string_len;  /* in bytes                              */
+    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>&#42;  string;      /&#42; this string is &#42;not&#42; null-terminated! &#42;/
+    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   string_len;  /&#42; in bytes                              &#42;/
 
   } <b>FT_SfntLangTag</b>;
 </pre>
@@ -168,7 +168,7 @@ A structure to model a language tag entry from an SFNT &lsquo;name&rsquo; table.
 <p>The language tag string, encoded in UTF-16BE (without trailing NULL bytes).</p>
 </td></tr>
 <tr><td class="val" id="string_len">string_len</td><td class="desc">
-<p>The length of &lsquo;string&rsquo; in <strong>bytes</strong>.</p>
+<p>The length of &lsquo;string&rsquo; in &#42;&#42;bytes&#42;&#42;.</p>
 </td></tr>
 </table>
 
@@ -191,7 +191,7 @@ Defined in FT_SFNT_NAMES_H (freetype/ftsnames.h).
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_Sfnt_LangTag</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>          face,
                        <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>          langID,
-                       <a href="../ft2-sfnt_names/#ft_sfntlangtag">FT_SfntLangTag</a>  *alangTag );
+                       <a href="../ft2-sfnt_names/#ft_sfntlangtag">FT_SfntLangTag</a>  &#42;alangTag );
 </pre>
 </div>
 
@@ -221,11 +221,11 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-The &lsquo;string&rsquo; array returned in the &lsquo;alangTag&rsquo; structure is not null-terminated. Note that you don't have to deallocate &lsquo;string&rsquo; by yourself; FreeType takes care of it if you call <a href="../ft2-base_interface/#ft_done_face">FT_Done_Face</a>.
+The &lsquo;string&rsquo; array returned in the `alangTag` structure is not null-terminated. Note that you don't have to deallocate &lsquo;string&rsquo; by yourself; FreeType takes care of it if you call <a href="../ft2-base_interface/#ft_done_face">FT_Done_Face</a>.
 
 Only &lsquo;name&rsquo; table format&nbsp;1 supports language tags. For format&nbsp;0 tables, this function always returns FT_Err_Invalid_Table. For invalid format&nbsp;1 language ID values, FT_Err_Invalid_Argument is returned.
 
-This function always returns an error if the config macro &lsquo;TT_CONFIG_OPTION_SFNT_NAMES&rsquo; is not defined in &lsquo;ftoption.h&rsquo;.
+This function always returns an error if the config macro `TT_CONFIG_OPTION_SFNT_NAMES` is not defined in `ftoption.h`.
 
 <h4>since</h4>
 
