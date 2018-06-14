@@ -97,7 +97,7 @@ Defined in FT_GX_VALIDATE_H (freetype/ftgxval.h).
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_ClassicKern_Validate</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
                            <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    validation_flags,
-                           <a href="../ft2-basic_types/#ft_bytes">FT_Bytes</a>  &#42;ckern_table );
+                           <a href="../ft2-basic_types/#ft_bytes">FT_Bytes</a>  *ckern_table );
 </pre>
 </div>
 
@@ -175,7 +175,7 @@ Defined in FT_GX_VALIDATE_H (freetype/ftgxval.h).
 </div>
 
 
-The number of tables checked in this module. Use it as a parameter for the `table-length` argument of function <a href="../ft2-gx_validation/#ft_truetypegx_validate">FT_TrueTypeGX_Validate</a>.
+The number of tables checked in this module. Use it as a parameter for the &lsquo;table-length&rsquo; argument of function <a href="../ft2-gx_validation/#ft_truetypegx_validate">FT_TrueTypeGX_Validate</a>.
 
 <hr>
 

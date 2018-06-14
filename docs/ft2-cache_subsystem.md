@@ -18,7 +18,7 @@ Second, the cache calls, only when needed, a client-provided function to convert
 
 Clients are free to map face IDs to anything else. The most simple usage is to associate them to a (pathname,face_index) pair that is used to call <a href="../ft2-base_interface/#ft_new_face">FT_New_Face</a>. However, more complex schemes are also possible.
 
-Note that for the cache to work correctly, the face ID values must be &#42;&#42;persistent&#42;&#42;, which means that the contents they point to should not change at runtime, or that their value should not become invalid.
+Note that for the cache to work correctly, the face ID values must be **persistent**, which means that the contents they point to should not change at runtime, or that their value should not become invalid.
 
 If this is unavoidable (e.g., when a font is uninstalled at runtime), you should call <a href="../ft2-cache_subsystem/#ftc_manager_removefaceid">FTC_Manager_RemoveFaceID</a> as soon as possible, to let the cache get rid of any references to the old <a href="../ft2-cache_subsystem/#ftc_faceid">FTC_FaceID</a> it may keep internally. Failure to do so will lead to incorrect behaviour or even crashes.
 
@@ -38,7 +38,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ManagerRec_&#42;  <b>FTC_Manager</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ManagerRec_*  <b>FTC_Manager</b>;
 </pre>
 </div>
 
@@ -87,10 +87,10 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <a href="../ft2-basic_types/#ft_error">FT_Error</a>
-  (&#42;<b>FTC_Face_Requester</b>)( <a href="../ft2-cache_subsystem/#ftc_faceid">FTC_FaceID</a>  face_id,
+  (*<b>FTC_Face_Requester</b>)( <a href="../ft2-cache_subsystem/#ftc_faceid">FTC_FaceID</a>  face_id,
                          <a href="../ft2-base_interface/#ft_library">FT_Library</a>  library,
                          <a href="../ft2-basic_types/#ft_pointer">FT_Pointer</a>  req_data,
-                         <a href="../ft2-base_interface/#ft_face">FT_Face</a>&#42;    aface );
+                         <a href="../ft2-base_interface/#ft_face">FT_Face</a>*    aface );
 </pre>
 </div>
 
@@ -142,7 +142,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
                    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>            max_bytes,
                    <a href="../ft2-cache_subsystem/#ftc_face_requester">FTC_Face_Requester</a>  requester,
                    <a href="../ft2-basic_types/#ft_pointer">FT_Pointer</a>          req_data,
-                   <a href="../ft2-cache_subsystem/#ftc_manager">FTC_Manager</a>        &#42;amanager );
+                   <a href="../ft2-cache_subsystem/#ftc_manager">FTC_Manager</a>        *amanager );
 </pre>
 </div>
 
@@ -239,7 +239,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FTC_Manager_LookupFace</b>( <a href="../ft2-cache_subsystem/#ftc_manager">FTC_Manager</a>  manager,
                           <a href="../ft2-cache_subsystem/#ftc_faceid">FTC_FaceID</a>   face_id,
-                          <a href="../ft2-base_interface/#ft_face">FT_Face</a>     &#42;aface );
+                          <a href="../ft2-base_interface/#ft_face">FT_Face</a>     *aface );
 </pre>
 </div>
 
@@ -290,7 +290,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FTC_Manager_LookupSize</b>( <a href="../ft2-cache_subsystem/#ftc_manager">FTC_Manager</a>  manager,
                           <a href="../ft2-cache_subsystem/#ftc_scaler">FTC_Scaler</a>   scaler,
-                          <a href="../ft2-base_interface/#ft_size">FT_Size</a>     &#42;asize );
+                          <a href="../ft2-base_interface/#ft_size">FT_Size</a>     *asize );
 </pre>
 </div>
 
@@ -371,7 +371,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_NodeRec_&#42;  <b>FTC_Node</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_NodeRec_*  <b>FTC_Node</b>;
 </pre>
 </div>
 
@@ -417,7 +417,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ImageCacheRec_&#42;  <b>FTC_ImageCache</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ImageCacheRec_*  <b>FTC_ImageCache</b>;
 </pre>
 </div>
 
@@ -434,7 +434,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FTC_ImageCache_New</b>( <a href="../ft2-cache_subsystem/#ftc_manager">FTC_Manager</a>      manager,
-                      <a href="../ft2-cache_subsystem/#ftc_imagecache">FTC_ImageCache</a>  &#42;acache );
+                      <a href="../ft2-cache_subsystem/#ftc_imagecache">FTC_ImageCache</a>  *acache );
 </pre>
 </div>
 
@@ -471,8 +471,8 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
   <b>FTC_ImageCache_Lookup</b>( <a href="../ft2-cache_subsystem/#ftc_imagecache">FTC_ImageCache</a>  cache,
                          <a href="../ft2-cache_subsystem/#ftc_imagetype">FTC_ImageType</a>   type,
                          <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>         gindex,
-                         <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>       &#42;aglyph,
-                         <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>       &#42;anode );
+                         <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>       *aglyph,
+                         <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>       *anode );
 </pre>
 </div>
 
@@ -522,7 +522,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_SBitRec_&#42;  <b>FTC_SBit</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_SBitRec_*  <b>FTC_SBit</b>;
 </pre>
 </div>
 
@@ -537,7 +537,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_SBitCacheRec_&#42;  <b>FTC_SBitCache</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_SBitCacheRec_*  <b>FTC_SBitCache</b>;
 </pre>
 </div>
 
@@ -554,7 +554,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FTC_SBitCache_New</b>( <a href="../ft2-cache_subsystem/#ftc_manager">FTC_Manager</a>     manager,
-                     <a href="../ft2-cache_subsystem/#ftc_sbitcache">FTC_SBitCache</a>  &#42;acache );
+                     <a href="../ft2-cache_subsystem/#ftc_sbitcache">FTC_SBitCache</a>  *acache );
 </pre>
 </div>
 
@@ -591,8 +591,8 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
   <b>FTC_SBitCache_Lookup</b>( <a href="../ft2-cache_subsystem/#ftc_sbitcache">FTC_SBitCache</a>    cache,
                         <a href="../ft2-cache_subsystem/#ftc_imagetype">FTC_ImageType</a>    type,
                         <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>          gindex,
-                        <a href="../ft2-cache_subsystem/#ftc_sbit">FTC_SBit</a>        &#42;sbit,
-                        <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>        &#42;anode );
+                        <a href="../ft2-cache_subsystem/#ftc_sbit">FTC_SBit</a>        *sbit,
+                        <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>        *anode );
 </pre>
 </div>
 
@@ -644,7 +644,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_CMapCacheRec_&#42;  <b>FTC_CMapCache</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_CMapCacheRec_*  <b>FTC_CMapCache</b>;
 </pre>
 </div>
 
@@ -661,7 +661,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FTC_CMapCache_New</b>( <a href="../ft2-cache_subsystem/#ftc_manager">FTC_Manager</a>     manager,
-                     <a href="../ft2-cache_subsystem/#ftc_cmapcache">FTC_CMapCache</a>  &#42;acache );
+                     <a href="../ft2-cache_subsystem/#ftc_cmapcache">FTC_CMapCache</a>  *acache );
 </pre>
 </div>
 
@@ -787,7 +787,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ScalerRec_&#42;  <b>FTC_Scaler</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ScalerRec_*  <b>FTC_Scaler</b>;
 </pre>
 </div>
 
@@ -840,7 +840,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ImageTypeRec_&#42;  <b>FTC_ImageType</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FTC_ImageTypeRec_*  <b>FTC_ImageType</b>;
 </pre>
 </div>
 
@@ -860,8 +860,8 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
                                <a href="../ft2-cache_subsystem/#ftc_scaler">FTC_Scaler</a>      scaler,
                                <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>        load_flags,
                                <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>         gindex,
-                               <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>       &#42;aglyph,
-                               <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>       &#42;anode );
+                               <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>       *aglyph,
+                               <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>       *anode );
 </pre>
 </div>
 
@@ -929,7 +929,7 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
     <a href="../ft2-basic_types/#ft_char">FT_Char</a>   xadvance;
     <a href="../ft2-basic_types/#ft_char">FT_Char</a>   yadvance;
 
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>&#42;  buffer;
+    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*  buffer;
 
   } <b>FTC_SBitRec</b>;
 </pre>
@@ -985,8 +985,8 @@ Defined in FT_CACHE_H (freetype/ftcache.h).
                               <a href="../ft2-cache_subsystem/#ftc_scaler">FTC_Scaler</a>     scaler,
                               <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>       load_flags,
                               <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>        gindex,
-                              <a href="../ft2-cache_subsystem/#ftc_sbit">FTC_SBit</a>      &#42;sbit,
-                              <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>      &#42;anode );
+                              <a href="../ft2-cache_subsystem/#ftc_sbit">FTC_SBit</a>      *sbit,
+                              <a href="../ft2-cache_subsystem/#ftc_node">FTC_Node</a>      *anode );
 </pre>
 </div>
 

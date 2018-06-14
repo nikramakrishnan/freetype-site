@@ -48,7 +48,7 @@ Defined in FT_LCD_FILTER_H (freetype/ftlcdfil.h).
     <a href="../ft2-lcd_rendering/#ft_lcd_filter_legacy1">FT_LCD_FILTER_LEGACY1</a> = 3,
     <a href="../ft2-lcd_rendering/#ft_lcd_filter_legacy">FT_LCD_FILTER_LEGACY</a>  = 16,
 
-    FT_LCD_FILTER_MAX   /&#42; do not remove &#42;/
+    FT_LCD_FILTER_MAX   /* do not remove */
 
   } <b>FT_LcdFilter</b>;
 </pre>
@@ -116,7 +116,7 @@ FreeType error code. 0&nbsp;means success.
 
 This feature is always disabled by default. Clients must make an explicit call to this function with a &lsquo;filter&rsquo; value other than <a href="../ft2-lcd_rendering/#ft_lcdfilter">FT_LCD_FILTER_NONE</a> in order to enable it.
 
-Due to &#42;&#42;PATENTS&#42;&#42; covering subpixel rendering, this function doesn't do anything except returning `FT_Err_Unimplemented_Feature` if the configuration macro FT_CONFIG_OPTION_SUBPIXEL_RENDERING is not defined in your build of the library, which should correspond to all default builds of FreeType.
+Due to **PATENTS** covering subpixel rendering, this function doesn't do anything except returning `FT_Err_Unimplemented_Feature` if the configuration macro FT_CONFIG_OPTION_SUBPIXEL_RENDERING is not defined in your build of the library, which should correspond to all default builds of FreeType.
 
 <h4>since</h4>
 
@@ -132,7 +132,7 @@ Defined in FT_LCD_FILTER_H (freetype/ftlcdfil.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Library_SetLcdFilterWeights</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>      library,
-                                  <span class="keyword">unsigned</span> <span class="keyword">char</span>  &#42;weights );
+                                  <span class="keyword">unsigned</span> <span class="keyword">char</span>  *weights );
 </pre>
 </div>
 
@@ -155,7 +155,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-Due to &#42;&#42;PATENTS&#42;&#42; covering subpixel rendering, this function doesn't do anything except returning `FT_Err_Unimplemented_Feature` if the configuration macro FT_CONFIG_OPTION_SUBPIXEL_RENDERING is not defined in your build of the library, which should correspond to all default builds of FreeType.
+Due to **PATENTS** covering subpixel rendering, this function doesn't do anything except returning `FT_Err_Unimplemented_Feature` if the configuration macro FT_CONFIG_OPTION_SUBPIXEL_RENDERING is not defined in your build of the library, which should correspond to all default builds of FreeType.
 
 LCD filter weights can also be set per face using <a href="../ft2-base_interface/#ft_face_properties">FT_Face_Properties</a> with <a href="../ft2-parameter_tags/#ft_param_tag_lcd_filter_weights">FT_PARAM_TAG_LCD_FILTER_WEIGHTS</a>.
 

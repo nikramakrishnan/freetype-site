@@ -22,7 +22,7 @@ Defined in FT_SIZES_H (freetype/ftsizes.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_New_Size</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
-               <a href="../ft2-base_interface/#ft_size">FT_Size</a>&#42;  size );
+               <a href="../ft2-base_interface/#ft_size">FT_Size</a>*  size );
 </pre>
 </div>
 

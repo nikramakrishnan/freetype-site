@@ -38,7 +38,7 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_ModuleRec_&#42;  <b>FT_Module</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_ModuleRec_*  <b>FT_Module</b>;
 </pre>
 </div>
 
@@ -54,7 +54,7 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <a href="../ft2-basic_types/#ft_error">FT_Error</a>
-  (&#42;<b>FT_Module_Constructor</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>  module );
+  (*<b>FT_Module_Constructor</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>  module );
 </pre>
 </div>
 
@@ -77,7 +77,7 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (&#42;<b>FT_Module_Destructor</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>  module );
+  (*<b>FT_Module_Destructor</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>  module );
 </pre>
 </div>
 
@@ -100,8 +100,8 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> FT_Module_Interface
-  (&#42;<b>FT_Module_Requester</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>    module,
-                          <span class="keyword">const</span> <span class="keyword">char</span>&#42;  name );
+  (*<b>FT_Module_Requester</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>    module,
+                          <span class="keyword">const</span> <span class="keyword">char</span>*  name );
 </pre>
 </div>
 
@@ -130,11 +130,11 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
   {
     <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>               module_flags;
     <a href="../ft2-basic_types/#ft_long">FT_Long</a>                module_size;
-    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;       module_name;
+    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*       module_name;
     <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>               module_version;
     <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>               module_requires;
 
-    <span class="keyword">const</span> <span class="keyword">void</span>&#42;            module_interface;
+    <span class="keyword">const</span> <span class="keyword">void</span>*            module_interface;
 
     <a href="../ft2-module_management/#ft_module_constructor">FT_Module_Constructor</a>  module_init;
     <a href="../ft2-module_management/#ft_module_destructor">FT_Module_Destructor</a>   module_done;
@@ -185,7 +185,7 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Add_Module</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>              library,
-                 <span class="keyword">const</span> <a href="../ft2-module_management/#ft_module_class">FT_Module_Class</a>&#42;  clazz );
+                 <span class="keyword">const</span> <a href="../ft2-module_management/#ft_module_class">FT_Module_Class</a>*  clazz );
 </pre>
 </div>
 
@@ -224,7 +224,7 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <pre>
   FT_EXPORT( <a href="../ft2-module_management/#ft_module">FT_Module</a> )
   <b>FT_Get_Module</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>   library,
-                 <span class="keyword">const</span> <span class="keyword">char</span>&#42;  module_name );
+                 <span class="keyword">const</span> <span class="keyword">char</span>*  module_name );
 </pre>
 </div>
 
@@ -321,9 +321,9 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Property_Set</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>        library,
-                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;  module_name,
-                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;  property_name,
-                   <span class="keyword">const</span> <span class="keyword">void</span>&#42;       value );
+                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*  module_name,
+                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*  property_name,
+                   <span class="keyword">const</span> <span class="keyword">void</span>*       value );
 </pre>
 </div>
 
@@ -382,9 +382,9 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Property_Get</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>        library,
-                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;  module_name,
-                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;  property_name,
-                   <span class="keyword">void</span>&#42;             value );
+                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*  module_name,
+                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*  property_name,
+                   <span class="keyword">void</span>*             value );
 </pre>
 </div>
 
@@ -497,7 +497,7 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_New_Library</b>( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>    memory,
-                  <a href="../ft2-base_interface/#ft_library">FT_Library</a>  &#42;alibrary );
+                  <a href="../ft2-base_interface/#ft_library">FT_Library</a>  *alibrary );
 </pre>
 </div>
 
@@ -602,7 +602,7 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_RendererRec_&#42;  <b>FT_Renderer</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_RendererRec_*  <b>FT_Renderer</b>;
 </pre>
 </div>
 
@@ -628,7 +628,7 @@ Defined in FT_RENDER_H (freetype/ftrender.h).
     FT_Renderer_GetCBoxFunc    get_glyph_cbox;
     FT_Renderer_SetModeFunc    set_mode;
 
-    <a href="../ft2-raster/#ft_raster_funcs">FT_Raster_Funcs</a>&#42;           raster_class;
+    <a href="../ft2-raster/#ft_raster_funcs">FT_Raster_Funcs</a>*           raster_class;
 
   } <b>FT_Renderer_Class</b>;
 </pre>
@@ -711,7 +711,7 @@ Defined in FT_RENDER_H (freetype/ftrender.h).
   <b>FT_Set_Renderer</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>     library,
                    <a href="../ft2-module_management/#ft_renderer">FT_Renderer</a>    renderer,
                    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>        num_params,
-                   <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a>&#42;  parameters );
+                   <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a>*  parameters );
 </pre>
 </div>
 
@@ -799,7 +799,7 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_DriverRec_&#42;  <b>FT_Driver</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_DriverRec_*  <b>FT_Driver</b>;
 </pre>
 </div>
 

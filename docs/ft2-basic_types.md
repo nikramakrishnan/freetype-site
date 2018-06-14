@@ -29,7 +29,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>&#42;  <b>FT_Bytes</b>;
+  <span class="keyword">typedef</span> <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*  <b>FT_Bytes</b>;
 </pre>
 </div>
 
@@ -332,7 +332,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">void</span>&#42;  <b>FT_Pointer</b>;
+  <span class="keyword">typedef</span> <span class="keyword">void</span>*  <b>FT_Pointer</b>;
 </pre>
 </div>
 
@@ -476,7 +476,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">signed</span> <span class="keyword">short</span>  <b>FT_FWord</b>;   /&#42; distance in FUnits &#42;/
+  <span class="keyword">typedef</span> <span class="keyword">signed</span> <span class="keyword">short</span>  <b>FT_FWord</b>;   /* distance in FUnits */
 </pre>
 </div>
 
@@ -491,7 +491,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">short</span>  <b>FT_UFWord</b>;  /&#42; <span class="keyword">unsigned</span> distance &#42;/
+  <span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">short</span>  <b>FT_UFWord</b>;  /* <span class="keyword">unsigned</span> distance */
 </pre>
 </div>
 
@@ -568,7 +568,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Data_
   {
-    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>&#42;  pointer;
+    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*  pointer;
     <a href="../ft2-basic_types/#ft_int">FT_Int</a>          length;
 
   } <b>FT_Data</b>;
@@ -610,7 +610,7 @@ This macro converts four-letter tags that are used to label TrueType tables into
 
 <h4>note</h4>
 
-The produced values &#42;&#42;must&#42;&#42; be 32-bit integers. Don't redefine this macro.
+The produced values **must** be 32-bit integers. Don't redefine this macro.
 
 <hr>
 
@@ -622,7 +622,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Generic_
   {
-    <span class="keyword">void</span>&#42;                 data;
+    <span class="keyword">void</span>*                 data;
     <a href="../ft2-basic_types/#ft_generic_finalizer">FT_Generic_Finalizer</a>  finalizer;
 
   } <b>FT_Generic</b>;
@@ -654,7 +654,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">void</span>  (&#42;<b>FT_Generic_Finalizer</b>)( <span class="keyword">void</span>&#42;  object );
+  <span class="keyword">typedef</span> <span class="keyword">void</span>  (*<b>FT_Generic_Finalizer</b>)( <span class="keyword">void</span>*  object );
 </pre>
 </div>
 
@@ -678,11 +678,11 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
     <span class="keyword">unsigned</span> <span class="keyword">int</span>    rows;
     <span class="keyword">unsigned</span> <span class="keyword">int</span>    width;
     <span class="keyword">int</span>             pitch;
-    <span class="keyword">unsigned</span> <span class="keyword">char</span>&#42;  buffer;
+    <span class="keyword">unsigned</span> <span class="keyword">char</span>*  buffer;
     <span class="keyword">unsigned</span> <span class="keyword">short</span>  num_grays;
     <span class="keyword">unsigned</span> <span class="keyword">char</span>   pixel_mode;
     <span class="keyword">unsigned</span> <span class="keyword">char</span>   palette_mode;
-    <span class="keyword">void</span>&#42;           palette;
+    <span class="keyword">void</span>*           palette;
 
   } <b>FT_Bitmap</b>;
 </pre>
@@ -741,13 +741,13 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
     <a href="../ft2-basic_types/#ft_pixel_mode_lcd_v">FT_PIXEL_MODE_LCD_V</a>,
     <a href="../ft2-basic_types/#ft_pixel_mode_bgra">FT_PIXEL_MODE_BGRA</a>,
 
-    FT_PIXEL_MODE_MAX      /&#42; do not remove &#42;/
+    FT_PIXEL_MODE_MAX      /* do not remove */
 
   } <b>FT_Pixel_Mode</b>;
 
 
-  /&#42; these constants are deprecated; use the corresponding `<b>FT_Pixel_Mode</b>' &#42;/
-  /&#42; values instead.                                                       &#42;/
+  /* these constants are deprecated; use the corresponding `<b>FT_Pixel_Mode</b>' */
+  /* values instead.                                                       */
 #<span class="keyword">define</span> ft_pixel_mode_none   <a href="../ft2-basic_types/#ft_pixel_mode_none">FT_PIXEL_MODE_NONE</a>
 #<span class="keyword">define</span> ft_pixel_mode_mono   <a href="../ft2-basic_types/#ft_pixel_mode_mono">FT_PIXEL_MODE_MONO</a>
 #<span class="keyword">define</span> ft_pixel_mode_grays  <a href="../ft2-basic_types/#ft_pixel_mode_gray">FT_PIXEL_MODE_GRAY</a>
@@ -807,8 +807,8 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
   } <b>FT_Glyph_Format</b>;
 
 
-  /&#42; these constants are deprecated; use the corresponding &#42;/
-  /* `<b>FT_Glyph_Format</b>' values instead.                     &#42;/
+  /* these constants are deprecated; use the corresponding */
+  /* `<b>FT_Glyph_Format</b>' values instead.                     */
 #<span class="keyword">define</span> ft_glyph_format_none       <a href="../ft2-basic_types/#ft_glyph_format_none">FT_GLYPH_FORMAT_NONE</a>
 #<span class="keyword">define</span> ft_glyph_format_composite  <a href="../ft2-basic_types/#ft_glyph_format_composite">FT_GLYPH_FORMAT_COMPOSITE</a>
 #<span class="keyword">define</span> ft_glyph_format_bitmap     <a href="../ft2-basic_types/#ft_glyph_format_bitmap">FT_GLYPH_FORMAT_BITMAP</a>
@@ -853,7 +853,7 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
                     ( (<span class="keyword">unsigned</span> <span class="keyword">long</span>)_x2 &lt;&lt; 16 ) | \
                     ( (<span class="keyword">unsigned</span> <span class="keyword">long</span>)_x3 &lt;&lt; 8  ) | \
                       (<span class="keyword">unsigned</span> <span class="keyword">long</span>)_x4         )
-#<span class="keyword">endif</span> /&#42; <b>FT_IMAGE_TAG</b> &#42;/
+#<span class="keyword">endif</span> /* <b>FT_IMAGE_TAG</b> */
 </pre>
 </div>
 

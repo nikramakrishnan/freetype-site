@@ -16,14 +16,14 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Outline_
   {
-    <span class="keyword">short</span>       n_contours;      /&#42; number of contours in glyph        &#42;/
-    <span class="keyword">short</span>       n_points;        /&#42; number of points in the glyph      &#42;/
+    <span class="keyword">short</span>       n_contours;      /* number of contours in glyph        */
+    <span class="keyword">short</span>       n_points;        /* number of points in the glyph      */
 
-    <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  points;          /&#42; the outline's points               &#42;/
-    <span class="keyword">char</span>&#42;       tags;            /&#42; the points flags                   &#42;/
-    <span class="keyword">short</span>&#42;      contours;        /&#42; the contour end points             &#42;/
+    <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  points;          /* the outline's points               */
+    <span class="keyword">char</span>*       tags;            /* the points flags                   */
+    <span class="keyword">short</span>*      contours;        /* the contour end points             */
 
-    <span class="keyword">int</span>         flags;           /&#42; outline masks                      &#42;/
+    <span class="keyword">int</span>         flags;           /* outline masks                      */
 
   } <b>FT_Outline</b>;
 </pre>
@@ -74,14 +74,14 @@ Defined in FT_OUTLINE_H (freetype/ftoutln.h).
   <b>FT_Outline_New</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>   library,
                   <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>      numPoints,
                   <a href="../ft2-basic_types/#ft_int">FT_Int</a>       numContours,
-                  <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>  &#42;anoutline );
+                  <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>  *anoutline );
 
 
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   FT_Outline_New_Internal( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>    memory,
                            <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>      numPoints,
                            <a href="../ft2-basic_types/#ft_int">FT_Int</a>       numContours,
-                           <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>  &#42;anoutline );
+                           <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>  *anoutline );
 </pre>
 </div>
 
@@ -91,7 +91,7 @@ Create a new outline of a given size.
 <h4>input</h4>
 <table class="fields">
 <tr><td class="val" id="library">library</td><td class="desc">
-<p>A handle to the library object from where the outline is allocated. Note however that the new outline will &#42;&#42;not&#42;&#42; necessarily be &#42;&#42;freed&#42;&#42;, when destroying the library, by <a href="../ft2-base_interface/#ft_done_freetype">FT_Done_FreeType</a>.</p>
+<p>A handle to the library object from where the outline is allocated. Note however that the new outline will <strong>not</strong> necessarily be <strong>freed</strong>, when destroying the library, by <a href="../ft2-base_interface/#ft_done_freetype">FT_Done_FreeType</a>.</p>
 </td></tr>
 <tr><td class="val" id="numpoints">numPoints</td><td class="desc">
 <p>The maximum number of points within the outline. Must be smaller than or equal to 0xFFFF (65535).</p>
@@ -126,12 +126,12 @@ Defined in FT_OUTLINE_H (freetype/ftoutln.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Outline_Done</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>   library,
-                   <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline );
+                   <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline );
 
 
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   FT_Outline_Done_Internal( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>    memory,
-                            <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline );
+                            <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline );
 </pre>
 </div>
 
@@ -165,8 +165,8 @@ Defined in FT_OUTLINE_H (freetype/ftoutln.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Outline_Copy</b>( <span class="keyword">const</span> <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  source,
-                   <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>        &#42;target );
+  <b>FT_Outline_Copy</b>( <span class="keyword">const</span> <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  source,
+                   <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>        *target );
 </pre>
 </div>
 
@@ -200,7 +200,7 @@ Defined in FT_OUTLINE_H (freetype/ftoutln.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Outline_Translate</b>( <span class="keyword">const</span> <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline,
+  <b>FT_Outline_Translate</b>( <span class="keyword">const</span> <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline,
                         <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>             xOffset,
                         <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>             yOffset );
 </pre>
@@ -235,8 +235,8 @@ Defined in FT_OUTLINE_H (freetype/ftoutln.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Outline_Transform</b>( <span class="keyword">const</span> <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline,
-                        <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>&#42;   matrix );
+  <b>FT_Outline_Transform</b>( <span class="keyword">const</span> <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline,
+                        <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>*   matrix );
 </pre>
 </div>
 
@@ -270,7 +270,7 @@ Defined in FT_OUTLINE_H (freetype/ftoutln.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Outline_Embolden</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline,
+  <b>FT_Outline_Embolden</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline,
                        <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>       strength );
 </pre>
 </div>
@@ -322,7 +322,7 @@ Defined in FT_OUTLINE_H (freetype/ftoutln.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Outline_EmboldenXY</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline,
+  <b>FT_Outline_EmboldenXY</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline,
                          <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>       xstrength,
                          <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>       ystrength );
 </pre>
@@ -344,7 +344,7 @@ Defined in FT_OUTLINE_H (freetype/ftoutln.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Outline_Reverse</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline );
+  <b>FT_Outline_Reverse</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline );
 </pre>
 </div>
 
@@ -373,7 +373,7 @@ Defined in FT_OUTLINE_H (freetype/ftoutln.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Outline_Check</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline );
+  <b>FT_Outline_Check</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline );
 </pre>
 </div>
 
@@ -404,8 +404,8 @@ Defined in FT_OUTLINE_H (freetype/ftoutln.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Outline_Get_CBox</b>( <span class="keyword">const</span> <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline,
-                       <a href="../ft2-basic_types/#ft_bbox">FT_BBox</a>           &#42;acbox );
+  <b>FT_Outline_Get_CBox</b>( <span class="keyword">const</span> <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline,
+                       <a href="../ft2-basic_types/#ft_bbox">FT_BBox</a>           *acbox );
 </pre>
 </div>
 
@@ -441,8 +441,8 @@ Defined in FT_BBOX_H (freetype/ftbbox.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Outline_Get_BBox</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline,
-                       <a href="../ft2-basic_types/#ft_bbox">FT_BBox</a>     &#42;abbox );
+  <b>FT_Outline_Get_BBox</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline,
+                       <a href="../ft2-basic_types/#ft_bbox">FT_BBox</a>     *abbox );
 </pre>
 </div>
 
@@ -481,8 +481,8 @@ Defined in FT_OUTLINE_H (freetype/ftoutln.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Outline_Get_Bitmap</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>        library,
-                         <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;       outline,
-                         <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  &#42;abitmap );
+                         <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*       outline,
+                         <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  *abitmap );
 </pre>
 </div>
 
@@ -528,8 +528,8 @@ Defined in FT_OUTLINE_H (freetype/ftoutln.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Outline_Render</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>         library,
-                     <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;        outline,
-                     <a href="../ft2-raster/#ft_raster_params">FT_Raster_Params</a>&#42;  params );
+                     <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*        outline,
+                     <a href="../ft2-raster/#ft_raster_params">FT_Raster_Params</a>*  params );
 </pre>
 </div>
 
@@ -574,9 +574,9 @@ Defined in FT_OUTLINE_H (freetype/ftoutln.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Outline_Decompose</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;              outline,
-                        <span class="keyword">const</span> <a href="../ft2-outline_processing/#ft_outline_funcs">FT_Outline_Funcs</a>&#42;  func_interface,
-                        <span class="keyword">void</span>&#42;                    user );
+  <b>FT_Outline_Decompose</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*              outline,
+                        <span class="keyword">const</span> <a href="../ft2-outline_processing/#ft_outline_funcs">FT_Outline_Funcs</a>*  func_interface,
+                        <span class="keyword">void</span>*                    user );
 </pre>
 </div>
 
@@ -676,8 +676,8 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">int</span>
-  (&#42;<b>FT_Outline_MoveToFunc</b>)( <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  to,
-                            <span class="keyword">void</span>&#42;             user );
+  (*<b>FT_Outline_MoveToFunc</b>)( <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  to,
+                            <span class="keyword">void</span>*             user );
 
 #<span class="keyword">define</span> FT_Outline_MoveTo_Func  <b>FT_Outline_MoveToFunc</b>
 </pre>
@@ -711,8 +711,8 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">int</span>
-  (&#42;<b>FT_Outline_LineToFunc</b>)( <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  to,
-                            <span class="keyword">void</span>&#42;             user );
+  (*<b>FT_Outline_LineToFunc</b>)( <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  to,
+                            <span class="keyword">void</span>*             user );
 
 #<span class="keyword">define</span> FT_Outline_LineTo_Func  <b>FT_Outline_LineToFunc</b>
 </pre>
@@ -746,9 +746,9 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">int</span>
-  (&#42;<b>FT_Outline_ConicToFunc</b>)( <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  control,
-                             <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  to,
-                             <span class="keyword">void</span>&#42;             user );
+  (*<b>FT_Outline_ConicToFunc</b>)( <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  control,
+                             <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  to,
+                             <span class="keyword">void</span>*             user );
 
 #<span class="keyword">define</span> FT_Outline_ConicTo_Func  <b>FT_Outline_ConicToFunc</b>
 </pre>
@@ -785,10 +785,10 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">int</span>
-  (&#42;<b>FT_Outline_CubicToFunc</b>)( <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  control1,
-                             <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  control2,
-                             <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  to,
-                             <span class="keyword">void</span>&#42;             user );
+  (*<b>FT_Outline_CubicToFunc</b>)( <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  control1,
+                             <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  control2,
+                             <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  to,
+                             <span class="keyword">void</span>*             user );
 
 #<span class="keyword">define</span> FT_Outline_CubicTo_Func  <b>FT_Outline_CubicToFunc</b>
 </pre>
@@ -872,7 +872,7 @@ Defined in FT_OUTLINE_H (freetype/ftoutln.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-outline_processing/#ft_orientation">FT_Orientation</a> )
-  <b>FT_Outline_Get_Orientation</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>&#42;  outline );
+  <b>FT_Outline_Get_Orientation</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline );
 </pre>
 </div>
 
@@ -912,8 +912,8 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 #<span class="keyword">define</span> <a href="../ft2-outline_processing/#ft_outline_single_pass">FT_OUTLINE_SINGLE_PASS</a>      0x200
 
 
-  /&#42; these constants are deprecated; use the corresponding &#42;/
-  /* `<b>FT_OUTLINE_XXX</b>' values instead                       &#42;/
+  /* these constants are deprecated; use the corresponding */
+  /* `<b>FT_OUTLINE_XXX</b>' values instead                       */
 #<span class="keyword">define</span> ft_outline_none             <a href="../ft2-outline_processing/#ft_outline_none">FT_OUTLINE_NONE</a>
 #<span class="keyword">define</span> ft_outline_owner            <a href="../ft2-outline_processing/#ft_outline_owner">FT_OUTLINE_OWNER</a>
 #<span class="keyword">define</span> ft_outline_even_odd_fill    <a href="../ft2-outline_processing/#ft_outline_even_odd_fill">FT_OUTLINE_EVEN_ODD_FILL</a>

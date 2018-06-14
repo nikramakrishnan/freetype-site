@@ -8,11 +8,11 @@
 
 The header file `fterrors.h` (which is automatically included by `freetype.h` defines the handling of FreeType's enumeration constants. It can also be used to generate error message strings with a small macro trick explained below.
 
-&#42;&#42;Error Formats&#42;&#42;
+**Error Formats**
 
 The configuration macro FT_CONFIG_OPTION_USE_MODULE_ERRORS can be defined in `ftoption.h` in order to make the higher byte indicate the module where the error has happened (this is not compatible with standard builds of FreeType&nbsp;2, however). See the file `ftmoderr.h` for more details.
 
-&#42;&#42;Error Message Strings&#42;&#42;
+**Error Message Strings**
 
 Error definitions are set up with special macros that allow client applications to build a table of error message strings. The strings are not included in a normal build of FreeType&nbsp;2 to save space (most client applications do not use them).
 

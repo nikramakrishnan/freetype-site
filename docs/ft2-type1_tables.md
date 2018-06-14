@@ -16,11 +16,11 @@ Defined in FT_TYPE1_TABLES_H (freetype/t1tables.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  PS_FontInfoRec_
   {
-    <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;  version;
-    <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;  notice;
-    <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;  full_name;
-    <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;  family_name;
-    <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;  weight;
+    <a href="../ft2-basic_types/#ft_string">FT_String</a>*  version;
+    <a href="../ft2-basic_types/#ft_string">FT_String</a>*  notice;
+    <a href="../ft2-basic_types/#ft_string">FT_String</a>*  full_name;
+    <a href="../ft2-basic_types/#ft_string">FT_String</a>*  family_name;
+    <a href="../ft2-basic_types/#ft_string">FT_String</a>*  weight;
     <a href="../ft2-basic_types/#ft_long">FT_Long</a>     italic_angle;
     <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>     is_fixed_pitch;
     <a href="../ft2-basic_types/#ft_short">FT_Short</a>    underline_position;
@@ -41,7 +41,7 @@ Defined in FT_TYPE1_TABLES_H (freetype/t1tables.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> PS_FontInfoRec_&#42;  <b>PS_FontInfo</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> PS_FontInfoRec_*  <b>PS_FontInfo</b>;
 </pre>
 </div>
 
@@ -84,8 +84,8 @@ Defined in FT_TYPE1_TABLES_H (freetype/t1tables.h).
     <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>    force_bold;
     <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>    round_stem_up;
 
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   snap_widths [13];  /&#42; including std width  &#42;/
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   snap_heights[13];  /&#42; including std height &#42;/
+    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   snap_widths [13];  /* including std width  */
+    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   snap_heights[13];  /* including std height */
 
     <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>   expansion_factor;
 
@@ -109,7 +109,7 @@ Defined in FT_TYPE1_TABLES_H (freetype/t1tables.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> PS_PrivateRec_&#42;  <b>PS_Private</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> PS_PrivateRec_*  <b>PS_Private</b>;
 </pre>
 </div>
 
@@ -157,7 +157,7 @@ Defined in FT_TYPE1_TABLES_H (freetype/t1tables.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> CID_FaceDictRec_&#42;  <b>CID_FaceDict</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> CID_FaceDictRec_*  <b>CID_FaceDict</b>;
 </pre>
 </div>
 
@@ -174,12 +174,12 @@ Defined in FT_TYPE1_TABLES_H (freetype/t1tables.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  CID_FaceInfoRec_
   {
-    <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;      cid_font_name;
+    <a href="../ft2-basic_types/#ft_string">FT_String</a>*      cid_font_name;
     <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>        cid_version;
     <a href="../ft2-basic_types/#ft_int">FT_Int</a>          cid_font_type;
 
-    <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;      registry;
-    <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;      ordering;
+    <a href="../ft2-basic_types/#ft_string">FT_String</a>*      registry;
+    <a href="../ft2-basic_types/#ft_string">FT_String</a>*      ordering;
     <a href="../ft2-basic_types/#ft_int">FT_Int</a>          supplement;
 
     <a href="../ft2-type1_tables/#ps_fontinforec">PS_FontInfoRec</a>  font_info;
@@ -214,7 +214,7 @@ Defined in FT_TYPE1_TABLES_H (freetype/t1tables.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> CID_FaceInfoRec_&#42;  <b>CID_FaceInfo</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> CID_FaceInfoRec_*  <b>CID_FaceInfo</b>;
 </pre>
 </div>
 
@@ -344,7 +344,7 @@ Defined in FT_TYPE1_TABLES_H (freetype/t1tables.h).
   <b>FT_Get_PS_Font_Value</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>       face,
                         <a href="../ft2-type1_tables/#ps_dict_keys">PS_Dict_Keys</a>  key,
                         <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>       idx,
-                        <span class="keyword">void</span>         &#42;value,
+                        <span class="keyword">void</span>         *value,
                         <a href="../ft2-basic_types/#ft_long">FT_Long</a>       value_len );
 </pre>
 </div>
@@ -384,7 +384,7 @@ The amount of memory (in bytes) required to hold the requested value (if it exis
 
 <h4>note</h4>
 
-The values returned are not pointers into the internal structures of the face, but are &lsquo;fresh&rsquo; copies, so that the memory containing them belongs to the calling application. This also enforces the `read-only` nature of these values, i.e., this function cannot be used to manipulate the face.
+The values returned are not pointers into the internal structures of the face, but are &lsquo;fresh&rsquo; copies, so that the memory containing them belongs to the calling application. This also enforces the &lsquo;read-only&rsquo; nature of these values, i.e., this function cannot be used to manipulate the face.
 
 &lsquo;value&rsquo; is a void pointer because the values returned can be of various types.
 
@@ -412,12 +412,12 @@ Defined in FT_TYPE1_TABLES_H (freetype/t1tables.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">enum</span>  T1_Blend_Flags_
   {
-    /&#42; required fields in a FontInfo blend dictionary &#42;/
+    /* required fields in a FontInfo blend dictionary */
     <a href="../ft2-type1_tables/#t1_blend_underline_position">T1_BLEND_UNDERLINE_POSITION</a> = 0,
     <a href="../ft2-type1_tables/#t1_blend_underline_thickness">T1_BLEND_UNDERLINE_THICKNESS</a>,
     <a href="../ft2-type1_tables/#t1_blend_italic_angle">T1_BLEND_ITALIC_ANGLE</a>,
 
-    /&#42; required fields in a Private blend dictionary &#42;/
+    /* required fields in a Private blend dictionary */
     <a href="../ft2-type1_tables/#t1_blend_blue_values">T1_BLEND_BLUE_VALUES</a>,
     <a href="../ft2-type1_tables/#t1_blend_other_blues">T1_BLEND_OTHER_BLUES</a>,
     <a href="../ft2-type1_tables/#t1_blend_standard_width">T1_BLEND_STANDARD_WIDTH</a>,
@@ -430,13 +430,13 @@ Defined in FT_TYPE1_TABLES_H (freetype/t1tables.h).
     <a href="../ft2-type1_tables/#t1_blend_family_other_blues">T1_BLEND_FAMILY_OTHER_BLUES</a>,
     <a href="../ft2-type1_tables/#t1_blend_force_bold">T1_BLEND_FORCE_BOLD</a>,
 
-    T1_BLEND_MAX    /&#42; do not remove &#42;/
+    T1_BLEND_MAX    /* do not remove */
 
   } <b>T1_Blend_Flags</b>;
 
 
-  /&#42; these constants are deprecated; use the corresponding &#42;/
-  /* `<b>T1_Blend_Flags</b>' values instead                       &#42;/
+  /* these constants are deprecated; use the corresponding */
+  /* `<b>T1_Blend_Flags</b>' values instead                       */
 #<span class="keyword">define</span> t1_blend_underline_position   <a href="../ft2-type1_tables/#t1_blend_underline_position">T1_BLEND_UNDERLINE_POSITION</a>
 #<span class="keyword">define</span> t1_blend_underline_thickness  <a href="../ft2-type1_tables/#t1_blend_underline_thickness">T1_BLEND_UNDERLINE_THICKNESS</a>
 #<span class="keyword">define</span> t1_blend_italic_angle         <a href="../ft2-type1_tables/#t1_blend_italic_angle">T1_BLEND_ITALIC_ANGLE</a>
@@ -560,57 +560,57 @@ Defined in FT_TYPE1_TABLES_H (freetype/t1tables.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">enum</span>  PS_Dict_Keys_
   {
-    /&#42; conventionally in the font dictionary &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_font_type">PS_DICT_FONT_TYPE</a>,              /&#42; <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>         &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_font_matrix">PS_DICT_FONT_MATRIX</a>,            /&#42; <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>        &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_font_bbox">PS_DICT_FONT_BBOX</a>,              /&#42; <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>        &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_paint_type">PS_DICT_PAINT_TYPE</a>,             /&#42; <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>         &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_font_name">PS_DICT_FONT_NAME</a>,              /&#42; <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;      &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_unique_id">PS_DICT_UNIQUE_ID</a>,              /&#42; <a href="../ft2-basic_types/#ft_int">FT_Int</a>          &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_num_char_strings">PS_DICT_NUM_CHAR_STRINGS</a>,       /&#42; <a href="../ft2-basic_types/#ft_int">FT_Int</a>          &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_char_string_key">PS_DICT_CHAR_STRING_KEY</a>,        /&#42; <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;      &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_char_string">PS_DICT_CHAR_STRING</a>,            /&#42; <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;      &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_encoding_type">PS_DICT_ENCODING_TYPE</a>,          /&#42; <a href="../ft2-type1_tables/#t1_encodingtype">T1_EncodingType</a> &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_encoding_entry">PS_DICT_ENCODING_ENTRY</a>,         /&#42; <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42;      &#42;/
+    /* conventionally in the font dictionary */
+    <a href="../ft2-type1_tables/#ps_dict_font_type">PS_DICT_FONT_TYPE</a>,              /* <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>         */
+    <a href="../ft2-type1_tables/#ps_dict_font_matrix">PS_DICT_FONT_MATRIX</a>,            /* <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>        */
+    <a href="../ft2-type1_tables/#ps_dict_font_bbox">PS_DICT_FONT_BBOX</a>,              /* <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>        */
+    <a href="../ft2-type1_tables/#ps_dict_paint_type">PS_DICT_PAINT_TYPE</a>,             /* <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>         */
+    <a href="../ft2-type1_tables/#ps_dict_font_name">PS_DICT_FONT_NAME</a>,              /* <a href="../ft2-basic_types/#ft_string">FT_String</a>*      */
+    <a href="../ft2-type1_tables/#ps_dict_unique_id">PS_DICT_UNIQUE_ID</a>,              /* <a href="../ft2-basic_types/#ft_int">FT_Int</a>          */
+    <a href="../ft2-type1_tables/#ps_dict_num_char_strings">PS_DICT_NUM_CHAR_STRINGS</a>,       /* <a href="../ft2-basic_types/#ft_int">FT_Int</a>          */
+    <a href="../ft2-type1_tables/#ps_dict_char_string_key">PS_DICT_CHAR_STRING_KEY</a>,        /* <a href="../ft2-basic_types/#ft_string">FT_String</a>*      */
+    <a href="../ft2-type1_tables/#ps_dict_char_string">PS_DICT_CHAR_STRING</a>,            /* <a href="../ft2-basic_types/#ft_string">FT_String</a>*      */
+    <a href="../ft2-type1_tables/#ps_dict_encoding_type">PS_DICT_ENCODING_TYPE</a>,          /* <a href="../ft2-type1_tables/#t1_encodingtype">T1_EncodingType</a> */
+    <a href="../ft2-type1_tables/#ps_dict_encoding_entry">PS_DICT_ENCODING_ENTRY</a>,         /* <a href="../ft2-basic_types/#ft_string">FT_String</a>*      */
 
-    /&#42; conventionally in the font Private dictionary &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_num_subrs">PS_DICT_NUM_SUBRS</a>,              /&#42; <a href="../ft2-basic_types/#ft_int">FT_Int</a>     &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_subr">PS_DICT_SUBR</a>,                   /&#42; <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42; &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_std_hw">PS_DICT_STD_HW</a>,                 /&#42; <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_std_vw">PS_DICT_STD_VW</a>,                 /&#42; <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_num_blue_values">PS_DICT_NUM_BLUE_VALUES</a>,        /&#42; <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_blue_value">PS_DICT_BLUE_VALUE</a>,             /&#42; <a href="../ft2-basic_types/#ft_short">FT_Short</a>   &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_blue_fuzz">PS_DICT_BLUE_FUZZ</a>,              /&#42; <a href="../ft2-basic_types/#ft_int">FT_Int</a>     &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_num_other_blues">PS_DICT_NUM_OTHER_BLUES</a>,        /&#42; <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_other_blue">PS_DICT_OTHER_BLUE</a>,             /&#42; <a href="../ft2-basic_types/#ft_short">FT_Short</a>   &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_num_family_blues">PS_DICT_NUM_FAMILY_BLUES</a>,       /&#42; <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_family_blue">PS_DICT_FAMILY_BLUE</a>,            /&#42; <a href="../ft2-basic_types/#ft_short">FT_Short</a>   &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_num_family_other_blues">PS_DICT_NUM_FAMILY_OTHER_BLUES</a>, /&#42; <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_family_other_blue">PS_DICT_FAMILY_OTHER_BLUE</a>,      /&#42; <a href="../ft2-basic_types/#ft_short">FT_Short</a>   &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_blue_scale">PS_DICT_BLUE_SCALE</a>,             /&#42; <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>   &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_blue_shift">PS_DICT_BLUE_SHIFT</a>,             /&#42; <a href="../ft2-basic_types/#ft_int">FT_Int</a>     &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_num_stem_snap_h">PS_DICT_NUM_STEM_SNAP_H</a>,        /&#42; <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_stem_snap_h">PS_DICT_STEM_SNAP_H</a>,            /&#42; <a href="../ft2-basic_types/#ft_short">FT_Short</a>   &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_num_stem_snap_v">PS_DICT_NUM_STEM_SNAP_V</a>,        /&#42; <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_stem_snap_v">PS_DICT_STEM_SNAP_V</a>,            /&#42; <a href="../ft2-basic_types/#ft_short">FT_Short</a>   &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_force_bold">PS_DICT_FORCE_BOLD</a>,             /&#42; <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>    &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_rnd_stem_up">PS_DICT_RND_STEM_UP</a>,            /&#42; <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>    &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_min_feature">PS_DICT_MIN_FEATURE</a>,            /&#42; <a href="../ft2-basic_types/#ft_short">FT_Short</a>   &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_len_iv">PS_DICT_LEN_IV</a>,                 /&#42; <a href="../ft2-basic_types/#ft_int">FT_Int</a>     &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_password">PS_DICT_PASSWORD</a>,               /&#42; <a href="../ft2-basic_types/#ft_long">FT_Long</a>    &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_language_group">PS_DICT_LANGUAGE_GROUP</a>,         /&#42; <a href="../ft2-basic_types/#ft_long">FT_Long</a>    &#42;/
+    /* conventionally in the font Private dictionary */
+    <a href="../ft2-type1_tables/#ps_dict_num_subrs">PS_DICT_NUM_SUBRS</a>,              /* <a href="../ft2-basic_types/#ft_int">FT_Int</a>     */
+    <a href="../ft2-type1_tables/#ps_dict_subr">PS_DICT_SUBR</a>,                   /* <a href="../ft2-basic_types/#ft_string">FT_String</a>* */
+    <a href="../ft2-type1_tables/#ps_dict_std_hw">PS_DICT_STD_HW</a>,                 /* <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  */
+    <a href="../ft2-type1_tables/#ps_dict_std_vw">PS_DICT_STD_VW</a>,                 /* <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  */
+    <a href="../ft2-type1_tables/#ps_dict_num_blue_values">PS_DICT_NUM_BLUE_VALUES</a>,        /* <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    */
+    <a href="../ft2-type1_tables/#ps_dict_blue_value">PS_DICT_BLUE_VALUE</a>,             /* <a href="../ft2-basic_types/#ft_short">FT_Short</a>   */
+    <a href="../ft2-type1_tables/#ps_dict_blue_fuzz">PS_DICT_BLUE_FUZZ</a>,              /* <a href="../ft2-basic_types/#ft_int">FT_Int</a>     */
+    <a href="../ft2-type1_tables/#ps_dict_num_other_blues">PS_DICT_NUM_OTHER_BLUES</a>,        /* <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    */
+    <a href="../ft2-type1_tables/#ps_dict_other_blue">PS_DICT_OTHER_BLUE</a>,             /* <a href="../ft2-basic_types/#ft_short">FT_Short</a>   */
+    <a href="../ft2-type1_tables/#ps_dict_num_family_blues">PS_DICT_NUM_FAMILY_BLUES</a>,       /* <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    */
+    <a href="../ft2-type1_tables/#ps_dict_family_blue">PS_DICT_FAMILY_BLUE</a>,            /* <a href="../ft2-basic_types/#ft_short">FT_Short</a>   */
+    <a href="../ft2-type1_tables/#ps_dict_num_family_other_blues">PS_DICT_NUM_FAMILY_OTHER_BLUES</a>, /* <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    */
+    <a href="../ft2-type1_tables/#ps_dict_family_other_blue">PS_DICT_FAMILY_OTHER_BLUE</a>,      /* <a href="../ft2-basic_types/#ft_short">FT_Short</a>   */
+    <a href="../ft2-type1_tables/#ps_dict_blue_scale">PS_DICT_BLUE_SCALE</a>,             /* <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>   */
+    <a href="../ft2-type1_tables/#ps_dict_blue_shift">PS_DICT_BLUE_SHIFT</a>,             /* <a href="../ft2-basic_types/#ft_int">FT_Int</a>     */
+    <a href="../ft2-type1_tables/#ps_dict_num_stem_snap_h">PS_DICT_NUM_STEM_SNAP_H</a>,        /* <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    */
+    <a href="../ft2-type1_tables/#ps_dict_stem_snap_h">PS_DICT_STEM_SNAP_H</a>,            /* <a href="../ft2-basic_types/#ft_short">FT_Short</a>   */
+    <a href="../ft2-type1_tables/#ps_dict_num_stem_snap_v">PS_DICT_NUM_STEM_SNAP_V</a>,        /* <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    */
+    <a href="../ft2-type1_tables/#ps_dict_stem_snap_v">PS_DICT_STEM_SNAP_V</a>,            /* <a href="../ft2-basic_types/#ft_short">FT_Short</a>   */
+    <a href="../ft2-type1_tables/#ps_dict_force_bold">PS_DICT_FORCE_BOLD</a>,             /* <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>    */
+    <a href="../ft2-type1_tables/#ps_dict_rnd_stem_up">PS_DICT_RND_STEM_UP</a>,            /* <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>    */
+    <a href="../ft2-type1_tables/#ps_dict_min_feature">PS_DICT_MIN_FEATURE</a>,            /* <a href="../ft2-basic_types/#ft_short">FT_Short</a>   */
+    <a href="../ft2-type1_tables/#ps_dict_len_iv">PS_DICT_LEN_IV</a>,                 /* <a href="../ft2-basic_types/#ft_int">FT_Int</a>     */
+    <a href="../ft2-type1_tables/#ps_dict_password">PS_DICT_PASSWORD</a>,               /* <a href="../ft2-basic_types/#ft_long">FT_Long</a>    */
+    <a href="../ft2-type1_tables/#ps_dict_language_group">PS_DICT_LANGUAGE_GROUP</a>,         /* <a href="../ft2-basic_types/#ft_long">FT_Long</a>    */
 
-    /&#42; conventionally in the font FontInfo dictionary &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_version">PS_DICT_VERSION</a>,                /&#42; <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42; &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_notice">PS_DICT_NOTICE</a>,                 /&#42; <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42; &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_full_name">PS_DICT_FULL_NAME</a>,              /&#42; <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42; &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_family_name">PS_DICT_FAMILY_NAME</a>,            /&#42; <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42; &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_weight">PS_DICT_WEIGHT</a>,                 /&#42; <a href="../ft2-basic_types/#ft_string">FT_String</a>&#42; &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_is_fixed_pitch">PS_DICT_IS_FIXED_PITCH</a>,         /&#42; <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>    &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_underline_position">PS_DICT_UNDERLINE_POSITION</a>,     /&#42; <a href="../ft2-basic_types/#ft_short">FT_Short</a>   &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_underline_thickness">PS_DICT_UNDERLINE_THICKNESS</a>,    /&#42; <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_fs_type">PS_DICT_FS_TYPE</a>,                /&#42; <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  &#42;/
-    <a href="../ft2-type1_tables/#ps_dict_italic_angle">PS_DICT_ITALIC_ANGLE</a>,           /&#42; <a href="../ft2-basic_types/#ft_long">FT_Long</a>    &#42;/
+    /* conventionally in the font FontInfo dictionary */
+    <a href="../ft2-type1_tables/#ps_dict_version">PS_DICT_VERSION</a>,                /* <a href="../ft2-basic_types/#ft_string">FT_String</a>* */
+    <a href="../ft2-type1_tables/#ps_dict_notice">PS_DICT_NOTICE</a>,                 /* <a href="../ft2-basic_types/#ft_string">FT_String</a>* */
+    <a href="../ft2-type1_tables/#ps_dict_full_name">PS_DICT_FULL_NAME</a>,              /* <a href="../ft2-basic_types/#ft_string">FT_String</a>* */
+    <a href="../ft2-type1_tables/#ps_dict_family_name">PS_DICT_FAMILY_NAME</a>,            /* <a href="../ft2-basic_types/#ft_string">FT_String</a>* */
+    <a href="../ft2-type1_tables/#ps_dict_weight">PS_DICT_WEIGHT</a>,                 /* <a href="../ft2-basic_types/#ft_string">FT_String</a>* */
+    <a href="../ft2-type1_tables/#ps_dict_is_fixed_pitch">PS_DICT_IS_FIXED_PITCH</a>,         /* <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>    */
+    <a href="../ft2-type1_tables/#ps_dict_underline_position">PS_DICT_UNDERLINE_POSITION</a>,     /* <a href="../ft2-basic_types/#ft_short">FT_Short</a>   */
+    <a href="../ft2-type1_tables/#ps_dict_underline_thickness">PS_DICT_UNDERLINE_THICKNESS</a>,    /* <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  */
+    <a href="../ft2-type1_tables/#ps_dict_fs_type">PS_DICT_FS_TYPE</a>,                /* <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  */
+    <a href="../ft2-type1_tables/#ps_dict_italic_angle">PS_DICT_ITALIC_ANGLE</a>,           /* <a href="../ft2-basic_types/#ft_long">FT_Long</a>    */
 
     PS_DICT_MAX = <a href="../ft2-type1_tables/#ps_dict_italic_angle">PS_DICT_ITALIC_ANGLE</a>
 

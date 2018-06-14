@@ -52,7 +52,7 @@ Defined in FT_BDF_H (freetype/ftbdf.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> BDF_PropertyRec_&#42;  <b>BDF_Property</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> BDF_PropertyRec_*  <b>BDF_Property</b>;
 </pre>
 </div>
 
@@ -71,7 +71,7 @@ Defined in FT_BDF_H (freetype/ftbdf.h).
   {
     <a href="../ft2-bdf_fonts/#bdf_propertytype">BDF_PropertyType</a>  type;
     <span class="keyword">union</span> {
-      <span class="keyword">const</span> <span class="keyword">char</span>&#42;     atom;
+      <span class="keyword">const</span> <span class="keyword">char</span>*     atom;
       <a href="../ft2-basic_types/#ft_int32">FT_Int32</a>        integer;
       <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>       cardinal;
 
@@ -110,8 +110,8 @@ Defined in FT_BDF_H (freetype/ftbdf.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_BDF_Charset_ID</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>       face,
-                         <span class="keyword">const</span> <span class="keyword">char</span>&#42;  &#42;acharset_encoding,
-                         <span class="keyword">const</span> <span class="keyword">char</span>&#42;  &#42;acharset_registry );
+                         <span class="keyword">const</span> <span class="keyword">char</span>*  *acharset_encoding,
+                         <span class="keyword">const</span> <span class="keyword">char</span>*  *acharset_registry );
 </pre>
 </div>
 
@@ -153,8 +153,8 @@ Defined in FT_BDF_H (freetype/ftbdf.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_BDF_Property</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>           face,
-                       <span class="keyword">const</span> <span class="keyword">char</span>&#42;       prop_name,
-                       <a href="../ft2-bdf_fonts/#bdf_propertyrec">BDF_PropertyRec</a>  &#42;aproperty );
+                       <span class="keyword">const</span> <span class="keyword">char</span>*       prop_name,
+                       <a href="../ft2-bdf_fonts/#bdf_propertyrec">BDF_PropertyRec</a>  *aproperty );
 </pre>
 </div>
 

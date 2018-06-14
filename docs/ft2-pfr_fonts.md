@@ -16,10 +16,10 @@ Defined in FT_PFR_H (freetype/ftpfr.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_PFR_Metrics</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
-                      <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   &#42;aoutline_resolution,
-                      <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   &#42;ametrics_resolution,
-                      <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  &#42;ametrics_x_scale,
-                      <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  &#42;ametrics_y_scale );
+                      <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   *aoutline_resolution,
+                      <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   *ametrics_resolution,
+                      <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  *ametrics_x_scale,
+                      <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  *ametrics_y_scale );
 </pre>
 </div>
 
@@ -42,7 +42,7 @@ Return the outline and metrics resolutions of a given PFR face.
 <p>Metrics resolution. This is equivalent to <code>outline_resolution</code> for non-PFR fonts. Optional (parameter can be NULL).</p>
 </td></tr>
 <tr><td class="val" id="ametrics_x_scale">ametrics_x_scale</td><td class="desc">
-<p>A 16.16 fixed-point number used to scale distance expressed in metrics units to device subpixels. This is equivalent to &lsquo;face-&gt;size-&gt;x_scale&rsquo;, but for metrics only. Optional (parameter can be NULL).</p>
+<p>A 16.16 fixed-point number used to scale distance expressed in metrics units to device subpixels. This is equivalent to <code>face-&gt;size-&gt;x_scale</code>, but for metrics only. Optional (parameter can be NULL).</p>
 </td></tr>
 <tr><td class="val" id="ametrics_y_scale">ametrics_y_scale</td><td class="desc">
 <p>Same as <code>ametrics_x_scale</code> but for the vertical direction. optional (parameter can be NULL).</p>
@@ -69,7 +69,7 @@ Defined in FT_PFR_H (freetype/ftpfr.h).
   <b>FT_Get_PFR_Kerning</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>     face,
                       <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>     left,
                       <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>     right,
-                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>  &#42;avector );
+                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>  *avector );
 </pre>
 </div>
 
@@ -117,7 +117,7 @@ Defined in FT_PFR_H (freetype/ftpfr.h).
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_PFR_Advance</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
                       <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   gindex,
-                      <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>   &#42;aadvance );
+                      <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>   *aadvance );
 </pre>
 </div>
 

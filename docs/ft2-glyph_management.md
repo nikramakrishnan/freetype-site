@@ -14,7 +14,7 @@ Defined in FT_GLYPH_H (freetype/ftglyph.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_GlyphRec_&#42;  <b>FT_Glyph</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_GlyphRec_*  <b>FT_Glyph</b>;
 </pre>
 </div>
 
@@ -36,7 +36,7 @@ Defined in FT_GLYPH_H (freetype/ftglyph.h).
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_GlyphRec_
   {
     <a href="../ft2-base_interface/#ft_library">FT_Library</a>             library;
-    <span class="keyword">const</span> FT_Glyph_Class&#42;  clazz;
+    <span class="keyword">const</span> FT_Glyph_Class*  clazz;
     <a href="../ft2-basic_types/#ft_glyph_format">FT_Glyph_Format</a>        format;
     <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>              advance;
 
@@ -71,7 +71,7 @@ Defined in FT_GLYPH_H (freetype/ftglyph.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_BitmapGlyphRec_&#42;  <b>FT_BitmapGlyph</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_BitmapGlyphRec_*  <b>FT_BitmapGlyph</b>;
 </pre>
 </div>
 
@@ -98,7 +98,7 @@ Defined in FT_GLYPH_H (freetype/ftglyph.h).
 </div>
 
 
-A structure used for bitmap glyph images. This really is a `sub-class` of <a href="../ft2-glyph_management/#ft_glyphrec">FT_GlyphRec</a>.
+A structure used for bitmap glyph images. This really is a &lsquo;sub-class&rsquo; of <a href="../ft2-glyph_management/#ft_glyphrec">FT_GlyphRec</a>.
 
 <h4>fields</h4>
 <table class="fields">
@@ -118,7 +118,7 @@ A structure used for bitmap glyph images. This really is a `sub-class` of <a hre
 
 <h4>note</h4>
 
-You can typecast an <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a> to <a href="../ft2-glyph_management/#ft_bitmapglyph">FT_BitmapGlyph</a> if you have &lsquo;glyph-&gt;format == FT_GLYPH_FORMAT_BITMAP&rsquo;. This lets you access the bitmap's contents easily.
+You can typecast an <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a> to <a href="../ft2-glyph_management/#ft_bitmapglyph">FT_BitmapGlyph</a> if you have `glyph->format == FT_GLYPH_FORMAT_BITMAP`. This lets you access the bitmap's contents easily.
 
 The corresponding pixel buffer is always owned by <a href="../ft2-glyph_management/#ft_bitmapglyph">FT_BitmapGlyph</a> and is thus created and destroyed with it.
 
@@ -130,7 +130,7 @@ Defined in FT_GLYPH_H (freetype/ftglyph.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_OutlineGlyphRec_&#42;  <b>FT_OutlineGlyph</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_OutlineGlyphRec_*  <b>FT_OutlineGlyph</b>;
 </pre>
 </div>
 
@@ -155,7 +155,7 @@ Defined in FT_GLYPH_H (freetype/ftglyph.h).
 </div>
 
 
-A structure used for outline (vectorial) glyph images. This really is a `sub-class` of <a href="../ft2-glyph_management/#ft_glyphrec">FT_GlyphRec</a>.
+A structure used for outline (vectorial) glyph images. This really is a &lsquo;sub-class&rsquo; of <a href="../ft2-glyph_management/#ft_glyphrec">FT_GlyphRec</a>.
 
 <h4>fields</h4>
 <table class="fields">
@@ -169,7 +169,7 @@ A structure used for outline (vectorial) glyph images. This really is a `sub-cla
 
 <h4>note</h4>
 
-You can typecast an <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a> to <a href="../ft2-glyph_management/#ft_outlineglyph">FT_OutlineGlyph</a> if you have &lsquo;glyph-&gt;format == FT_GLYPH_FORMAT_OUTLINE&rsquo;. This lets you access the outline's content easily.
+You can typecast an <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a> to <a href="../ft2-glyph_management/#ft_outlineglyph">FT_OutlineGlyph</a> if you have `glyph->format == FT_GLYPH_FORMAT_OUTLINE`. This lets you access the outline's content easily.
 
 As the outline is extracted from a glyph slot, its coordinates are expressed normally in 26.6 pixels, unless the flag <a href="../ft2-base_interface/#ft_load_xxx">FT_LOAD_NO_SCALE</a> was used in <a href="../ft2-base_interface/#ft_load_glyph">FT_Load_Glyph</a>() or <a href="../ft2-base_interface/#ft_load_char">FT_Load_Char</a>().
 
@@ -185,7 +185,7 @@ Defined in FT_GLYPH_H (freetype/ftglyph.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_Glyph</b>( <a href="../ft2-base_interface/#ft_glyphslot">FT_GlyphSlot</a>  slot,
-                <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>     &#42;aglyph );
+                <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>     *aglyph );
 </pre>
 </div>
 
@@ -212,7 +212,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-Because `*aglyph->advance.x` and &lsquo;&#42;aglyph-&gt;advance.y&rsquo; are 16.16 fixed-point numbers, `slot->advance.x` and `slot->advance.y` (which are in 26.6 fixed-point format) must be in the range ]-32768;32768[.
+Because `*aglyph->advance.x` and `*aglyph->advance.y` are 16.16 fixed-point numbers, `slot->advance.x` and `slot->advance.y` (which are in 26.6 fixed-point format) must be in the range ]-32768;32768[.
 
 <hr>
 
@@ -224,7 +224,7 @@ Defined in FT_GLYPH_H (freetype/ftglyph.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Glyph_Copy</b>( <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>   source,
-                 <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>  &#42;target );
+                 <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>  *target );
 </pre>
 </div>
 
@@ -259,8 +259,8 @@ Defined in FT_GLYPH_H (freetype/ftglyph.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Glyph_Transform</b>( <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>    glyph,
-                      <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>&#42;  matrix,
-                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  delta );
+                      <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>*  matrix,
+                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  delta );
 </pre>
 </div>
 
@@ -311,8 +311,8 @@ Defined in FT_GLYPH_H (freetype/ftglyph.h).
   } <b>FT_Glyph_BBox_Mode</b>;
 
 
-  /&#42; these constants are deprecated; use the corresponding &#42;/
-  /* `<b>FT_Glyph_BBox_Mode</b>' values instead                   &#42;/
+  /* these constants are deprecated; use the corresponding */
+  /* `<b>FT_Glyph_BBox_Mode</b>' values instead                   */
 #<span class="keyword">define</span> ft_glyph_bbox_unscaled   <a href="../ft2-glyph_management/#ft_glyph_bbox_unscaled">FT_GLYPH_BBOX_UNSCALED</a>
 #<span class="keyword">define</span> ft_glyph_bbox_subpixels  <a href="../ft2-glyph_management/#ft_glyph_bbox_subpixels">FT_GLYPH_BBOX_SUBPIXELS</a>
 #<span class="keyword">define</span> ft_glyph_bbox_gridfit    <a href="../ft2-glyph_management/#ft_glyph_bbox_gridfit">FT_GLYPH_BBOX_GRIDFIT</a>
@@ -354,7 +354,7 @@ Defined in FT_GLYPH_H (freetype/ftglyph.h).
   FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_Glyph_Get_CBox</b>( <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>  glyph,
                      <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   bbox_mode,
-                     <a href="../ft2-basic_types/#ft_bbox">FT_BBox</a>  &#42;acbox );
+                     <a href="../ft2-basic_types/#ft_bbox">FT_BBox</a>  *acbox );
 </pre>
 </div>
 
@@ -415,9 +415,9 @@ Defined in FT_GLYPH_H (freetype/ftglyph.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Glyph_To_Bitmap</b>( <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>&#42;       the_glyph,
+  <b>FT_Glyph_To_Bitmap</b>( <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>*       the_glyph,
                       <a href="../ft2-base_interface/#ft_render_mode">FT_Render_Mode</a>  render_mode,
-                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;      origin,
+                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*      origin,
                       <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>         destroy );
 </pre>
 </div>

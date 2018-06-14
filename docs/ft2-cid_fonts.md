@@ -16,9 +16,9 @@ Defined in FT_CID_H (freetype/ftcid.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_CID_Registry_Ordering_Supplement</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>       face,
-                                           <span class="keyword">const</span> <span class="keyword">char</span>&#42;  &#42;registry,
-                                           <span class="keyword">const</span> <span class="keyword">char</span>&#42;  &#42;ordering,
-                                           <a href="../ft2-basic_types/#ft_int">FT_Int</a>       &#42;supplement );
+                                           <span class="keyword">const</span> <span class="keyword">char</span>*  *registry,
+                                           <span class="keyword">const</span> <span class="keyword">char</span>*  *ordering,
+                                           <a href="../ft2-basic_types/#ft_int">FT_Int</a>       *supplement );
 </pre>
 </div>
 
@@ -67,7 +67,7 @@ Defined in FT_CID_H (freetype/ftcid.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_CID_Is_Internally_CID_Keyed</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
-                                      <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>  &#42;is_cid );
+                                      <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>  *is_cid );
 </pre>
 </div>
 
@@ -111,7 +111,7 @@ Defined in FT_CID_H (freetype/ftcid.h).
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_CID_From_Glyph_Index</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
                                <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   glyph_index,
-                               <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>  &#42;cid );
+                               <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>  *cid );
 </pre>
 </div>
 

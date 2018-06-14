@@ -31,7 +31,7 @@ A list of values and/or bit-flags returned by the <a href="../ft2-gasp_table/#ft
 <p>This special value means that there is no GASP table in this face. It is up to the client to decide what to do.</p>
 </td></tr>
 <tr><td class="val" id="ft_gasp_do_gridfit">FT_GASP_DO_GRIDFIT</td><td class="desc">
-<p>Grid-fitting and hinting should be performed at the specified ppem. This &#42;&#42;really&#42;&#42; means TrueType bytecode interpretation. If this bit is not set, no hinting gets applied.</p>
+<p>Grid-fitting and hinting should be performed at the specified ppem. This <strong>really</strong> means TrueType bytecode interpretation. If this bit is not set, no hinting gets applied.</p>
 </td></tr>
 <tr><td class="val" id="ft_gasp_do_gray">FT_GASP_DO_GRAY</td><td class="desc">
 <p>Anti-aliased rendering should be performed at the specified ppem. If not set, do monochrome rendering.</p>
@@ -87,7 +87,7 @@ Bit flags (see <a href="../ft2-gasp_table/#ft_gasp_xxx">FT_GASP_XXX</a>), or <a 
 
 <h4>note</h4>
 
-If you want to use the MM functionality of OpenType variation fonts (i.e., using <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> and friends), call this function &#42;&#42;after&#42;&#42; setting an instance since the return values can change.
+If you want to use the MM functionality of OpenType variation fonts (i.e., using <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> and friends), call this function **after** setting an instance since the return values can change.
 
 <h4>since</h4>
 

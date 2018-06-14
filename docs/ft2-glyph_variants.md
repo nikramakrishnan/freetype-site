@@ -16,11 +16,11 @@ To date (January 2017), the character with the most ideographic variations is U+
 
 Three Mongolian Variation Selectors have the values U+180B-U+180D; 256 generic Variation Selectors are encoded in the ranges U+FE00-U+FE0F and U+E0100-U+E01EF. IVS currently use Variation Selectors from the range U+E0100-U+E01EF only.
 
-A VS consists of the base character value followed by a single Variation Selector. For example, to get the first variation of U+9089, you have to write the character sequence &lsquo;U+9089 U+E0100&rsquo;.
+A VS consists of the base character value followed by a single Variation Selector. For example, to get the first variation of U+9089, you have to write the character sequence `U+9089 U+E0100`.
 
 Adobe and MS decided to support both standardized and ideographic VS with a new cmap subtable (format&nbsp;14). It is an odd subtable because it is not a mapping of input code points to glyphs, but contains lists of all variations supported by the font.
 
-A variation may be either &lsquo;default&rsquo; or `non-default` for a given font. A default variation is the one you will get for that code point if you look it up in the standard Unicode cmap. A non-default variation is a different glyph.
+A variation may be either &lsquo;default&rsquo; or &lsquo;non-default&rsquo; for a given font. A default variation is the one you will get for that code point if you look it up in the standard Unicode cmap. A non-default variation is a different glyph.
 
 ## FT_Face_GetCharVariantIndex
 
@@ -116,7 +116,7 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>&#42; )
+  FT_EXPORT( <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>* )
   <b>FT_Face_GetVariantSelectors</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>  face );
 </pre>
 </div>
@@ -151,7 +151,7 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>&#42; )
+  FT_EXPORT( <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>* )
   <b>FT_Face_GetVariantsOfChar</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
                              <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  charcode );
 </pre>
@@ -190,7 +190,7 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>&#42; )
+  FT_EXPORT( <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>* )
   <b>FT_Face_GetCharsOfVariant</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
                              <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  variantSelector );
 </pre>

@@ -640,7 +640,7 @@ A macro used in #include statements to name the file containing the FreeType&nbs
 <pre>
 #<span class="keyword">define</span> <b>FT_FONT_FORMATS_H</b>  &lt;freetype/ftfntfmt.h&gt;
 
-  /&#42; deprecated &#42;/
+  /* deprecated */
 #<span class="keyword">define</span> FT_XFREE86_H  <b>FT_FONT_FORMATS_H</b>
 </pre>
 </div>

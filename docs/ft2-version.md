@@ -16,9 +16,9 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
   <b>FT_Library_Version</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>   library,
-                      <a href="../ft2-basic_types/#ft_int">FT_Int</a>      &#42;amajor,
-                      <a href="../ft2-basic_types/#ft_int">FT_Int</a>      &#42;aminor,
-                      <a href="../ft2-basic_types/#ft_int">FT_Int</a>      &#42;apatch );
+                      <a href="../ft2-basic_types/#ft_int">FT_Int</a>      *amajor,
+                      <a href="../ft2-basic_types/#ft_int">FT_Int</a>      *aminor,
+                      <a href="../ft2-basic_types/#ft_int">FT_Int</a>      *apatch );
 </pre>
 </div>
 

@@ -18,7 +18,7 @@ Defined in FT_ADVANCES_H (freetype/ftadvanc.h).
   <b>FT_Get_Advance</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
                   <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    gindex,
                   <a href="../ft2-basic_types/#ft_int32">FT_Int32</a>   load_flags,
-                  <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  &#42;padvance );
+                  <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  *padvance );
 </pre>
 </div>
 
@@ -69,7 +69,7 @@ Defined in FT_ADVANCES_H (freetype/ftadvanc.h).
                    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    start,
                    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    count,
                    <a href="../ft2-basic_types/#ft_int32">FT_Int32</a>   load_flags,
-                   <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  &#42;padvances );
+                   <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  *padvances );
 </pre>
 </div>
 

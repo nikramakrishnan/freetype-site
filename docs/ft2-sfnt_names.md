@@ -25,8 +25,8 @@ Defined in FT_SFNT_NAMES_H (freetype/ftsnames.h).
     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  language_id;
     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  name_id;
 
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>&#42;   string;      /&#42; this string is &#42;not&#42; null-terminated! &#42;/
-    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    string_len;  /&#42; in bytes                              &#42;/
+    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*   string;      /* this string is *not* null-terminated! */
+    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    string_len;  /* in bytes                              */
 
   } <b>FT_SfntName</b>;
 </pre>
@@ -104,7 +104,7 @@ Defined in FT_SFNT_NAMES_H (freetype/ftsnames.h).
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_Sfnt_Name</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>       face,
                     <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>       idx,
-                    <a href="../ft2-sfnt_names/#ft_sfntname">FT_SfntName</a>  &#42;aname );
+                    <a href="../ft2-sfnt_names/#ft_sfntname">FT_SfntName</a>  *aname );
 </pre>
 </div>
 
@@ -152,8 +152,8 @@ Defined in FT_SFNT_NAMES_H (freetype/ftsnames.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_SfntLangTag_
   {
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>&#42;  string;      /&#42; this string is &#42;not&#42; null-terminated! &#42;/
-    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   string_len;  /&#42; in bytes                              &#42;/
+    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*  string;      /* this string is *not* null-terminated! */
+    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   string_len;  /* in bytes                              */
 
   } <b>FT_SfntLangTag</b>;
 </pre>
@@ -168,7 +168,7 @@ A structure to model a language tag entry from an SFNT &lsquo;name&rsquo; table.
 <p>The language tag string, encoded in UTF-16BE (without trailing NULL bytes).</p>
 </td></tr>
 <tr><td class="val" id="string_len">string_len</td><td class="desc">
-<p>The length of &lsquo;string&rsquo; in &#42;&#42;bytes&#42;&#42;.</p>
+<p>The length of &lsquo;string&rsquo; in <strong>bytes</strong>.</p>
 </td></tr>
 </table>
 
@@ -191,7 +191,7 @@ Defined in FT_SFNT_NAMES_H (freetype/ftsnames.h).
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Get_Sfnt_LangTag</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>          face,
                        <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>          langID,
-                       <a href="../ft2-sfnt_names/#ft_sfntlangtag">FT_SfntLangTag</a>  &#42;alangTag );
+                       <a href="../ft2-sfnt_names/#ft_sfntlangtag">FT_SfntLangTag</a>  *alangTag );
 </pre>
 </div>
 

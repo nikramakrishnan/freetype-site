@@ -90,11 +90,11 @@ Defined in FT_COLOR_H (freetype/ftcolor.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Palette_Data_ {
     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>         num_palettes;
-    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>&#42;  palette_name_ids;
-    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>&#42;  palette_types;
+    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>*  palette_name_ids;
+    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>*  palette_types;
 
     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>         num_palette_entries;
-    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>&#42;  palette_entry_name_ids;
+    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>*  palette_entry_name_ids;
 
   } <b>FT_Palette_Data</b>;
 </pre>
@@ -145,7 +145,7 @@ Defined in FT_COLOR_H (freetype/ftcolor.h).
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Palette_Data_Get</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>           face,
-                       <a href="../ft2-color_management/#ft_palette_data">FT_Palette_Data</a>  &#42;apalette );
+                       <a href="../ft2-color_management/#ft_palette_data">FT_Palette_Data</a>  *apalette );
 </pre>
 </div>
 
@@ -191,7 +191,7 @@ Defined in FT_COLOR_H (freetype/ftcolor.h).
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Palette_Select</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>     face,
                      <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>   palette_index,
-                     <a href="../ft2-color_management/#ft_color">FT_Color</a>&#42;  &#42;apalette );
+                     <a href="../ft2-color_management/#ft_color">FT_Color</a>*  *apalette );
 </pre>
 </div>
 
