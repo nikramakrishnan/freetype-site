@@ -1393,7 +1393,7 @@
 </pre>
 </div>
 
-<p>Compute &lsquo;(a&#42;b)/c&rsquo; with maximum accuracy, using a 64-bit intermediate integer whenever necessary.</p>
+<p>Compute &lsquo;(a*b)/c&rsquo; with maximum accuracy, using a 64-bit intermediate integer whenever necessary.</p>
 <p>This function isn't necessarily as fast as some processor specific operations, but is at least completely portable.</p>
 <h4>input</h4>
 
@@ -1411,7 +1411,7 @@
 
 <h4>return</h4>
 
-<p>The result of &lsquo;(a&#42;b)/c&rsquo;. This function never traps when trying to divide by zero; it simply returns &lsquo;MaxInt&rsquo; or &lsquo;MinInt&rsquo; depending on the signs of &lsquo;a&rsquo; and &lsquo;b&rsquo;.</p>
+<p>The result of &lsquo;(a*b)/c&rsquo;. This function never traps when trying to divide by zero; it simply returns &lsquo;MaxInt&rsquo; or &lsquo;MinInt&rsquo; depending on the signs of &lsquo;a&rsquo; and &lsquo;b&rsquo;.</p>
 <hr>
 
 <h2 id="ft_mulfix">FT_MulFix<a class="headerlink" href="#ft_mulfix" title="Permanent link">&para;</a></h2>
@@ -1424,7 +1424,7 @@
 </pre>
 </div>
 
-<p>Compute &lsquo;(a&#42;b)/0x10000&rsquo; with maximum accuracy. Its main use is to multiply a given value by a 16.16 fixed-point factor.</p>
+<p>Compute &lsquo;(a*b)/0x10000&rsquo; with maximum accuracy. Its main use is to multiply a given value by a 16.16 fixed-point factor.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1438,7 +1438,7 @@
 
 <h4>return</h4>
 
-<p>The result of &lsquo;(a&#42;b)/0x10000&rsquo;.</p>
+<p>The result of &lsquo;(a*b)/0x10000&rsquo;.</p>
 <h4>note</h4>
 
 <p>This function has been optimized for the case where the absolute value of &lsquo;a&rsquo; is less than 2048, and &lsquo;b&rsquo; is a 16.16 scaling factor. As this happens mainly when scaling from notional units to fractional pixels in FreeType, it resulted in noticeable speed improvements between versions 2.x and 1.x.</p>
@@ -1455,7 +1455,7 @@
 </pre>
 </div>
 
-<p>Compute &lsquo;(a&#42;0x10000)/b&rsquo; with maximum accuracy. Its main use is to divide a given value by a 16.16 fixed-point factor.</p>
+<p>Compute &lsquo;(a*0x10000)/b&rsquo; with maximum accuracy. Its main use is to divide a given value by a 16.16 fixed-point factor.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1469,7 +1469,7 @@
 
 <h4>return</h4>
 
-<p>The result of &lsquo;(a&#42;0x10000)/b&rsquo;.</p>
+<p>The result of &lsquo;(a*0x10000)/b&rsquo;.</p>
 <hr>
 
 <h2 id="ft_roundfix">FT_RoundFix<a class="headerlink" href="#ft_roundfix" title="Permanent link">&para;</a></h2>
@@ -1552,8 +1552,8 @@
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Vector_Transform</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;        vec,
-                       <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>&#42;  matrix );
+  <b>FT_Vector_Transform</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*        vec,
+                       <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>*  matrix );
 </pre>
 </div>
 
@@ -1584,12 +1584,12 @@
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Matrix_Multiply</b>( <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>&#42;  a,
-                      <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>&#42;        b );
+  <b>FT_Matrix_Multiply</b>( <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>*  a,
+                      <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>*        b );
 </pre>
 </div>
 
-<p>Perform the matrix operation &lsquo;b = a&#42;b&rsquo;.</p>
+<p>Perform the matrix operation &lsquo;b = a*b&rsquo;.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1617,7 +1617,7 @@
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Matrix_Invert</b>( <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>&#42;  matrix );
+  <b>FT_Matrix_Invert</b>( <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>*  matrix );
 </pre>
 </div>
 
@@ -1661,11 +1661,11 @@
 <p>Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).</p>
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <b>FT_ANGLE_2PI</b>  ( <a href="../ft2-computations/#ft_angle_pi">FT_ANGLE_PI</a> &#42; 2 )
+#<span class="keyword">define</span> <b>FT_ANGLE_2PI</b>  ( <a href="../ft2-computations/#ft_angle_pi">FT_ANGLE_PI</a> * 2 )
 </pre>
 </div>
 
-<p>The angle 2&#42;pi expressed in <a href="../ft2-computations/#ft_angle">FT_Angle</a> units.</p>
+<p>The angle 2*pi expressed in <a href="../ft2-computations/#ft_angle">FT_Angle</a> units.</p>
 <hr>
 
 <h2 id="ft_angle_pi2">FT_ANGLE_PI2<a class="headerlink" href="#ft_angle_pi2" title="Permanent link">&para;</a></h2>
@@ -1816,7 +1816,7 @@
 
 <h4>return</h4>
 
-<p>Constrained value of <code>value2-value1</code>.</p>
+<p>Constrained value of &lsquo;value2-value1&rsquo;.</p>
 <hr>
 
 <h2 id="ft_vector_unit">FT_Vector_Unit<a class="headerlink" href="#ft_vector_unit" title="Permanent link">&para;</a></h2>
@@ -1824,7 +1824,7 @@
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Vector_Unit</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  vec,
+  <b>FT_Vector_Unit</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  vec,
                   <a href="../ft2-computations/#ft_angle">FT_Angle</a>    angle );
 </pre>
 </div>
@@ -1854,7 +1854,7 @@
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Vector_Rotate</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  vec,
+  <b>FT_Vector_Rotate</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  vec,
                     <a href="../ft2-computations/#ft_angle">FT_Angle</a>    angle );
 </pre>
 </div>
@@ -1883,7 +1883,7 @@
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a> )
-  <b>FT_Vector_Length</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  vec );
+  <b>FT_Vector_Length</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  vec );
 </pre>
 </div>
 
@@ -1906,9 +1906,9 @@
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Vector_Polarize</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  vec,
-                      <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>   &#42;length,
-                      <a href="../ft2-computations/#ft_angle">FT_Angle</a>   &#42;angle );
+  <b>FT_Vector_Polarize</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  vec,
+                      <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>   *length,
+                      <a href="../ft2-computations/#ft_angle">FT_Angle</a>   *angle );
 </pre>
 </div>
 
@@ -1939,7 +1939,7 @@
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Vector_From_Polar</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>&#42;  vec,
+  <b>FT_Vector_From_Polar</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  vec,
                         <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>    length,
                         <a href="../ft2-computations/#ft_angle">FT_Angle</a>    angle );
 </pre>

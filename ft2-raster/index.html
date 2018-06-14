@@ -1232,7 +1232,7 @@
 <p>Defined in FT_IMAGE_H (freetype/ftimage.h).</p>
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_RasterRec_&#42;  <b>FT_Raster</b>;
+  <span class="keyword">typedef</span> <span class="keyword">struct</span> FT_RasterRec_*  <b>FT_Raster</b>;
 </pre>
 </div>
 
@@ -1279,10 +1279,10 @@
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (&#42;<b>FT_SpanFunc</b>)( <span class="keyword">int</span>             y,
+  (*<b>FT_SpanFunc</b>)( <span class="keyword">int</span>             y,
                   <span class="keyword">int</span>             count,
-                  <span class="keyword">const</span> <a href="../ft2-raster/#ft_span">FT_Span</a>&#42;  spans,
-                  <span class="keyword">void</span>&#42;           user );
+                  <span class="keyword">const</span> <a href="../ft2-raster/#ft_span">FT_Span</a>*  spans,
+                  <span class="keyword">void</span>*           user );
 
 #<span class="keyword">define</span> FT_Raster_Span_Func  <b>FT_SpanFunc</b>
 </pre>
@@ -1318,14 +1318,14 @@
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Raster_Params_
   {
-    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>&#42;        target;
-    <span class="keyword">const</span> <span class="keyword">void</span>&#42;             source;
+    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>*        target;
+    <span class="keyword">const</span> <span class="keyword">void</span>*             source;
     <span class="keyword">int</span>                     flags;
     <a href="../ft2-raster/#ft_spanfunc">FT_SpanFunc</a>             gray_spans;
-    <a href="../ft2-raster/#ft_spanfunc">FT_SpanFunc</a>             black_spans;  /&#42; unused &#42;/
-    <a href="../ft2-raster/#ft_raster_bittest_func">FT_Raster_BitTest_Func</a>  bit_test;     /&#42; unused &#42;/
-    <a href="../ft2-raster/#ft_raster_bitset_func">FT_Raster_BitSet_Func</a>   bit_set;      /&#42; unused &#42;/
-    <span class="keyword">void</span>&#42;                   user;
+    <a href="../ft2-raster/#ft_spanfunc">FT_SpanFunc</a>             black_spans;  /* unused */
+    <a href="../ft2-raster/#ft_raster_bittest_func">FT_Raster_BitTest_Func</a>  bit_test;     /* unused */
+    <a href="../ft2-raster/#ft_raster_bitset_func">FT_Raster_BitSet_Func</a>   bit_set;      /* unused */
+    <span class="keyword">void</span>*                   user;
     <a href="../ft2-basic_types/#ft_bbox">FT_BBox</a>                 clip_box;
 
   } <b>FT_Raster_Params</b>;
@@ -1380,8 +1380,8 @@
 #<span class="keyword">define</span> <a href="../ft2-raster/#ft_raster_flag_direct">FT_RASTER_FLAG_DIRECT</a>   0x2
 #<span class="keyword">define</span> <a href="../ft2-raster/#ft_raster_flag_clip">FT_RASTER_FLAG_CLIP</a>     0x4
 
-  /&#42; these constants are deprecated; use the corresponding &#42;/
-  /* `<b>FT_RASTER_FLAG_XXX</b>' values instead                   &#42;/
+  /* these constants are deprecated; use the corresponding */
+  /* `<b>FT_RASTER_FLAG_XXX</b>' values instead                   */
 #<span class="keyword">define</span> ft_raster_flag_default  <a href="../ft2-raster/#ft_raster_flag_default">FT_RASTER_FLAG_DEFAULT</a>
 #<span class="keyword">define</span> ft_raster_flag_aa       <a href="../ft2-raster/#ft_raster_flag_aa">FT_RASTER_FLAG_AA</a>
 #<span class="keyword">define</span> ft_raster_flag_direct   <a href="../ft2-raster/#ft_raster_flag_direct">FT_RASTER_FLAG_DIRECT</a>
@@ -1416,8 +1416,8 @@
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">int</span>
-  (&#42;<b>FT_Raster_NewFunc</b>)( <span class="keyword">void</span>&#42;       memory,
-                        <a href="../ft2-raster/#ft_raster">FT_Raster</a>&#42;  raster );
+  (*<b>FT_Raster_NewFunc</b>)( <span class="keyword">void</span>*       memory,
+                        <a href="../ft2-raster/#ft_raster">FT_Raster</a>*  raster );
 
 #<span class="keyword">define</span> FT_Raster_New_Func  <b>FT_Raster_NewFunc</b>
 </pre>
@@ -1453,7 +1453,7 @@
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (&#42;<b>FT_Raster_DoneFunc</b>)( <a href="../ft2-raster/#ft_raster">FT_Raster</a>  raster );
+  (*<b>FT_Raster_DoneFunc</b>)( <a href="../ft2-raster/#ft_raster">FT_Raster</a>  raster );
 
 #<span class="keyword">define</span> FT_Raster_Done_Func  <b>FT_Raster_DoneFunc</b>
 </pre>
@@ -1475,8 +1475,8 @@
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (&#42;<b>FT_Raster_ResetFunc</b>)( <a href="../ft2-raster/#ft_raster">FT_Raster</a>       raster,
-                          <span class="keyword">unsigned</span> <span class="keyword">char</span>&#42;  pool_base,
+  (*<b>FT_Raster_ResetFunc</b>)( <a href="../ft2-raster/#ft_raster">FT_Raster</a>       raster,
+                          <span class="keyword">unsigned</span> <span class="keyword">char</span>*  pool_base,
                           <span class="keyword">unsigned</span> <span class="keyword">long</span>   pool_size );
 
 #<span class="keyword">define</span> FT_Raster_Reset_Func  <b>FT_Raster_ResetFunc</b>
@@ -1509,9 +1509,9 @@
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">int</span>
-  (&#42;<b>FT_Raster_SetModeFunc</b>)( <a href="../ft2-raster/#ft_raster">FT_Raster</a>      raster,
+  (*<b>FT_Raster_SetModeFunc</b>)( <a href="../ft2-raster/#ft_raster">FT_Raster</a>      raster,
                             <span class="keyword">unsigned</span> <span class="keyword">long</span>  mode,
-                            <span class="keyword">void</span>&#42;          args );
+                            <span class="keyword">void</span>*          args );
 
 #<span class="keyword">define</span> FT_Raster_Set_Mode_Func  <b>FT_Raster_SetModeFunc</b>
 </pre>
@@ -1539,8 +1539,8 @@
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">int</span>
-  (&#42;<b>FT_Raster_RenderFunc</b>)( <a href="../ft2-raster/#ft_raster">FT_Raster</a>                raster,
-                           <span class="keyword">const</span> <a href="../ft2-raster/#ft_raster_params">FT_Raster_Params</a>&#42;  params );
+  (*<b>FT_Raster_RenderFunc</b>)( <a href="../ft2-raster/#ft_raster">FT_Raster</a>                raster,
+                           <span class="keyword">const</span> <a href="../ft2-raster/#ft_raster_params">FT_Raster_Params</a>*  params );
 
 #<span class="keyword">define</span> FT_Raster_Render_Func  <b>FT_Raster_RenderFunc</b>
 </pre>
@@ -1614,9 +1614,9 @@
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">int</span>
-  (&#42;<b>FT_Raster_BitTest_Func</b>)( <span class="keyword">int</span>    y,
+  (*<b>FT_Raster_BitTest_Func</b>)( <span class="keyword">int</span>    y,
                              <span class="keyword">int</span>    x,
-                             <span class="keyword">void</span>&#42;  user );
+                             <span class="keyword">void</span>*  user );
 </pre>
 </div>
 
@@ -1628,9 +1628,9 @@
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (&#42;<b>FT_Raster_BitSet_Func</b>)( <span class="keyword">int</span>    y,
+  (*<b>FT_Raster_BitSet_Func</b>)( <span class="keyword">int</span>    y,
                             <span class="keyword">int</span>    x,
-                            <span class="keyword">void</span>&#42;  user );
+                            <span class="keyword">void</span>*  user );
 </pre>
 </div>
 

@@ -1046,9 +1046,9 @@
 <h1 id="error-enumerations">Error Enumerations<a class="headerlink" href="#error-enumerations" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
 <p>The header file <code>fterrors.h</code> (which is automatically included by <code>freetype.h</code> defines the handling of FreeType's enumeration constants. It can also be used to generate error message strings with a small macro trick explained below.</p>
-<p>&#42;&#42;Error Formats&#42;&#42;</p>
+<p><strong>Error Formats</strong></p>
 <p>The configuration macro FT_CONFIG_OPTION_USE_MODULE_ERRORS can be defined in <code>ftoption.h</code> in order to make the higher byte indicate the module where the error has happened (this is not compatible with standard builds of FreeType&nbsp;2, however). See the file <code>ftmoderr.h</code> for more details.</p>
-<p>&#42;&#42;Error Message Strings&#42;&#42;</p>
+<p><strong>Error Message Strings</strong></p>
 <p>Error definitions are set up with special macros that allow client applications to build a table of error message strings. The strings are not included in a normal build of FreeType&nbsp;2 to save space (most client applications do not use them).</p>
 <p>To do so, you have to define the following macros before including this file.
 <div class="highlight"><pre><span></span>  FT_ERROR_START_LIST

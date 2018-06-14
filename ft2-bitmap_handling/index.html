@@ -1135,11 +1135,11 @@
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Bitmap_Init</b>( <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  &#42;abitmap );
+  <b>FT_Bitmap_Init</b>( <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  *abitmap );
 
-  /&#42; deprecated &#42;/
+  /* deprecated */
   FT_EXPORT( <span class="keyword">void</span> )
-  FT_Bitmap_New( <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  &#42;abitmap );
+  FT_Bitmap_New( <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  *abitmap );
 </pre>
 </div>
 
@@ -1163,8 +1163,8 @@
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Bitmap_Copy</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>        library,
-                  <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  &#42;source,
-                  <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>        &#42;target );
+                  <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  *source,
+                  <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>        *target );
 </pre>
 </div>
 
@@ -1199,7 +1199,7 @@
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Bitmap_Embolden</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>  library,
-                      <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>&#42;  bitmap,
+                      <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>*  bitmap,
                       <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>      xStrength,
                       <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>      yStrength );
 </pre>
@@ -1244,8 +1244,8 @@
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Bitmap_Convert</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>        library,
-                     <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  &#42;source,
-                     <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>        &#42;target,
+                     <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  *source,
+                     <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>        *target,
                      <a href="../ft2-basic_types/#ft_int">FT_Int</a>            alignment );
 </pre>
 </div>
@@ -1315,7 +1315,7 @@
 <pre>
   FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
   <b>FT_Bitmap_Done</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>  library,
-                  <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  &#42;bitmap );
+                  <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>  *bitmap );
 </pre>
 </div>
 
