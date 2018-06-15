@@ -411,10 +411,9 @@ A list of constants used for the <a href="../ft2-properties/#glyph-to-script-map
 <p>Don't auto-hint this glyph.</p>
 </td></tr>
 <tr><td class="val" id="ft_autohinter_script_latin">FT_AUTOHINTER_SCRIPT_LATIN</td><td class="desc">
-<p>Apply the latin auto-hinter. For the auto-hinter, &lsquo;latin&rsquo; is a very broad term, including Cyrillic and Greek also since characters from those scripts share the same design constraints.</p>
-<p>By default, characters from the following Unicode ranges are assigned to this submodule.</p>
-```
-  U+0020 - U+007F  // Basic Latin (no control characters)
+<p>Apply the latin auto-hinter. For the auto-hinter, &lsquo;latin&rsquo; is a very broad term, including Cyrillic and Greek also since characters from those scripts share the same design constraints.
+By default, characters from the following Unicode ranges are assigned to this submodule.</p>
+<pre><code>  U+0020 - U+007F  // Basic Latin (no control characters)
   U+00A0 - U+00FF  // Latin-1 Supplement (no control characters)
   U+0100 - U+017F  // Latin Extended-A
   U+0180 - U+024F  // Latin Extended-B
@@ -442,14 +441,12 @@ A list of constants used for the <a href="../ft2-properties/#glyph-to-script-map
   U+FB00 - U+FB06  // Alphab. Present. Forms (Latin Ligatures)
  U+1D400 - U+1D7FF // Mathematical Alphanumeric Symbols
  U+1F100 - U+1F1FF // Enclosed Alphanumeric Supplement
-```
-
+</code></pre>
 </td></tr>
 <tr><td class="val" id="ft_autohinter_script_cjk">FT_AUTOHINTER_SCRIPT_CJK</td><td class="desc">
-<p>Apply the CJK auto-hinter, covering Chinese, Japanese, Korean, old Vietnamese, and some other scripts.</p>
-<p>By default, characters from the following Unicode ranges are assigned to this submodule.</p>
-```
-  U+1100 - U+11FF  // Hangul Jamo
+<p>Apply the CJK auto-hinter, covering Chinese, Japanese, Korean, old Vietnamese, and some other scripts.
+By default, characters from the following Unicode ranges are assigned to this submodule.</p>
+<pre><code>  U+1100 - U+11FF  // Hangul Jamo
   U+2E80 - U+2EFF  // CJK Radicals Supplement
   U+2F00 - U+2FDF  // Kangxi Radicals
   U+2FF0 - U+2FFF  // Ideographic Description Characters
@@ -481,21 +478,19 @@ A list of constants used for the <a href="../ft2-properties/#glyph-to-script-map
  U+2A700 - U+2B73F // CJK Unified Ideographs Extension C
  U+2B740 - U+2B81F // CJK Unified Ideographs Extension D
  U+2F800 - U+2FA1F // CJK Compatibility Ideographs Supplement
-```
-
+</code></pre>
 </td></tr>
 <tr><td class="val" id="ft_autohinter_script_indic">FT_AUTOHINTER_SCRIPT_INDIC</td><td class="desc">
-<p>Apply the indic auto-hinter, covering all major scripts from the Indian sub-continent and some other related scripts like Thai, Lao, or Tibetan.</p>
-<p>By default, characters from the following Unicode ranges are assigned to this submodule.</p>
-```
-  U+0900 - U+0DFF  // Indic Range
+<p>Apply the indic auto-hinter, covering all major scripts from the Indian sub-continent and some other related scripts like Thai, Lao, or Tibetan.
+By default, characters from the following Unicode ranges are assigned to this submodule.</p>
+<pre><code>  U+0900 - U+0DFF  // Indic Range
   U+0F00 - U+0FFF  // Tibetan
   U+1900 - U+194F  // Limbu
   U+1B80 - U+1BBF  // Sundanese
   U+A800 - U+A82F  // Syloti Nagri
   U+ABC0 - U+ABFF  // Meetei Mayek
  U+11800 - U+118DF // Sharada
-```
+</code></pre>
 <p>Note that currently Indic support is rudimentary only, missing blue zone support.</p>
 </td></tr>
 </table>

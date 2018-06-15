@@ -109,21 +109,21 @@ This structure holds the data of the &lsquo;CPAL&rsquo; table.
 <p>The number of palettes.</p>
 </td></tr>
 <tr><td class="val" id="palette_name_ids">palette_name_ids</td><td class="desc">
-<p>A read-only array of palette name IDs with <code>num_palettes</code> elements, corresponding to entries like &lsquo;dark&rsquo; or &lsquo;light&rsquo; in the font's &lsquo;name&rsquo; table.</p>
-<p>An empty name ID in the &lsquo;CPAL&rsquo; table gets represented as value 0xFFFF.</p>
-<p>NULL if the font's &lsquo;CPAL&rsquo; table doesn't contain appropriate data.</p>
+<p>A read-only array of palette name IDs with <code>num_palettes</code> elements, corresponding to entries like &lsquo;dark&rsquo; or &lsquo;light&rsquo; in the font's &lsquo;name&rsquo; table.
+An empty name ID in the &lsquo;CPAL&rsquo; table gets represented as value 0xFFFF.
+NULL if the font's &lsquo;CPAL&rsquo; table doesn't contain appropriate data.</p>
 </td></tr>
 <tr><td class="val" id="palette_types">palette_types</td><td class="desc">
-<p>A read-only array of palette types with <code>num_palettes</code> elements. Possible values are an ORed combination of <a href="../ft2-color_management/#ft_palette_xxx">FT_PALETTE_USABLE_WITH_LIGHT_BACKGROUND</a> and <a href="../ft2-color_management/#ft_palette_xxx">FT_PALETTE_USABLE_WITH_DARK_BACKGROUND</a>.</p>
-<p>NULL if the font's &lsquo;CPAL&rsquo; table doesn't contain appropriate data.</p>
+<p>A read-only array of palette types with <code>num_palettes</code> elements. Possible values are an ORed combination of <a href="../ft2-color_management/#ft_palette_xxx">FT_PALETTE_USABLE_WITH_LIGHT_BACKGROUND</a> and <a href="../ft2-color_management/#ft_palette_xxx">FT_PALETTE_USABLE_WITH_DARK_BACKGROUND</a>.
+NULL if the font's &lsquo;CPAL&rsquo; table doesn't contain appropriate data.</p>
 </td></tr>
 <tr><td class="val" id="num_palette_entries">num_palette_entries</td><td class="desc">
 <p>The number of entries in a single palette. All palettes have the same size.</p>
 </td></tr>
 <tr><td class="val" id="palette_entry_name_ids">palette_entry_name_ids</td><td class="desc">
-<p>A read-only array of palette entry name IDs with <code>num_palette_entries</code>. In each palette, entries with the same index have the same function. For example, index&nbsp;0 might correspond to string &lsquo;outline&rsquo; in the font's &lsquo;name&rsquo; table to indicate that this palette entry is used for outlines, index&nbsp;1 might correspond to &lsquo;fill&rsquo; to indicate the filling color palette entry, etc.</p>
-<p>An empty entry name ID in the &lsquo;CPAL&rsquo; table gets represented as value 0xFFFF.</p>
-<p>NULL if the font's &lsquo;CPAL&rsquo; table doesn't contain appropriate data.</p>
+<p>A read-only array of palette entry name IDs with <code>num_palette_entries</code>. In each palette, entries with the same index have the same function. For example, index&nbsp;0 might correspond to string &lsquo;outline&rsquo; in the font's &lsquo;name&rsquo; table to indicate that this palette entry is used for outlines, index&nbsp;1 might correspond to &lsquo;fill&rsquo; to indicate the filling color palette entry, etc.
+An empty entry name ID in the &lsquo;CPAL&rsquo; table gets represented as value 0xFFFF.
+NULL if the font's &lsquo;CPAL&rsquo; table doesn't contain appropriate data.</p>
 </td></tr>
 </table>
 
@@ -217,8 +217,8 @@ A corollary of (2) is that calling the function, then modifying some values, the
 <h4>output</h4>
 <table class="fields">
 <tr><td class="val" id="apalette">apalette</td><td class="desc">
-<p>An array of color entries for a palette with index <code>palette_index</code>. If &lsquo;apalette&rsquo; is set to NULL, no array gets returned (and no color entries can be modified).</p>
-<p>In case the font doesn't support color palettes, NULL is returned.</p>
+<p>An array of color entries for a palette with index <code>palette_index</code>. If &lsquo;apalette&rsquo; is set to NULL, no array gets returned (and no color entries can be modified).
+In case the font doesn't support color palettes, NULL is returned.</p>
 </td></tr>
 </table>
 

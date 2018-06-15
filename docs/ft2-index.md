@@ -278,4 +278,4 @@
 <tr><td><a href="../ft2-base_interface/#ft_is_variation">FT_IS_VARIATION</a></td><td><a href="../ft2-system_interface/#ft_streamrec">FT_StreamRec</a></td><td></td></tr>
 <tr><td><a href="../ft2-base_interface/#ft_kerning_mode">FT_KERNING_DEFAULT</a></td><td><a href="../ft2-basic_types/#ft_string">FT_String</a></td><td></td></tr>
 </table>
-<div class="timestamp">generated on Thu Jun 14 14:54:38 2018 UTC</div>
+<div class="timestamp">generated on Fri Jun 15 11:38:50 2018 UTC</div>
