@@ -15,15 +15,15 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Library_Version</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>   library,
-                      <a href="../ft2-basic_types/#ft_int">FT_Int</a>      *amajor,
-                      <a href="../ft2-basic_types/#ft_int">FT_Int</a>      *aminor,
-                      <a href="../ft2-basic_types/#ft_int">FT_Int</a>      *apatch );
+  <b>FT_Library_Version</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>   library,
+                      <a href="../ft2-basic_types/index.html#ft_int">FT_Int</a>      *amajor,
+                      <a href="../ft2-basic_types/index.html#ft_int">FT_Int</a>      *aminor,
+                      <a href="../ft2-basic_types/index.html#ft_int">FT_Int</a>      *apatch );
 </pre>
 </div>
 
 
-Return the version of the FreeType library being used. This is useful when dynamically linking to the library, since one cannot use the macros <a href="../ft2-version/#freetype_xxx">FREETYPE_MAJOR</a>, <a href="../ft2-version/#freetype_xxx">FREETYPE_MINOR</a>, and <a href="../ft2-version/#freetype_xxx">FREETYPE_PATCH</a>.
+Return the version of the FreeType library being used. This is useful when dynamically linking to the library, since one cannot use the macros <a href="../ft2-version/index.html#freetype_xxx">FREETYPE_MAJOR</a>, <a href="../ft2-version/index.html#freetype_xxx">FREETYPE_MINOR</a>, and <a href="../ft2-version/index.html#freetype_xxx">FREETYPE_PATCH</a>.
 
 <h4>input</h4>
 <table class="fields">
@@ -47,7 +47,7 @@ Return the version of the FreeType library being used. This is useful when dynam
 
 <h4>note</h4>
 
-The reason why this function takes a &lsquo;library&rsquo; argument is because certain programs implement library initialization in a custom way that doesn't use <a href="../ft2-base_interface/#ft_init_freetype">FT_Init_FreeType</a>.
+The reason why this function takes a &lsquo;library&rsquo; argument is because certain programs implement library initialization in a custom way that doesn't use <a href="../ft2-base_interface/index.html#ft_init_freetype">FT_Init_FreeType</a>.
 
 In such cases, the library version might not be available before the library object has been created.
 
@@ -59,8 +59,8 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_bool">FT_Bool</a> )
-  <b>FT_Face_CheckTrueTypePatents</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>  face );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_bool">FT_Bool</a> )
+  <b>FT_Face_CheckTrueTypePatents</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>  face );
 </pre>
 </div>
 
@@ -94,9 +94,9 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_bool">FT_Bool</a> )
-  <b>FT_Face_SetUnpatentedHinting</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>  face,
-                                <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>  value );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_bool">FT_Bool</a> )
+  <b>FT_Face_SetUnpatentedHinting</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>  face,
+                                <a href="../ft2-basic_types/index.html#ft_bool">FT_Bool</a>  value );
 </pre>
 </div>
 
@@ -133,14 +133,14 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <a href="../ft2-version/#freetype_major">FREETYPE_MAJOR</a>  2
-#<span class="keyword">define</span> <a href="../ft2-version/#freetype_minor">FREETYPE_MINOR</a>  9
-#<span class="keyword">define</span> <a href="../ft2-version/#freetype_patch">FREETYPE_PATCH</a>  1
+#<span class="keyword">define</span> <a href="../ft2-version/index.html#freetype_major">FREETYPE_MAJOR</a>  2
+#<span class="keyword">define</span> <a href="../ft2-version/index.html#freetype_minor">FREETYPE_MINOR</a>  9
+#<span class="keyword">define</span> <a href="../ft2-version/index.html#freetype_patch">FREETYPE_PATCH</a>  1
 </pre>
 </div>
 
 
-These three macros identify the FreeType source code version. Use <a href="../ft2-version/#ft_library_version">FT_Library_Version</a> to access them at runtime.
+These three macros identify the FreeType source code version. Use <a href="../ft2-version/index.html#ft_library_version">FT_Library_Version</a> to access them at runtime.
 
 <h4>values</h4>
 <table class="fields">

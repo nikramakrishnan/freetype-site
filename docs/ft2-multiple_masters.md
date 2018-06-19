@@ -18,9 +18,9 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_MM_Axis_
   {
-    <a href="../ft2-basic_types/#ft_string">FT_String</a>*  name;
-    <a href="../ft2-basic_types/#ft_long">FT_Long</a>     minimum;
-    <a href="../ft2-basic_types/#ft_long">FT_Long</a>     maximum;
+    <a href="../ft2-basic_types/index.html#ft_string">FT_String</a>*  name;
+    <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>     minimum;
+    <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>     maximum;
 
   } <b>FT_MM_Axis</b>;
 </pre>
@@ -54,9 +54,9 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Multi_Master_
   {
-    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>     num_axis;
-    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>     num_designs;
-    <a href="../ft2-multiple_masters/#ft_mm_axis">FT_MM_Axis</a>  axis[T1_MAX_MM_AXIS];
+    <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>     num_axis;
+    <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>     num_designs;
+    <a href="../ft2-multiple_masters/index.html#ft_mm_axis">FT_MM_Axis</a>  axis[T1_MAX_MM_AXIS];
 
   } <b>FT_Multi_Master</b>;
 </pre>
@@ -90,14 +90,14 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Var_Axis_
   {
-    <a href="../ft2-basic_types/#ft_string">FT_String</a>*  name;
+    <a href="../ft2-basic_types/index.html#ft_string">FT_String</a>*  name;
 
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>    minimum;
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>    def;
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>    maximum;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>    minimum;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>    def;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>    maximum;
 
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>    tag;
-    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>     strid;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>    tag;
+    <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>     strid;
 
   } <b>FT_Var_Axis</b>;
 </pre>
@@ -142,9 +142,9 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Var_Named_Style_
   {
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>*  coords;
-    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    strid;
-    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    psid;   /* since 2.7.1 */
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>*  coords;
+    <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>    strid;
+    <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>    psid;   /* since 2.7.1 */
 
   } <b>FT_Var_Named_Style</b>;
 </pre>
@@ -178,11 +178,11 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_MM_Var_
   {
-    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>              num_axis;
-    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>              num_designs;
-    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>              num_namedstyles;
-    <a href="../ft2-multiple_masters/#ft_var_axis">FT_Var_Axis</a>*         axis;
-    <a href="../ft2-multiple_masters/#ft_var_named_style">FT_Var_Named_Style</a>*  namedstyle;
+    <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>              num_axis;
+    <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>              num_designs;
+    <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>              num_namedstyles;
+    <a href="../ft2-multiple_masters/index.html#ft_var_axis">FT_Var_Axis</a>*         axis;
+    <a href="../ft2-multiple_masters/index.html#ft_var_named_style">FT_Var_Named_Style</a>*  namedstyle;
 
   } <b>FT_MM_Var</b>;
 </pre>
@@ -221,9 +221,9 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Get_Multi_Master</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>           face,
-                       <a href="../ft2-multiple_masters/#ft_multi_master">FT_Multi_Master</a>  *amaster );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Get_Multi_Master</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>           face,
+                       <a href="../ft2-multiple_masters/index.html#ft_multi_master">FT_Multi_Master</a>  *amaster );
 </pre>
 </div>
 
@@ -258,9 +258,9 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Get_MM_Var</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>      face,
-                 <a href="../ft2-multiple_masters/#ft_mm_var">FT_MM_Var</a>*  *amaster );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Get_MM_Var</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>      face,
+                 <a href="../ft2-multiple_masters/index.html#ft_mm_var">FT_MM_Var</a>*  *amaster );
 </pre>
 </div>
 
@@ -279,7 +279,7 @@ This function works with all supported variation formats.
 <h4>output</h4>
 <table class="fields">
 <tr><td class="val" id="amaster">amaster</td><td class="desc">
-<p>The variation descriptor. Allocates a data structure, which the user must deallocate with a call to <a href="../ft2-multiple_masters/#ft_done_mm_var">FT_Done_MM_Var</a> after use.</p>
+<p>The variation descriptor. Allocates a data structure, which the user must deallocate with a call to <a href="../ft2-multiple_masters/index.html#ft_done_mm_var">FT_Done_MM_Var</a> after use.</p>
 </td></tr>
 </table>
 
@@ -295,19 +295,19 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Done_MM_Var</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>   library,
-                  <a href="../ft2-multiple_masters/#ft_mm_var">FT_MM_Var</a>   *amaster );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Done_MM_Var</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>   library,
+                  <a href="../ft2-multiple_masters/index.html#ft_mm_var">FT_MM_Var</a>   *amaster );
 </pre>
 </div>
 
 
-Free the memory allocated by <a href="../ft2-multiple_masters/#ft_get_mm_var">FT_Get_MM_Var</a>.
+Free the memory allocated by <a href="../ft2-multiple_masters/index.html#ft_get_mm_var">FT_Get_MM_Var</a>.
 
 <h4>input</h4>
 <table class="fields">
 <tr><td class="val" id="library">library</td><td class="desc">
-<p>A handle of the face's parent library object that was used in the call to <a href="../ft2-multiple_masters/#ft_get_mm_var">FT_Get_MM_Var</a> to create &lsquo;amaster&rsquo;.</p>
+<p>A handle of the face's parent library object that was used in the call to <a href="../ft2-multiple_masters/index.html#ft_get_mm_var">FT_Get_MM_Var</a> to create &lsquo;amaster&rsquo;.</p>
 </td></tr>
 </table>
 
@@ -323,10 +323,10 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Set_MM_Design_Coordinates</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
-                                <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   num_coords,
-                                <a href="../ft2-basic_types/#ft_long">FT_Long</a>*  coords );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Set_MM_Design_Coordinates</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>   face,
+                                <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>   num_coords,
+                                <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>*  coords );
 </pre>
 </div>
 
@@ -360,7 +360,7 @@ FreeType error code. 0&nbsp;means success.
 
 [Since 2.8.1] To reset all axes to the default values, call the function with `num_coords` set to zero and &lsquo;coords&rsquo; set to NULL.
 
-[Since 2.9] If `num_coords` is larger than zero, this function sets the <a href="../ft2-base_interface/#ft_face_flag_xxx">FT_FACE_FLAG_VARIATION</a> bit in <a href="../ft2-base_interface/#ft_face">FT_Face</a>'s `face_flags` field (i.e., <a href="../ft2-base_interface/#ft_is_variation">FT_IS_VARIATION</a> will return true). If `num_coords` is zero, this bit flag gets unset.
+[Since 2.9] If `num_coords` is larger than zero, this function sets the <a href="../ft2-base_interface/index.html#ft_face_flag_xxx">FT_FACE_FLAG_VARIATION</a> bit in <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>'s `face_flags` field (i.e., <a href="../ft2-base_interface/index.html#ft_is_variation">FT_IS_VARIATION</a> will return true). If `num_coords` is zero, this bit flag gets unset.
 
 <hr>
 
@@ -370,10 +370,10 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Set_Var_Design_Coordinates</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
-                                 <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    num_coords,
-                                 <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>*  coords );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Set_Var_Design_Coordinates</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>    face,
+                                 <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>    num_coords,
+                                 <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>*  coords );
 </pre>
 </div>
 
@@ -407,7 +407,7 @@ FreeType error code. 0&nbsp;means success.
 
 [Since 2.8.1] To reset all axes to the default values, call the function with `num_coords` set to zero and &lsquo;coords&rsquo; set to NULL. [Since 2.9] &lsquo;Default values&rsquo; means the currently selected named instance (or the base font if no named instance is selected).
 
-[Since 2.9] If `num_coords` is larger than zero, this function sets the <a href="../ft2-base_interface/#ft_face_flag_xxx">FT_FACE_FLAG_VARIATION</a> bit in <a href="../ft2-base_interface/#ft_face">FT_Face</a>'s `face_flags` field (i.e., <a href="../ft2-base_interface/#ft_is_variation">FT_IS_VARIATION</a> will return true). If `num_coords` is zero, this bit flag gets unset.
+[Since 2.9] If `num_coords` is larger than zero, this function sets the <a href="../ft2-base_interface/index.html#ft_face_flag_xxx">FT_FACE_FLAG_VARIATION</a> bit in <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>'s `face_flags` field (i.e., <a href="../ft2-base_interface/index.html#ft_is_variation">FT_IS_VARIATION</a> will return true). If `num_coords` is zero, this bit flag gets unset.
 
 <hr>
 
@@ -417,10 +417,10 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Get_Var_Design_Coordinates</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
-                                 <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    num_coords,
-                                 <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>*  coords );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Get_Var_Design_Coordinates</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>    face,
+                                 <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>    num_coords,
+                                 <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>*  coords );
 </pre>
 </div>
 
@@ -462,10 +462,10 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Set_MM_Blend_Coordinates</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
-                               <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    num_coords,
-                               <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>*  coords );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Set_MM_Blend_Coordinates</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>    face,
+                               <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>    num_coords,
+                               <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>*  coords );
 </pre>
 </div>
 
@@ -499,7 +499,7 @@ FreeType error code. 0&nbsp;means success.
 
 [Since 2.8.1] To reset all axes to the default values, call the function with `num_coords` set to zero and &lsquo;coords&rsquo; set to NULL. [Since 2.9] &lsquo;Default values&rsquo; means the currently selected named instance (or the base font if no named instance is selected).
 
-[Since 2.9] If `num_coords` is larger than zero, this function sets the <a href="../ft2-base_interface/#ft_face_flag_xxx">FT_FACE_FLAG_VARIATION</a> bit in <a href="../ft2-base_interface/#ft_face">FT_Face</a>'s `face_flags` field (i.e., <a href="../ft2-base_interface/#ft_is_variation">FT_IS_VARIATION</a> will return true). If `num_coords` is zero, this bit flag gets unset.
+[Since 2.9] If `num_coords` is larger than zero, this function sets the <a href="../ft2-base_interface/index.html#ft_face_flag_xxx">FT_FACE_FLAG_VARIATION</a> bit in <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>'s `face_flags` field (i.e., <a href="../ft2-base_interface/index.html#ft_is_variation">FT_IS_VARIATION</a> will return true). If `num_coords` is zero, this bit flag gets unset.
 
 <hr>
 
@@ -509,10 +509,10 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Get_MM_Blend_Coordinates</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
-                               <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    num_coords,
-                               <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>*  coords );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Get_MM_Blend_Coordinates</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>    face,
+                               <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>    num_coords,
+                               <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>*  coords );
 </pre>
 </div>
 
@@ -554,15 +554,15 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Set_Var_Blend_Coordinates</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
-                                <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    num_coords,
-                                <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>*  coords );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Set_Var_Blend_Coordinates</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>    face,
+                                <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>    num_coords,
+                                <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>*  coords );
 </pre>
 </div>
 
 
-This is another name of <a href="../ft2-multiple_masters/#ft_set_mm_blend_coordinates">FT_Set_MM_Blend_Coordinates</a>.
+This is another name of <a href="../ft2-multiple_masters/index.html#ft_set_mm_blend_coordinates">FT_Set_MM_Blend_Coordinates</a>.
 
 <hr>
 
@@ -572,15 +572,15 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Get_Var_Blend_Coordinates</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
-                                <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    num_coords,
-                                <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>*  coords );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Get_Var_Blend_Coordinates</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>    face,
+                                <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>    num_coords,
+                                <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>*  coords );
 </pre>
 </div>
 
 
-This is another name of <a href="../ft2-multiple_masters/#ft_get_mm_blend_coordinates">FT_Get_MM_Blend_Coordinates</a>.
+This is another name of <a href="../ft2-multiple_masters/index.html#ft_get_mm_blend_coordinates">FT_Get_MM_Blend_Coordinates</a>.
 
 <h4>since</h4>
 
@@ -594,12 +594,12 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <a href="../ft2-multiple_masters/#ft_var_axis_flag_hidden">FT_VAR_AXIS_FLAG_HIDDEN</a>  1
+#<span class="keyword">define</span> <a href="../ft2-multiple_masters/index.html#ft_var_axis_flag_hidden">FT_VAR_AXIS_FLAG_HIDDEN</a>  1
 </pre>
 </div>
 
 
-A list of bit flags used in the return value of <a href="../ft2-multiple_masters/#ft_get_var_axis_flags">FT_Get_Var_Axis_Flags</a>.
+A list of bit flags used in the return value of <a href="../ft2-multiple_masters/index.html#ft_get_var_axis_flags">FT_Get_Var_Axis_Flags</a>.
 
 <h4>values</h4>
 <table class="fields">
@@ -620,10 +620,10 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Get_Var_Axis_Flags</b>( <a href="../ft2-multiple_masters/#ft_mm_var">FT_MM_Var</a>*  master,
-                         <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>     axis_index,
-                         <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>*    flags );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Get_Var_Axis_Flags</b>( <a href="../ft2-multiple_masters/index.html#ft_mm_var">FT_MM_Var</a>*  master,
+                         <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>     axis_index,
+                         <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>*    flags );
 </pre>
 </div>
 
@@ -645,7 +645,7 @@ Not meaningful for Adobe MM fonts (&lsquo;*flags&rsquo; is always zero).
 <h4>output</h4>
 <table class="fields">
 <tr><td class="val" id="flags">flags</td><td class="desc">
-<p>The &lsquo;flags&rsquo; field. See <a href="../ft2-multiple_masters/#ft_var_axis_flag_xxx">FT_VAR_AXIS_FLAG_XXX</a> for possible values.</p>
+<p>The &lsquo;flags&rsquo; field. See <a href="../ft2-multiple_masters/index.html#ft_var_axis_flag_xxx">FT_VAR_AXIS_FLAG_XXX</a> for possible values.</p>
 </td></tr>
 </table>
 
@@ -665,9 +665,9 @@ Defined in FT_MULTIPLE_MASTERS_H (freetype/ftmm.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Set_Named_Instance</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>  face,
-                         <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>  instance_index );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Set_Named_Instance</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>  face,
+                         <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>  instance_index );
 </pre>
 </div>
 
@@ -690,7 +690,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-The function uses the value of `instance_index` to set bits 16-30 of the face's `face_index` field. It also resets any variation applied to the font, and the <a href="../ft2-base_interface/#ft_face_flag_xxx">FT_FACE_FLAG_VARIATION</a> bit of the face's `face_flags` field gets reset to zero (i.e., <a href="../ft2-base_interface/#ft_is_variation">FT_IS_VARIATION</a> will return false).
+The function uses the value of `instance_index` to set bits 16-30 of the face's `face_index` field. It also resets any variation applied to the font, and the <a href="../ft2-base_interface/index.html#ft_face_flag_xxx">FT_FACE_FLAG_VARIATION</a> bit of the face's `face_flags` field gets reset to zero (i.e., <a href="../ft2-base_interface/index.html#ft_is_variation">FT_IS_VARIATION</a> will return false).
 
 For Adobe MM fonts (which don't have named instances) this function simply resets the current face to the default instance.
 

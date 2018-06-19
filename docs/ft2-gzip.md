@@ -14,9 +14,9 @@ Defined in FT_GZIP_H (freetype/ftgzip.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Stream_OpenGzip</b>( <a href="../ft2-system_interface/#ft_stream">FT_Stream</a>  stream,
-                      <a href="../ft2-system_interface/#ft_stream">FT_Stream</a>  source );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Stream_OpenGzip</b>( <a href="../ft2-system_interface/index.html#ft_stream">FT_Stream</a>  stream,
+                      <a href="../ft2-system_interface/index.html#ft_stream">FT_Stream</a>  source );
 </pre>
 </div>
 
@@ -45,7 +45,7 @@ Calling the internal function `FT_Stream_Close` on the new stream will **not** c
 
 The stream implementation is very basic and resets the decompression process each time seeking backwards is needed within the stream.
 
-In certain builds of the library, gzip compression recognition is automatically handled when calling <a href="../ft2-base_interface/#ft_new_face">FT_New_Face</a> or <a href="../ft2-base_interface/#ft_open_face">FT_Open_Face</a>. This means that if no font driver is capable of handling the raw compressed file, the library will try to open a gzipped stream from it and re-open the face with it.
+In certain builds of the library, gzip compression recognition is automatically handled when calling <a href="../ft2-base_interface/index.html#ft_new_face">FT_New_Face</a> or <a href="../ft2-base_interface/index.html#ft_open_face">FT_Open_Face</a>. This means that if no font driver is capable of handling the raw compressed file, the library will try to open a gzipped stream from it and re-open the face with it.
 
 This function may return `FT_Err_Unimplemented_Feature` if your build of FreeType was not compiled with zlib support.
 
@@ -57,12 +57,12 @@ Defined in FT_GZIP_H (freetype/ftgzip.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Gzip_Uncompress</b>( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>       memory,
-                      <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*        output,
-                      <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>*       output_len,
-                      <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*  input,
-                      <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>        input_len );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Gzip_Uncompress</b>( <a href="../ft2-system_interface/index.html#ft_memory">FT_Memory</a>       memory,
+                      <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>*        output,
+                      <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>*       output_len,
+                      <span class="keyword">const</span> <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>*  input,
+                      <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>        input_len );
 </pre>
 </div>
 

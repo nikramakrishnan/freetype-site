@@ -29,7 +29,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*  <b>FT_Bytes</b>;
+  <span class="keyword">typedef</span> <span class="keyword">const</span> <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>*  <b>FT_Bytes</b>;
 </pre>
 </div>
 
@@ -287,7 +287,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>  <b>FT_Tag</b>;
+  <span class="keyword">typedef</span> <a href="../ft2-basic_types/index.html#ft_uint32">FT_UInt32</a>  <b>FT_Tag</b>;
 </pre>
 </div>
 
@@ -364,8 +364,8 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Vector_
   {
-    <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>  x;
-    <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>  y;
+    <a href="../ft2-basic_types/index.html#ft_pos">FT_Pos</a>  x;
+    <a href="../ft2-basic_types/index.html#ft_pos">FT_Pos</a>  y;
 
   } <b>FT_Vector</b>;
 </pre>
@@ -394,8 +394,8 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_BBox_
   {
-    <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>  xMin, yMin;
-    <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>  xMax, yMax;
+    <a href="../ft2-basic_types/index.html#ft_pos">FT_Pos</a>  xMin, yMin;
+    <a href="../ft2-basic_types/index.html#ft_pos">FT_Pos</a>  xMax, yMax;
 
   } <b>FT_BBox</b>;
 </pre>
@@ -438,8 +438,8 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Matrix_
   {
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  xx, xy;
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  yx, yy;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>  xx, xy;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>  yx, yy;
 
   } <b>FT_Matrix</b>;
 </pre>
@@ -523,8 +523,8 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_UnitVector_
   {
-    <a href="../ft2-basic_types/#ft_f2dot14">FT_F2Dot14</a>  x;
-    <a href="../ft2-basic_types/#ft_f2dot14">FT_F2Dot14</a>  y;
+    <a href="../ft2-basic_types/index.html#ft_f2dot14">FT_F2Dot14</a>  x;
+    <a href="../ft2-basic_types/index.html#ft_f2dot14">FT_F2Dot14</a>  y;
 
   } <b>FT_UnitVector</b>;
 </pre>
@@ -568,8 +568,8 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Data_
   {
-    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*  pointer;
-    <a href="../ft2-basic_types/#ft_int">FT_Int</a>          length;
+    <span class="keyword">const</span> <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>*  pointer;
+    <a href="../ft2-basic_types/index.html#ft_int">FT_Int</a>          length;
 
   } <b>FT_Data</b>;
 </pre>
@@ -597,11 +597,11 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 <div class = "codehilite">
 <pre>
 #<span class="keyword">define</span> <b>FT_MAKE_TAG</b>( _x1, _x2, _x3, _x4 ) \
-          (<a href="../ft2-basic_types/#ft_tag">FT_Tag</a>)                        \
-          ( ( (<a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>)_x1 &lt;&lt; 24 ) |     \
-            ( (<a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>)_x2 &lt;&lt; 16 ) |     \
-            ( (<a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>)_x3 &lt;&lt;  8 ) |     \
-              (<a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>)_x4         )
+          (<a href="../ft2-basic_types/index.html#ft_tag">FT_Tag</a>)                        \
+          ( ( (<a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>)_x1 &lt;&lt; 24 ) |     \
+            ( (<a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>)_x2 &lt;&lt; 16 ) |     \
+            ( (<a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>)_x3 &lt;&lt;  8 ) |     \
+              (<a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>)_x4         )
 </pre>
 </div>
 
@@ -623,7 +623,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Generic_
   {
     <span class="keyword">void</span>*                 data;
-    <a href="../ft2-basic_types/#ft_generic_finalizer">FT_Generic_Finalizer</a>  finalizer;
+    <a href="../ft2-basic_types/index.html#ft_generic_finalizer">FT_Generic_Finalizer</a>  finalizer;
 
   } <b>FT_Generic</b>;
 </pre>
@@ -659,7 +659,7 @@ Defined in FT_TYPES_H (freetype/fttypes.h).
 </div>
 
 
-Describe a function used to destroy the &lsquo;client&rsquo; data of any FreeType object. See the description of the <a href="../ft2-basic_types/#ft_generic">FT_Generic</a> type for details of usage.
+Describe a function used to destroy the &lsquo;client&rsquo; data of any FreeType object. See the description of the <a href="../ft2-basic_types/index.html#ft_generic">FT_Generic</a> type for details of usage.
 
 <h4>input</h4>
 
@@ -703,16 +703,16 @@ A structure used to describe a bitmap or pixmap to the raster. Note that we now 
 <p>The pitch's absolute value is the number of bytes taken by one bitmap row, including padding. However, the pitch is positive when the bitmap has a &lsquo;down&rsquo; flow, and negative when it has an &lsquo;up&rsquo; flow. In all cases, the pitch is an offset to add to a bitmap pointer in order to go down one row.
 Note that &lsquo;padding&rsquo; means the alignment of a bitmap to a byte border, and FreeType functions normally align to the smallest possible integer value.
 For the B/W rasterizer, &lsquo;pitch&rsquo; is always an even number.
-To change the pitch of a bitmap (say, to make it a multiple of 4), use <a href="../ft2-bitmap_handling/#ft_bitmap_convert">FT_Bitmap_Convert</a>. Alternatively, you might use callback functions to directly render to the application's surface; see the file <code>example2.cpp</code> in the tutorial for a demonstration.</p>
+To change the pitch of a bitmap (say, to make it a multiple of 4), use <a href="../ft2-bitmap_handling/index.html#ft_bitmap_convert">FT_Bitmap_Convert</a>. Alternatively, you might use callback functions to directly render to the application's surface; see the file <code>example2.cpp</code> in the tutorial for a demonstration.</p>
 </td></tr>
 <tr><td class="val" id="buffer">buffer</td><td class="desc">
 <p>A typeless pointer to the bitmap buffer. This value should be aligned on 32-bit boundaries in most cases.</p>
 </td></tr>
 <tr><td class="val" id="num_grays">num_grays</td><td class="desc">
-<p>This field is only used with <a href="../ft2-basic_types/#ft_pixel_mode">FT_PIXEL_MODE_GRAY</a>; it gives the number of gray levels used in the bitmap.</p>
+<p>This field is only used with <a href="../ft2-basic_types/index.html#ft_pixel_mode">FT_PIXEL_MODE_GRAY</a>; it gives the number of gray levels used in the bitmap.</p>
 </td></tr>
 <tr><td class="val" id="pixel_mode">pixel_mode</td><td class="desc">
-<p>The pixel mode, i.e., how pixel bits are stored. See <a href="../ft2-basic_types/#ft_pixel_mode">FT_Pixel_Mode</a> for possible values.</p>
+<p>The pixel mode, i.e., how pixel bits are stored. See <a href="../ft2-basic_types/index.html#ft_pixel_mode">FT_Pixel_Mode</a> for possible values.</p>
 </td></tr>
 <tr><td class="val" id="palette_mode">palette_mode</td><td class="desc">
 <p>This field is intended for paletted pixel modes; it indicates how the palette is stored. Not used currently.</p>
@@ -732,14 +732,14 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">enum</span>  FT_Pixel_Mode_
   {
-    <a href="../ft2-basic_types/#ft_pixel_mode_none">FT_PIXEL_MODE_NONE</a> = 0,
-    <a href="../ft2-basic_types/#ft_pixel_mode_mono">FT_PIXEL_MODE_MONO</a>,
-    <a href="../ft2-basic_types/#ft_pixel_mode_gray">FT_PIXEL_MODE_GRAY</a>,
-    <a href="../ft2-basic_types/#ft_pixel_mode_gray2">FT_PIXEL_MODE_GRAY2</a>,
-    <a href="../ft2-basic_types/#ft_pixel_mode_gray4">FT_PIXEL_MODE_GRAY4</a>,
-    <a href="../ft2-basic_types/#ft_pixel_mode_lcd">FT_PIXEL_MODE_LCD</a>,
-    <a href="../ft2-basic_types/#ft_pixel_mode_lcd_v">FT_PIXEL_MODE_LCD_V</a>,
-    <a href="../ft2-basic_types/#ft_pixel_mode_bgra">FT_PIXEL_MODE_BGRA</a>,
+    <a href="../ft2-basic_types/index.html#ft_pixel_mode_none">FT_PIXEL_MODE_NONE</a> = 0,
+    <a href="../ft2-basic_types/index.html#ft_pixel_mode_mono">FT_PIXEL_MODE_MONO</a>,
+    <a href="../ft2-basic_types/index.html#ft_pixel_mode_gray">FT_PIXEL_MODE_GRAY</a>,
+    <a href="../ft2-basic_types/index.html#ft_pixel_mode_gray2">FT_PIXEL_MODE_GRAY2</a>,
+    <a href="../ft2-basic_types/index.html#ft_pixel_mode_gray4">FT_PIXEL_MODE_GRAY4</a>,
+    <a href="../ft2-basic_types/index.html#ft_pixel_mode_lcd">FT_PIXEL_MODE_LCD</a>,
+    <a href="../ft2-basic_types/index.html#ft_pixel_mode_lcd_v">FT_PIXEL_MODE_LCD_V</a>,
+    <a href="../ft2-basic_types/index.html#ft_pixel_mode_bgra">FT_PIXEL_MODE_BGRA</a>,
 
     FT_PIXEL_MODE_MAX      /* do not remove */
 
@@ -748,11 +748,11 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 
   /* these constants are deprecated; use the corresponding `<b>FT_Pixel_Mode</b>' */
   /* values instead.                                                       */
-#<span class="keyword">define</span> ft_pixel_mode_none   <a href="../ft2-basic_types/#ft_pixel_mode_none">FT_PIXEL_MODE_NONE</a>
-#<span class="keyword">define</span> ft_pixel_mode_mono   <a href="../ft2-basic_types/#ft_pixel_mode_mono">FT_PIXEL_MODE_MONO</a>
-#<span class="keyword">define</span> ft_pixel_mode_grays  <a href="../ft2-basic_types/#ft_pixel_mode_gray">FT_PIXEL_MODE_GRAY</a>
-#<span class="keyword">define</span> ft_pixel_mode_pal2   <a href="../ft2-basic_types/#ft_pixel_mode_gray2">FT_PIXEL_MODE_GRAY2</a>
-#<span class="keyword">define</span> ft_pixel_mode_pal4   <a href="../ft2-basic_types/#ft_pixel_mode_gray4">FT_PIXEL_MODE_GRAY4</a>
+#<span class="keyword">define</span> ft_pixel_mode_none   <a href="../ft2-basic_types/index.html#ft_pixel_mode_none">FT_PIXEL_MODE_NONE</a>
+#<span class="keyword">define</span> ft_pixel_mode_mono   <a href="../ft2-basic_types/index.html#ft_pixel_mode_mono">FT_PIXEL_MODE_MONO</a>
+#<span class="keyword">define</span> ft_pixel_mode_grays  <a href="../ft2-basic_types/index.html#ft_pixel_mode_gray">FT_PIXEL_MODE_GRAY</a>
+#<span class="keyword">define</span> ft_pixel_mode_pal2   <a href="../ft2-basic_types/index.html#ft_pixel_mode_gray2">FT_PIXEL_MODE_GRAY2</a>
+#<span class="keyword">define</span> ft_pixel_mode_pal4   <a href="../ft2-basic_types/index.html#ft_pixel_mode_gray4">FT_PIXEL_MODE_GRAY4</a>
 </pre>
 </div>
 
@@ -768,7 +768,7 @@ An enumeration type used to describe the format of pixels in a given bitmap. Not
 <p>A monochrome bitmap, using 1&nbsp;bit per pixel. Note that pixels are stored in most-significant order (MSB), which means that the left-most pixel in a byte has value 128.</p>
 </td></tr>
 <tr><td class="val" id="ft_pixel_mode_gray">FT_PIXEL_MODE_GRAY</td><td class="desc">
-<p>An 8-bit bitmap, generally used to represent anti-aliased glyph images. Each pixel is stored in one byte. Note that the number of &lsquo;gray&rsquo; levels is stored in the <code>num_grays</code> field of the <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a> structure (it generally is 256).</p>
+<p>An 8-bit bitmap, generally used to represent anti-aliased glyph images. Each pixel is stored in one byte. Note that the number of &lsquo;gray&rsquo; levels is stored in the <code>num_grays</code> field of the <a href="../ft2-basic_types/index.html#ft_bitmap">FT_Bitmap</a> structure (it generally is 256).</p>
 </td></tr>
 <tr><td class="val" id="ft_pixel_mode_gray2">FT_PIXEL_MODE_GRAY2</td><td class="desc">
 <p>A 2-bit per pixel bitmap, used to represent embedded anti-aliased bitmaps in font files according to the OpenType specification. We haven't found a single font using this format, however.</p>
@@ -777,13 +777,13 @@ An enumeration type used to describe the format of pixels in a given bitmap. Not
 <p>A 4-bit per pixel bitmap, representing embedded anti-aliased bitmaps in font files according to the OpenType specification. We haven't found a single font using this format, however.</p>
 </td></tr>
 <tr><td class="val" id="ft_pixel_mode_lcd">FT_PIXEL_MODE_LCD</td><td class="desc">
-<p>An 8-bit bitmap, representing RGB or BGR decimated glyph images used for display on LCD displays; the bitmap is three times wider than the original glyph image. See also <a href="../ft2-base_interface/#ft_render_mode">FT_RENDER_MODE_LCD</a>.</p>
+<p>An 8-bit bitmap, representing RGB or BGR decimated glyph images used for display on LCD displays; the bitmap is three times wider than the original glyph image. See also <a href="../ft2-base_interface/index.html#ft_render_mode">FT_RENDER_MODE_LCD</a>.</p>
 </td></tr>
 <tr><td class="val" id="ft_pixel_mode_lcd_v">FT_PIXEL_MODE_LCD_V</td><td class="desc">
-<p>An 8-bit bitmap, representing RGB or BGR decimated glyph images used for display on rotated LCD displays; the bitmap is three times taller than the original glyph image. See also <a href="../ft2-base_interface/#ft_render_mode">FT_RENDER_MODE_LCD_V</a>.</p>
+<p>An 8-bit bitmap, representing RGB or BGR decimated glyph images used for display on rotated LCD displays; the bitmap is three times taller than the original glyph image. See also <a href="../ft2-base_interface/index.html#ft_render_mode">FT_RENDER_MODE_LCD_V</a>.</p>
 </td></tr>
 <tr><td class="val" id="ft_pixel_mode_bgra">FT_PIXEL_MODE_BGRA</td><td class="desc">
-<p>[Since 2.5] An image with four 8-bit channels per pixel, representing a color image (such as emoticons) with alpha channel. For each pixel, the format is BGRA, which means, the blue channel comes first in memory. The color channels are pre-multiplied and in the sRGB colorspace. For example, full red at half-translucent opacity will be represented as &lsquo;00,00,80,80&rsquo;, not &lsquo;00,00,FF,80&rsquo;. See also <a href="../ft2-base_interface/#ft_load_xxx">FT_LOAD_COLOR</a>.</p>
+<p>[Since 2.5] An image with four 8-bit channels per pixel, representing a color image (such as emoticons) with alpha channel. For each pixel, the format is BGRA, which means, the blue channel comes first in memory. The color channels are pre-multiplied and in the sRGB colorspace. For example, full red at half-translucent opacity will be represented as &lsquo;00,00,80,80&rsquo;, not &lsquo;00,00,FF,80&rsquo;. See also <a href="../ft2-base_interface/index.html#ft_load_xxx">FT_LOAD_COLOR</a>.</p>
 </td></tr>
 </table>
 
@@ -797,23 +797,23 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">enum</span>  FT_Glyph_Format_
   {
-    <a href="../ft2-basic_types/#ft_image_tag">FT_IMAGE_TAG</a>( <a href="../ft2-basic_types/#ft_glyph_format_none">FT_GLYPH_FORMAT_NONE</a>, 0, 0, 0, 0 ),
+    <a href="../ft2-basic_types/index.html#ft_image_tag">FT_IMAGE_TAG</a>( <a href="../ft2-basic_types/index.html#ft_glyph_format_none">FT_GLYPH_FORMAT_NONE</a>, 0, 0, 0, 0 ),
 
-    <a href="../ft2-basic_types/#ft_image_tag">FT_IMAGE_TAG</a>( <a href="../ft2-basic_types/#ft_glyph_format_composite">FT_GLYPH_FORMAT_COMPOSITE</a>, 'c', 'o', 'm', 'p' ),
-    <a href="../ft2-basic_types/#ft_image_tag">FT_IMAGE_TAG</a>( <a href="../ft2-basic_types/#ft_glyph_format_bitmap">FT_GLYPH_FORMAT_BITMAP</a>,    'b', 'i', 't', 's' ),
-    <a href="../ft2-basic_types/#ft_image_tag">FT_IMAGE_TAG</a>( <a href="../ft2-basic_types/#ft_glyph_format_outline">FT_GLYPH_FORMAT_OUTLINE</a>,   'o', 'u', 't', 'l' ),
-    <a href="../ft2-basic_types/#ft_image_tag">FT_IMAGE_TAG</a>( <a href="../ft2-basic_types/#ft_glyph_format_plotter">FT_GLYPH_FORMAT_PLOTTER</a>,   'p', 'l', 'o', 't' )
+    <a href="../ft2-basic_types/index.html#ft_image_tag">FT_IMAGE_TAG</a>( <a href="../ft2-basic_types/index.html#ft_glyph_format_composite">FT_GLYPH_FORMAT_COMPOSITE</a>, 'c', 'o', 'm', 'p' ),
+    <a href="../ft2-basic_types/index.html#ft_image_tag">FT_IMAGE_TAG</a>( <a href="../ft2-basic_types/index.html#ft_glyph_format_bitmap">FT_GLYPH_FORMAT_BITMAP</a>,    'b', 'i', 't', 's' ),
+    <a href="../ft2-basic_types/index.html#ft_image_tag">FT_IMAGE_TAG</a>( <a href="../ft2-basic_types/index.html#ft_glyph_format_outline">FT_GLYPH_FORMAT_OUTLINE</a>,   'o', 'u', 't', 'l' ),
+    <a href="../ft2-basic_types/index.html#ft_image_tag">FT_IMAGE_TAG</a>( <a href="../ft2-basic_types/index.html#ft_glyph_format_plotter">FT_GLYPH_FORMAT_PLOTTER</a>,   'p', 'l', 'o', 't' )
 
   } <b>FT_Glyph_Format</b>;
 
 
   /* these constants are deprecated; use the corresponding */
   /* `<b>FT_Glyph_Format</b>' values instead.                     */
-#<span class="keyword">define</span> ft_glyph_format_none       <a href="../ft2-basic_types/#ft_glyph_format_none">FT_GLYPH_FORMAT_NONE</a>
-#<span class="keyword">define</span> ft_glyph_format_composite  <a href="../ft2-basic_types/#ft_glyph_format_composite">FT_GLYPH_FORMAT_COMPOSITE</a>
-#<span class="keyword">define</span> ft_glyph_format_bitmap     <a href="../ft2-basic_types/#ft_glyph_format_bitmap">FT_GLYPH_FORMAT_BITMAP</a>
-#<span class="keyword">define</span> ft_glyph_format_outline    <a href="../ft2-basic_types/#ft_glyph_format_outline">FT_GLYPH_FORMAT_OUTLINE</a>
-#<span class="keyword">define</span> ft_glyph_format_plotter    <a href="../ft2-basic_types/#ft_glyph_format_plotter">FT_GLYPH_FORMAT_PLOTTER</a>
+#<span class="keyword">define</span> ft_glyph_format_none       <a href="../ft2-basic_types/index.html#ft_glyph_format_none">FT_GLYPH_FORMAT_NONE</a>
+#<span class="keyword">define</span> ft_glyph_format_composite  <a href="../ft2-basic_types/index.html#ft_glyph_format_composite">FT_GLYPH_FORMAT_COMPOSITE</a>
+#<span class="keyword">define</span> ft_glyph_format_bitmap     <a href="../ft2-basic_types/index.html#ft_glyph_format_bitmap">FT_GLYPH_FORMAT_BITMAP</a>
+#<span class="keyword">define</span> ft_glyph_format_outline    <a href="../ft2-basic_types/index.html#ft_glyph_format_outline">FT_GLYPH_FORMAT_OUTLINE</a>
+#<span class="keyword">define</span> ft_glyph_format_plotter    <a href="../ft2-basic_types/index.html#ft_glyph_format_plotter">FT_GLYPH_FORMAT_PLOTTER</a>
 </pre>
 </div>
 
@@ -826,16 +826,16 @@ An enumeration type used to describe the format of a given glyph image. Note tha
 <p>The value&nbsp;0 is reserved.</p>
 </td></tr>
 <tr><td class="val" id="ft_glyph_format_composite">FT_GLYPH_FORMAT_COMPOSITE</td><td class="desc">
-<p>The glyph image is a composite of several other images. This format is <em>only</em> used with <a href="../ft2-base_interface/#ft_load_xxx">FT_LOAD_NO_RECURSE</a>, and is used to report compound glyphs (like accented characters).</p>
+<p>The glyph image is a composite of several other images. This format is <em>only</em> used with <a href="../ft2-base_interface/index.html#ft_load_xxx">FT_LOAD_NO_RECURSE</a>, and is used to report compound glyphs (like accented characters).</p>
 </td></tr>
 <tr><td class="val" id="ft_glyph_format_bitmap">FT_GLYPH_FORMAT_BITMAP</td><td class="desc">
-<p>The glyph image is a bitmap, and can be described as an <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>. You generally need to access the &lsquo;bitmap&rsquo; field of the <a href="../ft2-base_interface/#ft_glyphslotrec">FT_GlyphSlotRec</a> structure to read it.</p>
+<p>The glyph image is a bitmap, and can be described as an <a href="../ft2-basic_types/index.html#ft_bitmap">FT_Bitmap</a>. You generally need to access the &lsquo;bitmap&rsquo; field of the <a href="../ft2-base_interface/index.html#ft_glyphslotrec">FT_GlyphSlotRec</a> structure to read it.</p>
 </td></tr>
 <tr><td class="val" id="ft_glyph_format_outline">FT_GLYPH_FORMAT_OUTLINE</td><td class="desc">
-<p>The glyph image is a vectorial outline made of line segments and Bezier arcs; it can be described as an <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>; you generally want to access the &lsquo;outline&rsquo; field of the <a href="../ft2-base_interface/#ft_glyphslotrec">FT_GlyphSlotRec</a> structure to read it.</p>
+<p>The glyph image is a vectorial outline made of line segments and Bezier arcs; it can be described as an <a href="../ft2-outline_processing/index.html#ft_outline">FT_Outline</a>; you generally want to access the &lsquo;outline&rsquo; field of the <a href="../ft2-base_interface/index.html#ft_glyphslotrec">FT_GlyphSlotRec</a> structure to read it.</p>
 </td></tr>
 <tr><td class="val" id="ft_glyph_format_plotter">FT_GLYPH_FORMAT_PLOTTER</td><td class="desc">
-<p>The glyph image is a vectorial path with no inside and outside contours. Some Type&nbsp;1 fonts, like those in the Hershey family, contain glyphs in this format. These are described as <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>, but FreeType isn't currently capable of rendering them correctly.</p>
+<p>The glyph image is a vectorial path with no inside and outside contours. Some Type&nbsp;1 fonts, like those in the Hershey family, contain glyphs in this format. These are described as <a href="../ft2-outline_processing/index.html#ft_outline">FT_Outline</a>, but FreeType isn't currently capable of rendering them correctly.</p>
 </td></tr>
 </table>
 

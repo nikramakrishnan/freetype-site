@@ -14,30 +14,30 @@ Defined in FT_WINFONTS_H (freetype/ftwinfnt.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp1252">FT_WinFNT_ID_CP1252</a>    0
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_default">FT_WinFNT_ID_DEFAULT</a>   1
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_symbol">FT_WinFNT_ID_SYMBOL</a>    2
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_mac">FT_WinFNT_ID_MAC</a>      77
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp932">FT_WinFNT_ID_CP932</a>   128
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp949">FT_WinFNT_ID_CP949</a>   129
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp1361">FT_WinFNT_ID_CP1361</a>  130
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp936">FT_WinFNT_ID_CP936</a>   134
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp950">FT_WinFNT_ID_CP950</a>   136
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp1253">FT_WinFNT_ID_CP1253</a>  161
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp1254">FT_WinFNT_ID_CP1254</a>  162
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp1258">FT_WinFNT_ID_CP1258</a>  163
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp1255">FT_WinFNT_ID_CP1255</a>  177
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp1256">FT_WinFNT_ID_CP1256</a>  178
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp1257">FT_WinFNT_ID_CP1257</a>  186
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp1251">FT_WinFNT_ID_CP1251</a>  204
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp874">FT_WinFNT_ID_CP874</a>   222
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_cp1250">FT_WinFNT_ID_CP1250</a>  238
-#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/#ft_winfnt_id_oem">FT_WinFNT_ID_OEM</a>     255
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp1252">FT_WinFNT_ID_CP1252</a>    0
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_default">FT_WinFNT_ID_DEFAULT</a>   1
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_symbol">FT_WinFNT_ID_SYMBOL</a>    2
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_mac">FT_WinFNT_ID_MAC</a>      77
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp932">FT_WinFNT_ID_CP932</a>   128
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp949">FT_WinFNT_ID_CP949</a>   129
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp1361">FT_WinFNT_ID_CP1361</a>  130
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp936">FT_WinFNT_ID_CP936</a>   134
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp950">FT_WinFNT_ID_CP950</a>   136
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp1253">FT_WinFNT_ID_CP1253</a>  161
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp1254">FT_WinFNT_ID_CP1254</a>  162
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp1258">FT_WinFNT_ID_CP1258</a>  163
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp1255">FT_WinFNT_ID_CP1255</a>  177
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp1256">FT_WinFNT_ID_CP1256</a>  178
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp1257">FT_WinFNT_ID_CP1257</a>  186
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp1251">FT_WinFNT_ID_CP1251</a>  204
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp874">FT_WinFNT_ID_CP874</a>   222
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_cp1250">FT_WinFNT_ID_CP1250</a>  238
+#<span class="keyword">define</span> <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_id_oem">FT_WinFNT_ID_OEM</a>     255
 </pre>
 </div>
 
 
-A list of valid values for the &lsquo;charset&rsquo; byte in <a href="../ft2-winfnt_fonts/#ft_winfnt_headerrec">FT_WinFNT_HeaderRec</a>. Exact mapping tables for the various cpXXXX encodings (except for cp1361) can be found at <ftp://ftp.unicode.org/Public> in the MAPPINGS/VENDORS/MICSFT/WINDOWS subdirectory. cp1361 is roughly a superset of MAPPINGS/OBSOLETE/EASTASIA/KSC/JOHAB.TXT.
+A list of valid values for the &lsquo;charset&rsquo; byte in <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_headerrec">FT_WinFNT_HeaderRec</a>. Exact mapping tables for the various cpXXXX encodings (except for cp1361) can be found at <ftp://ftp.unicode.org/Public> in the MAPPINGS/VENDORS/MICSFT/WINDOWS subdirectory. cp1361 is roughly a superset of MAPPINGS/OBSOLETE/EASTASIA/KSC/JOHAB.TXT.
 
 <h4>values</h4>
 <table class="fields">
@@ -116,42 +116,42 @@ Defined in FT_WINFONTS_H (freetype/ftwinfnt.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_WinFNT_HeaderRec_
   {
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  version;
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   file_size;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    copyright[60];
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  file_type;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  nominal_point_size;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  vertical_resolution;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  horizontal_resolution;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  ascent;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  internal_leading;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  external_leading;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    italic;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    underline;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    strike_out;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  weight;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    charset;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  pixel_width;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  pixel_height;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    pitch_and_family;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  avg_width;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  max_width;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    first_char;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    last_char;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    default_char;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    break_char;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  bytes_per_row;
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   device_offset;
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   face_name_offset;
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   bits_pointer;
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   bits_offset;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    reserved;
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   flags;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  A_space;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  B_space;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  C_space;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  color_table_offset;
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   reserved1[4];
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  version;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   file_size;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>    copyright[60];
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  file_type;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  nominal_point_size;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  vertical_resolution;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  horizontal_resolution;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  ascent;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  internal_leading;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  external_leading;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>    italic;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>    underline;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>    strike_out;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  weight;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>    charset;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  pixel_width;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  pixel_height;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>    pitch_and_family;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  avg_width;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  max_width;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>    first_char;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>    last_char;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>    default_char;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>    break_char;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  bytes_per_row;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   device_offset;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   face_name_offset;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   bits_pointer;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   bits_offset;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>    reserved;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   flags;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  A_space;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  B_space;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  C_space;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  color_table_offset;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   reserved1[4];
 
   } <b>FT_WinFNT_HeaderRec</b>;
 </pre>
@@ -173,7 +173,7 @@ Defined in FT_WINFONTS_H (freetype/ftwinfnt.h).
 </div>
 
 
-A handle to an <a href="../ft2-winfnt_fonts/#ft_winfnt_headerrec">FT_WinFNT_HeaderRec</a> structure.
+A handle to an <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_headerrec">FT_WinFNT_HeaderRec</a> structure.
 
 <hr>
 
@@ -183,9 +183,9 @@ Defined in FT_WINFONTS_H (freetype/ftwinfnt.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Get_WinFNT_Header</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>               face,
-                        <a href="../ft2-winfnt_fonts/#ft_winfnt_headerrec">FT_WinFNT_HeaderRec</a>  *aheader );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Get_WinFNT_Header</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>               face,
+                        <a href="../ft2-winfnt_fonts/index.html#ft_winfnt_headerrec">FT_WinFNT_HeaderRec</a>  *aheader );
 </pre>
 </div>
 

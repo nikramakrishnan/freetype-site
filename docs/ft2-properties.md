@@ -6,7 +6,7 @@
 
 ## Synopsis
 
-Driver modules can be controlled by setting and unsetting properties, using the functions <a href="../ft2-module_management/#ft_property_set">FT_Property_Set</a> and <a href="../ft2-module_management/#ft_property_get">FT_Property_Get</a>. This section documents the available properties, together with auxiliary macros and structures.
+Driver modules can be controlled by setting and unsetting properties, using the functions <a href="../ft2-module_management/index.html#ft_property_set">FT_Property_Set</a> and <a href="../ft2-module_management/index.html#ft_property_get">FT_Property_Get</a>. This section documents the available properties, together with auxiliary macros and structures.
 
 ## FT_HINTING_XXX
 
@@ -14,17 +14,17 @@ Defined in FT_DRIVER_H (freetype/ftdriver.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <a href="../ft2-properties/#ft_hinting_freetype">FT_HINTING_FREETYPE</a>  0
-#<span class="keyword">define</span> <a href="../ft2-properties/#ft_hinting_adobe">FT_HINTING_ADOBE</a>     1
+#<span class="keyword">define</span> <a href="../ft2-properties/index.html#ft_hinting_freetype">FT_HINTING_FREETYPE</a>  0
+#<span class="keyword">define</span> <a href="../ft2-properties/index.html#ft_hinting_adobe">FT_HINTING_ADOBE</a>     1
 
   /* these constants (introduced in 2.4.12) are deprecated */
-#<span class="keyword">define</span> FT_CFF_HINTING_FREETYPE  <a href="../ft2-properties/#ft_hinting_freetype">FT_HINTING_FREETYPE</a>
-#<span class="keyword">define</span> FT_CFF_HINTING_ADOBE     <a href="../ft2-properties/#ft_hinting_adobe">FT_HINTING_ADOBE</a>
+#<span class="keyword">define</span> FT_CFF_HINTING_FREETYPE  <a href="../ft2-properties/index.html#ft_hinting_freetype">FT_HINTING_FREETYPE</a>
+#<span class="keyword">define</span> FT_CFF_HINTING_ADOBE     <a href="../ft2-properties/index.html#ft_hinting_adobe">FT_HINTING_ADOBE</a>
 </pre>
 </div>
 
 
-A list of constants used for the <a href="../ft2-properties/#hinting-engine">hinting-engine</a> property to select the hinting engine for CFF, Type&nbsp;1, and CID fonts.
+A list of constants used for the <a href="../ft2-properties/index.html#hinting-engine">hinting-engine</a> property to select the hinting engine for CFF, Type&nbsp;1, and CID fonts.
 
 <h4>values</h4>
 <table class="fields">
@@ -54,6 +54,14 @@ For the &lsquo;cff&rsquo; module, the default engine is &lsquo;freetype&rsquo; i
 
 For both the &lsquo;type1&rsquo; and &lsquo;t1cid&rsquo; modules, the default engine is &lsquo;freetype&rsquo; if T1_CONFIG_OPTION_OLD_ENGINE is defined, and &lsquo;adobe&rsquo; otherwise.
 
+<h4>note</h4>
+
+This property can be used with <a href="../ft2-module_management/index.html#ft_property_get">FT_Property_Get</a> also.
+
+This property can be set via the `FREETYPE_PROPERTIES` environment variable (using values &lsquo;adobe&rsquo; or &lsquo;freetype&rsquo;).
+
+<h4>example</h4>
+
 The following example code demonstrates how to select Adobe's hinting engine for the &lsquo;cff&rsquo; module (omitting the error handling).
 ```
   FT_Library  library;
@@ -65,12 +73,6 @@ The following example code demonstrates how to select Adobe's hinting engine for
   FT_Property_Set( library, "cff",
                             "hinting-engine", &hinting_engine );
 ```
-
-<h4>note</h4>
-
-This property can be used with <a href="../ft2-module_management/#ft_property_get">FT_Property_Get</a> also.
-
-This property can be set via the `FREETYPE_PROPERTIES` environment variable (using values &lsquo;adobe&rsquo; or &lsquo;freetype&rsquo;).
 
 <h4>since</h4>
 
@@ -86,7 +88,7 @@ This property can be set via the `FREETYPE_PROPERTIES` environment variable (usi
 
 All glyphs that pass through the auto-hinter will be emboldened unless this property is set to TRUE. The same is true for the CFF, Type&nbsp;1, and CID font modules if the &lsquo;Adobe&rsquo; engine is selected (which is the default).
 
-Stem darkening emboldens glyphs at smaller sizes to make them more readable on common low-DPI screens when using linear alpha blending and gamma correction, see <a href="../ft2-base_interface/#ft_render_glyph">FT_Render_Glyph</a>. When not using linear alpha blending and gamma correction, glyphs will appear heavy and fuzzy!
+Stem darkening emboldens glyphs at smaller sizes to make them more readable on common low-DPI screens when using linear alpha blending and gamma correction, see <a href="../ft2-base_interface/index.html#ft_render_glyph">FT_Render_Glyph</a>. When not using linear alpha blending and gamma correction, glyphs will appear heavy and fuzzy!
 
 Gamma correction essentially lightens fonts since shades of grey are shifted to higher pixel values (=&nbsp;higher brightness) to match the original intention to the reality of our screens. The side-effect is that glyphs &lsquo;thin out&rsquo;. Mac OS&nbsp;X and Adobe's proprietary font rendering library implement a counter-measure: stem darkening at smaller sizes where shades of gray dominate. By emboldening a glyph slightly in relation to its pixel size, individual pixels get higher coverage of filled-in outlines and are therefore &lsquo;blacker&rsquo;. This counteracts the &lsquo;thinning out&rsquo; of glyphs, making text remain readable at smaller sizes.
 
@@ -94,7 +96,15 @@ By default, the Adobe engines for CFF, Type&nbsp;1, and CID fonts darken stems a
 
 For the auto-hinter, stem-darkening is experimental currently and thus switched off by default (this is, &lsquo;no-stem-darkening&rsquo; is set to TRUE by default). Total consistency with the CFF driver is not achieved right now because the emboldening method differs and glyphs must be scaled down on the Y-axis to keep outline points inside their precomputed blue zones. The smaller the size (especially 9ppem and down), the higher the loss of emboldening versus the CFF driver.
 
-Note that stem darkening is never applied if <a href="../ft2-base_interface/#ft_load_xxx">FT_LOAD_NO_SCALE</a> is set.
+Note that stem darkening is never applied if <a href="../ft2-base_interface/index.html#ft_load_xxx">FT_LOAD_NO_SCALE</a> is set.
+
+<h4>note</h4>
+
+This property can be used with <a href="../ft2-module_management/index.html#ft_property_get">FT_Property_Get</a> also.
+
+This property can be set via the `FREETYPE_PROPERTIES` environment variable (using values 1 and 0 for &lsquo;on&rsquo; and &lsquo;off&rsquo;, respectively). It can also be set per face using <a href="../ft2-base_interface/index.html#ft_face_properties">FT_Face_Properties</a> with <a href="../ft2-parameter_tags/index.html#ft_param_tag_stem_darkening">FT_PARAM_TAG_STEM_DARKENING</a>.
+
+<h4>example</h4>
 ```
   FT_Library  library;
   FT_Bool     no_stem_darkening = TRUE;
@@ -105,12 +115,6 @@ Note that stem darkening is never applied if <a href="../ft2-base_interface/#ft_
   FT_Property_Set( library, "cff",
                             "no-stem-darkening", &no_stem_darkening );
 ```
-
-<h4>note</h4>
-
-This property can be used with <a href="../ft2-module_management/#ft_property_get">FT_Property_Get</a> also.
-
-This property can be set via the `FREETYPE_PROPERTIES` environment variable (using values 1 and 0 for &lsquo;on&rsquo; and &lsquo;off&rsquo;, respectively). It can also be set per face using <a href="../ft2-base_interface/#ft_face_properties">FT_Face_Properties</a> with <a href="../ft2-parameter_tags/#ft_param_tag_stem_darkening">FT_PARAM_TAG_STEM_DARKENING</a>.
 
 <h4>since</h4>
 
@@ -134,7 +138,23 @@ By default, the Adobe hinting engine, as used by the CFF, Type&nbsp;1, and CID f
   stem width >= 2.333px: darkening amount = 0px
 ```
 
-and piecewise linear in-between. At configuration time, these four control points can be set with the macro `CFF_CONFIG_OPTION_DARKENING_PARAMETERS`; the CFF, Type&nbsp;1, and CID drivers share these values. At runtime, the control points can be changed using the &lsquo;darkening-parameters&rsquo; property, as the following example demonstrates for the Type&nbsp;1 driver.
+and piecewise linear in-between. At configuration time, these four control points can be set with the macro `CFF_CONFIG_OPTION_DARKENING_PARAMETERS`; the CFF, Type&nbsp;1, and CID drivers share these values. At runtime, the control points can be changed using the &lsquo;darkening-parameters&rsquo; property (see the example below that demonstrates this for the Type&nbsp;1 driver).
+
+The x&nbsp;values give the stem width, and the y&nbsp;values the darkening amount. The unit is 1000th of pixels. All coordinate values must be positive; the x&nbsp;values must be monotonically increasing; the y&nbsp;values must be monotonically decreasing and smaller than or equal to 500 (corresponding to half a pixel); the slope of each linear piece must be shallower than -1 (e.g., -.4).
+
+The auto-hinter provides this property, too, as an experimental feature. See <a href="../ft2-properties/index.html#no-stem-darkening">no-stem-darkening</a> for more.
+
+<h4>note</h4>
+
+This property can be used with <a href="../ft2-module_management/index.html#ft_property_get">FT_Property_Get</a> also.
+
+This property can be set via the `FREETYPE_PROPERTIES` environment variable, using eight comma-separated integers without spaces. Here the above example, using &lsquo;\&rsquo; to break the line for readability.
+```
+  FREETYPE_PROPERTIES=\
+  type1:darkening-parameters=500,300,1000,200,1500,100,2000,0
+```
+
+<h4>example</h4>
 ```
   FT_Library  library;
   FT_Int      darken_params[8] = {  500, 300,   // x1, y1
@@ -147,20 +167,6 @@ and piecewise linear in-between. At configuration time, these four control point
 
   FT_Property_Set( library, "type1",
                             "darkening-parameters", darken_params );
-```
-
-The x&nbsp;values give the stem width, and the y&nbsp;values the darkening amount. The unit is 1000th of pixels. All coordinate values must be positive; the x&nbsp;values must be monotonically increasing; the y&nbsp;values must be monotonically decreasing and smaller than or equal to 500 (corresponding to half a pixel); the slope of each linear piece must be shallower than -1 (e.g., -.4).
-
-The auto-hinter provides this property, too, as an experimental feature. See <a href="../ft2-properties/#no-stem-darkening">no-stem-darkening</a> for more.
-
-<h4>note</h4>
-
-This property can be used with <a href="../ft2-module_management/#ft_property_get">FT_Property_Get</a> also.
-
-This property can be set via the `FREETYPE_PROPERTIES` environment variable, using eight comma-separated integers without spaces. Here the above example, using &lsquo;\&rsquo; to break the line for readability.
-```
-  FREETYPE_PROPERTIES=\
-  type1:darkening-parameters=500,300,1000,200,1500,100,2000,0
 ```
 
 <h4>since</h4>
@@ -183,7 +189,7 @@ The &lsquo;random-seed&rsquo; property does that. Its argument is a signed 32bit
 
 <h4>note</h4>
 
-This property can be set via the `FREETYPE_PROPERTIES` environment variable. It can also be set per face using <a href="../ft2-base_interface/#ft_face_properties">FT_Face_Properties</a> with <a href="../ft2-parameter_tags/#ft_param_tag_random_seed">FT_PARAM_TAG_RANDOM_SEED</a>.
+This property can be set via the `FREETYPE_PROPERTIES` environment variable. It can also be set per face using <a href="../ft2-base_interface/index.html#ft_face_properties">FT_Face_Properties</a> with <a href="../ft2-parameter_tags/index.html#ft_param_tag_random_seed">FT_PARAM_TAG_RANDOM_SEED</a>.
 
 <h4>since</h4>
 
@@ -202,6 +208,14 @@ If PCF_CONFIG_OPTION_LONG_FAMILY_NAMES is active while compiling FreeType, the P
 There are many PCF fonts just called &lsquo;Fixed&rsquo; which look completely different, and which have nothing to do with each other. When selecting &lsquo;Fixed&rsquo; in KDE or Gnome one gets results that appear rather random, the style changes often if one changes the size and one cannot select some fonts at all. The improve this situation, the PCF module prepends the foundry name (plus a space) to the family name. It also checks whether there are &lsquo;wide&rsquo; characters; all put together, family names like &lsquo;Sony Fixed&rsquo; or &lsquo;Misc Fixed Wide&rsquo; are constructed.
 
 If &lsquo;no-long-family-names&rsquo; is set, this feature gets switched off.
+
+<h4>note</h4>
+
+This property can be used with <a href="../ft2-module_management/index.html#ft_property_get">FT_Property_Get</a> also.
+
+This property can be set via the `FREETYPE_PROPERTIES` environment variable (using values 1 and 0 for &lsquo;on&rsquo; and &lsquo;off&rsquo;, respectively).
+
+<h4>example</h4>
 ```
   FT_Library  library;
   FT_Bool     no_long_family_names = TRUE;
@@ -213,12 +227,6 @@ If &lsquo;no-long-family-names&rsquo; is set, this feature gets switched off.
                             "no-long-family-names",
                             &no_long_family_names );
 ```
-
-<h4>note</h4>
-
-This property can be used with <a href="../ft2-module_management/#ft_property_get">FT_Property_Get</a> also.
-
-This property can be set via the `FREETYPE_PROPERTIES` environment variable (using values 1 and 0 for &lsquo;on&rsquo; and &lsquo;off&rsquo;, respectively).
 
 <h4>since</h4>
 
@@ -232,14 +240,14 @@ Defined in FT_DRIVER_H (freetype/ftdriver.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <a href="../ft2-properties/#tt_interpreter_version_35">TT_INTERPRETER_VERSION_35</a>  35
-#<span class="keyword">define</span> <a href="../ft2-properties/#tt_interpreter_version_38">TT_INTERPRETER_VERSION_38</a>  38
-#<span class="keyword">define</span> <a href="../ft2-properties/#tt_interpreter_version_40">TT_INTERPRETER_VERSION_40</a>  40
+#<span class="keyword">define</span> <a href="../ft2-properties/index.html#tt_interpreter_version_35">TT_INTERPRETER_VERSION_35</a>  35
+#<span class="keyword">define</span> <a href="../ft2-properties/index.html#tt_interpreter_version_38">TT_INTERPRETER_VERSION_38</a>  38
+#<span class="keyword">define</span> <a href="../ft2-properties/index.html#tt_interpreter_version_40">TT_INTERPRETER_VERSION_40</a>  40
 </pre>
 </div>
 
 
-A list of constants used for the <a href="../ft2-properties/#interpreter-version">interpreter-version</a> property to select the hinting engine for Truetype fonts.
+A list of constants used for the <a href="../ft2-properties/index.html#interpreter-version">interpreter-version</a> property to select the hinting engine for Truetype fonts.
 
 The numeric value in the constant names represents the version number as returned by the &lsquo;GETINFO&rsquo; bytecode instruction.
 
@@ -323,6 +331,14 @@ If subpixel hinting is on, many TrueType bytecode instructions behave differentl
 
 Details on subpixel hinting and some of the necessary tweaks can be found in Greg Hitchcock's whitepaper at &lsquo;<https://www.microsoft.com/typography/cleartype/truetypecleartype.aspx>&rsquo;. Note that FreeType currently doesn't really &lsquo;subpixel hint&rsquo; (6x1, 6x2, or 6x5 supersampling) like discussed in the paper. Depending on the chosen interpreter, it simply ignores instructions on vertical stems to arrive at very similar results.
 
+<h4>note</h4>
+
+This property can be used with <a href="../ft2-module_management/index.html#ft_property_get">FT_Property_Get</a> also.
+
+This property can be set via the `FREETYPE_PROPERTIES` environment variable (using values &lsquo;35&rsquo;, &lsquo;38&rsquo;, or &lsquo;40&rsquo;).
+
+<h4>example</h4>
+
 The following example code demonstrates how to deactivate subpixel hinting (omitting the error handling).
 ```
   FT_Library  library;
@@ -336,12 +352,6 @@ The following example code demonstrates how to deactivate subpixel hinting (omit
                             "interpreter-version",
                             &interpreter_version );
 ```
-
-<h4>note</h4>
-
-This property can be used with <a href="../ft2-module_management/#ft_property_get">FT_Property_Get</a> also.
-
-This property can be set via the `FREETYPE_PROPERTIES` environment variable (using values &lsquo;35&rsquo;, &lsquo;38&rsquo;, or &lsquo;40&rsquo;).
 
 <h4>since</h4>
 
@@ -359,7 +369,9 @@ The auto-hinter provides various script modules to hint glyphs. Examples of supp
 
 OpenType fonts, however, often provide much more glyphs than character codes (small caps, superscripts, ligatures, swashes, etc.), to be controlled by so-called &lsquo;features&rsquo;. Handling OpenType features can be quite complicated and thus needs a separate library on top of FreeType.
 
-The mapping between glyph indices and scripts (in the auto-hinter sense, see the <a href="../ft2-properties/#ft_autohinter_script_xxx">FT_AUTOHINTER_SCRIPT_XXX</a> values) is stored as an array with `num_glyphs` elements, as found in the font's <a href="../ft2-base_interface/#ft_face">FT_Face</a> structure. The &lsquo;glyph-to-script-map&rsquo; property returns a pointer to this array, which can be modified as needed. Note that the modification should happen before the first glyph gets processed by the auto-hinter so that the global analysis of the font shapes actually uses the modified mapping.
+The mapping between glyph indices and scripts (in the auto-hinter sense, see the <a href="../ft2-properties/index.html#ft_autohinter_script_xxx">FT_AUTOHINTER_SCRIPT_XXX</a> values) is stored as an array with `num_glyphs` elements, as found in the font's <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a> structure. The &lsquo;glyph-to-script-map&rsquo; property returns a pointer to this array, which can be modified as needed. Note that the modification should happen before the first glyph gets processed by the auto-hinter so that the global analysis of the font shapes actually uses the modified mapping.
+
+<h4>example</h4>
 
 The following example code demonstrates how to access it (omitting the error handling).
 ```
@@ -393,17 +405,17 @@ Defined in FT_DRIVER_H (freetype/ftdriver.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <a href="../ft2-properties/#ft_autohinter_script_none">FT_AUTOHINTER_SCRIPT_NONE</a>   0
-#<span class="keyword">define</span> <a href="../ft2-properties/#ft_autohinter_script_latin">FT_AUTOHINTER_SCRIPT_LATIN</a>  1
-#<span class="keyword">define</span> <a href="../ft2-properties/#ft_autohinter_script_cjk">FT_AUTOHINTER_SCRIPT_CJK</a>    2
-#<span class="keyword">define</span> <a href="../ft2-properties/#ft_autohinter_script_indic">FT_AUTOHINTER_SCRIPT_INDIC</a>  3
+#<span class="keyword">define</span> <a href="../ft2-properties/index.html#ft_autohinter_script_none">FT_AUTOHINTER_SCRIPT_NONE</a>   0
+#<span class="keyword">define</span> <a href="../ft2-properties/index.html#ft_autohinter_script_latin">FT_AUTOHINTER_SCRIPT_LATIN</a>  1
+#<span class="keyword">define</span> <a href="../ft2-properties/index.html#ft_autohinter_script_cjk">FT_AUTOHINTER_SCRIPT_CJK</a>    2
+#<span class="keyword">define</span> <a href="../ft2-properties/index.html#ft_autohinter_script_indic">FT_AUTOHINTER_SCRIPT_INDIC</a>  3
 </pre>
 </div>
 
 
 **Experimental only**
 
-A list of constants used for the <a href="../ft2-properties/#glyph-to-script-map">glyph-to-script-map</a> property to specify the script submodule the auto-hinter should use for hinting a particular glyph.
+A list of constants used for the <a href="../ft2-properties/index.html#glyph-to-script-map">glyph-to-script-map</a> property to specify the script submodule the auto-hinter should use for hinting a particular glyph.
 
 <h4>values</h4>
 <table class="fields">
@@ -509,8 +521,8 @@ Defined in FT_DRIVER_H (freetype/ftdriver.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Prop_GlyphToScriptMap_
   {
-    <a href="../ft2-base_interface/#ft_face">FT_Face</a>     face;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>*  map;
+    <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>     face;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>*  map;
 
   } <b>FT_Prop_GlyphToScriptMap</b>;
 </pre>
@@ -519,7 +531,7 @@ Defined in FT_DRIVER_H (freetype/ftdriver.h).
 
 **Experimental only**
 
-The data exchange structure for the <a href="../ft2-properties/#glyph-to-script-map">glyph-to-script-map</a> property.
+The data exchange structure for the <a href="../ft2-properties/index.html#glyph-to-script-map">glyph-to-script-map</a> property.
 
 <h4>since</h4>
 
@@ -533,7 +545,15 @@ The data exchange structure for the <a href="../ft2-properties/#glyph-to-script-
 
 **Experimental only**
 
-If no auto-hinter script module can be assigned to a glyph, a fallback script gets assigned to it (see also the <a href="../ft2-properties/#glyph-to-script-map">glyph-to-script-map</a> property). By default, this is <a href="../ft2-properties/#ft_autohinter_script_xxx">FT_AUTOHINTER_SCRIPT_CJK</a>. Using the &lsquo;fallback-script&rsquo; property, this fallback value can be changed.
+If no auto-hinter script module can be assigned to a glyph, a fallback script gets assigned to it (see also the <a href="../ft2-properties/index.html#glyph-to-script-map">glyph-to-script-map</a> property). By default, this is <a href="../ft2-properties/index.html#ft_autohinter_script_xxx">FT_AUTOHINTER_SCRIPT_CJK</a>. Using the &lsquo;fallback-script&rsquo; property, this fallback value can be changed.
+
+<h4>note</h4>
+
+This property can be used with <a href="../ft2-module_management/index.html#ft_property_get">FT_Property_Get</a> also.
+
+It's important to use the right timing for changing this value: The creation of the glyph-to-script map that eventually uses the fallback script value gets triggered either by setting or reading a face-specific property like <a href="../ft2-properties/index.html#glyph-to-script-map">glyph-to-script-map</a>, or by auto-hinting any glyph from that face. In particular, if you have already created an <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a> structure but not loaded any glyph (using the auto-hinter), a change of the fallback script will affect this face.
+
+<h4>example</h4>
 ```
   FT_Library  library;
   FT_UInt     fallback_script = FT_AUTOHINTER_SCRIPT_NONE;
@@ -544,12 +564,6 @@ If no auto-hinter script module can be assigned to a glyph, a fallback script ge
   FT_Property_Set( library, "autofitter",
                             "fallback-script", &fallback_script );
 ```
-
-<h4>note</h4>
-
-This property can be used with <a href="../ft2-module_management/#ft_property_get">FT_Property_Get</a> also.
-
-It's important to use the right timing for changing this value: The creation of the glyph-to-script map that eventually uses the fallback script value gets triggered either by setting or reading a face-specific property like <a href="../ft2-properties/#glyph-to-script-map">glyph-to-script-map</a>, or by auto-hinting any glyph from that face. In particular, if you have already created an <a href="../ft2-base_interface/#ft_face">FT_Face</a> structure but not loaded any glyph (using the auto-hinter), a change of the fallback script will affect this face.
 
 <h4>since</h4>
 
@@ -565,7 +579,15 @@ It's important to use the right timing for changing this value: The creation of 
 
 If FreeType gets compiled with FT_CONFIG_OPTION_USE_HARFBUZZ to make the HarfBuzz library access OpenType features for getting better glyph coverages, this property sets the (auto-fitter) script to be used for the default (OpenType) script data of a font's GSUB table. Features for the default script are intended for all scripts not explicitly handled in GSUB; an example is a &lsquo;dlig&rsquo; feature, containing the combination of the characters &lsquo;T&rsquo;, &lsquo;E&rsquo;, and &lsquo;L&rsquo; to form a &lsquo;TEL&rsquo; ligature.
 
-By default, this is <a href="../ft2-properties/#ft_autohinter_script_xxx">FT_AUTOHINTER_SCRIPT_LATIN</a>. Using the &lsquo;default-script&rsquo; property, this default value can be changed.
+By default, this is <a href="../ft2-properties/index.html#ft_autohinter_script_xxx">FT_AUTOHINTER_SCRIPT_LATIN</a>. Using the &lsquo;default-script&rsquo; property, this default value can be changed.
+
+<h4>note</h4>
+
+This property can be used with <a href="../ft2-module_management/index.html#ft_property_get">FT_Property_Get</a> also.
+
+It's important to use the right timing for changing this value: The creation of the glyph-to-script map that eventually uses the default script value gets triggered either by setting or reading a face-specific property like <a href="../ft2-properties/index.html#glyph-to-script-map">glyph-to-script-map</a>, or by auto-hinting any glyph from that face. In particular, if you have already created an <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a> structure but not loaded any glyph (using the auto-hinter), a change of the default script will affect this face.
+
+<h4>example</h4>
 ```
   FT_Library  library;
   FT_UInt     default_script = FT_AUTOHINTER_SCRIPT_NONE;
@@ -576,12 +598,6 @@ By default, this is <a href="../ft2-properties/#ft_autohinter_script_xxx">FT_AUT
   FT_Property_Set( library, "autofitter",
                             "default-script", &default_script );
 ```
-
-<h4>note</h4>
-
-This property can be used with <a href="../ft2-module_management/#ft_property_get">FT_Property_Get</a> also.
-
-It's important to use the right timing for changing this value: The creation of the glyph-to-script map that eventually uses the default script value gets triggered either by setting or reading a face-specific property like <a href="../ft2-properties/#glyph-to-script-map">glyph-to-script-map</a>, or by auto-hinting any glyph from that face. In particular, if you have already created an <a href="../ft2-base_interface/#ft_face">FT_Face</a> structure but not loaded any glyph (using the auto-hinter), a change of the default script will affect this face.
 
 <h4>since</h4>
 
@@ -594,6 +610,14 @@ It's important to use the right timing for changing this value: The creation of 
 
 
 For ppem values in the range 6&nbsp;&lt;= ppem &lt;= &lsquo;increase-x-height&rsquo;, round up the font's x&nbsp;height much more often than normally. If the value is set to&nbsp;0, which is the default, this feature is switched off. Use this property to improve the legibility of small font sizes if necessary.
+
+<h4>note</h4>
+
+This property can be used with <a href="../ft2-module_management/index.html#ft_property_get">FT_Property_Get</a> also.
+
+Set this value right after calling <a href="../ft2-base_interface/index.html#ft_set_char_size">FT_Set_Char_Size</a>, but before loading any glyph (using the auto-hinter).
+
+<h4>example</h4>
 ```
   FT_Library               library;
   FT_Face                  face;
@@ -611,12 +635,6 @@ For ppem values in the range 6&nbsp;&lt;= ppem &lt;= &lsquo;increase-x-height&rs
                             "increase-x-height", &prop );
 ```
 
-<h4>note</h4>
-
-This property can be used with <a href="../ft2-module_management/#ft_property_get">FT_Property_Get</a> also.
-
-Set this value right after calling <a href="../ft2-base_interface/#ft_set_char_size">FT_Set_Char_Size</a>, but before loading any glyph (using the auto-hinter).
-
 <h4>since</h4>
 
 2.4.11
@@ -631,15 +649,15 @@ Defined in FT_DRIVER_H (freetype/ftdriver.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Prop_IncreaseXHeight_
   {
-    <a href="../ft2-base_interface/#ft_face">FT_Face</a>  face;
-    <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>  limit;
+    <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>  face;
+    <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>  limit;
 
   } <b>FT_Prop_IncreaseXHeight</b>;
 </pre>
 </div>
 
 
-The data exchange structure for the <a href="../ft2-properties/#increase-x-height">increase-x-height</a> property.
+The data exchange structure for the <a href="../ft2-properties/index.html#increase-x-height">increase-x-height</a> property.
 
 <hr>
 
@@ -653,7 +671,21 @@ If FreeType gets compiled with option AF_CONFIG_OPTION_USE_WARPER to activate th
 
 Warping only works in &lsquo;normal&rsquo; auto-hinting mode replacing it. The idea of the code is to slightly scale and shift a glyph along the non-hinted dimension (which is usually the horizontal axis) so that as much of its segments are aligned (more or less) to the grid. To find out a glyph's optimal scaling and shifting value, various parameter combinations are tried and scored.
 
-By default, warping is off. The example below shows how to switch on warping (omitting the error handling).
+By default, warping is off.
+
+<h4>note</h4>
+
+This property can be used with <a href="../ft2-module_management/index.html#ft_property_get">FT_Property_Get</a> also.
+
+This property can be set via the `FREETYPE_PROPERTIES` environment variable (using values 1 and 0 for &lsquo;on&rsquo; and &lsquo;off&rsquo;, respectively).
+
+The warping code can also change advance widths. Have a look at the `lsb_delta` and `rsb_delta` fields in the <a href="../ft2-base_interface/index.html#ft_glyphslotrec">FT_GlyphSlotRec</a> structure for details on improving inter-glyph distances while rendering.
+
+Since warping is a global property of the auto-hinter it is best to change its value before rendering any face. Otherwise, you should reload all faces that get auto-hinted in &lsquo;normal&rsquo; hinting mode.
+
+<h4>example</h4>
+
+This example shows how to switch on warping (omitting the error handling).
 ```
   FT_Library  library;
   FT_Bool     warping = 1;
@@ -661,19 +693,8 @@ By default, warping is off. The example below shows how to switch on warping (om
 
   FT_Init_FreeType( &library );
 
-  FT_Property_Set( library, "autofitter",
-                            "warping", &warping );
+  FT_Property_Set( library, "autofitter", "warping", &warping );
 ```
-
-<h4>note</h4>
-
-This property can be used with <a href="../ft2-module_management/#ft_property_get">FT_Property_Get</a> also.
-
-This property can be set via the `FREETYPE_PROPERTIES` environment variable (using values 1 and 0 for &lsquo;on&rsquo; and &lsquo;off&rsquo;, respectively).
-
-The warping code can also change advance widths. Have a look at the `lsb_delta` and `rsb_delta` fields in the <a href="../ft2-base_interface/#ft_glyphslotrec">FT_GlyphSlotRec</a> structure for details on improving inter-glyph distances while rendering.
-
-Since warping is a global property of the auto-hinter it is best to change its value before rendering any face. Otherwise, you should reload all faces that get auto-hinted in &lsquo;normal&rsquo; hinting mode.
 
 <h4>since</h4>
 

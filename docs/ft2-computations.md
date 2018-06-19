@@ -14,10 +14,10 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_long">FT_Long</a> )
-  <b>FT_MulDiv</b>( <a href="../ft2-basic_types/#ft_long">FT_Long</a>  a,
-             <a href="../ft2-basic_types/#ft_long">FT_Long</a>  b,
-             <a href="../ft2-basic_types/#ft_long">FT_Long</a>  c );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a> )
+  <b>FT_MulDiv</b>( <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>  a,
+             <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>  b,
+             <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>  c );
 </pre>
 </div>
 
@@ -51,9 +51,9 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_long">FT_Long</a> )
-  <b>FT_MulFix</b>( <a href="../ft2-basic_types/#ft_long">FT_Long</a>  a,
-             <a href="../ft2-basic_types/#ft_long">FT_Long</a>  b );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a> )
+  <b>FT_MulFix</b>( <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>  a,
+             <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>  b );
 </pre>
 </div>
 
@@ -88,9 +88,9 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_long">FT_Long</a> )
-  <b>FT_DivFix</b>( <a href="../ft2-basic_types/#ft_long">FT_Long</a>  a,
-             <a href="../ft2-basic_types/#ft_long">FT_Long</a>  b );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a> )
+  <b>FT_DivFix</b>( <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>  a,
+             <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>  b );
 </pre>
 </div>
 
@@ -119,8 +119,8 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a> )
-  <b>FT_RoundFix</b>( <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  a );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a> )
+  <b>FT_RoundFix</b>( <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>  a );
 </pre>
 </div>
 
@@ -150,8 +150,8 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a> )
-  <b>FT_CeilFix</b>( <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  a );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a> )
+  <b>FT_CeilFix</b>( <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>  a );
 </pre>
 </div>
 
@@ -181,8 +181,8 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a> )
-  <b>FT_FloorFix</b>( <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  a );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a> )
+  <b>FT_FloorFix</b>( <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>  a );
 </pre>
 </div>
 
@@ -209,8 +209,8 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Vector_Transform</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*        vec,
-                       <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>*  matrix );
+  <b>FT_Vector_Transform</b>( <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a>*        vec,
+                       <span class="keyword">const</span> <a href="../ft2-basic_types/index.html#ft_matrix">FT_Matrix</a>*  matrix );
 </pre>
 </div>
 
@@ -244,8 +244,8 @@ Defined in FT_GLYPH_H (freetype/ftglyph.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Matrix_Multiply</b>( <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>*  a,
-                      <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>*        b );
+  <b>FT_Matrix_Multiply</b>( <span class="keyword">const</span> <a href="../ft2-basic_types/index.html#ft_matrix">FT_Matrix</a>*  a,
+                      <a href="../ft2-basic_types/index.html#ft_matrix">FT_Matrix</a>*        b );
 </pre>
 </div>
 
@@ -280,8 +280,8 @@ Defined in FT_GLYPH_H (freetype/ftglyph.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Matrix_Invert</b>( <a href="../ft2-basic_types/#ft_matrix">FT_Matrix</a>*  matrix );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Matrix_Invert</b>( <a href="../ft2-basic_types/index.html#ft_matrix">FT_Matrix</a>*  matrix );
 </pre>
 </div>
 
@@ -307,7 +307,7 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  <b>FT_Angle</b>;
+  <span class="keyword">typedef</span> <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>  <b>FT_Angle</b>;
 </pre>
 </div>
 
@@ -327,7 +327,7 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 </div>
 
 
-The angle pi expressed in <a href="../ft2-computations/#ft_angle">FT_Angle</a> units.
+The angle pi expressed in <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a> units.
 
 <hr>
 
@@ -337,12 +337,12 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <b>FT_ANGLE_2PI</b>  ( <a href="../ft2-computations/#ft_angle_pi">FT_ANGLE_PI</a> * 2 )
+#<span class="keyword">define</span> <b>FT_ANGLE_2PI</b>  ( <a href="../ft2-computations/index.html#ft_angle_pi">FT_ANGLE_PI</a> * 2 )
 </pre>
 </div>
 
 
-The angle 2*pi expressed in <a href="../ft2-computations/#ft_angle">FT_Angle</a> units.
+The angle 2*pi expressed in <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a> units.
 
 <hr>
 
@@ -352,12 +352,12 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <b>FT_ANGLE_PI2</b>  ( <a href="../ft2-computations/#ft_angle_pi">FT_ANGLE_PI</a> / 2 )
+#<span class="keyword">define</span> <b>FT_ANGLE_PI2</b>  ( <a href="../ft2-computations/index.html#ft_angle_pi">FT_ANGLE_PI</a> / 2 )
 </pre>
 </div>
 
 
-The angle pi/2 expressed in <a href="../ft2-computations/#ft_angle">FT_Angle</a> units.
+The angle pi/2 expressed in <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a> units.
 
 <hr>
 
@@ -367,12 +367,12 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <b>FT_ANGLE_PI4</b>  ( <a href="../ft2-computations/#ft_angle_pi">FT_ANGLE_PI</a> / 4 )
+#<span class="keyword">define</span> <b>FT_ANGLE_PI4</b>  ( <a href="../ft2-computations/index.html#ft_angle_pi">FT_ANGLE_PI</a> / 4 )
 </pre>
 </div>
 
 
-The angle pi/4 expressed in <a href="../ft2-computations/#ft_angle">FT_Angle</a> units.
+The angle pi/4 expressed in <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a> units.
 
 <hr>
 
@@ -382,8 +382,8 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a> )
-  <b>FT_Sin</b>( <a href="../ft2-computations/#ft_angle">FT_Angle</a>  angle );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a> )
+  <b>FT_Sin</b>( <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a>  angle );
 </pre>
 </div>
 
@@ -403,7 +403,7 @@ The sinus value.
 
 <h4>note</h4>
 
-If you need both the sinus and cosinus for a given angle, use the function <a href="../ft2-computations/#ft_vector_unit">FT_Vector_Unit</a>.
+If you need both the sinus and cosinus for a given angle, use the function <a href="../ft2-computations/index.html#ft_vector_unit">FT_Vector_Unit</a>.
 
 <hr>
 
@@ -413,8 +413,8 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a> )
-  <b>FT_Cos</b>( <a href="../ft2-computations/#ft_angle">FT_Angle</a>  angle );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a> )
+  <b>FT_Cos</b>( <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a>  angle );
 </pre>
 </div>
 
@@ -434,7 +434,7 @@ The cosinus value.
 
 <h4>note</h4>
 
-If you need both the sinus and cosinus for a given angle, use the function <a href="../ft2-computations/#ft_vector_unit">FT_Vector_Unit</a>.
+If you need both the sinus and cosinus for a given angle, use the function <a href="../ft2-computations/index.html#ft_vector_unit">FT_Vector_Unit</a>.
 
 <hr>
 
@@ -444,8 +444,8 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a> )
-  <b>FT_Tan</b>( <a href="../ft2-computations/#ft_angle">FT_Angle</a>  angle );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a> )
+  <b>FT_Tan</b>( <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a>  angle );
 </pre>
 </div>
 
@@ -471,9 +471,9 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-computations/#ft_angle">FT_Angle</a> )
-  <b>FT_Atan2</b>( <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  x,
-            <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  y );
+  FT_EXPORT( <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a> )
+  <b>FT_Atan2</b>( <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>  x,
+            <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>  y );
 </pre>
 </div>
 
@@ -502,9 +502,9 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-computations/#ft_angle">FT_Angle</a> )
-  <b>FT_Angle_Diff</b>( <a href="../ft2-computations/#ft_angle">FT_Angle</a>  angle1,
-                 <a href="../ft2-computations/#ft_angle">FT_Angle</a>  angle2 );
+  FT_EXPORT( <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a> )
+  <b>FT_Angle_Diff</b>( <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a>  angle1,
+                 <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a>  angle2 );
 </pre>
 </div>
 
@@ -534,8 +534,8 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Vector_Unit</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  vec,
-                  <a href="../ft2-computations/#ft_angle">FT_Angle</a>    angle );
+  <b>FT_Vector_Unit</b>( <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a>*  vec,
+                  <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a>    angle );
 </pre>
 </div>
 
@@ -567,8 +567,8 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Vector_Rotate</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  vec,
-                    <a href="../ft2-computations/#ft_angle">FT_Angle</a>    angle );
+  <b>FT_Vector_Rotate</b>( <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a>*  vec,
+                    <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a>    angle );
 </pre>
 </div>
 
@@ -597,8 +597,8 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a> )
-  <b>FT_Vector_Length</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  vec );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a> )
+  <b>FT_Vector_Length</b>( <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a>*  vec );
 </pre>
 </div>
 
@@ -625,9 +625,9 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Vector_Polarize</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  vec,
-                      <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>   *length,
-                      <a href="../ft2-computations/#ft_angle">FT_Angle</a>   *angle );
+  <b>FT_Vector_Polarize</b>( <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a>*  vec,
+                      <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>   *length,
+                      <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a>   *angle );
 </pre>
 </div>
 
@@ -660,9 +660,9 @@ Defined in FT_TRIGONOMETRY_H (freetype/fttrigon.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Vector_From_Polar</b>( <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  vec,
-                        <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>    length,
-                        <a href="../ft2-computations/#ft_angle">FT_Angle</a>    angle );
+  <b>FT_Vector_From_Polar</b>( <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a>*  vec,
+                        <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>    length,
+                        <a href="../ft2-computations/index.html#ft_angle">FT_Angle</a>    angle );
 </pre>
 </div>
 

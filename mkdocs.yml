@@ -1,6 +1,7 @@
 # Project information
 site_name: FreeType-2.9.1 API Reference
 site_author: FreeType Contributors
+site_description: "API Reference documentation for FreeType-2.9.1"
 #docs_dir: markdown
 #site_dir: site
 
@@ -75,16 +76,20 @@ pages:
 extra_css:
 - stylesheets/extra.css
 extra_javascript:
-- javascripts/jquery-3.3.1.min.js
 - javascripts/extra.js
 
 # Extensions
 markdown_extensions:
-- toc:
-    permalink: true
-- pymdownx.superfences:
-    disable_indented_code_blocks: true
-    preserve_tabs: true
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      disable_indented_code_blocks: true
+  - codehilite:
+      guess_lang: false
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
 
 # Other Options
 copyright: Copyright 2018 <a href = "http://git.savannah.gnu.org/cgit/freetype/freetype2.git/tree/docs/LICENSE.TXT">The

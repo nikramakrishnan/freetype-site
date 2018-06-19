@@ -6,11 +6,11 @@
 
 ## Synopsis
 
-While FreeType's CFF driver doesn't expose API functions by itself, it is possible to control its behaviour with <a href="../ft2-module_management/#ft_property_set">FT_Property_Set</a> and <a href="../ft2-module_management/#ft_property_get">FT_Property_Get</a>.
+While FreeType's CFF driver doesn't expose API functions by itself, it is possible to control its behaviour with <a href="../ft2-module_management/index.html#ft_property_set">FT_Property_Set</a> and <a href="../ft2-module_management/index.html#ft_property_get">FT_Property_Get</a>.
 
 The CFF driver's module name is &lsquo;cff&rsquo;.
 
-Available properties are <a href="../ft2-properties/#hinting-engine">hinting-engine</a>, <a href="../ft2-properties/#no-stem-darkening">no-stem-darkening</a>, <a href="../ft2-properties/#darkening-parameters">darkening-parameters</a>, and <a href="../ft2-properties/#random-seed">random-seed</a>, as documented in the &lsquo;<a href="../ft2-properties/#properties">Driver properties</a>&rsquo; section.
+Available properties are <a href="../ft2-properties/index.html#hinting-engine">hinting-engine</a>, <a href="../ft2-properties/index.html#no-stem-darkening">no-stem-darkening</a>, <a href="../ft2-properties/index.html#darkening-parameters">darkening-parameters</a>, and <a href="../ft2-properties/index.html#random-seed">random-seed</a>, as documented in the &lsquo;<a href="../ft2-properties/index.html#properties">Driver properties</a>&rsquo; section.
 
 **Hinting and antialiasing principles of the new engine**
 

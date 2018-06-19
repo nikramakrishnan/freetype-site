@@ -19,7 +19,7 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 </div>
 
 
-A handle to a given memory manager object, defined with an <a href="../ft2-system_interface/#ft_memoryrec">FT_MemoryRec</a> structure.
+A handle to a given memory manager object, defined with an <a href="../ft2-system_interface/index.html#ft_memoryrec">FT_MemoryRec</a> structure.
 
 <hr>
 
@@ -30,7 +30,7 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>*
-  (*<b>FT_Alloc_Func</b>)( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>  memory,
+  (*<b>FT_Alloc_Func</b>)( <a href="../ft2-system_interface/index.html#ft_memory">FT_Memory</a>  memory,
                     <span class="keyword">long</span>       size );
 </pre>
 </div>
@@ -61,7 +61,7 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (*<b>FT_Free_Func</b>)( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>  memory,
+  (*<b>FT_Free_Func</b>)( <a href="../ft2-system_interface/index.html#ft_memory">FT_Memory</a>  memory,
                    <span class="keyword">void</span>*      block );
 </pre>
 </div>
@@ -88,7 +88,7 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>*
-  (*<b>FT_Realloc_Func</b>)( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>  memory,
+  (*<b>FT_Realloc_Func</b>)( <a href="../ft2-system_interface/index.html#ft_memory">FT_Memory</a>  memory,
                       <span class="keyword">long</span>       cur_size,
                       <span class="keyword">long</span>       new_size,
                       <span class="keyword">void</span>*      block );
@@ -133,9 +133,9 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
   <span class="keyword">struct</span>  FT_MemoryRec_
   {
     <span class="keyword">void</span>*            user;
-    <a href="../ft2-system_interface/#ft_alloc_func">FT_Alloc_Func</a>    alloc;
-    <a href="../ft2-system_interface/#ft_free_func">FT_Free_Func</a>     free;
-    <a href="../ft2-system_interface/#ft_realloc_func">FT_Realloc_Func</a>  realloc;
+    <a href="../ft2-system_interface/index.html#ft_alloc_func">FT_Alloc_Func</a>    alloc;
+    <a href="../ft2-system_interface/index.html#ft_free_func">FT_Free_Func</a>     free;
+    <a href="../ft2-system_interface/index.html#ft_realloc_func">FT_Realloc_Func</a>  realloc;
   };
 </pre>
 </div>
@@ -176,7 +176,7 @@ A handle to an input stream.
 
 <h4>also</h4>
 
-See <a href="../ft2-system_interface/#ft_streamrec">FT_StreamRec</a> for the publicly accessible fields of a given stream object.
+See <a href="../ft2-system_interface/index.html#ft_streamrec">FT_StreamRec</a> for the publicly accessible fields of a given stream object.
 
 <hr>
 
@@ -207,7 +207,7 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span>
-  (*<b>FT_Stream_IoFunc</b>)( <a href="../ft2-system_interface/#ft_stream">FT_Stream</a>       stream,
+  (*<b>FT_Stream_IoFunc</b>)( <a href="../ft2-system_interface/index.html#ft_stream">FT_Stream</a>       stream,
                        <span class="keyword">unsigned</span> <span class="keyword">long</span>   offset,
                        <span class="keyword">unsigned</span> <span class="keyword">char</span>*  buffer,
                        <span class="keyword">unsigned</span> <span class="keyword">long</span>   count );
@@ -250,7 +250,7 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (*<b>FT_Stream_CloseFunc</b>)( <a href="../ft2-system_interface/#ft_stream">FT_Stream</a>  stream );
+  (*<b>FT_Stream_CloseFunc</b>)( <a href="../ft2-system_interface/index.html#ft_stream">FT_Stream</a>  stream );
 </pre>
 </div>
 
@@ -278,12 +278,12 @@ Defined in FT_SYSTEM_H (freetype/ftsystem.h).
     <span class="keyword">unsigned</span> <span class="keyword">long</span>        size;
     <span class="keyword">unsigned</span> <span class="keyword">long</span>        pos;
 
-    <a href="../ft2-system_interface/#ft_streamdesc">FT_StreamDesc</a>        descriptor;
-    <a href="../ft2-system_interface/#ft_streamdesc">FT_StreamDesc</a>        pathname;
-    <a href="../ft2-system_interface/#ft_stream_iofunc">FT_Stream_IoFunc</a>     read;
-    <a href="../ft2-system_interface/#ft_stream_closefunc">FT_Stream_CloseFunc</a>  close;
+    <a href="../ft2-system_interface/index.html#ft_streamdesc">FT_StreamDesc</a>        descriptor;
+    <a href="../ft2-system_interface/index.html#ft_streamdesc">FT_StreamDesc</a>        pathname;
+    <a href="../ft2-system_interface/index.html#ft_stream_iofunc">FT_Stream_IoFunc</a>     read;
+    <a href="../ft2-system_interface/index.html#ft_stream_closefunc">FT_Stream_CloseFunc</a>  close;
 
-    <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>            memory;
+    <a href="../ft2-system_interface/index.html#ft_memory">FT_Memory</a>            memory;
     <span class="keyword">unsigned</span> <span class="keyword">char</span>*       cursor;
     <span class="keyword">unsigned</span> <span class="keyword">char</span>*       limit;
 

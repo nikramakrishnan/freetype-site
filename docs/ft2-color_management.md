@@ -1,4 +1,4 @@
-[Docs](ft2-index.md) &raquo; [Miscellaneous](ft2-toc.md#miscellaneous) &raquo; Glyph Color Management
+[Docs](ft2-index.md) &raquo; [Core API](ft2-toc.md#core-api) &raquo; Glyph Color Management
 
 -------------------------------
 
@@ -6,7 +6,7 @@
 
 ## Synopsis
 
-The functions described here allow access and manipulation of color palette entries in OpenType's &lsquo;CPAL&rsquo; table.
+The functions described here allow access and manipulation of color palette entries in OpenType's &lsquo;CPAL&rsquo; tables.
 
 ## FT_Color
 
@@ -16,10 +16,10 @@ Defined in FT_COLOR_H (freetype/ftcolor.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Color_
   {
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>  blue;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>  green;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>  red;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>  alpha;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>  blue;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>  green;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>  red;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>  alpha;
 
   } <b>FT_Color</b>;
 </pre>
@@ -58,13 +58,13 @@ Defined in FT_COLOR_H (freetype/ftcolor.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <a href="../ft2-color_management/#ft_palette_usable_with_light_background">FT_PALETTE_USABLE_WITH_LIGHT_BACKGROUND</a>  0x01
-#<span class="keyword">define</span> <a href="../ft2-color_management/#ft_palette_usable_with_dark_background">FT_PALETTE_USABLE_WITH_DARK_BACKGROUND</a>   0x02
+#<span class="keyword">define</span> <a href="../ft2-color_management/index.html#ft_palette_usable_with_light_background">FT_PALETTE_USABLE_WITH_LIGHT_BACKGROUND</a>  0x01
+#<span class="keyword">define</span> <a href="../ft2-color_management/index.html#ft_palette_usable_with_dark_background">FT_PALETTE_USABLE_WITH_DARK_BACKGROUND</a>   0x02
 </pre>
 </div>
 
 
-A list of bit field constants used in the `palette_types` array of the <a href="../ft2-color_management/#ft_palette_data">FT_Palette_Data</a> structure to indicate for which background a palette with a given index is usable.
+A list of bit field constants used in the `palette_types` array of the <a href="../ft2-color_management/index.html#ft_palette_data">FT_Palette_Data</a> structure to indicate for which background a palette with a given index is usable.
 
 <h4>values</h4>
 <table class="fields">
@@ -89,12 +89,12 @@ Defined in FT_COLOR_H (freetype/ftcolor.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Palette_Data_ {
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>         num_palettes;
-    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>*  palette_name_ids;
-    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>*  palette_types;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>         num_palettes;
+    <span class="keyword">const</span> <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>*  palette_name_ids;
+    <span class="keyword">const</span> <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>*  palette_types;
 
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>         num_palette_entries;
-    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>*  palette_entry_name_ids;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>         num_palette_entries;
+    <span class="keyword">const</span> <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>*  palette_entry_name_ids;
 
   } <b>FT_Palette_Data</b>;
 </pre>
@@ -114,7 +114,7 @@ An empty name ID in the &lsquo;CPAL&rsquo; table gets represented as value 0xFFF
 NULL if the font's &lsquo;CPAL&rsquo; table doesn't contain appropriate data.</p>
 </td></tr>
 <tr><td class="val" id="palette_types">palette_types</td><td class="desc">
-<p>A read-only array of palette types with <code>num_palettes</code> elements. Possible values are an ORed combination of <a href="../ft2-color_management/#ft_palette_xxx">FT_PALETTE_USABLE_WITH_LIGHT_BACKGROUND</a> and <a href="../ft2-color_management/#ft_palette_xxx">FT_PALETTE_USABLE_WITH_DARK_BACKGROUND</a>.
+<p>A read-only array of palette types with <code>num_palettes</code> elements. Possible values are an ORed combination of <a href="../ft2-color_management/index.html#ft_palette_xxx">FT_PALETTE_USABLE_WITH_LIGHT_BACKGROUND</a> and <a href="../ft2-color_management/index.html#ft_palette_xxx">FT_PALETTE_USABLE_WITH_DARK_BACKGROUND</a>.
 NULL if the font's &lsquo;CPAL&rsquo; table doesn't contain appropriate data.</p>
 </td></tr>
 <tr><td class="val" id="num_palette_entries">num_palette_entries</td><td class="desc">
@@ -129,7 +129,7 @@ NULL if the font's &lsquo;CPAL&rsquo; table doesn't contain appropriate data.</p
 
 <h4>note</h4>
 
-Use function <a href="../ft2-sfnt_names/#ft_get_sfnt_name">FT_Get_Sfnt_Name</a> to map name IDs and entry name IDs to name strings.
+Use function <a href="../ft2-sfnt_names/index.html#ft_get_sfnt_name">FT_Get_Sfnt_Name</a> to map name IDs and entry name IDs to name strings.
 
 <h4>since</h4>
 
@@ -143,9 +143,9 @@ Defined in FT_COLOR_H (freetype/ftcolor.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Palette_Data_Get</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>           face,
-                       <a href="../ft2-color_management/#ft_palette_data">FT_Palette_Data</a>  *apalette );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Palette_Data_Get</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>           face,
+                       <a href="../ft2-color_management/index.html#ft_palette_data">FT_Palette_Data</a>  *apalette );
 </pre>
 </div>
 
@@ -162,7 +162,7 @@ Retrieve the face's color palette data.
 <h4>output</h4>
 <table class="fields">
 <tr><td class="val" id="apalette">apalette</td><td class="desc">
-<p>A pointer to an <a href="../ft2-color_management/#ft_palette_data">FT_Palette_Data</a> structure.</p>
+<p>A pointer to an <a href="../ft2-color_management/index.html#ft_palette_data">FT_Palette_Data</a> structure.</p>
 </td></tr>
 </table>
 
@@ -172,7 +172,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-All arrays in the returned <a href="../ft2-color_management/#ft_palette_data">FT_Palette_Data</a> structure are read-only.
+All arrays in the returned <a href="../ft2-color_management/index.html#ft_palette_data">FT_Palette_Data</a> structure are read-only.
 
 This function always returns an error if the config macro `TT_CONFIG_OPTION_COLOR_LAYERS` is not defined in `ftoption.h`.
 
@@ -188,10 +188,10 @@ Defined in FT_COLOR_H (freetype/ftcolor.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Palette_Select</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>     face,
-                     <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>   palette_index,
-                     <a href="../ft2-color_management/#ft_color">FT_Color</a>*  *apalette );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Palette_Select</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>     face,
+                     <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>   palette_index,
+                     <a href="../ft2-color_management/index.html#ft_color">FT_Color</a>*  *apalette );
 </pre>
 </div>
 
@@ -228,7 +228,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-The number of color entries is given by the `num_palette_entries` field in the <a href="../ft2-color_management/#ft_palette_data">FT_Palette_Data</a> structure.
+The number of color entries is given by the `num_palette_entries` field in the <a href="../ft2-color_management/index.html#ft_palette_data">FT_Palette_Data</a> structure.
 
 The array pointed to by `apalette_entries` is owned and managed by FreeType.
 
@@ -246,9 +246,9 @@ Defined in FT_COLOR_H (freetype/ftcolor.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Palette_Set_Foreground_Color</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
-                                   <a href="../ft2-color_management/#ft_color">FT_Color</a>  foreground_color );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Palette_Set_Foreground_Color</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>   face,
+                                   <a href="../ft2-color_management/index.html#ft_color">FT_Color</a>  foreground_color );
 </pre>
 </div>
 
@@ -271,7 +271,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-If this function isn't called, the text foreground color is set to white opaque (BGRA value 0xFFFFFFFF) if <a href="../ft2-color_management/#ft_palette_xxx">FT_PALETTE_USABLE_WITH_DARK_BACKGROUND</a> is present for the current palette, and black opaque (BGRA value 0x000000FF) otherwise, including the case that no palette types are available in the &lsquo;CPAL&rsquo; table.
+If this function isn't called, the text foreground color is set to white opaque (BGRA value 0xFFFFFFFF) if <a href="../ft2-color_management/index.html#ft_palette_xxx">FT_PALETTE_USABLE_WITH_DARK_BACKGROUND</a> is present for the current palette, and black opaque (BGRA value 0x000000FF) otherwise, including the case that no palette types are available in the &lsquo;CPAL&rsquo; table.
 
 This function always returns an error if the config macro `TT_CONFIG_OPTION_COLOR_LAYERS` is not defined in `ftoption.h`.
 

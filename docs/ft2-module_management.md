@@ -8,7 +8,7 @@
 
 The definitions below are used to manage modules within FreeType. Modules can be added, upgraded, and removed at runtime. Additionally, some module properties can be controlled also.
 
-Here is a list of possible values of the `module_name` field in the <a href="../ft2-module_management/#ft_module_class">FT_Module_Class</a> structure.
+Here is a list of possible values of the `module_name` field in the <a href="../ft2-module_management/index.html#ft_module_class">FT_Module_Class</a> structure.
 ```
   autofitter
   bdf
@@ -53,8 +53,8 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <a href="../ft2-basic_types/#ft_error">FT_Error</a>
-  (*<b>FT_Module_Constructor</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>  module );
+  <span class="keyword">typedef</span> <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a>
+  (*<b>FT_Module_Constructor</b>)( <a href="../ft2-module_management/index.html#ft_module">FT_Module</a>  module );
 </pre>
 </div>
 
@@ -77,7 +77,7 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (*<b>FT_Module_Destructor</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>  module );
+  (*<b>FT_Module_Destructor</b>)( <a href="../ft2-module_management/index.html#ft_module">FT_Module</a>  module );
 </pre>
 </div>
 
@@ -100,7 +100,7 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> FT_Module_Interface
-  (*<b>FT_Module_Requester</b>)( <a href="../ft2-module_management/#ft_module">FT_Module</a>    module,
+  (*<b>FT_Module_Requester</b>)( <a href="../ft2-module_management/index.html#ft_module">FT_Module</a>    module,
                           <span class="keyword">const</span> <span class="keyword">char</span>*  name );
 </pre>
 </div>
@@ -128,17 +128,17 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Module_Class_
   {
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>               module_flags;
-    <a href="../ft2-basic_types/#ft_long">FT_Long</a>                module_size;
-    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*       module_name;
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>               module_version;
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>               module_requires;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>               module_flags;
+    <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>                module_size;
+    <span class="keyword">const</span> <a href="../ft2-basic_types/index.html#ft_string">FT_String</a>*       module_name;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>               module_version;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>               module_requires;
 
     <span class="keyword">const</span> <span class="keyword">void</span>*            module_interface;
 
-    <a href="../ft2-module_management/#ft_module_constructor">FT_Module_Constructor</a>  module_init;
-    <a href="../ft2-module_management/#ft_module_destructor">FT_Module_Destructor</a>   module_done;
-    <a href="../ft2-module_management/#ft_module_requester">FT_Module_Requester</a>    get_interface;
+    <a href="../ft2-module_management/index.html#ft_module_constructor">FT_Module_Constructor</a>  module_init;
+    <a href="../ft2-module_management/index.html#ft_module_destructor">FT_Module_Destructor</a>   module_done;
+    <a href="../ft2-module_management/index.html#ft_module_requester">FT_Module_Requester</a>    get_interface;
 
   } <b>FT_Module_Class</b>;
 </pre>
@@ -183,9 +183,9 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Add_Module</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>              library,
-                 <span class="keyword">const</span> <a href="../ft2-module_management/#ft_module_class">FT_Module_Class</a>*  clazz );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Add_Module</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>              library,
+                 <span class="keyword">const</span> <a href="../ft2-module_management/index.html#ft_module_class">FT_Module_Class</a>*  clazz );
 </pre>
 </div>
 
@@ -222,8 +222,8 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-module_management/#ft_module">FT_Module</a> )
-  <b>FT_Get_Module</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>   library,
+  FT_EXPORT( <a href="../ft2-module_management/index.html#ft_module">FT_Module</a> )
+  <b>FT_Get_Module</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>   library,
                  <span class="keyword">const</span> <span class="keyword">char</span>*  module_name );
 </pre>
 </div>
@@ -257,9 +257,9 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Remove_Module</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>  library,
-                    <a href="../ft2-module_management/#ft_module">FT_Module</a>   module );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Remove_Module</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>  library,
+                    <a href="../ft2-module_management/index.html#ft_module">FT_Module</a>   module );
 </pre>
 </div>
 
@@ -297,12 +297,12 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Add_Default_Modules</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>  library );
+  <b>FT_Add_Default_Modules</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>  library );
 </pre>
 </div>
 
 
-Add the set of default drivers to a given library object. This is only useful when you create a library object with <a href="../ft2-module_management/#ft_new_library">FT_New_Library</a> (usually to plug a custom memory manager).
+Add the set of default drivers to a given library object. This is only useful when you create a library object with <a href="../ft2-module_management/index.html#ft_new_library">FT_New_Library</a> (usually to plug a custom memory manager).
 
 <h4>inout</h4>
 <table class="fields">
@@ -319,10 +319,10 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Property_Set</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>        library,
-                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*  module_name,
-                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*  property_name,
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Property_Set</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>        library,
+                   <span class="keyword">const</span> <a href="../ft2-basic_types/index.html#ft_string">FT_String</a>*  module_name,
+                   <span class="keyword">const</span> <a href="../ft2-basic_types/index.html#ft_string">FT_String</a>*  property_name,
                    <span class="keyword">const</span> <span class="keyword">void</span>*       value );
 </pre>
 </div>
@@ -339,11 +339,11 @@ Set a property for a given module.
 <p>The module name.</p>
 </td></tr>
 <tr><td class="val" id="property_name">property_name</td><td class="desc">
-<p>The property name. Properties are described in section &lsquo;<a href="../ft2-properties/#properties">Driver properties</a>&rsquo;.
+<p>The property name. Properties are described in section &lsquo;<a href="../ft2-properties/index.html#properties">Driver properties</a>&rsquo;.
 Note that only a few modules have properties.</p>
 </td></tr>
 <tr><td class="val" id="value">value</td><td class="desc">
-<p>A generic pointer to a variable or structure that gives the new value of the property. The exact definition of &lsquo;value&rsquo; is dependent on the property; see section &lsquo;<a href="../ft2-properties/#properties">Driver properties</a>&rsquo;.</p>
+<p>A generic pointer to a variable or structure that gives the new value of the property. The exact definition of &lsquo;value&rsquo; is dependent on the property; see section &lsquo;<a href="../ft2-properties/index.html#properties">Driver properties</a>&rsquo;.</p>
 </td></tr>
 </table>
 
@@ -364,7 +364,7 @@ The following example sets property &lsquo;bar&rsquo; (a simple integer) in modu
   FT_Property_Set( library, "foo", "bar", &bar );
 ```
 
-Note that the FreeType Cache sub-system doesn't recognize module property changes. To avoid glyph lookup confusion within the cache you should call <a href="../ft2-cache_subsystem/#ftc_manager_reset">FTC_Manager_Reset</a> to completely flush the cache if a module property gets changed after <a href="../ft2-cache_subsystem/#ftc_manager_new">FTC_Manager_New</a> has been called.
+Note that the FreeType Cache sub-system doesn't recognize module property changes. To avoid glyph lookup confusion within the cache you should call <a href="../ft2-cache_subsystem/index.html#ftc_manager_reset">FTC_Manager_Reset</a> to completely flush the cache if a module property gets changed after <a href="../ft2-cache_subsystem/index.html#ftc_manager_new">FTC_Manager_New</a> has been called.
 
 It is not possible to set properties of the FreeType Cache sub-system itself with FT_Property_Set; use ?FTC_Property_Set? instead.
 
@@ -380,10 +380,10 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Property_Get</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>        library,
-                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*  module_name,
-                   <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_string">FT_String</a>*  property_name,
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Property_Get</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>        library,
+                   <span class="keyword">const</span> <a href="../ft2-basic_types/index.html#ft_string">FT_String</a>*  module_name,
+                   <span class="keyword">const</span> <a href="../ft2-basic_types/index.html#ft_string">FT_String</a>*  property_name,
                    <span class="keyword">void</span>*             value );
 </pre>
 </div>
@@ -400,14 +400,14 @@ Get a module's property value.
 <p>The module name.</p>
 </td></tr>
 <tr><td class="val" id="property_name">property_name</td><td class="desc">
-<p>The property name. Properties are described in section &lsquo;<a href="../ft2-properties/#properties">Driver properties</a>&rsquo;.</p>
+<p>The property name. Properties are described in section &lsquo;<a href="../ft2-properties/index.html#properties">Driver properties</a>&rsquo;.</p>
 </td></tr>
 </table>
 
 <h4>inout</h4>
 <table class="fields">
 <tr><td class="val" id="value">value</td><td class="desc">
-<p>A generic pointer to a variable or structure that gives the value of the property. The exact definition of &lsquo;value&rsquo; is dependent on the property; see section &lsquo;<a href="../ft2-properties/#properties">Driver properties</a>&rsquo;.</p>
+<p>A generic pointer to a variable or structure that gives the value of the property. The exact definition of &lsquo;value&rsquo; is dependent on the property; see section &lsquo;<a href="../ft2-properties/index.html#properties">Driver properties</a>&rsquo;.</p>
 </td></tr>
 </table>
 
@@ -449,12 +449,12 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Set_Default_Properties</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>  library );
+  <b>FT_Set_Default_Properties</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>  library );
 </pre>
 </div>
 
 
-If compilation option FT_CONFIG_OPTION_ENVIRONMENT_PROPERTIES is set, this function reads the `FREETYPE_PROPERTIES` environment variable to control driver properties. See section &lsquo;<a href="../ft2-properties/#properties">Driver properties</a>&rsquo; for more.
+If compilation option FT_CONFIG_OPTION_ENVIRONMENT_PROPERTIES is set, this function reads the `FREETYPE_PROPERTIES` environment variable to control driver properties. See section &lsquo;<a href="../ft2-properties/index.html#properties">Driver properties</a>&rsquo; for more.
 
 If the compilation option is not set, this function does nothing.
 
@@ -495,18 +495,18 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_New_Library</b>( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>    memory,
-                  <a href="../ft2-base_interface/#ft_library">FT_Library</a>  *alibrary );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_New_Library</b>( <a href="../ft2-system_interface/index.html#ft_memory">FT_Memory</a>    memory,
+                  <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>  *alibrary );
 </pre>
 </div>
 
 
-This function is used to create a new FreeType library instance from a given memory object. It is thus possible to use libraries with distinct memory allocators within the same program. Note, however, that the used <a href="../ft2-system_interface/#ft_memory">FT_Memory</a> structure is expected to remain valid for the life of the <a href="../ft2-base_interface/#ft_library">FT_Library</a> object.
+This function is used to create a new FreeType library instance from a given memory object. It is thus possible to use libraries with distinct memory allocators within the same program. Note, however, that the used <a href="../ft2-system_interface/index.html#ft_memory">FT_Memory</a> structure is expected to remain valid for the life of the <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a> object.
 
-Normally, you would call this function (followed by a call to <a href="../ft2-module_management/#ft_add_default_modules">FT_Add_Default_Modules</a> or a series of calls to <a href="../ft2-module_management/#ft_add_module">FT_Add_Module</a>, and a call to <a href="../ft2-module_management/#ft_set_default_properties">FT_Set_Default_Properties</a>) instead of <a href="../ft2-base_interface/#ft_init_freetype">FT_Init_FreeType</a> to initialize the FreeType library.
+Normally, you would call this function (followed by a call to <a href="../ft2-module_management/index.html#ft_add_default_modules">FT_Add_Default_Modules</a> or a series of calls to <a href="../ft2-module_management/index.html#ft_add_module">FT_Add_Module</a>, and a call to <a href="../ft2-module_management/index.html#ft_set_default_properties">FT_Set_Default_Properties</a>) instead of <a href="../ft2-base_interface/index.html#ft_init_freetype">FT_Init_FreeType</a> to initialize the FreeType library.
 
-Don't use <a href="../ft2-base_interface/#ft_done_freetype">FT_Done_FreeType</a> but <a href="../ft2-module_management/#ft_done_library">FT_Done_Library</a> to destroy a library instance.
+Don't use <a href="../ft2-base_interface/index.html#ft_done_freetype">FT_Done_FreeType</a> but <a href="../ft2-module_management/index.html#ft_done_library">FT_Done_Library</a> to destroy a library instance.
 
 <h4>input</h4>
 <table class="fields">
@@ -528,7 +528,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-See the discussion of reference counters in the description of <a href="../ft2-module_management/#ft_reference_library">FT_Reference_Library</a>.
+See the discussion of reference counters in the description of <a href="../ft2-module_management/index.html#ft_reference_library">FT_Reference_Library</a>.
 
 <hr>
 
@@ -538,8 +538,8 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Done_Library</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>  library );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Done_Library</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>  library );
 </pre>
 </div>
 
@@ -559,7 +559,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-See the discussion of reference counters in the description of <a href="../ft2-module_management/#ft_reference_library">FT_Reference_Library</a>.
+See the discussion of reference counters in the description of <a href="../ft2-module_management/index.html#ft_reference_library">FT_Reference_Library</a>.
 
 <hr>
 
@@ -569,15 +569,15 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Reference_Library</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>  library );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Reference_Library</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>  library );
 </pre>
 </div>
 
 
-A counter gets initialized to&nbsp;1 at the time an <a href="../ft2-base_interface/#ft_library">FT_Library</a> structure is created. This function increments the counter. <a href="../ft2-module_management/#ft_done_library">FT_Done_Library</a> then only destroys a library if the counter is&nbsp;1, otherwise it simply decrements the counter.
+A counter gets initialized to&nbsp;1 at the time an <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a> structure is created. This function increments the counter. <a href="../ft2-module_management/index.html#ft_done_library">FT_Done_Library</a> then only destroys a library if the counter is&nbsp;1, otherwise it simply decrements the counter.
 
-This function helps in managing life-cycles of structures that reference <a href="../ft2-base_interface/#ft_library">FT_Library</a> objects.
+This function helps in managing life-cycles of structures that reference <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a> objects.
 
 <h4>input</h4>
 <table class="fields">
@@ -619,16 +619,16 @@ Defined in FT_RENDER_H (freetype/ftrender.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Renderer_Class_
   {
-    <a href="../ft2-module_management/#ft_module_class">FT_Module_Class</a>            root;
+    <a href="../ft2-module_management/index.html#ft_module_class">FT_Module_Class</a>            root;
 
-    <a href="../ft2-basic_types/#ft_glyph_format">FT_Glyph_Format</a>            glyph_format;
+    <a href="../ft2-basic_types/index.html#ft_glyph_format">FT_Glyph_Format</a>            glyph_format;
 
     FT_Renderer_RenderFunc     render_glyph;
     FT_Renderer_TransformFunc  transform_glyph;
     FT_Renderer_GetCBoxFunc    get_glyph_cbox;
     FT_Renderer_SetModeFunc    set_mode;
 
-    <a href="../ft2-raster/#ft_raster_funcs">FT_Raster_Funcs</a>*           raster_class;
+    <a href="../ft2-raster/index.html#ft_raster_funcs">FT_Raster_Funcs</a>*           raster_class;
 
   } <b>FT_Renderer_Class</b>;
 </pre>
@@ -640,7 +640,7 @@ The renderer module class descriptor.
 <h4>fields</h4>
 <table class="fields">
 <tr><td class="val" id="root">root</td><td class="desc">
-<p>The root <a href="../ft2-module_management/#ft_module_class">FT_Module_Class</a> fields.</p>
+<p>The root <a href="../ft2-module_management/index.html#ft_module_class">FT_Module_Class</a> fields.</p>
 </td></tr>
 <tr><td class="val" id="glyph_format">glyph_format</td><td class="desc">
 <p>The glyph image format this renderer handles.</p>
@@ -658,7 +658,7 @@ The renderer module class descriptor.
 <p>A method used to pass additional parameters.</p>
 </td></tr>
 <tr><td class="val" id="raster_class">raster_class</td><td class="desc">
-<p>For <a href="../ft2-basic_types/#ft_glyph_format">FT_GLYPH_FORMAT_OUTLINE</a> renderers only. This is a pointer to its raster's class.</p>
+<p>For <a href="../ft2-basic_types/index.html#ft_glyph_format">FT_GLYPH_FORMAT_OUTLINE</a> renderers only. This is a pointer to its raster's class.</p>
 </td></tr>
 </table>
 
@@ -670,9 +670,9 @@ Defined in FT_RENDER_H (freetype/ftrender.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-module_management/#ft_renderer">FT_Renderer</a> )
-  <b>FT_Get_Renderer</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>       library,
-                   <a href="../ft2-basic_types/#ft_glyph_format">FT_Glyph_Format</a>  format );
+  FT_EXPORT( <a href="../ft2-module_management/index.html#ft_renderer">FT_Renderer</a> )
+  <b>FT_Get_Renderer</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>       library,
+                   <a href="../ft2-basic_types/index.html#ft_glyph_format">FT_Glyph_Format</a>  format );
 </pre>
 </div>
 
@@ -697,7 +697,7 @@ A renderer handle. 0&nbsp;if none found.
 
 An error will be returned if a module already exists by that name, or if the module requires a version of FreeType that is too great.
 
-To add a new renderer, simply use <a href="../ft2-module_management/#ft_add_module">FT_Add_Module</a>. To retrieve a renderer by its name, use <a href="../ft2-module_management/#ft_get_module">FT_Get_Module</a>.
+To add a new renderer, simply use <a href="../ft2-module_management/index.html#ft_add_module">FT_Add_Module</a>. To retrieve a renderer by its name, use <a href="../ft2-module_management/index.html#ft_get_module">FT_Get_Module</a>.
 
 <hr>
 
@@ -707,11 +707,11 @@ Defined in FT_RENDER_H (freetype/ftrender.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Set_Renderer</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>     library,
-                   <a href="../ft2-module_management/#ft_renderer">FT_Renderer</a>    renderer,
-                   <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>        num_params,
-                   <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a>*  parameters );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Set_Renderer</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>     library,
+                   <a href="../ft2-module_management/index.html#ft_renderer">FT_Renderer</a>    renderer,
+                   <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>        num_params,
+                   <a href="../ft2-base_interface/index.html#ft_parameter">FT_Parameter</a>*  parameters );
 </pre>
 </div>
 
@@ -759,8 +759,8 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Set_Debug_Hook</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>         library,
-                     <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>            hook_index,
+  <b>FT_Set_Debug_Hook</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>         library,
+                     <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>            hook_index,
                      FT_DebugHook_Func  debug_hook );
 </pre>
 </div>

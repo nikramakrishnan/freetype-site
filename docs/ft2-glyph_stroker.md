@@ -33,11 +33,11 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">enum</span>  FT_Stroker_LineJoin_
   {
-    <a href="../ft2-glyph_stroker/#ft_stroker_linejoin_round">FT_STROKER_LINEJOIN_ROUND</a>          = 0,
-    <a href="../ft2-glyph_stroker/#ft_stroker_linejoin_bevel">FT_STROKER_LINEJOIN_BEVEL</a>          = 1,
-    <a href="../ft2-glyph_stroker/#ft_stroker_linejoin_miter_variable">FT_STROKER_LINEJOIN_MITER_VARIABLE</a> = 2,
-    <a href="../ft2-glyph_stroker/#ft_stroker_linejoin_miter">FT_STROKER_LINEJOIN_MITER</a>          = <a href="../ft2-glyph_stroker/#ft_stroker_linejoin_miter_variable">FT_STROKER_LINEJOIN_MITER_VARIABLE</a>,
-    <a href="../ft2-glyph_stroker/#ft_stroker_linejoin_miter_fixed">FT_STROKER_LINEJOIN_MITER_FIXED</a>    = 3
+    <a href="../ft2-glyph_stroker/index.html#ft_stroker_linejoin_round">FT_STROKER_LINEJOIN_ROUND</a>          = 0,
+    <a href="../ft2-glyph_stroker/index.html#ft_stroker_linejoin_bevel">FT_STROKER_LINEJOIN_BEVEL</a>          = 1,
+    <a href="../ft2-glyph_stroker/index.html#ft_stroker_linejoin_miter_variable">FT_STROKER_LINEJOIN_MITER_VARIABLE</a> = 2,
+    <a href="../ft2-glyph_stroker/index.html#ft_stroker_linejoin_miter">FT_STROKER_LINEJOIN_MITER</a>          = <a href="../ft2-glyph_stroker/index.html#ft_stroker_linejoin_miter_variable">FT_STROKER_LINEJOIN_MITER_VARIABLE</a>,
+    <a href="../ft2-glyph_stroker/index.html#ft_stroker_linejoin_miter_fixed">FT_STROKER_LINEJOIN_MITER_FIXED</a>    = 3
 
   } <b>FT_Stroker_LineJoin</b>;
 </pre>
@@ -75,9 +75,9 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">enum</span>  FT_Stroker_LineCap_
   {
-    <a href="../ft2-glyph_stroker/#ft_stroker_linecap_butt">FT_STROKER_LINECAP_BUTT</a> = 0,
-    <a href="../ft2-glyph_stroker/#ft_stroker_linecap_round">FT_STROKER_LINECAP_ROUND</a>,
-    <a href="../ft2-glyph_stroker/#ft_stroker_linecap_square">FT_STROKER_LINECAP_SQUARE</a>
+    <a href="../ft2-glyph_stroker/index.html#ft_stroker_linecap_butt">FT_STROKER_LINECAP_BUTT</a> = 0,
+    <a href="../ft2-glyph_stroker/index.html#ft_stroker_linecap_round">FT_STROKER_LINECAP_ROUND</a>,
+    <a href="../ft2-glyph_stroker/index.html#ft_stroker_linecap_square">FT_STROKER_LINECAP_SQUARE</a>
 
   } <b>FT_Stroker_LineCap</b>;
 </pre>
@@ -109,15 +109,15 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">enum</span>  FT_StrokerBorder_
   {
-    <a href="../ft2-glyph_stroker/#ft_stroker_border_left">FT_STROKER_BORDER_LEFT</a> = 0,
-    <a href="../ft2-glyph_stroker/#ft_stroker_border_right">FT_STROKER_BORDER_RIGHT</a>
+    <a href="../ft2-glyph_stroker/index.html#ft_stroker_border_left">FT_STROKER_BORDER_LEFT</a> = 0,
+    <a href="../ft2-glyph_stroker/index.html#ft_stroker_border_right">FT_STROKER_BORDER_RIGHT</a>
 
   } <b>FT_StrokerBorder</b>;
 </pre>
 </div>
 
 
-These values are used to select a given stroke border in <a href="../ft2-glyph_stroker/#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a> and <a href="../ft2-glyph_stroker/#ft_stroker_exportborder">FT_Stroker_ExportBorder</a>.
+These values are used to select a given stroke border in <a href="../ft2-glyph_stroker/index.html#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a> and <a href="../ft2-glyph_stroker/index.html#ft_stroker_exportborder">FT_Stroker_ExportBorder</a>.
 
 <h4>values</h4>
 <table class="fields">
@@ -133,7 +133,7 @@ These values are used to select a given stroke border in <a href="../ft2-glyph_s
 
 Applications are generally interested in the &lsquo;inside&rsquo; and &lsquo;outside&rsquo; borders. However, there is no direct mapping between these and the &lsquo;left&rsquo; and &lsquo;right&rsquo; ones, since this really depends on the glyph's drawing orientation, which varies between font formats.
 
-You can however use <a href="../ft2-glyph_stroker/#ft_outline_getinsideborder">FT_Outline_GetInsideBorder</a> and <a href="../ft2-glyph_stroker/#ft_outline_getoutsideborder">FT_Outline_GetOutsideBorder</a> to get these.
+You can however use <a href="../ft2-glyph_stroker/index.html#ft_outline_getinsideborder">FT_Outline_GetInsideBorder</a> and <a href="../ft2-glyph_stroker/index.html#ft_outline_getoutsideborder">FT_Outline_GetOutsideBorder</a> to get these.
 
 <hr>
 
@@ -143,13 +143,13 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-glyph_stroker/#ft_strokerborder">FT_StrokerBorder</a> )
-  <b>FT_Outline_GetInsideBorder</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline );
+  FT_EXPORT( <a href="../ft2-glyph_stroker/index.html#ft_strokerborder">FT_StrokerBorder</a> )
+  <b>FT_Outline_GetInsideBorder</b>( <a href="../ft2-outline_processing/index.html#ft_outline">FT_Outline</a>*  outline );
 </pre>
 </div>
 
 
-Retrieve the <a href="../ft2-glyph_stroker/#ft_strokerborder">FT_StrokerBorder</a> value corresponding to the &lsquo;inside&rsquo; borders of a given outline.
+Retrieve the <a href="../ft2-glyph_stroker/index.html#ft_strokerborder">FT_StrokerBorder</a> value corresponding to the &lsquo;inside&rsquo; borders of a given outline.
 
 <h4>input</h4>
 <table class="fields">
@@ -160,7 +160,7 @@ Retrieve the <a href="../ft2-glyph_stroker/#ft_strokerborder">FT_StrokerBorder</
 
 <h4>return</h4>
 
-The border index. <a href="../ft2-glyph_stroker/#ft_strokerborder">FT_STROKER_BORDER_RIGHT</a> for empty or invalid outlines.
+The border index. <a href="../ft2-glyph_stroker/index.html#ft_strokerborder">FT_STROKER_BORDER_RIGHT</a> for empty or invalid outlines.
 
 <hr>
 
@@ -170,13 +170,13 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-glyph_stroker/#ft_strokerborder">FT_StrokerBorder</a> )
-  <b>FT_Outline_GetOutsideBorder</b>( <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline );
+  FT_EXPORT( <a href="../ft2-glyph_stroker/index.html#ft_strokerborder">FT_StrokerBorder</a> )
+  <b>FT_Outline_GetOutsideBorder</b>( <a href="../ft2-outline_processing/index.html#ft_outline">FT_Outline</a>*  outline );
 </pre>
 </div>
 
 
-Retrieve the <a href="../ft2-glyph_stroker/#ft_strokerborder">FT_StrokerBorder</a> value corresponding to the &lsquo;outside&rsquo; borders of a given outline.
+Retrieve the <a href="../ft2-glyph_stroker/index.html#ft_strokerborder">FT_StrokerBorder</a> value corresponding to the &lsquo;outside&rsquo; borders of a given outline.
 
 <h4>input</h4>
 <table class="fields">
@@ -187,7 +187,7 @@ Retrieve the <a href="../ft2-glyph_stroker/#ft_strokerborder">FT_StrokerBorder</
 
 <h4>return</h4>
 
-The border index. <a href="../ft2-glyph_stroker/#ft_strokerborder">FT_STROKER_BORDER_LEFT</a> for empty or invalid outlines.
+The border index. <a href="../ft2-glyph_stroker/index.html#ft_strokerborder">FT_STROKER_BORDER_LEFT</a> for empty or invalid outlines.
 
 <hr>
 
@@ -197,10 +197,10 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Glyph_Stroke</b>( <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>    *pglyph,
-                   <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>   stroker,
-                   <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>      destroy );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Glyph_Stroke</b>( <a href="../ft2-glyph_management/index.html#ft_glyph">FT_Glyph</a>    *pglyph,
+                   <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>   stroker,
+                   <a href="../ft2-basic_types/index.html#ft_bool">FT_Bool</a>      destroy );
 </pre>
 </div>
 
@@ -242,11 +242,11 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Glyph_StrokeBorder</b>( <a href="../ft2-glyph_management/#ft_glyph">FT_Glyph</a>    *pglyph,
-                         <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>   stroker,
-                         <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>      inside,
-                         <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>      destroy );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Glyph_StrokeBorder</b>( <a href="../ft2-glyph_management/index.html#ft_glyph">FT_Glyph</a>    *pglyph,
+                         <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>   stroker,
+                         <a href="../ft2-basic_types/index.html#ft_bool">FT_Bool</a>      inside,
+                         <a href="../ft2-basic_types/index.html#ft_bool">FT_Bool</a>      destroy );
 </pre>
 </div>
 
@@ -291,9 +291,9 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Stroker_New</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>   library,
-                  <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  *astroker );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Stroker_New</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>   library,
+                  <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>  *astroker );
 </pre>
 </div>
 
@@ -327,11 +327,11 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Stroker_Set</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>           stroker,
-                  <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>             radius,
-                  <a href="../ft2-glyph_stroker/#ft_stroker_linecap">FT_Stroker_LineCap</a>   line_cap,
-                  <a href="../ft2-glyph_stroker/#ft_stroker_linejoin">FT_Stroker_LineJoin</a>  line_join,
-                  <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>             miter_limit );
+  <b>FT_Stroker_Set</b>( <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>           stroker,
+                  <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>             radius,
+                  <a href="../ft2-glyph_stroker/index.html#ft_stroker_linecap">FT_Stroker_LineCap</a>   line_cap,
+                  <a href="../ft2-glyph_stroker/index.html#ft_stroker_linejoin">FT_Stroker_LineJoin</a>  line_join,
+                  <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>             miter_limit );
 </pre>
 </div>
 
@@ -361,7 +361,7 @@ Reset a stroker object's attributes.
 
 The radius is expressed in the same units as the outline coordinates.
 
-This function calls <a href="../ft2-glyph_stroker/#ft_stroker_rewind">FT_Stroker_Rewind</a> automatically.
+This function calls <a href="../ft2-glyph_stroker/index.html#ft_stroker_rewind">FT_Stroker_Rewind</a> automatically.
 
 <hr>
 
@@ -372,12 +372,12 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Stroker_Rewind</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  stroker );
+  <b>FT_Stroker_Rewind</b>( <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>  stroker );
 </pre>
 </div>
 
 
-Reset a stroker object without changing its attributes. You should call this function before beginning a new series of calls to <a href="../ft2-glyph_stroker/#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a> or <a href="../ft2-glyph_stroker/#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a>.
+Reset a stroker object without changing its attributes. You should call this function before beginning a new series of calls to <a href="../ft2-glyph_stroker/index.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a> or <a href="../ft2-glyph_stroker/index.html#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a>.
 
 <h4>input</h4>
 <table class="fields">
@@ -394,15 +394,15 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Stroker_ParseOutline</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>   stroker,
-                           <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline,
-                           <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>      opened );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Stroker_ParseOutline</b>( <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>   stroker,
+                           <a href="../ft2-outline_processing/index.html#ft_outline">FT_Outline</a>*  outline,
+                           <a href="../ft2-basic_types/index.html#ft_bool">FT_Bool</a>      opened );
 </pre>
 </div>
 
 
-A convenience function used to parse a whole outline with the stroker. The resulting outline(s) can be retrieved later by functions like <a href="../ft2-glyph_stroker/#ft_stroker_getcounts">FT_Stroker_GetCounts</a> and <a href="../ft2-glyph_stroker/#ft_stroker_export">FT_Stroker_Export</a>.
+A convenience function used to parse a whole outline with the stroker. The resulting outline(s) can be retrieved later by functions like <a href="../ft2-glyph_stroker/index.html#ft_stroker_getcounts">FT_Stroker_GetCounts</a> and <a href="../ft2-glyph_stroker/index.html#ft_stroker_export">FT_Stroker_Export</a>.
 
 <h4>input</h4>
 <table class="fields">
@@ -427,7 +427,7 @@ If &lsquo;opened&rsquo; is&nbsp;0 (the default), the outline is treated as a clo
 
 If &lsquo;opened&rsquo; is&nbsp;1, the outline is processed as an open path, and the stroker generates a single &lsquo;stroke&rsquo; outline.
 
-This function calls <a href="../ft2-glyph_stroker/#ft_stroker_rewind">FT_Stroker_Rewind</a> automatically.
+This function calls <a href="../ft2-glyph_stroker/index.html#ft_stroker_rewind">FT_Stroker_Rewind</a> automatically.
 
 <hr>
 
@@ -438,7 +438,7 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Stroker_Done</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  stroker );
+  <b>FT_Stroker_Done</b>( <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>  stroker );
 </pre>
 </div>
 
@@ -460,10 +460,10 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Stroker_BeginSubPath</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  stroker,
-                           <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  to,
-                           <a href="../ft2-basic_types/#ft_bool">FT_Bool</a>     open );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Stroker_BeginSubPath</b>( <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>  stroker,
+                           <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a>*  to,
+                           <a href="../ft2-basic_types/index.html#ft_bool">FT_Bool</a>     open );
 </pre>
 </div>
 
@@ -489,7 +489,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-This function is useful when you need to stroke a path that is not stored as an <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a> object.
+This function is useful when you need to stroke a path that is not stored as an <a href="../ft2-outline_processing/index.html#ft_outline">FT_Outline</a> object.
 
 <hr>
 
@@ -499,8 +499,8 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Stroker_EndSubPath</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  stroker );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Stroker_EndSubPath</b>( <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>  stroker );
 </pre>
 </div>
 
@@ -520,7 +520,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-You should call this function after <a href="../ft2-glyph_stroker/#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a>. If the subpath was not &lsquo;opened&rsquo;, this function &lsquo;draws&rsquo; a single line segment to the start position when needed.
+You should call this function after <a href="../ft2-glyph_stroker/index.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a>. If the subpath was not &lsquo;opened&rsquo;, this function &lsquo;draws&rsquo; a single line segment to the start position when needed.
 
 <hr>
 
@@ -530,9 +530,9 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Stroker_LineTo</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  stroker,
-                     <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  to );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Stroker_LineTo</b>( <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>  stroker,
+                     <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a>*  to );
 </pre>
 </div>
 
@@ -555,7 +555,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-You should call this function between <a href="../ft2-glyph_stroker/#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a> and <a href="../ft2-glyph_stroker/#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a>.
+You should call this function between <a href="../ft2-glyph_stroker/index.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a> and <a href="../ft2-glyph_stroker/index.html#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a>.
 
 <hr>
 
@@ -565,10 +565,10 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Stroker_ConicTo</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  stroker,
-                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  control,
-                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  to );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Stroker_ConicTo</b>( <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>  stroker,
+                      <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a>*  control,
+                      <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a>*  to );
 </pre>
 </div>
 
@@ -594,7 +594,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-You should call this function between <a href="../ft2-glyph_stroker/#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a> and <a href="../ft2-glyph_stroker/#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a>.
+You should call this function between <a href="../ft2-glyph_stroker/index.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a> and <a href="../ft2-glyph_stroker/index.html#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a>.
 
 <hr>
 
@@ -604,11 +604,11 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Stroker_CubicTo</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  stroker,
-                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  control1,
-                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  control2,
-                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>*  to );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Stroker_CubicTo</b>( <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>  stroker,
+                      <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a>*  control1,
+                      <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a>*  control2,
+                      <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a>*  to );
 </pre>
 </div>
 
@@ -637,7 +637,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-You should call this function between <a href="../ft2-glyph_stroker/#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a> and <a href="../ft2-glyph_stroker/#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a>.
+You should call this function between <a href="../ft2-glyph_stroker/index.html#ft_stroker_beginsubpath">FT_Stroker_BeginSubPath</a> and <a href="../ft2-glyph_stroker/index.html#ft_stroker_endsubpath">FT_Stroker_EndSubPath</a>.
 
 <hr>
 
@@ -647,11 +647,11 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Stroker_GetBorderCounts</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>        stroker,
-                              <a href="../ft2-glyph_stroker/#ft_strokerborder">FT_StrokerBorder</a>  border,
-                              <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>          *anum_points,
-                              <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>          *anum_contours );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Stroker_GetBorderCounts</b>( <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>        stroker,
+                              <a href="../ft2-glyph_stroker/index.html#ft_strokerborder">FT_StrokerBorder</a>  border,
+                              <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>          *anum_points,
+                              <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>          *anum_contours );
 </pre>
 </div>
 
@@ -688,7 +688,7 @@ When an outline, or a sub-path, is &lsquo;closed&rsquo;, the stroker generates t
 
 When the outline, or a sub-path, is &lsquo;opened&rsquo;, the stroker merges the &lsquo;border&rsquo; outlines with caps. The &lsquo;left&rsquo; border receives all points, while the &lsquo;right&rsquo; border becomes empty.
 
-Use the function <a href="../ft2-glyph_stroker/#ft_stroker_getcounts">FT_Stroker_GetCounts</a> instead if you want to retrieve the counts associated to both borders.
+Use the function <a href="../ft2-glyph_stroker/index.html#ft_stroker_getcounts">FT_Stroker_GetCounts</a> instead if you want to retrieve the counts associated to both borders.
 
 <hr>
 
@@ -699,14 +699,14 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Stroker_ExportBorder</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>        stroker,
-                           <a href="../ft2-glyph_stroker/#ft_strokerborder">FT_StrokerBorder</a>  border,
-                           <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*       outline );
+  <b>FT_Stroker_ExportBorder</b>( <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>        stroker,
+                           <a href="../ft2-glyph_stroker/index.html#ft_strokerborder">FT_StrokerBorder</a>  border,
+                           <a href="../ft2-outline_processing/index.html#ft_outline">FT_Outline</a>*       outline );
 </pre>
 </div>
 
 
-Call this function after <a href="../ft2-glyph_stroker/#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a> to export the corresponding border to your own <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a> structure.
+Call this function after <a href="../ft2-glyph_stroker/index.html#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a> to export the corresponding border to your own <a href="../ft2-outline_processing/index.html#ft_outline">FT_Outline</a> structure.
 
 Note that this function appends the border points and contours to your outline, but does not try to resize its arrays.
 
@@ -725,13 +725,13 @@ Note that this function appends the border points and contours to your outline, 
 
 <h4>note</h4>
 
-Always call this function after <a href="../ft2-glyph_stroker/#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a> to get sure that there is enough room in your <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a> object to receive all new data.
+Always call this function after <a href="../ft2-glyph_stroker/index.html#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a> to get sure that there is enough room in your <a href="../ft2-outline_processing/index.html#ft_outline">FT_Outline</a> object to receive all new data.
 
 When an outline, or a sub-path, is &lsquo;closed&rsquo;, the stroker generates two independent &lsquo;border&rsquo; outlines, named &lsquo;left&rsquo; and &lsquo;right&rsquo;.
 
 When the outline, or a sub-path, is &lsquo;opened&rsquo;, the stroker merges the &lsquo;border&rsquo; outlines with caps. The &lsquo;left&rsquo; border receives all points, while the &lsquo;right&rsquo; border becomes empty.
 
-Use the function <a href="../ft2-glyph_stroker/#ft_stroker_export">FT_Stroker_Export</a> instead if you want to retrieve all borders at once.
+Use the function <a href="../ft2-glyph_stroker/index.html#ft_stroker_export">FT_Stroker_Export</a> instead if you want to retrieve all borders at once.
 
 <hr>
 
@@ -741,10 +741,10 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Stroker_GetCounts</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>  stroker,
-                        <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    *anum_points,
-                        <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    *anum_contours );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Stroker_GetCounts</b>( <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>  stroker,
+                        <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>    *anum_points,
+                        <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>    *anum_contours );
 </pre>
 </div>
 
@@ -781,13 +781,13 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_Stroker_Export</b>( <a href="../ft2-glyph_stroker/#ft_stroker">FT_Stroker</a>   stroker,
-                     <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>*  outline );
+  <b>FT_Stroker_Export</b>( <a href="../ft2-glyph_stroker/index.html#ft_stroker">FT_Stroker</a>   stroker,
+                     <a href="../ft2-outline_processing/index.html#ft_outline">FT_Outline</a>*  outline );
 </pre>
 </div>
 
 
-Call this function after <a href="../ft2-glyph_stroker/#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a> to export all borders to your own <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a> structure.
+Call this function after <a href="../ft2-glyph_stroker/index.html#ft_stroker_getbordercounts">FT_Stroker_GetBorderCounts</a> to export all borders to your own <a href="../ft2-outline_processing/index.html#ft_outline">FT_Outline</a> structure.
 
 Note that this function appends the border points and contours to your outline, but does not try to resize its arrays.
 

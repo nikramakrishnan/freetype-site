@@ -14,12 +14,12 @@ Defined in FT_PFR_H (freetype/ftpfr.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Get_PFR_Metrics</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
-                      <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   *aoutline_resolution,
-                      <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   *ametrics_resolution,
-                      <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  *ametrics_x_scale,
-                      <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  *ametrics_y_scale );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Get_PFR_Metrics</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>    face,
+                      <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>   *aoutline_resolution,
+                      <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>   *ametrics_resolution,
+                      <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>  *ametrics_x_scale,
+                      <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>  *ametrics_y_scale );
 </pre>
 </div>
 
@@ -65,16 +65,16 @@ Defined in FT_PFR_H (freetype/ftpfr.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Get_PFR_Kerning</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>     face,
-                      <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>     left,
-                      <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>     right,
-                      <a href="../ft2-basic_types/#ft_vector">FT_Vector</a>  *avector );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Get_PFR_Kerning</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>     face,
+                      <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>     left,
+                      <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>     right,
+                      <a href="../ft2-basic_types/index.html#ft_vector">FT_Vector</a>  *avector );
 </pre>
 </div>
 
 
-Return the kerning pair corresponding to two glyphs in a PFR face. The distance is expressed in metrics units, unlike the result of <a href="../ft2-base_interface/#ft_get_kerning">FT_Get_Kerning</a>.
+Return the kerning pair corresponding to two glyphs in a PFR face. The distance is expressed in metrics units, unlike the result of <a href="../ft2-base_interface/index.html#ft_get_kerning">FT_Get_Kerning</a>.
 
 <h4>input</h4>
 <table class="fields">
@@ -102,9 +102,9 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-This function always return distances in original PFR metrics units. This is unlike <a href="../ft2-base_interface/#ft_get_kerning">FT_Get_Kerning</a> with the <a href="../ft2-base_interface/#ft_kerning_mode">FT_KERNING_UNSCALED</a> mode, which always returns distances converted to outline units.
+This function always return distances in original PFR metrics units. This is unlike <a href="../ft2-base_interface/index.html#ft_get_kerning">FT_Get_Kerning</a> with the <a href="../ft2-base_interface/index.html#ft_kerning_mode">FT_KERNING_UNSCALED</a> mode, which always returns distances converted to outline units.
 
-You can use the value of the `x_scale` and `y_scale` parameters returned by <a href="../ft2-pfr_fonts/#ft_get_pfr_metrics">FT_Get_PFR_Metrics</a> to scale these to device subpixels.
+You can use the value of the `x_scale` and `y_scale` parameters returned by <a href="../ft2-pfr_fonts/index.html#ft_get_pfr_metrics">FT_Get_PFR_Metrics</a> to scale these to device subpixels.
 
 <hr>
 
@@ -114,10 +114,10 @@ Defined in FT_PFR_H (freetype/ftpfr.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Get_PFR_Advance</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
-                      <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>   gindex,
-                      <a href="../ft2-basic_types/#ft_pos">FT_Pos</a>   *aadvance );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Get_PFR_Advance</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>   face,
+                      <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>   gindex,
+                      <a href="../ft2-basic_types/index.html#ft_pos">FT_Pos</a>   *aadvance );
 </pre>
 </div>
 
@@ -147,7 +147,7 @@ FreeType error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-You can use the `x_scale` or `y_scale` results of <a href="../ft2-pfr_fonts/#ft_get_pfr_metrics">FT_Get_PFR_Metrics</a> to convert the advance to device subpixels (i.e., 1/64th of pixels).
+You can use the `x_scale` or `y_scale` results of <a href="../ft2-pfr_fonts/index.html#ft_get_pfr_metrics">FT_Get_PFR_Metrics</a> to convert the advance to device subpixels (i.e., 1/64th of pixels).
 
 <hr>
 

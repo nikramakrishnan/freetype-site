@@ -28,10 +28,10 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_uint">FT_UInt</a> )
-  <b>FT_Face_GetCharVariantIndex</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
-                               <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  charcode,
-                               <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  variantSelector );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a> )
+  <b>FT_Face_GetCharVariantIndex</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>   face,
+                               <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>  charcode,
+                               <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>  variantSelector );
 </pre>
 </div>
 
@@ -73,10 +73,10 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_int">FT_Int</a> )
-  <b>FT_Face_GetCharVariantIsDefault</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
-                                   <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  charcode,
-                                   <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  variantSelector );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_int">FT_Int</a> )
+  <b>FT_Face_GetCharVariantIsDefault</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>   face,
+                                   <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>  charcode,
+                                   <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>  variantSelector );
 </pre>
 </div>
 
@@ -116,8 +116,8 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>* )
-  <b>FT_Face_GetVariantSelectors</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>  face );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_uint32">FT_UInt32</a>* )
+  <b>FT_Face_GetVariantSelectors</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>  face );
 </pre>
 </div>
 
@@ -137,7 +137,7 @@ A pointer to an array of selector code points, or NULL if there is no valid vari
 
 <h4>note</h4>
 
-The last item in the array is&nbsp;0; the array is owned by the <a href="../ft2-base_interface/#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.
+The last item in the array is&nbsp;0; the array is owned by the <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.
 
 <h4>since</h4>
 
@@ -151,9 +151,9 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>* )
-  <b>FT_Face_GetVariantsOfChar</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
-                             <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  charcode );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_uint32">FT_UInt32</a>* )
+  <b>FT_Face_GetVariantsOfChar</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>   face,
+                             <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>  charcode );
 </pre>
 </div>
 
@@ -176,7 +176,7 @@ A pointer to an array of variation selector code points that are active for the 
 
 <h4>note</h4>
 
-The last item in the array is&nbsp;0; the array is owned by the <a href="../ft2-base_interface/#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.
+The last item in the array is&nbsp;0; the array is owned by the <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.
 
 <h4>since</h4>
 
@@ -190,9 +190,9 @@ Defined in FT_FREETYPE_H (freetype/freetype.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_uint32">FT_UInt32</a>* )
-  <b>FT_Face_GetCharsOfVariant</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>   face,
-                             <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  variantSelector );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_uint32">FT_UInt32</a>* )
+  <b>FT_Face_GetCharsOfVariant</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>   face,
+                             <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>  variantSelector );
 </pre>
 </div>
 
@@ -215,7 +215,7 @@ A list of all the code points that are specified by this selector (both default 
 
 <h4>note</h4>
 
-The last item in the array is&nbsp;0; the array is owned by the <a href="../ft2-base_interface/#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.
+The last item in the array is&nbsp;0; the array is owned by the <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a> object but can be overwritten or released on the next call to a FreeType function.
 
 <h4>since</h4>
 

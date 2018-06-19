@@ -57,7 +57,7 @@ A structure used to model a single span of gray pixels when rendering an anti-al
 
 <h4>note</h4>
 
-This structure is used by the span drawing callback type named <a href="../ft2-raster/#ft_spanfunc">FT_SpanFunc</a> that takes the y&nbsp;coordinate of the span as a parameter.
+This structure is used by the span drawing callback type named <a href="../ft2-raster/index.html#ft_spanfunc">FT_SpanFunc</a> that takes the y&nbsp;coordinate of the span as a parameter.
 
 The coverage value is always between 0 and 255. If you want less gray values, the callback function has to reduce them.
 
@@ -72,7 +72,7 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
   <span class="keyword">typedef</span> <span class="keyword">void</span>
   (*<b>FT_SpanFunc</b>)( <span class="keyword">int</span>             y,
                   <span class="keyword">int</span>             count,
-                  <span class="keyword">const</span> <a href="../ft2-raster/#ft_span">FT_Span</a>*  spans,
+                  <span class="keyword">const</span> <a href="../ft2-raster/index.html#ft_span">FT_Span</a>*  spans,
                   <span class="keyword">void</span>*           user );
 
 #<span class="keyword">define</span> FT_Raster_Span_Func  <b>FT_SpanFunc</b>
@@ -114,15 +114,15 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Raster_Params_
   {
-    <span class="keyword">const</span> <a href="../ft2-basic_types/#ft_bitmap">FT_Bitmap</a>*        target;
+    <span class="keyword">const</span> <a href="../ft2-basic_types/index.html#ft_bitmap">FT_Bitmap</a>*        target;
     <span class="keyword">const</span> <span class="keyword">void</span>*             source;
     <span class="keyword">int</span>                     flags;
-    <a href="../ft2-raster/#ft_spanfunc">FT_SpanFunc</a>             gray_spans;
-    <a href="../ft2-raster/#ft_spanfunc">FT_SpanFunc</a>             black_spans;  /* unused */
-    <a href="../ft2-raster/#ft_raster_bittest_func">FT_Raster_BitTest_Func</a>  bit_test;     /* unused */
-    <a href="../ft2-raster/#ft_raster_bitset_func">FT_Raster_BitSet_Func</a>   bit_set;      /* unused */
+    <a href="../ft2-raster/index.html#ft_spanfunc">FT_SpanFunc</a>             gray_spans;
+    <a href="../ft2-raster/index.html#ft_spanfunc">FT_SpanFunc</a>             black_spans;  /* unused */
+    <a href="../ft2-raster/index.html#ft_raster_bittest_func">FT_Raster_BitTest_Func</a>  bit_test;     /* unused */
+    <a href="../ft2-raster/index.html#ft_raster_bitset_func">FT_Raster_BitSet_Func</a>   bit_set;      /* unused */
     <span class="keyword">void</span>*                   user;
-    <a href="../ft2-basic_types/#ft_bbox">FT_BBox</a>                 clip_box;
+    <a href="../ft2-basic_types/index.html#ft_bbox">FT_BBox</a>                 clip_box;
 
   } <b>FT_Raster_Params</b>;
 </pre>
@@ -137,7 +137,7 @@ A structure to hold the arguments used by a raster's render function.
 <p>The target bitmap.</p>
 </td></tr>
 <tr><td class="val" id="source">source</td><td class="desc">
-<p>A pointer to the source glyph image (e.g., an <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a>).</p>
+<p>A pointer to the source glyph image (e.g., an <a href="../ft2-outline_processing/index.html#ft_outline">FT_Outline</a>).</p>
 </td></tr>
 <tr><td class="val" id="flags">flags</td><td class="desc">
 <p>The rendering flags.</p>
@@ -164,9 +164,9 @@ A structure to hold the arguments used by a raster's render function.
 
 <h4>note</h4>
 
-An anti-aliased glyph bitmap is drawn if the <a href="../ft2-raster/#ft_raster_flag_xxx">FT_RASTER_FLAG_AA</a> bit flag is set in the &lsquo;flags&rsquo; field, otherwise a monochrome bitmap is generated.
+An anti-aliased glyph bitmap is drawn if the <a href="../ft2-raster/index.html#ft_raster_flag_xxx">FT_RASTER_FLAG_AA</a> bit flag is set in the &lsquo;flags&rsquo; field, otherwise a monochrome bitmap is generated.
 
-If the <a href="../ft2-raster/#ft_raster_flag_xxx">FT_RASTER_FLAG_DIRECT</a> bit flag is set in &lsquo;flags&rsquo;, the raster will call the `gray_spans` callback to draw gray pixel spans. This allows direct composition over a pre-existing bitmap through user-provided callbacks to perform the span drawing and composition. Not supported by the monochrome rasterizer.
+If the <a href="../ft2-raster/index.html#ft_raster_flag_xxx">FT_RASTER_FLAG_DIRECT</a> bit flag is set in &lsquo;flags&rsquo;, the raster will call the `gray_spans` callback to draw gray pixel spans. This allows direct composition over a pre-existing bitmap through user-provided callbacks to perform the span drawing and composition. Not supported by the monochrome rasterizer.
 
 <hr>
 
@@ -176,22 +176,22 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <a href="../ft2-raster/#ft_raster_flag_default">FT_RASTER_FLAG_DEFAULT</a>  0x0
-#<span class="keyword">define</span> <a href="../ft2-raster/#ft_raster_flag_aa">FT_RASTER_FLAG_AA</a>       0x1
-#<span class="keyword">define</span> <a href="../ft2-raster/#ft_raster_flag_direct">FT_RASTER_FLAG_DIRECT</a>   0x2
-#<span class="keyword">define</span> <a href="../ft2-raster/#ft_raster_flag_clip">FT_RASTER_FLAG_CLIP</a>     0x4
+#<span class="keyword">define</span> <a href="../ft2-raster/index.html#ft_raster_flag_default">FT_RASTER_FLAG_DEFAULT</a>  0x0
+#<span class="keyword">define</span> <a href="../ft2-raster/index.html#ft_raster_flag_aa">FT_RASTER_FLAG_AA</a>       0x1
+#<span class="keyword">define</span> <a href="../ft2-raster/index.html#ft_raster_flag_direct">FT_RASTER_FLAG_DIRECT</a>   0x2
+#<span class="keyword">define</span> <a href="../ft2-raster/index.html#ft_raster_flag_clip">FT_RASTER_FLAG_CLIP</a>     0x4
 
   /* these constants are deprecated; use the corresponding */
   /* `<b>FT_RASTER_FLAG_XXX</b>' values instead                   */
-#<span class="keyword">define</span> ft_raster_flag_default  <a href="../ft2-raster/#ft_raster_flag_default">FT_RASTER_FLAG_DEFAULT</a>
-#<span class="keyword">define</span> ft_raster_flag_aa       <a href="../ft2-raster/#ft_raster_flag_aa">FT_RASTER_FLAG_AA</a>
-#<span class="keyword">define</span> ft_raster_flag_direct   <a href="../ft2-raster/#ft_raster_flag_direct">FT_RASTER_FLAG_DIRECT</a>
-#<span class="keyword">define</span> ft_raster_flag_clip     <a href="../ft2-raster/#ft_raster_flag_clip">FT_RASTER_FLAG_CLIP</a>
+#<span class="keyword">define</span> ft_raster_flag_default  <a href="../ft2-raster/index.html#ft_raster_flag_default">FT_RASTER_FLAG_DEFAULT</a>
+#<span class="keyword">define</span> ft_raster_flag_aa       <a href="../ft2-raster/index.html#ft_raster_flag_aa">FT_RASTER_FLAG_AA</a>
+#<span class="keyword">define</span> ft_raster_flag_direct   <a href="../ft2-raster/index.html#ft_raster_flag_direct">FT_RASTER_FLAG_DIRECT</a>
+#<span class="keyword">define</span> ft_raster_flag_clip     <a href="../ft2-raster/index.html#ft_raster_flag_clip">FT_RASTER_FLAG_CLIP</a>
 </pre>
 </div>
 
 
-A list of bit flag constants as used in the &lsquo;flags&rsquo; field of a <a href="../ft2-raster/#ft_raster_params">FT_Raster_Params</a> structure.
+A list of bit flag constants as used in the &lsquo;flags&rsquo; field of a <a href="../ft2-raster/index.html#ft_raster_params">FT_Raster_Params</a> structure.
 
 <h4>values</h4>
 <table class="fields">
@@ -206,7 +206,7 @@ A list of bit flag constants as used in the &lsquo;flags&rsquo; field of a <a hr
 Direct rendering is only possible with anti-aliased glyphs.</p>
 </td></tr>
 <tr><td class="val" id="ft_raster_flag_clip">FT_RASTER_FLAG_CLIP</td><td class="desc">
-<p>This flag is only used in direct rendering mode. If set, the output will be clipped to a box specified in the <code>clip_box</code> field of the <a href="../ft2-raster/#ft_raster_params">FT_Raster_Params</a> structure.
+<p>This flag is only used in direct rendering mode. If set, the output will be clipped to a box specified in the <code>clip_box</code> field of the <a href="../ft2-raster/index.html#ft_raster_params">FT_Raster_Params</a> structure.
 Note that by default, the glyph bitmap is clipped to the target pixmap, except in direct rendering mode where all spans are generated if no clipping box is set.</p>
 </td></tr>
 </table>
@@ -221,7 +221,7 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">int</span>
   (*<b>FT_Raster_NewFunc</b>)( <span class="keyword">void</span>*       memory,
-                        <a href="../ft2-raster/#ft_raster">FT_Raster</a>*  raster );
+                        <a href="../ft2-raster/index.html#ft_raster">FT_Raster</a>*  raster );
 
 #<span class="keyword">define</span> FT_Raster_New_Func  <b>FT_Raster_NewFunc</b>
 </pre>
@@ -250,7 +250,7 @@ Error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-The &lsquo;memory&rsquo; parameter is a typeless pointer in order to avoid un-wanted dependencies on the rest of the FreeType code. In practice, it is an <a href="../ft2-system_interface/#ft_memory">FT_Memory</a> object, i.e., a handle to the standard FreeType memory allocator. However, this field can be completely ignored by a given raster implementation.
+The &lsquo;memory&rsquo; parameter is a typeless pointer in order to avoid un-wanted dependencies on the rest of the FreeType code. In practice, it is an <a href="../ft2-system_interface/index.html#ft_memory">FT_Memory</a> object, i.e., a handle to the standard FreeType memory allocator. However, this field can be completely ignored by a given raster implementation.
 
 <hr>
 
@@ -261,7 +261,7 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (*<b>FT_Raster_DoneFunc</b>)( <a href="../ft2-raster/#ft_raster">FT_Raster</a>  raster );
+  (*<b>FT_Raster_DoneFunc</b>)( <a href="../ft2-raster/index.html#ft_raster">FT_Raster</a>  raster );
 
 #<span class="keyword">define</span> FT_Raster_Done_Func  <b>FT_Raster_DoneFunc</b>
 </pre>
@@ -286,7 +286,7 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (*<b>FT_Raster_ResetFunc</b>)( <a href="../ft2-raster/#ft_raster">FT_Raster</a>       raster,
+  (*<b>FT_Raster_ResetFunc</b>)( <a href="../ft2-raster/index.html#ft_raster">FT_Raster</a>       raster,
                           <span class="keyword">unsigned</span> <span class="keyword">char</span>*  pool_base,
                           <span class="keyword">unsigned</span> <span class="keyword">long</span>   pool_size );
 
@@ -325,7 +325,7 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">int</span>
-  (*<b>FT_Raster_SetModeFunc</b>)( <a href="../ft2-raster/#ft_raster">FT_Raster</a>      raster,
+  (*<b>FT_Raster_SetModeFunc</b>)( <a href="../ft2-raster/index.html#ft_raster">FT_Raster</a>      raster,
                             <span class="keyword">unsigned</span> <span class="keyword">long</span>  mode,
                             <span class="keyword">void</span>*          args );
 
@@ -358,8 +358,8 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">int</span>
-  (*<b>FT_Raster_RenderFunc</b>)( <a href="../ft2-raster/#ft_raster">FT_Raster</a>                raster,
-                           <span class="keyword">const</span> <a href="../ft2-raster/#ft_raster_params">FT_Raster_Params</a>*  params );
+  (*<b>FT_Raster_RenderFunc</b>)( <a href="../ft2-raster/index.html#ft_raster">FT_Raster</a>                raster,
+                           <span class="keyword">const</span> <a href="../ft2-raster/index.html#ft_raster_params">FT_Raster_Params</a>*  params );
 
 #<span class="keyword">define</span> FT_Raster_Render_Func  <b>FT_Raster_RenderFunc</b>
 </pre>
@@ -374,7 +374,7 @@ Invoke a given raster to scan-convert a given glyph image into a target bitmap.
 <p>A handle to the raster object.</p>
 </td></tr>
 <tr><td class="val" id="params">params</td><td class="desc">
-<p>A pointer to an <a href="../ft2-raster/#ft_raster_params">FT_Raster_Params</a> structure used to store the rendering parameters.</p>
+<p>A pointer to an <a href="../ft2-raster/index.html#ft_raster_params">FT_Raster_Params</a> structure used to store the rendering parameters.</p>
 </td></tr>
 </table>
 
@@ -384,7 +384,7 @@ Error code. 0&nbsp;means success.
 
 <h4>note</h4>
 
-The exact format of the source image depends on the raster's glyph format defined in its <a href="../ft2-raster/#ft_raster_funcs">FT_Raster_Funcs</a> structure. It can be an <a href="../ft2-outline_processing/#ft_outline">FT_Outline</a> or anything else in order to support a large array of glyph formats.
+The exact format of the source image depends on the raster's glyph format defined in its <a href="../ft2-raster/index.html#ft_raster_funcs">FT_Raster_Funcs</a> structure. It can be an <a href="../ft2-outline_processing/index.html#ft_outline">FT_Outline</a> or anything else in order to support a large array of glyph formats.
 
 Note also that the render function can fail and return a `FT_Err_Unimplemented_Feature` error code if the raster used does not support direct composition.
 
@@ -400,13 +400,13 @@ Defined in FT_IMAGE_H (freetype/ftimage.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_Raster_Funcs_
   {
-    <a href="../ft2-basic_types/#ft_glyph_format">FT_Glyph_Format</a>        glyph_format;
+    <a href="../ft2-basic_types/index.html#ft_glyph_format">FT_Glyph_Format</a>        glyph_format;
 
-    <a href="../ft2-raster/#ft_raster_newfunc">FT_Raster_NewFunc</a>      raster_new;
-    <a href="../ft2-raster/#ft_raster_resetfunc">FT_Raster_ResetFunc</a>    raster_reset;
-    <a href="../ft2-raster/#ft_raster_setmodefunc">FT_Raster_SetModeFunc</a>  raster_set_mode;
-    <a href="../ft2-raster/#ft_raster_renderfunc">FT_Raster_RenderFunc</a>   raster_render;
-    <a href="../ft2-raster/#ft_raster_donefunc">FT_Raster_DoneFunc</a>     raster_done;
+    <a href="../ft2-raster/index.html#ft_raster_newfunc">FT_Raster_NewFunc</a>      raster_new;
+    <a href="../ft2-raster/index.html#ft_raster_resetfunc">FT_Raster_ResetFunc</a>    raster_reset;
+    <a href="../ft2-raster/index.html#ft_raster_setmodefunc">FT_Raster_SetModeFunc</a>  raster_set_mode;
+    <a href="../ft2-raster/index.html#ft_raster_renderfunc">FT_Raster_RenderFunc</a>   raster_render;
+    <a href="../ft2-raster/index.html#ft_raster_donefunc">FT_Raster_DoneFunc</a>     raster_done;
 
   } <b>FT_Raster_Funcs</b>;
 </pre>

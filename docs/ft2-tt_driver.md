@@ -6,11 +6,11 @@
 
 ## Synopsis
 
-While FreeType's TrueType driver doesn't expose API functions by itself, it is possible to control its behaviour with <a href="../ft2-module_management/#ft_property_set">FT_Property_Set</a> and <a href="../ft2-module_management/#ft_property_get">FT_Property_Get</a>. The following lists the available properties together with the necessary macros and structures.
+While FreeType's TrueType driver doesn't expose API functions by itself, it is possible to control its behaviour with <a href="../ft2-module_management/index.html#ft_property_set">FT_Property_Set</a> and <a href="../ft2-module_management/index.html#ft_property_get">FT_Property_Get</a>. The following lists the available properties together with the necessary macros and structures.
 
 The TrueType driver's module name is &lsquo;truetype&rsquo;.
 
-A single property <a href="../ft2-properties/#interpreter-version">interpreter-version</a> is available, as documented in the &lsquo;<a href="../ft2-properties/#properties">Driver properties</a>&rsquo; section.
+A single property <a href="../ft2-properties/index.html#interpreter-version">interpreter-version</a> is available, as documented in the &lsquo;<a href="../ft2-properties/index.html#properties">Driver properties</a>&rsquo; section.
 
 We start with a list of definitions, kindly provided by Greg Hitchcock.
 

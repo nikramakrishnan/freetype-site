@@ -15,12 +15,12 @@ Defined in FT_FONT_FORMATS_H (freetype/ftfntfmt.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">const</span> <span class="keyword">char</span>* )
-  <b>FT_Get_Font_Format</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>  face );
+  <b>FT_Get_Font_Format</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>  face );
 
 
   /* deprecated */
   FT_EXPORT( <span class="keyword">const</span> <span class="keyword">char</span>* )
-  FT_Get_X11_Font_Format( <a href="../ft2-base_interface/#ft_face">FT_Face</a>  face );
+  FT_Get_X11_Font_Format( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>  face );
 </pre>
 </div>
 

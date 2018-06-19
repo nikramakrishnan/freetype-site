@@ -16,29 +16,29 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  TT_Header_
   {
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>   Table_Version;
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>   Font_Revision;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>   Table_Version;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>   Font_Revision;
 
-    <a href="../ft2-basic_types/#ft_long">FT_Long</a>    CheckSum_Adjust;
-    <a href="../ft2-basic_types/#ft_long">FT_Long</a>    Magic_Number;
+    <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>    CheckSum_Adjust;
+    <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>    Magic_Number;
 
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  Flags;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  Units_Per_EM;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  Flags;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  Units_Per_EM;
 
-    <a href="../ft2-basic_types/#ft_long">FT_Long</a>    Created [2];
-    <a href="../ft2-basic_types/#ft_long">FT_Long</a>    Modified[2];
+    <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>    Created [2];
+    <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>    Modified[2];
 
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   xMin;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   yMin;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   xMax;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   yMax;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   xMin;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   yMin;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   xMax;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   yMax;
 
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  Mac_Style;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  Lowest_Rec_PPEM;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  Mac_Style;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  Lowest_Rec_PPEM;
 
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Font_Direction;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Index_To_Loc_Format;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Glyph_Data_Format;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   Font_Direction;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   Index_To_Loc_Format;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   Glyph_Data_Format;
 
   } <b>TT_Header</b>;
 </pre>
@@ -57,24 +57,24 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  TT_HoriHeader_
   {
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>   Version;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Ascender;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Descender;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Line_Gap;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>   Version;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   Ascender;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   Descender;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   Line_Gap;
 
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  advance_Width_Max;      /* advance width maximum */
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  advance_Width_Max;      /* advance width maximum */
 
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   min_Left_Side_Bearing;  /* minimum left-sb       */
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   min_Right_Side_Bearing; /* minimum right-sb      */
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   xMax_Extent;            /* xmax extents          */
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   caret_Slope_Rise;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   caret_Slope_Run;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   caret_Offset;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   min_Left_Side_Bearing;  /* minimum left-sb       */
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   min_Right_Side_Bearing; /* minimum right-sb      */
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   xMax_Extent;            /* xmax extents          */
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   caret_Slope_Rise;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   caret_Slope_Run;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   caret_Offset;
 
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Reserved[4];
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   Reserved[4];
 
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   metric_Data_Format;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  number_Of_HMetrics;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   metric_Data_Format;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  number_Of_HMetrics;
 
     /* The following fields are not defined by the OpenType specification */
     /* but they are used to connect the metrics header to the relevant    */
@@ -148,7 +148,7 @@ You should use the <code>sTypoDescender</code> field of the &lsquo;OS/2&rsquo; t
 
 <h4>note</h4>
 
-For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: `caret_Slope_Rise`, `caret_Slope_Run`, and `caret_Offset`.
+For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/index.html#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: `caret_Slope_Rise`, `caret_Slope_Run`, and `caret_Offset`.
 
 <hr>
 
@@ -160,24 +160,24 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  TT_VertHeader_
   {
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>   Version;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Ascender;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Descender;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Line_Gap;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>   Version;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   Ascender;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   Descender;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   Line_Gap;
 
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  advance_Height_Max;      /* advance height maximum */
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  advance_Height_Max;      /* advance height maximum */
 
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   min_Top_Side_Bearing;    /* minimum top-sb          */
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   min_Bottom_Side_Bearing; /* minimum bottom-sb       */
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   yMax_Extent;             /* ymax extents            */
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   caret_Slope_Rise;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   caret_Slope_Run;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   caret_Offset;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   min_Top_Side_Bearing;    /* minimum top-sb          */
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   min_Bottom_Side_Bearing; /* minimum bottom-sb       */
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   yMax_Extent;             /* ymax extents            */
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   caret_Slope_Rise;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   caret_Slope_Run;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   caret_Offset;
 
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   Reserved[4];
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   Reserved[4];
 
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   metric_Data_Format;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  number_Of_VMetrics;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   metric_Data_Format;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  number_Of_VMetrics;
 
     /* The following fields are not defined by the OpenType specification */
     /* but they are used to connect the metrics header to the relevant    */
@@ -251,7 +251,7 @@ You should use the <code>sTypoDescender</code> field of the &lsquo;OS/2&rsquo; t
 
 <h4>note</h4>
 
-For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: &lsquo;Ascender&rsquo;, &lsquo;Descender&rsquo;, `Line_Gap`, `caret_Slope_Rise`, `caret_Slope_Run`, and `caret_Offset`.
+For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/index.html#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: &lsquo;Ascender&rsquo;, &lsquo;Descender&rsquo;, `Line_Gap`, `caret_Slope_Rise`, `caret_Slope_Run`, and `caret_Offset`.
 
 <hr>
 
@@ -263,58 +263,58 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  TT_OS2_
   {
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  version;                /* 0x0001 - more or 0xFFFF */
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   xAvgCharWidth;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usWeightClass;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usWidthClass;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  fsType;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   ySubscriptXSize;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   ySubscriptYSize;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   ySubscriptXOffset;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   ySubscriptYOffset;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   ySuperscriptXSize;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   ySuperscriptYSize;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   ySuperscriptXOffset;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   ySuperscriptYOffset;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   yStrikeoutSize;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   yStrikeoutPosition;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   sFamilyClass;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  version;                /* 0x0001 - more or 0xFFFF */
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   xAvgCharWidth;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  usWeightClass;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  usWidthClass;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  fsType;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   ySubscriptXSize;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   ySubscriptYSize;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   ySubscriptXOffset;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   ySubscriptYOffset;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   ySuperscriptXSize;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   ySuperscriptYSize;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   ySuperscriptXOffset;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   ySuperscriptYOffset;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   yStrikeoutSize;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   yStrikeoutPosition;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   sFamilyClass;
 
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    panose[10];
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>    panose[10];
 
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulUnicodeRange1;        /* Bits 0-31   */
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulUnicodeRange2;        /* Bits 32-63  */
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulUnicodeRange3;        /* Bits 64-95  */
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulUnicodeRange4;        /* Bits 96-127 */
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   ulUnicodeRange1;        /* Bits 0-31   */
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   ulUnicodeRange2;        /* Bits 32-63  */
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   ulUnicodeRange3;        /* Bits 64-95  */
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   ulUnicodeRange4;        /* Bits 96-127 */
 
-    <a href="../ft2-basic_types/#ft_char">FT_Char</a>    achVendID[4];
+    <a href="../ft2-basic_types/index.html#ft_char">FT_Char</a>    achVendID[4];
 
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  fsSelection;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usFirstCharIndex;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usLastCharIndex;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   sTypoAscender;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   sTypoDescender;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   sTypoLineGap;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usWinAscent;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usWinDescent;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  fsSelection;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  usFirstCharIndex;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  usLastCharIndex;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   sTypoAscender;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   sTypoDescender;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   sTypoLineGap;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  usWinAscent;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  usWinDescent;
 
     /* only version 1 and higher: */
 
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulCodePageRange1;       /* Bits 0-31   */
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   ulCodePageRange2;       /* Bits 32-63  */
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   ulCodePageRange1;       /* Bits 0-31   */
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   ulCodePageRange2;       /* Bits 32-63  */
 
     /* only version 2 and higher: */
 
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   sxHeight;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>   sCapHeight;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usDefaultChar;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usBreakChar;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usMaxContext;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   sxHeight;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>   sCapHeight;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  usDefaultChar;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  usBreakChar;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  usMaxContext;
 
     /* only version 5 and higher: */
 
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usLowerOpticalPointSize;       /* in twips (1/20th points) */
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  usUpperOpticalPointSize;       /* in twips (1/20th points) */
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  usLowerOpticalPointSize;       /* in twips (1/20th points) */
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  usUpperOpticalPointSize;       /* in twips (1/20th points) */
 
   } <b>TT_OS2</b>;
 </pre>
@@ -327,9 +327,9 @@ Note that we now support old Mac fonts that do not include an &lsquo;OS/2&rsquo;
 
 <h4>note</h4>
 
-For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: `sCapHeight`, `sTypoAscender`, `sTypoDescender`, `sTypoLineGap`, `sxHeight`, `usWinAscent`, `usWinDescent`, `yStrikeoutPosition`, `yStrikeoutSize`, `ySubscriptXOffset`, `ySubScriptXSize`, `ySubscriptYOffset`, `ySubscriptYSize`, `ySuperscriptXOffset`, `ySuperscriptXSize`, `ySuperscriptYOffset`, and `ySuperscriptYSize`.
+For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/index.html#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: `sCapHeight`, `sTypoAscender`, `sTypoDescender`, `sTypoLineGap`, `sxHeight`, `usWinAscent`, `usWinDescent`, `yStrikeoutPosition`, `yStrikeoutSize`, `ySubscriptXOffset`, `ySubScriptXSize`, `ySubscriptYOffset`, `ySubscriptYSize`, `ySuperscriptXOffset`, `ySuperscriptXSize`, `ySuperscriptYOffset`, and `ySuperscriptYSize`.
 
-Possible values for bits in the `ulUnicodeRangeX` fields are given by the <a href="../ft2-truetype_tables/#tt_ucr_xxx">TT_UCR_XXX</a> macros.
+Possible values for bits in the `ulUnicodeRangeX` fields are given by the <a href="../ft2-truetype_tables/index.html#tt_ucr_xxx">TT_UCR_XXX</a> macros.
 
 <hr>
 
@@ -341,15 +341,15 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  TT_Postscript_
   {
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  FormatType;
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>  italicAngle;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>  underlinePosition;
-    <a href="../ft2-basic_types/#ft_short">FT_Short</a>  underlineThickness;
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  isFixedPitch;
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  minMemType42;
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  maxMemType42;
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  minMemType1;
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  maxMemType1;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>  FormatType;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>  italicAngle;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>  underlinePosition;
+    <a href="../ft2-basic_types/index.html#ft_short">FT_Short</a>  underlineThickness;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>  isFixedPitch;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>  minMemType42;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>  maxMemType42;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>  minMemType1;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>  maxMemType1;
 
     /* Glyph names follow in the `post' table, but we don't */
     /* load them by default.                                */
@@ -359,11 +359,11 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 </div>
 
 
-A structure to model a TrueType &lsquo;post&rsquo; table. All fields comply to the OpenType specification. This structure does not reference a font's PostScript glyph names; use <a href="../ft2-base_interface/#ft_get_glyph_name">FT_Get_Glyph_Name</a> to retrieve them.
+A structure to model a TrueType &lsquo;post&rsquo; table. All fields comply to the OpenType specification. This structure does not reference a font's PostScript glyph names; use <a href="../ft2-base_interface/index.html#ft_get_glyph_name">FT_Get_Glyph_Name</a> to retrieve them.
 
 <h4>note</h4>
 
-For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: `underlinePosition` and `underlineThickness`.
+For an OpenType variation font, the values of the following fields can change after a call to <a href="../ft2-multiple_masters/index.html#ft_set_var_design_coordinates">FT_Set_Var_Design_Coordinates</a> (and friends) if the font contains an &lsquo;MVAR&rsquo; table: `underlinePosition` and `underlineThickness`.
 
 <hr>
 
@@ -375,21 +375,21 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  TT_PCLT_
   {
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>   Version;
-    <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   FontNumber;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  Pitch;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  xHeight;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  Style;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  TypeFamily;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  CapHeight;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  SymbolSet;
-    <a href="../ft2-basic_types/#ft_char">FT_Char</a>    TypeFace[16];
-    <a href="../ft2-basic_types/#ft_char">FT_Char</a>    CharacterComplement[8];
-    <a href="../ft2-basic_types/#ft_char">FT_Char</a>    FileName[6];
-    <a href="../ft2-basic_types/#ft_char">FT_Char</a>    StrokeWeight;
-    <a href="../ft2-basic_types/#ft_char">FT_Char</a>    WidthType;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    SerifStyle;
-    <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>    Reserved;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>   Version;
+    <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   FontNumber;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  Pitch;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  xHeight;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  Style;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  TypeFamily;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  CapHeight;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  SymbolSet;
+    <a href="../ft2-basic_types/index.html#ft_char">FT_Char</a>    TypeFace[16];
+    <a href="../ft2-basic_types/index.html#ft_char">FT_Char</a>    CharacterComplement[8];
+    <a href="../ft2-basic_types/index.html#ft_char">FT_Char</a>    FileName[6];
+    <a href="../ft2-basic_types/index.html#ft_char">FT_Char</a>    StrokeWeight;
+    <a href="../ft2-basic_types/index.html#ft_char">FT_Char</a>    WidthType;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>    SerifStyle;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>    Reserved;
 
   } <b>TT_PCLT</b>;
 </pre>
@@ -408,21 +408,21 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  TT_MaxProfile_
   {
-    <a href="../ft2-basic_types/#ft_fixed">FT_Fixed</a>   version;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  numGlyphs;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  maxPoints;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  maxContours;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  maxCompositePoints;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  maxCompositeContours;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  maxZones;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  maxTwilightPoints;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  maxStorage;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  maxFunctionDefs;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  maxInstructionDefs;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  maxStackElements;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  maxSizeOfInstructions;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  maxComponentElements;
-    <a href="../ft2-basic_types/#ft_ushort">FT_UShort</a>  maxComponentDepth;
+    <a href="../ft2-basic_types/index.html#ft_fixed">FT_Fixed</a>   version;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  numGlyphs;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  maxPoints;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  maxContours;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  maxCompositePoints;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  maxCompositeContours;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  maxZones;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  maxTwilightPoints;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  maxStorage;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  maxFunctionDefs;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  maxInstructionDefs;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  maxStackElements;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  maxSizeOfInstructions;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  maxComponentElements;
+    <a href="../ft2-basic_types/index.html#ft_ushort">FT_UShort</a>  maxComponentDepth;
 
   } <b>TT_MaxProfile</b>;
 </pre>
@@ -494,13 +494,13 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">enum</span>  FT_Sfnt_Tag_
   {
-    <a href="../ft2-truetype_tables/#ft_sfnt_head">FT_SFNT_HEAD</a>,
-    <a href="../ft2-truetype_tables/#ft_sfnt_maxp">FT_SFNT_MAXP</a>,
-    <a href="../ft2-truetype_tables/#ft_sfnt_os2">FT_SFNT_OS2</a>,
-    <a href="../ft2-truetype_tables/#ft_sfnt_hhea">FT_SFNT_HHEA</a>,
-    <a href="../ft2-truetype_tables/#ft_sfnt_vhea">FT_SFNT_VHEA</a>,
-    <a href="../ft2-truetype_tables/#ft_sfnt_post">FT_SFNT_POST</a>,
-    <a href="../ft2-truetype_tables/#ft_sfnt_pclt">FT_SFNT_PCLT</a>,
+    <a href="../ft2-truetype_tables/index.html#ft_sfnt_head">FT_SFNT_HEAD</a>,
+    <a href="../ft2-truetype_tables/index.html#ft_sfnt_maxp">FT_SFNT_MAXP</a>,
+    <a href="../ft2-truetype_tables/index.html#ft_sfnt_os2">FT_SFNT_OS2</a>,
+    <a href="../ft2-truetype_tables/index.html#ft_sfnt_hhea">FT_SFNT_HHEA</a>,
+    <a href="../ft2-truetype_tables/index.html#ft_sfnt_vhea">FT_SFNT_VHEA</a>,
+    <a href="../ft2-truetype_tables/index.html#ft_sfnt_post">FT_SFNT_POST</a>,
+    <a href="../ft2-truetype_tables/index.html#ft_sfnt_pclt">FT_SFNT_PCLT</a>,
 
     FT_SFNT_MAX
 
@@ -508,41 +508,41 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 
   /* these constants are deprecated; use the corresponding `<b>FT_Sfnt_Tag</b>' */
   /* values instead                                                      */
-#<span class="keyword">define</span> ft_sfnt_head  <a href="../ft2-truetype_tables/#ft_sfnt_head">FT_SFNT_HEAD</a>
-#<span class="keyword">define</span> ft_sfnt_maxp  <a href="../ft2-truetype_tables/#ft_sfnt_maxp">FT_SFNT_MAXP</a>
-#<span class="keyword">define</span> ft_sfnt_os2   <a href="../ft2-truetype_tables/#ft_sfnt_os2">FT_SFNT_OS2</a>
-#<span class="keyword">define</span> ft_sfnt_hhea  <a href="../ft2-truetype_tables/#ft_sfnt_hhea">FT_SFNT_HHEA</a>
-#<span class="keyword">define</span> ft_sfnt_vhea  <a href="../ft2-truetype_tables/#ft_sfnt_vhea">FT_SFNT_VHEA</a>
-#<span class="keyword">define</span> ft_sfnt_post  <a href="../ft2-truetype_tables/#ft_sfnt_post">FT_SFNT_POST</a>
-#<span class="keyword">define</span> ft_sfnt_pclt  <a href="../ft2-truetype_tables/#ft_sfnt_pclt">FT_SFNT_PCLT</a>
+#<span class="keyword">define</span> ft_sfnt_head  <a href="../ft2-truetype_tables/index.html#ft_sfnt_head">FT_SFNT_HEAD</a>
+#<span class="keyword">define</span> ft_sfnt_maxp  <a href="../ft2-truetype_tables/index.html#ft_sfnt_maxp">FT_SFNT_MAXP</a>
+#<span class="keyword">define</span> ft_sfnt_os2   <a href="../ft2-truetype_tables/index.html#ft_sfnt_os2">FT_SFNT_OS2</a>
+#<span class="keyword">define</span> ft_sfnt_hhea  <a href="../ft2-truetype_tables/index.html#ft_sfnt_hhea">FT_SFNT_HHEA</a>
+#<span class="keyword">define</span> ft_sfnt_vhea  <a href="../ft2-truetype_tables/index.html#ft_sfnt_vhea">FT_SFNT_VHEA</a>
+#<span class="keyword">define</span> ft_sfnt_post  <a href="../ft2-truetype_tables/index.html#ft_sfnt_post">FT_SFNT_POST</a>
+#<span class="keyword">define</span> ft_sfnt_pclt  <a href="../ft2-truetype_tables/index.html#ft_sfnt_pclt">FT_SFNT_PCLT</a>
 </pre>
 </div>
 
 
-An enumeration to specify indices of SFNT tables loaded and parsed by FreeType during initialization of an SFNT font. Used in the <a href="../ft2-truetype_tables/#ft_get_sfnt_table">FT_Get_Sfnt_Table</a> API function.
+An enumeration to specify indices of SFNT tables loaded and parsed by FreeType during initialization of an SFNT font. Used in the <a href="../ft2-truetype_tables/index.html#ft_get_sfnt_table">FT_Get_Sfnt_Table</a> API function.
 
 <h4>values</h4>
 <table class="fields">
 <tr><td class="val" id="ft_sfnt_head">FT_SFNT_HEAD</td><td class="desc">
-<p>To access the font's <a href="../ft2-truetype_tables/#tt_header">TT_Header</a> structure.</p>
+<p>To access the font's <a href="../ft2-truetype_tables/index.html#tt_header">TT_Header</a> structure.</p>
 </td></tr>
 <tr><td class="val" id="ft_sfnt_maxp">FT_SFNT_MAXP</td><td class="desc">
-<p>To access the font's <a href="../ft2-truetype_tables/#tt_maxprofile">TT_MaxProfile</a> structure.</p>
+<p>To access the font's <a href="../ft2-truetype_tables/index.html#tt_maxprofile">TT_MaxProfile</a> structure.</p>
 </td></tr>
 <tr><td class="val" id="ft_sfnt_os2">FT_SFNT_OS2</td><td class="desc">
-<p>To access the font's <a href="../ft2-truetype_tables/#tt_os2">TT_OS2</a> structure.</p>
+<p>To access the font's <a href="../ft2-truetype_tables/index.html#tt_os2">TT_OS2</a> structure.</p>
 </td></tr>
 <tr><td class="val" id="ft_sfnt_hhea">FT_SFNT_HHEA</td><td class="desc">
-<p>To access the font's <a href="../ft2-truetype_tables/#tt_horiheader">TT_HoriHeader</a> structure.</p>
+<p>To access the font's <a href="../ft2-truetype_tables/index.html#tt_horiheader">TT_HoriHeader</a> structure.</p>
 </td></tr>
 <tr><td class="val" id="ft_sfnt_vhea">FT_SFNT_VHEA</td><td class="desc">
-<p>To access the font's <a href="../ft2-truetype_tables/#tt_vertheader">TT_VertHeader</a> structure.</p>
+<p>To access the font's <a href="../ft2-truetype_tables/index.html#tt_vertheader">TT_VertHeader</a> structure.</p>
 </td></tr>
 <tr><td class="val" id="ft_sfnt_post">FT_SFNT_POST</td><td class="desc">
-<p>To access the font's <a href="../ft2-truetype_tables/#tt_postscript">TT_Postscript</a> structure.</p>
+<p>To access the font's <a href="../ft2-truetype_tables/index.html#tt_postscript">TT_Postscript</a> structure.</p>
 </td></tr>
 <tr><td class="val" id="ft_sfnt_pclt">FT_SFNT_PCLT</td><td class="desc">
-<p>To access the font's <a href="../ft2-truetype_tables/#tt_pclt">TT_PCLT</a> structure.</p>
+<p>To access the font's <a href="../ft2-truetype_tables/index.html#tt_pclt">TT_PCLT</a> structure.</p>
 </td></tr>
 </table>
 
@@ -555,8 +555,8 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span>* )
-  <b>FT_Get_Sfnt_Table</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>      face,
-                     <a href="../ft2-truetype_tables/#ft_sfnt_tag">FT_Sfnt_Tag</a>  tag );
+  <b>FT_Get_Sfnt_Table</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>      face,
+                     <a href="../ft2-truetype_tables/index.html#ft_sfnt_tag">FT_Sfnt_Tag</a>  tag );
 </pre>
 </div>
 
@@ -583,9 +583,11 @@ Use a typecast according to &lsquo;tag&rsquo; to access the structure elements.
 
 The table is owned by the face object and disappears with it.
 
-This function is only useful to access SFNT tables that are loaded by the sfnt, truetype, and opentype drivers. See <a href="../ft2-truetype_tables/#ft_sfnt_tag">FT_Sfnt_Tag</a> for a list.
+This function is only useful to access SFNT tables that are loaded by the sfnt, truetype, and opentype drivers. See <a href="../ft2-truetype_tables/index.html#ft_sfnt_tag">FT_Sfnt_Tag</a> for a list.
 
-Here an example how to access the &lsquo;vhea&rsquo; table:
+<h4>example</h4>
+
+Here an example how to access the &lsquo;vhea&rsquo; table.
 ```
   TT_VertHeader*  vert_header;
 
@@ -602,12 +604,12 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Load_Sfnt_Table</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
-                      <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>   tag,
-                      <a href="../ft2-basic_types/#ft_long">FT_Long</a>    offset,
-                      <a href="../ft2-basic_types/#ft_byte">FT_Byte</a>*   buffer,
-                      <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>*  length );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Load_Sfnt_Table</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>    face,
+                      <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>   tag,
+                      <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>    offset,
+                      <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>*   buffer,
+                      <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>*  length );
 </pre>
 </div>
 
@@ -620,7 +622,7 @@ Load any SFNT font table into client memory.
 <p>A handle to the source face.</p>
 </td></tr>
 <tr><td class="val" id="tag">tag</td><td class="desc">
-<p>The four-byte tag of the table to load. Use value&nbsp;0 if you want to access the whole font file. Otherwise, you can use one of the definitions found in the <a href="../ft2-header_file_macros/#ft_truetype_tags_h">FT_TRUETYPE_TAGS_H</a> file, or forge a new one with <a href="../ft2-basic_types/#ft_make_tag">FT_MAKE_TAG</a>.</p>
+<p>The four-byte tag of the table to load. Use value&nbsp;0 if you want to access the whole font file. Otherwise, you can use one of the definitions found in the <a href="../ft2-header_file_macros/index.html#ft_truetype_tags_h">FT_TRUETYPE_TAGS_H</a> file, or forge a new one with <a href="../ft2-basic_types/index.html#ft_make_tag">FT_MAKE_TAG</a>.</p>
 </td></tr>
 <tr><td class="val" id="offset">offset</td><td class="desc">
 <p>The starting offset in the table (or file if tag&nbsp;==&nbsp;0).</p>
@@ -664,7 +666,7 @@ If you need to determine the table's length you should first call this function 
   if ( error ) { ... could not load table ... }
 ```
 
-Note that structures like <a href="../ft2-truetype_tables/#tt_header">TT_Header</a> or <a href="../ft2-truetype_tables/#tt_os2">TT_OS2</a> can't be used with this function; they are limited to <a href="../ft2-truetype_tables/#ft_get_sfnt_table">FT_Get_Sfnt_Table</a>. Reason is that those structures depend on the processor architecture, with varying size (e.g. 32bit vs. 64bit) or order (big endian vs. little endian).
+Note that structures like <a href="../ft2-truetype_tables/index.html#tt_header">TT_Header</a> or <a href="../ft2-truetype_tables/index.html#tt_os2">TT_OS2</a> can't be used with this function; they are limited to <a href="../ft2-truetype_tables/index.html#ft_get_sfnt_table">FT_Get_Sfnt_Table</a>. Reason is that those structures depend on the processor architecture, with varying size (e.g. 32bit vs. 64bit) or order (big endian vs. little endian).
 
 <hr>
 
@@ -674,11 +676,11 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_Sfnt_Table_Info</b>( <a href="../ft2-base_interface/#ft_face">FT_Face</a>    face,
-                      <a href="../ft2-basic_types/#ft_uint">FT_UInt</a>    table_index,
-                      <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  *tag,
-                      <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a>  *length );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_Sfnt_Table_Info</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>    face,
+                      <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>    table_index,
+                      <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>  *tag,
+                      <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a>  *length );
 </pre>
 </div>
 
@@ -725,13 +727,13 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_ulong">FT_ULong</a> )
-  <b>FT_Get_CMap_Language_ID</b>( <a href="../ft2-base_interface/#ft_charmap">FT_CharMap</a>  charmap );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_ulong">FT_ULong</a> )
+  <b>FT_Get_CMap_Language_ID</b>( <a href="../ft2-base_interface/index.html#ft_charmap">FT_CharMap</a>  charmap );
 </pre>
 </div>
 
 
-Return cmap language ID as specified in the OpenType standard. Definitions of language ID values are in file <a href="../ft2-header_file_macros/#ft_truetype_ids_h">FT_TRUETYPE_IDS_H</a>.
+Return cmap language ID as specified in the OpenType standard. Definitions of language ID values are in file <a href="../ft2-header_file_macros/index.html#ft_truetype_ids_h">FT_TRUETYPE_IDS_H</a>.
 
 <h4>input</h4>
 <table class="fields">
@@ -754,8 +756,8 @@ Defined in FT_TRUETYPE_TABLES_H (freetype/tttables.h).
 
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_long">FT_Long</a> )
-  <b>FT_Get_CMap_Format</b>( <a href="../ft2-base_interface/#ft_charmap">FT_CharMap</a>  charmap );
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a> )
+  <b>FT_Get_CMap_Format</b>( <a href="../ft2-base_interface/index.html#ft_charmap">FT_CharMap</a>  charmap );
 </pre>
 </div>
 
@@ -781,14 +783,14 @@ The format of &lsquo;charmap&rsquo;. If &lsquo;charmap&rsquo; doesn't belong to 
 <div class = "codehilite">
 <pre>
 #<span class="keyword">define</span> <b>FT_PARAM_TAG_UNPATENTED_HINTING</b> \
-          <a href="../ft2-basic_types/#ft_make_tag">FT_MAKE_TAG</a>( 'u', 'n', 'p', 'a' )
+          <a href="../ft2-basic_types/index.html#ft_make_tag">FT_MAKE_TAG</a>( 'u', 'n', 'p', 'a' )
 </pre>
 </div>
 
 
 Deprecated, no effect.
 
-Previously: A constant used as the tag of an <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a> structure to indicate that unpatented methods only should be used by the TrueType bytecode interpreter for a typeface opened by <a href="../ft2-base_interface/#ft_open_face">FT_Open_Face</a>.
+Previously: A constant used as the tag of an <a href="../ft2-base_interface/index.html#ft_parameter">FT_Parameter</a> structure to indicate that unpatented methods only should be used by the TrueType bytecode interpreter for a typeface opened by <a href="../ft2-base_interface/index.html#ft_open_face">FT_Open_Face</a>.
 
 <hr>
 
@@ -798,37 +800,37 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_platform_apple_unicode">TT_PLATFORM_APPLE_UNICODE</a>  0
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_platform_macintosh">TT_PLATFORM_MACINTOSH</a>      1
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_platform_iso">TT_PLATFORM_ISO</a>            2 /* deprecated */
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_platform_microsoft">TT_PLATFORM_MICROSOFT</a>      3
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_platform_custom">TT_PLATFORM_CUSTOM</a>         4
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_platform_adobe">TT_PLATFORM_ADOBE</a>          7 /* artificial */
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_platform_apple_unicode">TT_PLATFORM_APPLE_UNICODE</a>  0
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_platform_macintosh">TT_PLATFORM_MACINTOSH</a>      1
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_platform_iso">TT_PLATFORM_ISO</a>            2 /* deprecated */
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_platform_microsoft">TT_PLATFORM_MICROSOFT</a>      3
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_platform_custom">TT_PLATFORM_CUSTOM</a>         4
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_platform_adobe">TT_PLATFORM_ADOBE</a>          7 /* artificial */
 </pre>
 </div>
 
 
-A list of valid values for the `platform_id` identifier code in <a href="../ft2-base_interface/#ft_charmaprec">FT_CharMapRec</a> and <a href="../ft2-sfnt_names/#ft_sfntname">FT_SfntName</a> structures.
+A list of valid values for the `platform_id` identifier code in <a href="../ft2-base_interface/index.html#ft_charmaprec">FT_CharMapRec</a> and <a href="../ft2-sfnt_names/index.html#ft_sfntname">FT_SfntName</a> structures.
 
 <h4>values</h4>
 <table class="fields">
 <tr><td class="val" id="tt_platform_apple_unicode">TT_PLATFORM_APPLE_UNICODE</td><td class="desc">
-<p>Used by Apple to indicate a Unicode character map and/or name entry. See <a href="../ft2-truetype_tables/#tt_apple_id_xxx">TT_APPLE_ID_XXX</a> for corresponding <code>encoding_id</code> values. Note that name entries in this format are coded as big-endian UCS-2 character codes <em>only</em>.</p>
+<p>Used by Apple to indicate a Unicode character map and/or name entry. See <a href="../ft2-truetype_tables/index.html#tt_apple_id_xxx">TT_APPLE_ID_XXX</a> for corresponding <code>encoding_id</code> values. Note that name entries in this format are coded as big-endian UCS-2 character codes <em>only</em>.</p>
 </td></tr>
 <tr><td class="val" id="tt_platform_macintosh">TT_PLATFORM_MACINTOSH</td><td class="desc">
-<p>Used by Apple to indicate a MacOS-specific charmap and/or name entry. See <a href="../ft2-truetype_tables/#tt_mac_id_xxx">TT_MAC_ID_XXX</a> for corresponding <code>encoding_id</code> values. Note that most TrueType fonts contain an Apple roman charmap to be usable on MacOS systems (even if they contain a Microsoft charmap as well).</p>
+<p>Used by Apple to indicate a MacOS-specific charmap and/or name entry. See <a href="../ft2-truetype_tables/index.html#tt_mac_id_xxx">TT_MAC_ID_XXX</a> for corresponding <code>encoding_id</code> values. Note that most TrueType fonts contain an Apple roman charmap to be usable on MacOS systems (even if they contain a Microsoft charmap as well).</p>
 </td></tr>
 <tr><td class="val" id="tt_platform_iso">TT_PLATFORM_ISO</td><td class="desc">
-<p>This value was used to specify ISO/IEC 10646 charmaps. It is however now deprecated. See <a href="../ft2-truetype_tables/#tt_iso_id_xxx">TT_ISO_ID_XXX</a> for a list of corresponding <code>encoding_id</code> values.</p>
+<p>This value was used to specify ISO/IEC 10646 charmaps. It is however now deprecated. See <a href="../ft2-truetype_tables/index.html#tt_iso_id_xxx">TT_ISO_ID_XXX</a> for a list of corresponding <code>encoding_id</code> values.</p>
 </td></tr>
 <tr><td class="val" id="tt_platform_microsoft">TT_PLATFORM_MICROSOFT</td><td class="desc">
-<p>Used by Microsoft to indicate Windows-specific charmaps. See <a href="../ft2-truetype_tables/#tt_ms_id_xxx">TT_MS_ID_XXX</a> for a list of corresponding <code>encoding_id</code> values. Note that most fonts contain a Unicode charmap using (TT_PLATFORM_MICROSOFT, <a href="../ft2-truetype_tables/#tt_ms_id_xxx">TT_MS_ID_UNICODE_CS</a>).</p>
+<p>Used by Microsoft to indicate Windows-specific charmaps. See <a href="../ft2-truetype_tables/index.html#tt_ms_id_xxx">TT_MS_ID_XXX</a> for a list of corresponding <code>encoding_id</code> values. Note that most fonts contain a Unicode charmap using (TT_PLATFORM_MICROSOFT, <a href="../ft2-truetype_tables/index.html#tt_ms_id_xxx">TT_MS_ID_UNICODE_CS</a>).</p>
 </td></tr>
 <tr><td class="val" id="tt_platform_custom">TT_PLATFORM_CUSTOM</td><td class="desc">
 <p>Used to indicate application-specific charmaps.</p>
 </td></tr>
 <tr><td class="val" id="tt_platform_adobe">TT_PLATFORM_ADOBE</td><td class="desc">
-<p>This value isn't part of any font format specification, but is used by FreeType to report Adobe-specific charmaps in an <a href="../ft2-base_interface/#ft_charmaprec">FT_CharMapRec</a> structure. See <a href="../ft2-truetype_tables/#tt_adobe_id_xxx">TT_ADOBE_ID_XXX</a>.</p>
+<p>This value isn't part of any font format specification, but is used by FreeType to report Adobe-specific charmaps in an <a href="../ft2-base_interface/index.html#ft_charmaprec">FT_CharMapRec</a> structure. See <a href="../ft2-truetype_tables/index.html#tt_adobe_id_xxx">TT_ADOBE_ID_XXX</a>.</p>
 </td></tr>
 </table>
 
@@ -840,18 +842,18 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_default">TT_APPLE_ID_DEFAULT</a>           0 /* Unicode 1.0                   */
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_unicode_1_1">TT_APPLE_ID_UNICODE_1_1</a>       1 /* specify Hangul at U+34xx      */
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_iso_10646">TT_APPLE_ID_ISO_10646</a>         2 /* deprecated                    */
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_unicode_2_0">TT_APPLE_ID_UNICODE_2_0</a>       3 /* or later                      */
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_unicode_32">TT_APPLE_ID_UNICODE_32</a>        4 /* 2.0 or later, full repertoire */
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_variant_selector">TT_APPLE_ID_VARIANT_SELECTOR</a>  5 /* variation selector data       */
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_apple_id_full_unicode">TT_APPLE_ID_FULL_UNICODE</a>      6 /* used with type 13 cmaps       */
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_apple_id_default">TT_APPLE_ID_DEFAULT</a>           0 /* Unicode 1.0                   */
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_apple_id_unicode_1_1">TT_APPLE_ID_UNICODE_1_1</a>       1 /* specify Hangul at U+34xx      */
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_apple_id_iso_10646">TT_APPLE_ID_ISO_10646</a>         2 /* deprecated                    */
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_apple_id_unicode_2_0">TT_APPLE_ID_UNICODE_2_0</a>       3 /* or later                      */
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_apple_id_unicode_32">TT_APPLE_ID_UNICODE_32</a>        4 /* 2.0 or later, full repertoire */
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_apple_id_variant_selector">TT_APPLE_ID_VARIANT_SELECTOR</a>  5 /* variation selector data       */
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_apple_id_full_unicode">TT_APPLE_ID_FULL_UNICODE</a>      6 /* used with type 13 cmaps       */
 </pre>
 </div>
 
 
-A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_APPLE_UNICODE</a> charmaps and name entries.
+A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/index.html#tt_platform_xxx">TT_PLATFORM_APPLE_UNICODE</a> charmaps and name entries.
 
 <h4>values</h4>
 <table class="fields">
@@ -924,7 +926,7 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 </div>
 
 
-A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_MACINTOSH</a> charmaps and name entries.
+A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/index.html#tt_platform_xxx">TT_PLATFORM_MACINTOSH</a> charmaps and name entries.
 
 <hr>
 
@@ -934,14 +936,14 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_iso_id_7bit_ascii">TT_ISO_ID_7BIT_ASCII</a>  0
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_iso_id_10646">TT_ISO_ID_10646</a>       1
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_iso_id_8859_1">TT_ISO_ID_8859_1</a>      2
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_iso_id_7bit_ascii">TT_ISO_ID_7BIT_ASCII</a>  0
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_iso_id_10646">TT_ISO_ID_10646</a>       1
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_iso_id_8859_1">TT_ISO_ID_8859_1</a>      2
 </pre>
 </div>
 
 
-A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_ISO</a> charmaps and name entries.
+A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/index.html#tt_platform_xxx">TT_PLATFORM_ISO</a> charmaps and name entries.
 
 Their use is now deprecated.
 
@@ -966,45 +968,45 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_ms_id_symbol_cs">TT_MS_ID_SYMBOL_CS</a>    0
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_ms_id_unicode_cs">TT_MS_ID_UNICODE_CS</a>   1
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_ms_id_sjis">TT_MS_ID_SJIS</a>         2
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_ms_id_prc">TT_MS_ID_PRC</a>          3
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_ms_id_big_5">TT_MS_ID_BIG_5</a>        4
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_ms_id_wansung">TT_MS_ID_WANSUNG</a>      5
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_ms_id_johab">TT_MS_ID_JOHAB</a>        6
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_ms_id_ucs_4">TT_MS_ID_UCS_4</a>       10
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_ms_id_symbol_cs">TT_MS_ID_SYMBOL_CS</a>    0
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_ms_id_unicode_cs">TT_MS_ID_UNICODE_CS</a>   1
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_ms_id_sjis">TT_MS_ID_SJIS</a>         2
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_ms_id_prc">TT_MS_ID_PRC</a>          3
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_ms_id_big_5">TT_MS_ID_BIG_5</a>        4
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_ms_id_wansung">TT_MS_ID_WANSUNG</a>      5
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_ms_id_johab">TT_MS_ID_JOHAB</a>        6
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_ms_id_ucs_4">TT_MS_ID_UCS_4</a>       10
 
   /* this value is deprecated */
-#<span class="keyword">define</span> TT_MS_ID_GB2312  <a href="../ft2-truetype_tables/#tt_ms_id_prc">TT_MS_ID_PRC</a>
+#<span class="keyword">define</span> TT_MS_ID_GB2312  <a href="../ft2-truetype_tables/index.html#tt_ms_id_prc">TT_MS_ID_PRC</a>
 </pre>
 </div>
 
 
-A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_MICROSOFT</a> charmaps and name entries.
+A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/index.html#tt_platform_xxx">TT_PLATFORM_MICROSOFT</a> charmaps and name entries.
 
 <h4>values</h4>
 <table class="fields">
 <tr><td class="val" id="tt_ms_id_symbol_cs">TT_MS_ID_SYMBOL_CS</td><td class="desc">
-<p>Microsoft symbol encoding. See <a href="../ft2-base_interface/#ft_encoding">FT_ENCODING_MS_SYMBOL</a>.</p>
+<p>Microsoft symbol encoding. See <a href="../ft2-base_interface/index.html#ft_encoding">FT_ENCODING_MS_SYMBOL</a>.</p>
 </td></tr>
 <tr><td class="val" id="tt_ms_id_unicode_cs">TT_MS_ID_UNICODE_CS</td><td class="desc">
-<p>Microsoft WGL4 charmap, matching Unicode. See <a href="../ft2-base_interface/#ft_encoding">FT_ENCODING_UNICODE</a>.</p>
+<p>Microsoft WGL4 charmap, matching Unicode. See <a href="../ft2-base_interface/index.html#ft_encoding">FT_ENCODING_UNICODE</a>.</p>
 </td></tr>
 <tr><td class="val" id="tt_ms_id_sjis">TT_MS_ID_SJIS</td><td class="desc">
-<p>Shift JIS Japanese encoding. See <a href="../ft2-base_interface/#ft_encoding">FT_ENCODING_SJIS</a>.</p>
+<p>Shift JIS Japanese encoding. See <a href="../ft2-base_interface/index.html#ft_encoding">FT_ENCODING_SJIS</a>.</p>
 </td></tr>
 <tr><td class="val" id="tt_ms_id_prc">TT_MS_ID_PRC</td><td class="desc">
-<p>Chinese encodings as used in the People's Republic of China (PRC). This means the encodings GB&nbsp;2312 and its supersets GBK and GB&nbsp;18030. See <a href="../ft2-base_interface/#ft_encoding">FT_ENCODING_PRC</a>.</p>
+<p>Chinese encodings as used in the People's Republic of China (PRC). This means the encodings GB&nbsp;2312 and its supersets GBK and GB&nbsp;18030. See <a href="../ft2-base_interface/index.html#ft_encoding">FT_ENCODING_PRC</a>.</p>
 </td></tr>
 <tr><td class="val" id="tt_ms_id_big_5">TT_MS_ID_BIG_5</td><td class="desc">
-<p>Traditional Chinese as used in Taiwan and Hong Kong. See <a href="../ft2-base_interface/#ft_encoding">FT_ENCODING_BIG5</a>.</p>
+<p>Traditional Chinese as used in Taiwan and Hong Kong. See <a href="../ft2-base_interface/index.html#ft_encoding">FT_ENCODING_BIG5</a>.</p>
 </td></tr>
 <tr><td class="val" id="tt_ms_id_wansung">TT_MS_ID_WANSUNG</td><td class="desc">
-<p>Korean Extended Wansung encoding. See <a href="../ft2-base_interface/#ft_encoding">FT_ENCODING_WANSUNG</a>.</p>
+<p>Korean Extended Wansung encoding. See <a href="../ft2-base_interface/index.html#ft_encoding">FT_ENCODING_WANSUNG</a>.</p>
 </td></tr>
 <tr><td class="val" id="tt_ms_id_johab">TT_MS_ID_JOHAB</td><td class="desc">
-<p>Korean Johab encoding. See <a href="../ft2-base_interface/#ft_encoding">FT_ENCODING_JOHAB</a>.</p>
+<p>Korean Johab encoding. See <a href="../ft2-base_interface/index.html#ft_encoding">FT_ENCODING_JOHAB</a>.</p>
 </td></tr>
 <tr><td class="val" id="tt_ms_id_ucs_4">TT_MS_ID_UCS_4</td><td class="desc">
 <p>UCS-4 or UTF-32 charmaps. This has been added to the OpenType specification version 1.4 (mid-2001).</p>
@@ -1019,15 +1021,15 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_adobe_id_standard">TT_ADOBE_ID_STANDARD</a>  0
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_adobe_id_expert">TT_ADOBE_ID_EXPERT</a>    1
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_adobe_id_custom">TT_ADOBE_ID_CUSTOM</a>    2
-#<span class="keyword">define</span> <a href="../ft2-truetype_tables/#tt_adobe_id_latin_1">TT_ADOBE_ID_LATIN_1</a>   3
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_adobe_id_standard">TT_ADOBE_ID_STANDARD</a>  0
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_adobe_id_expert">TT_ADOBE_ID_EXPERT</a>    1
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_adobe_id_custom">TT_ADOBE_ID_CUSTOM</a>    2
+#<span class="keyword">define</span> <a href="../ft2-truetype_tables/index.html#tt_adobe_id_latin_1">TT_ADOBE_ID_LATIN_1</a>   3
 </pre>
 </div>
 
 
-A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_ADOBE</a> charmaps. This is a FreeType-specific extension!
+A list of valid values for the `encoding_id` for <a href="../ft2-truetype_tables/index.html#tt_platform_xxx">TT_PLATFORM_ADOBE</a> charmaps. This is a FreeType-specific extension!
 
 <h4>values</h4>
 <table class="fields">
@@ -1179,7 +1181,7 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 </div>
 
 
-Possible values of the language identifier field in the name records of the SFNT &lsquo;name&rsquo; table if the &lsquo;platform&rsquo; identifier code is <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_MACINTOSH</a>. These values are also used as return values for function <a href="../ft2-truetype_tables/#ft_get_cmap_language_id">FT_Get_CMap_Language_ID</a>.
+Possible values of the language identifier field in the name records of the SFNT &lsquo;name&rsquo; table if the &lsquo;platform&rsquo; identifier code is <a href="../ft2-truetype_tables/index.html#tt_platform_xxx">TT_PLATFORM_MACINTOSH</a>. These values are also used as return values for function <a href="../ft2-truetype_tables/index.html#ft_get_cmap_language_id">FT_Get_CMap_Language_ID</a>.
 
 The canonical source for Apple's IDs is
 
@@ -1402,7 +1404,7 @@ Defined in FT_TRUETYPE_IDS_H (freetype/ttnameid.h).
 </div>
 
 
-Possible values of the language identifier field in the name records of the SFNT &lsquo;name&rsquo; table if the &lsquo;platform&rsquo; identifier code is <a href="../ft2-truetype_tables/#tt_platform_xxx">TT_PLATFORM_MICROSOFT</a>. These values are also used as return values for function <a href="../ft2-truetype_tables/#ft_get_cmap_language_id">FT_Get_CMap_Language_ID</a>.
+Possible values of the language identifier field in the name records of the SFNT &lsquo;name&rsquo; table if the &lsquo;platform&rsquo; identifier code is <a href="../ft2-truetype_tables/index.html#tt_platform_xxx">TT_PLATFORM_MICROSOFT</a>. These values are also used as return values for function <a href="../ft2-truetype_tables/index.html#ft_get_cmap_language_id">FT_Get_CMap_Language_ID</a>.
 
 The canonical source for Microsoft's IDs is
 
@@ -1410,7 +1412,7 @@ The canonical source for Microsoft's IDs is
 
 however, we only provide macros for language identifiers present in the OpenType specification: Microsoft has abandoned the concept of LCIDs (language code identifiers), and format&nbsp;1 of the &lsquo;name&rsquo; table provides a better mechanism for languages not covered here.
 
-More legacy values not listed in the reference can be found in the <a href="../ft2-header_file_macros/#ft_truetype_ids_h">FT_TRUETYPE_IDS_H</a> header file.
+More legacy values not listed in the reference can be found in the <a href="../ft2-header_file_macros/index.html#ft_truetype_ids_h">FT_TRUETYPE_IDS_H</a> header file.
 
 <hr>
 
