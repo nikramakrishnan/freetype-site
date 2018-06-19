@@ -40,7 +40,7 @@
     
     
       
-        <title>LZW Streams - FreeType-2.9.1 API Reference</title>
+        <title>Glyph Layer Management - FreeType-2.9.1 API Reference</title>
       
     
     
@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#lzw-streams" tabindex="1" class="md-skip">
+      <a href="#glyph-layer-management" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -103,7 +103,7 @@
                 FreeType-2.9.1 API Reference
               </span>
               <span class="md-header-nav__topic">
-                LZW Streams
+                Glyph Layer Management
               </span>
             
           
@@ -244,10 +244,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Core API
@@ -323,11 +325,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../ft2-layer_management/" title="Glyph Layer Management" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Glyph Layer Management
+      </label>
+    
+    <a href="./" title="Glyph Layer Management" class="md-nav__link md-nav__link--active">
       Glyph Layer Management
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_layeriterator" title="FT_LayerIterator" class="md-nav__link">
+    FT_LayerIterator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_get_color_glyph_layer" title="FT_Get_Color_Glyph_Layer" class="md-nav__link">
+    FT_Get_Color_Glyph_Layer
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -688,12 +742,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
     <label class="md-nav__link" for="nav-8">
       Support API
@@ -829,56 +881,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        LZW Streams
-      </label>
-    
-    <a href="./" title="LZW Streams" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../ft2-lzw/" title="LZW Streams" class="md-nav__link">
       LZW Streams
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
-    Synopsis
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ft_stream_openlzw" title="FT_Stream_OpenLZW" class="md-nav__link">
-    FT_Stream_OpenLZW
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1047,8 +1054,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ft_stream_openlzw" title="FT_Stream_OpenLZW" class="md-nav__link">
-    FT_Stream_OpenLZW
+  <a href="#ft_layeriterator" title="FT_LayerIterator" class="md-nav__link">
+    FT_LayerIterator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ft_get_color_glyph_layer" title="FT_Get_Color_Glyph_Layer" class="md-nav__link">
+    FT_Get_Color_Glyph_Layer
   </a>
   
 </li>
@@ -1070,43 +1084,130 @@
               
                 
                 
-                <p><a href="../ft2-index/">Docs</a> &raquo; <a href="../ft2-toc/#support-api">Support API</a> &raquo; LZW Streams</p>
+                <p><a href="../ft2-index/">Docs</a> &raquo; <a href="../ft2-toc/#core-api">Core API</a> &raquo; Glyph Layer Management</p>
 <hr />
-<h1 id="lzw-streams">LZW Streams<a class="headerlink" href="#lzw-streams" title="Permanent link">&para;</a></h1>
+<h1 id="glyph-layer-management">Glyph Layer Management<a class="headerlink" href="#glyph-layer-management" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
-<p>This section contains the declaration of LZW-specific functions.</p>
-<h2 id="ft_stream_openlzw">FT_Stream_OpenLZW<a class="headerlink" href="#ft_stream_openlzw" title="Permanent link">&para;</a></h2>
-<p>Defined in FT_LZW_H (freetype/ftlzw.h).</p>
+<p>The functions described here allow access of colored glyph layer data in OpenType's &lsquo;COLR&rsquo; tables.</p>
+<h2 id="ft_layeriterator">FT_LayerIterator<a class="headerlink" href="#ft_layeriterator" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_FREETYPE_H (freetype/freetype.h).</p>
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
-  <b>FT_Stream_OpenLZW</b>( <a href="../ft2-system_interface/index.html#ft_stream">FT_Stream</a>  stream,
-                     <a href="../ft2-system_interface/index.html#ft_stream">FT_Stream</a>  source );
+  <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_LayerIterator_
+  {
+    <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>   num_layers;
+    <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>   layer;
+    <a href="../ft2-basic_types/index.html#ft_byte">FT_Byte</a>*  p;
+
+  } <b>FT_LayerIterator</b>;
 </pre>
 </div>
 
-<p>Open a new stream to parse LZW-compressed font files. This is mainly used to support the compressed <code>*.pcf.Z</code> fonts that come with XFree86.</p>
+<p>This iterator object is needed for <a href="../ft2-layer_management/index.html#ft_get_color_glyph_layer">FT_Get_Color_Glyph_Layer</a>.</p>
+<h4>fields</h4>
+
+<table class="fields">
+<tr><td class="val" id="num_layers">num_layers</td><td class="desc">
+<p>The number of glyph layers for the requested glyph index. Will be set by <a href="../ft2-layer_management/index.html#ft_get_color_glyph_layer">FT_Get_Color_Glyph_Layer</a>.</p>
+</td></tr>
+<tr><td class="val" id="layer">layer</td><td class="desc">
+<p>The current layer. Will be set by <a href="../ft2-layer_management/index.html#ft_get_color_glyph_layer">FT_Get_Color_Glyph_Layer</a>.</p>
+</td></tr>
+<tr><td class="val" id="p">p</td><td class="desc">
+<p>An opaque pointer into &lsquo;COLR&rsquo; table data. The caller must set this to NULL before the first call of <a href="../ft2-layer_management/index.html#ft_get_color_glyph_layer">FT_Get_Color_Glyph_Layer</a>.</p>
+</td></tr>
+</table>
+
+<hr>
+
+<h2 id="ft_get_color_glyph_layer">FT_Get_Color_Glyph_Layer<a class="headerlink" href="#ft_get_color_glyph_layer" title="Permanent link">&para;</a></h2>
+<p>Defined in FT_FREETYPE_H (freetype/freetype.h).</p>
+<div class = "codehilite">
+<pre>
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a> )
+  <b>FT_Get_Color_Glyph_Layer</b>( <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>            face,
+                            <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>            base_glyph,
+                            <a href="../ft2-basic_types/index.html#ft_uint">FT_UInt</a>           *acolor_index,
+                            <a href="../ft2-layer_management/index.html#ft_layeriterator">FT_LayerIterator</a>*  iterator );
+</pre>
+</div>
+
+<p>This is an interface to the &lsquo;COLR&rsquo; table in OpenType fonts to iteratively retrieve the colored glyph layers associated with the current glyph slot.</p>
+<p><a href="https://docs.microsoft.com/en-us/typography/opentype/spec/colr">https://docs.microsoft.com/en-us/typography/opentype/spec/colr</a></p>
+<p>The glyph layer data for a given glyph index, if present, provides an alternative, multi-colour glyph representation: Instead of rendering the outline or bitmap with the given glyph index, glyphs with the indices and colors returned by this function are rendered layer by layer.</p>
+<p>The returned elements are ordered in the z&nbsp;direction from bottom to top; the 'n'th element should be rendered with the associated palette color and blended on top of the already rendered layers (elements 0, 1, ..., n-1).</p>
 <h4>input</h4>
 
 <table class="fields">
-<tr><td class="val" id="stream">stream</td><td class="desc">
-<p>The target embedding stream.</p>
+<tr><td class="val" id="face">face</td><td class="desc">
+<p>A handle to the parent face object.</p>
 </td></tr>
-<tr><td class="val" id="source">source</td><td class="desc">
-<p>The source stream.</p>
+<tr><td class="val" id="base_glyph">base_glyph</td><td class="desc">
+<p>The glyph index the colored glyph layers are associated with.</p>
+</td></tr>
+</table>
+
+<h4>inout</h4>
+
+<table class="fields">
+<tr><td class="val" id="iterator">iterator</td><td class="desc">
+<p>An <a href="../ft2-layer_management/index.html#ft_layeriterator">FT_LayerIterator</a> object. For the first call you should set <code>iterator-&gt;p</code> to NULL. For all following calls, simply use the same object again.</p>
+</td></tr>
+</table>
+
+<h4>output</h4>
+
+<table class="fields">
+<tr><td class="val" id="acolor_index">acolor_index</td><td class="desc">
+<p>The color index into the font face's color palette of the current layer. The value 0xFFFF is special; it doesn't reference a palette entry but indicates that the text foreground color should be used instead (to be set up by the application outside of FreeType).
+The color palette can be retrieved with <a href="../ft2-color_management/index.html#ft_palette_select">FT_Palette_Select</a>.</p>
 </td></tr>
 </table>
 
 <h4>return</h4>
 
-<p>FreeType error code. 0&nbsp;means success.</p>
+<p>The glyph index of the current layer. If there are no more layers (or if there are no layers at all), value&nbsp;0 gets returned. In case of an error, value&nbsp;0 is returned also.</p>
 <h4>note</h4>
 
-<p>The source stream must be opened <em>before</em> calling this function.</p>
-<p>Calling the internal function <code>FT_Stream_Close</code> on the new stream will <strong>not</strong> call <code>FT_Stream_Close</code> on the source stream. None of the stream objects will be released to the heap.</p>
-<p>The stream implementation is very basic and resets the decompression process each time seeking backwards is needed within the stream</p>
-<p>In certain builds of the library, LZW compression recognition is automatically handled when calling <a href="../ft2-base_interface/index.html#ft_new_face">FT_New_Face</a> or <a href="../ft2-base_interface/index.html#ft_open_face">FT_Open_Face</a>. This means that if no font driver is capable of handling the raw compressed file, the library will try to open a LZW stream from it and re-open the face with it.</p>
-<p>This function may return <code>FT_Err_Unimplemented_Feature</code> if your build of FreeType was not compiled with LZW support.</p>
+<p>This function is necessary if you want to handle glyph layers by yourself. In particular, functions that operate with <a href="../ft2-glyph_management/index.html#ft_glyphrec">FT_GlyphRec</a> objects (like <a href="../ft2-glyph_management/index.html#ft_get_glyph">FT_Get_Glyph</a> or <a href="../ft2-glyph_management/index.html#ft_glyph_to_bitmap">FT_Glyph_To_Bitmap</a>) don't have access to this information.</p>
+<p><a href="../ft2-base_interface/index.html#ft_render_glyph">FT_Render_Glyph</a>, however, handles colored glyph layers automatically if the <a href="../ft2-base_interface/index.html#ft_load_xxx">FT_LOAD_COLOR</a> flag is passed to it.</p>
+<h4>example</h4>
+
+<div class="codehilite"><pre><span></span>  FT_Color*         palette;
+  FT_LayerIterator  iterator;
+
+  FT_UInt  layer_glyph_index;
+  FT_UInt  layer_color_index;
+
+
+  error = FT_Palette_Select( face, palette_index, &amp;palette );
+  if ( error )
+    palette = NULL;
+
+  iterator.p        = NULL;
+  layer_glyph_index = FT_Get_Color_Glyph_Layer( face,
+                                                glyph_index,
+                                                &amp;layer_color_index,
+                                                &amp;iterator );
+
+  if ( palette &amp;&amp; layer_glyph_index )
+  {
+    do
+    {
+      FT_Color  layer_color = palette[layer_color_index];
+
+
+      // Load and render glyph `layer_glyph_index&#39;, then
+      // blend resulting pixmap with previously created pixmaps.
+
+    } while ( ( layer_glyph_index =
+                  FT_Get_Color_Glyph_Layer( face,
+                                            glyph_index,
+                                            &amp;layer_color_index,
+                                            &amp;iterator ) ) != 0 );
+  }
+</pre></div>
+
 <hr>
                 
                   
@@ -1128,7 +1229,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../ft2-gzip/" title="GZIP Streams" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ft2-color_management/" title="Glyph Color Management" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1137,19 +1238,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                GZIP Streams
+                Glyph Color Management
               </span>
             </div>
           </a>
         
         
-          <a href="../ft2-bzip2/" title="BZIP2 Streams" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../ft2-glyph_management/" title="Glyph Management" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                BZIP2 Streams
+                Glyph Management
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

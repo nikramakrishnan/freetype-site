@@ -41,6 +41,16 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>/ft2-color_management/</loc>
+     <lastmod>2018-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/ft2-layer_management/</loc>
+     <lastmod>2018-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>/ft2-glyph_management/</loc>
      <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
@@ -146,6 +156,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>/ft2-lcd_rendering/</loc>
+     <lastmod>2018-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>/ft2-cache_subsystem/</loc>
      <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
@@ -211,11 +226,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/ft2-lcd_rendering/</loc>
-     <lastmod>2018-06-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>/ft2-error_enumerations/</loc>
      <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
@@ -226,7 +236,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/ft2-ot_validation/</loc>
+     <loc>/ft2-gx_validation/</loc>
      <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -241,12 +251,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/ft2-color_management/</loc>
-     <lastmod>2018-06-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>/ft2-gx_validation/</loc>
+     <loc>/ft2-ot_validation/</loc>
      <lastmod>2018-06-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
