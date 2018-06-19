@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="API Reference documentation for FreeType-2.9.1">
+      
       
       
         <meta name="author" content="FreeType Contributors">
@@ -34,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.8.0">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.1">
     
     
       
@@ -42,7 +44,8 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.e8ff00e1.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      
       
     
     
@@ -1732,7 +1735,7 @@
 <h1 id="header-file-macros">Header File Macros<a class="headerlink" href="#header-file-macros" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
 <p>The following macros are defined to the name of specific FreeType&nbsp;2 header files. They can be used directly in #include statements as in:
-<div class="highlight"><pre><span></span>  #include FT_FREETYPE_H
+<div class="codehilite"><pre><span></span>  #include FT_FREETYPE_H
   #include FT_MULTIPLE_MASTERS_H
   #include FT_GLYPH_H
 </pre></div></p>
@@ -1783,7 +1786,7 @@
 </pre>
 </div>
 
-<p>A macro used in #include statements to name the file containing the list of FreeType&nbsp;2 modules that are statically linked to new library instances in <a href="../ft2-base_interface/#ft_init_freetype">FT_Init_FreeType</a>.</p>
+<p>A macro used in #include statements to name the file containing the list of FreeType&nbsp;2 modules that are statically linked to new library instances in <a href="../ft2-base_interface/index.html#ft_init_freetype">FT_Init_FreeType</a>.</p>
 <hr>
 
 <h2 id="ft_freetype_h">FT_FREETYPE_H<a class="headerlink" href="#ft_freetype_h" title="Permanent link">&para;</a></h2>
@@ -1804,7 +1807,7 @@
 </div>
 
 <p>A macro used in #include statements to name the file containing the list of FreeType&nbsp;2 error codes (and messages).</p>
-<p>It is included by <a href="../ft2-header_file_macros/#ft_freetype_h">FT_FREETYPE_H</a>.</p>
+<p>It is included by <a href="../ft2-header_file_macros/index.html#ft_freetype_h">FT_FREETYPE_H</a>.</p>
 <hr>
 
 <h2 id="ft_module_errors_h">FT_MODULE_ERRORS_H<a class="headerlink" href="#ft_module_errors_h" title="Permanent link">&para;</a></h2>
@@ -1825,7 +1828,7 @@
 </div>
 
 <p>A macro used in #include statements to name the file containing the FreeType&nbsp;2 interface to low-level operations (i.e., memory management and stream i/o).</p>
-<p>It is included by <a href="../ft2-header_file_macros/#ft_freetype_h">FT_FREETYPE_H</a>.</p>
+<p>It is included by <a href="../ft2-header_file_macros/index.html#ft_freetype_h">FT_FREETYPE_H</a>.</p>
 <hr>
 
 <h2 id="ft_image_h">FT_IMAGE_H<a class="headerlink" href="#ft_image_h" title="Permanent link">&para;</a></h2>
@@ -1836,7 +1839,7 @@
 </div>
 
 <p>A macro used in #include statements to name the file containing type definitions related to glyph images (i.e., bitmaps, outlines, scan-converter parameters).</p>
-<p>It is included by <a href="../ft2-header_file_macros/#ft_freetype_h">FT_FREETYPE_H</a>.</p>
+<p>It is included by <a href="../ft2-header_file_macros/index.html#ft_freetype_h">FT_FREETYPE_H</a>.</p>
 <hr>
 
 <h2 id="ft_types_h">FT_TYPES_H<a class="headerlink" href="#ft_types_h" title="Permanent link">&para;</a></h2>
@@ -1847,7 +1850,7 @@
 </div>
 
 <p>A macro used in #include statements to name the file containing the basic data types defined by FreeType&nbsp;2.</p>
-<p>It is included by <a href="../ft2-header_file_macros/#ft_freetype_h">FT_FREETYPE_H</a>.</p>
+<p>It is included by <a href="../ft2-header_file_macros/index.html#ft_freetype_h">FT_FREETYPE_H</a>.</p>
 <hr>
 
 <h2 id="ft_list_h">FT_LIST_H<a class="headerlink" href="#ft_list_h" title="Permanent link">&para;</a></h2>
@@ -1878,7 +1881,7 @@
 </pre>
 </div>
 
-<p>A macro used in #include statements to name the file containing the API which manages multiple <a href="../ft2-base_interface/#ft_size">FT_Size</a> objects per face.</p>
+<p>A macro used in #include statements to name the file containing the API which manages multiple <a href="../ft2-base_interface/index.html#ft_size">FT_Size</a> objects per face.</p>
 <hr>
 
 <h2 id="ft_module_h">FT_MODULE_H<a class="headerlink" href="#ft_module_h" title="Permanent link">&para;</a></h2>
@@ -1914,45 +1917,45 @@
 <h2 id="ft_autohinter_h">FT_AUTOHINTER_H<a class="headerlink" href="#ft_autohinter_h" title="Permanent link">&para;</a></h2>
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <b>FT_AUTOHINTER_H</b>  <a href="../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a>
+#<span class="keyword">define</span> <b>FT_AUTOHINTER_H</b>  <a href="../ft2-header_file_macros/index.html#ft_driver_h">FT_DRIVER_H</a>
 </pre>
 </div>
 
 <p>A macro used in #include statements to name the file containing structures and macros related to the auto-hinting module.</p>
-<p>Deprecated since version 2.9; use <a href="../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a> instead.</p>
+<p>Deprecated since version 2.9; use <a href="../ft2-header_file_macros/index.html#ft_driver_h">FT_DRIVER_H</a> instead.</p>
 <hr>
 
 <h2 id="ft_cff_driver_h">FT_CFF_DRIVER_H<a class="headerlink" href="#ft_cff_driver_h" title="Permanent link">&para;</a></h2>
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <b>FT_CFF_DRIVER_H</b>  <a href="../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a>
+#<span class="keyword">define</span> <b>FT_CFF_DRIVER_H</b>  <a href="../ft2-header_file_macros/index.html#ft_driver_h">FT_DRIVER_H</a>
 </pre>
 </div>
 
 <p>A macro used in #include statements to name the file containing structures and macros related to the CFF driver module.</p>
-<p>Deprecated since version 2.9; use <a href="../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a> instead.</p>
+<p>Deprecated since version 2.9; use <a href="../ft2-header_file_macros/index.html#ft_driver_h">FT_DRIVER_H</a> instead.</p>
 <hr>
 
 <h2 id="ft_truetype_driver_h">FT_TRUETYPE_DRIVER_H<a class="headerlink" href="#ft_truetype_driver_h" title="Permanent link">&para;</a></h2>
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <b>FT_TRUETYPE_DRIVER_H</b>  <a href="../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a>
+#<span class="keyword">define</span> <b>FT_TRUETYPE_DRIVER_H</b>  <a href="../ft2-header_file_macros/index.html#ft_driver_h">FT_DRIVER_H</a>
 </pre>
 </div>
 
 <p>A macro used in #include statements to name the file containing structures and macros related to the TrueType driver module.</p>
-<p>Deprecated since version 2.9; use <a href="../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a> instead.</p>
+<p>Deprecated since version 2.9; use <a href="../ft2-header_file_macros/index.html#ft_driver_h">FT_DRIVER_H</a> instead.</p>
 <hr>
 
 <h2 id="ft_pcf_driver_h">FT_PCF_DRIVER_H<a class="headerlink" href="#ft_pcf_driver_h" title="Permanent link">&para;</a></h2>
 <div class = "codehilite">
 <pre>
-#<span class="keyword">define</span> <b>FT_PCF_DRIVER_H</b>  <a href="../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a>
+#<span class="keyword">define</span> <b>FT_PCF_DRIVER_H</b>  <a href="../ft2-header_file_macros/index.html#ft_driver_h">FT_DRIVER_H</a>
 </pre>
 </div>
 
 <p>A macro used in #include statements to name the file containing structures and macros related to the PCF driver module.</p>
-<p>Deprecated since version 2.9; use <a href="../ft2-header_file_macros/#ft_driver_h">FT_DRIVER_H</a> instead.</p>
+<p>Deprecated since version 2.9; use <a href="../ft2-header_file_macros/index.html#ft_driver_h">FT_DRIVER_H</a> instead.</p>
 <hr>
 
 <h2 id="ft_type1_tables_h">FT_TYPE1_TABLES_H<a class="headerlink" href="#ft_type1_tables_h" title="Permanent link">&para;</a></h2>
@@ -2326,8 +2329,6 @@
       <script src="../assets/javascripts/application.a59e2a89.js"></script>
       
       <script>app.initialize({version:"0.17.4",url:{base:".."}})</script>
-      
-        <script src="../javascripts/jquery-3.3.1.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
       

@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="API Reference documentation for FreeType-2.9.1">
+      
       
       
         <meta name="author" content="FreeType Contributors">
@@ -34,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.8.0">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.1">
     
     
       
@@ -42,7 +44,8 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.e8ff00e1.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      
       
     
     
@@ -1143,12 +1146,12 @@
 <hr />
 <h1 id="parameter-tags">Parameter Tags<a class="headerlink" href="#parameter-tags" title="Permanent link">&para;</a></h1>
 <h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
-<p>This section contains macros for the <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a> structure that are used with various functions to activate some special functionality or different behaviour of various components of FreeType.</p>
+<p>This section contains macros for the <a href="../ft2-base_interface/index.html#ft_parameter">FT_Parameter</a> structure that are used with various functions to activate some special functionality or different behaviour of various components of FreeType.</p>
 <h2 id="ft_param_tag_ignore_typographic_family">FT_PARAM_TAG_IGNORE_TYPOGRAPHIC_FAMILY<a class="headerlink" href="#ft_param_tag_ignore_typographic_family" title="Permanent link">&para;</a></h2>
 <div class = "codehilite">
 <pre>
 #<span class="keyword">define</span> <b>FT_PARAM_TAG_IGNORE_TYPOGRAPHIC_FAMILY</b> \
-          <a href="../ft2-basic_types/#ft_make_tag">FT_MAKE_TAG</a>( 'i', 'g', 'p', 'f' )
+          <a href="../ft2-basic_types/index.html#ft_make_tag">FT_MAKE_TAG</a>( 'i', 'g', 'p', 'f' )
 
   /* this constant is deprecated */
 #<span class="keyword">define</span> FT_PARAM_TAG_IGNORE_PREFERRED_FAMILY \
@@ -1156,7 +1159,7 @@
 </pre>
 </div>
 
-<p>A tag for <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a> to make <a href="../ft2-base_interface/#ft_open_face">FT_Open_Face</a> ignore typographic family names in the &lsquo;name&rsquo; table (introduced in OpenType version 1.4). Use this for backward compatibility with legacy systems that have a four-faces-per-family restriction.</p>
+<p>A tag for <a href="../ft2-base_interface/index.html#ft_parameter">FT_Parameter</a> to make <a href="../ft2-base_interface/index.html#ft_open_face">FT_Open_Face</a> ignore typographic family names in the &lsquo;name&rsquo; table (introduced in OpenType version 1.4). Use this for backward compatibility with legacy systems that have a four-faces-per-family restriction.</p>
 <h4>since</h4>
 
 <p>2.8</p>
@@ -1166,7 +1169,7 @@
 <div class = "codehilite">
 <pre>
 #<span class="keyword">define</span> <b>FT_PARAM_TAG_IGNORE_TYPOGRAPHIC_SUBFAMILY</b> \
-          <a href="../ft2-basic_types/#ft_make_tag">FT_MAKE_TAG</a>( 'i', 'g', 'p', 's' )
+          <a href="../ft2-basic_types/index.html#ft_make_tag">FT_MAKE_TAG</a>( 'i', 'g', 'p', 's' )
 
   /* this constant is deprecated */
 #<span class="keyword">define</span> FT_PARAM_TAG_IGNORE_PREFERRED_SUBFAMILY \
@@ -1174,7 +1177,7 @@
 </pre>
 </div>
 
-<p>A tag for <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a> to make <a href="../ft2-base_interface/#ft_open_face">FT_Open_Face</a> ignore typographic subfamily names in the &lsquo;name&rsquo; table (introduced in OpenType version 1.4). Use this for backward compatibility with legacy systems that have a four-faces-per-family restriction.</p>
+<p>A tag for <a href="../ft2-base_interface/index.html#ft_parameter">FT_Parameter</a> to make <a href="../ft2-base_interface/index.html#ft_open_face">FT_Open_Face</a> ignore typographic subfamily names in the &lsquo;name&rsquo; table (introduced in OpenType version 1.4). Use this for backward compatibility with legacy systems that have a four-faces-per-family restriction.</p>
 <h4>since</h4>
 
 <p>2.8</p>
@@ -1184,22 +1187,22 @@
 <div class = "codehilite">
 <pre>
 #<span class="keyword">define</span> <b>FT_PARAM_TAG_INCREMENTAL</b> \
-          <a href="../ft2-basic_types/#ft_make_tag">FT_MAKE_TAG</a>( 'i', 'n', 'c', 'r' )
+          <a href="../ft2-basic_types/index.html#ft_make_tag">FT_MAKE_TAG</a>( 'i', 'n', 'c', 'r' )
 </pre>
 </div>
 
-<p>An <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a> tag to be used with <a href="../ft2-base_interface/#ft_open_face">FT_Open_Face</a> to indicate incremental glyph loading.</p>
+<p>An <a href="../ft2-base_interface/index.html#ft_parameter">FT_Parameter</a> tag to be used with <a href="../ft2-base_interface/index.html#ft_open_face">FT_Open_Face</a> to indicate incremental glyph loading.</p>
 <hr>
 
 <h2 id="ft_param_tag_lcd_filter_weights">FT_PARAM_TAG_LCD_FILTER_WEIGHTS<a class="headerlink" href="#ft_param_tag_lcd_filter_weights" title="Permanent link">&para;</a></h2>
 <div class = "codehilite">
 <pre>
 #<span class="keyword">define</span> <b>FT_PARAM_TAG_LCD_FILTER_WEIGHTS</b> \
-          <a href="../ft2-basic_types/#ft_make_tag">FT_MAKE_TAG</a>( 'l', 'c', 'd', 'f' )
+          <a href="../ft2-basic_types/index.html#ft_make_tag">FT_MAKE_TAG</a>( 'l', 'c', 'd', 'f' )
 </pre>
 </div>
 
-<p>An <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a> tag to be used with <a href="../ft2-base_interface/#ft_face_properties">FT_Face_Properties</a>. The corresponding argument specifies the five LCD filter weights for a given face (if using <a href="../ft2-base_interface/#ft_load_target_xxx">FT_LOAD_TARGET_LCD</a>, for example), overriding the global default values or the values set up with <a href="../ft2-lcd_rendering/#ft_library_setlcdfilterweights">FT_Library_SetLcdFilterWeights</a>.</p>
+<p>An <a href="../ft2-base_interface/index.html#ft_parameter">FT_Parameter</a> tag to be used with <a href="../ft2-base_interface/index.html#ft_face_properties">FT_Face_Properties</a>. The corresponding argument specifies the five LCD filter weights for a given face (if using <a href="../ft2-base_interface/index.html#ft_load_target_xxx">FT_LOAD_TARGET_LCD</a>, for example), overriding the global default values or the values set up with <a href="../ft2-lcd_rendering/index.html#ft_library_setlcdfilterweights">FT_Library_SetLcdFilterWeights</a>.</p>
 <h4>since</h4>
 
 <p>2.8</p>
@@ -1209,11 +1212,11 @@
 <div class = "codehilite">
 <pre>
 #<span class="keyword">define</span> <b>FT_PARAM_TAG_RANDOM_SEED</b> \
-          <a href="../ft2-basic_types/#ft_make_tag">FT_MAKE_TAG</a>( 's', 'e', 'e', 'd' )
+          <a href="../ft2-basic_types/index.html#ft_make_tag">FT_MAKE_TAG</a>( 's', 'e', 'e', 'd' )
 </pre>
 </div>
 
-<p>An <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a> tag to be used with <a href="../ft2-base_interface/#ft_face_properties">FT_Face_Properties</a>. The corresponding 32bit signed integer argument overrides the font driver's random seed value with a face-specific one; see <a href="../ft2-properties/#random-seed">random-seed</a>.</p>
+<p>An <a href="../ft2-base_interface/index.html#ft_parameter">FT_Parameter</a> tag to be used with <a href="../ft2-base_interface/index.html#ft_face_properties">FT_Face_Properties</a>. The corresponding 32bit signed integer argument overrides the font driver's random seed value with a face-specific one; see <a href="../ft2-properties/index.html#random-seed">random-seed</a>.</p>
 <h4>since</h4>
 
 <p>2.8</p>
@@ -1223,11 +1226,11 @@
 <div class = "codehilite">
 <pre>
 #<span class="keyword">define</span> <b>FT_PARAM_TAG_STEM_DARKENING</b> \
-          <a href="../ft2-basic_types/#ft_make_tag">FT_MAKE_TAG</a>( 'd', 'a', 'r', 'k' )
+          <a href="../ft2-basic_types/index.html#ft_make_tag">FT_MAKE_TAG</a>( 'd', 'a', 'r', 'k' )
 </pre>
 </div>
 
-<p>An <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a> tag to be used with <a href="../ft2-base_interface/#ft_face_properties">FT_Face_Properties</a>. The corresponding Boolean argument specifies whether to apply stem darkening, overriding the global default values or the values set up with <a href="../ft2-module_management/#ft_property_set">FT_Property_Set</a> (see <a href="../ft2-properties/#no-stem-darkening">no-stem-darkening</a>).</p>
+<p>An <a href="../ft2-base_interface/index.html#ft_parameter">FT_Parameter</a> tag to be used with <a href="../ft2-base_interface/index.html#ft_face_properties">FT_Face_Properties</a>. The corresponding Boolean argument specifies whether to apply stem darkening, overriding the global default values or the values set up with <a href="../ft2-module_management/index.html#ft_property_set">FT_Property_Set</a> (see <a href="../ft2-properties/index.html#no-stem-darkening">no-stem-darkening</a>).</p>
 <p>This is a passive setting that only takes effect if the font driver or autohinter honors it, which the CFF, Type&nbsp;1, and CID drivers always do, but the autohinter only in &lsquo;light&rsquo; hinting mode (as of version 2.9).</p>
 <h4>since</h4>
 
@@ -1238,12 +1241,12 @@
 <div class = "codehilite">
 <pre>
 #<span class="keyword">define</span> <b>FT_PARAM_TAG_UNPATENTED_HINTING</b> \
-          <a href="../ft2-basic_types/#ft_make_tag">FT_MAKE_TAG</a>( 'u', 'n', 'p', 'a' )
+          <a href="../ft2-basic_types/index.html#ft_make_tag">FT_MAKE_TAG</a>( 'u', 'n', 'p', 'a' )
 </pre>
 </div>
 
 <p>Deprecated, no effect.</p>
-<p>Previously: A constant used as the tag of an <a href="../ft2-base_interface/#ft_parameter">FT_Parameter</a> structure to indicate that unpatented methods only should be used by the TrueType bytecode interpreter for a typeface opened by <a href="../ft2-base_interface/#ft_open_face">FT_Open_Face</a>.</p>
+<p>Previously: A constant used as the tag of an <a href="../ft2-base_interface/index.html#ft_parameter">FT_Parameter</a> structure to indicate that unpatented methods only should be used by the TrueType bytecode interpreter for a typeface opened by <a href="../ft2-base_interface/index.html#ft_open_face">FT_Open_Face</a>.</p>
 <hr>
                 
                   
@@ -1323,8 +1326,6 @@
       <script src="../assets/javascripts/application.a59e2a89.js"></script>
       
       <script>app.initialize({version:"0.17.4",url:{base:".."}})</script>
-      
-        <script src="../javascripts/jquery-3.3.1.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
       

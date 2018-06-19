@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="API Reference documentation for FreeType-2.9.1">
+      
       
       
         <meta name="author" content="FreeType Contributors">
@@ -34,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.8.0">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.1">
     
     
       
@@ -42,7 +44,8 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.e8ff00e1.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      
       
     
     
@@ -1134,11 +1137,11 @@
 <p>Defined in FT_MAC_H (freetype/ftmac.h).</p>
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_New_Face_From_FOND</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>  library,
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_New_Face_From_FOND</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>  library,
                          Handle      fond,
-                         <a href="../ft2-basic_types/#ft_long">FT_Long</a>     face_index,
-                         <a href="../ft2-base_interface/#ft_face">FT_Face</a>    *aface )
+                         <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>     face_index,
+                         <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>    *aface )
                        FT_DEPRECATED_ATTRIBUTE;
 </pre>
 </div>
@@ -1174,10 +1177,10 @@
 <h4>return</h4>
 
 <p>FreeType error code. 0&nbsp;means success.</p>
-<h4>notes</h4>
+<h4>example</h4>
 
-<p>This function can be used to create <a href="../ft2-base_interface/#ft_face">FT_Face</a> objects from fonts that are installed in the system as follows.
-<div class="highlight"><pre><span></span>  fond = GetResource( &#39;FOND&#39;, fontName );
+<p>This function can be used to create <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a> objects from fonts that are installed in the system as follows.
+<div class="codehilite"><pre><span></span>  fond  = GetResource( &#39;FOND&#39;, fontName );
   error = FT_New_Face_From_FOND( library, fond, 0, &amp;face );
 </pre></div></p>
 <hr>
@@ -1186,10 +1189,10 @@
 <p>Defined in FT_MAC_H (freetype/ftmac.h).</p>
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
   <b>FT_GetFile_From_Mac_Name</b>( <span class="keyword">const</span> <span class="keyword">char</span>*  fontName,
                             FSSpec*      pathSpec,
-                            <a href="../ft2-basic_types/#ft_long">FT_Long</a>*     face_index )
+                            <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>*     face_index )
                           FT_DEPRECATED_ATTRIBUTE;
 </pre>
 </div>
@@ -1207,10 +1210,10 @@
 
 <table class="fields">
 <tr><td class="val" id="pathspec">pathSpec</td><td class="desc">
-<p>FSSpec to the file. For passing to <a href="../ft2-mac_specific/#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a>.</p>
+<p>FSSpec to the file. For passing to <a href="../ft2-mac_specific/index.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a>.</p>
 </td></tr>
 <tr><td class="val" id="face_index">face_index</td><td class="desc">
-<p>Index of the face. For passing to <a href="../ft2-mac_specific/#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a>.</p>
+<p>Index of the face. For passing to <a href="../ft2-mac_specific/index.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a>.</p>
 </td></tr>
 </table>
 
@@ -1223,10 +1226,10 @@
 <p>Defined in FT_MAC_H (freetype/ftmac.h).</p>
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
   <b>FT_GetFile_From_Mac_ATS_Name</b>( <span class="keyword">const</span> <span class="keyword">char</span>*  fontName,
                                 FSSpec*      pathSpec,
-                                <a href="../ft2-basic_types/#ft_long">FT_Long</a>*     face_index )
+                                <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>*     face_index )
                               FT_DEPRECATED_ATTRIBUTE;
 </pre>
 </div>
@@ -1244,10 +1247,10 @@
 
 <table class="fields">
 <tr><td class="val" id="pathspec">pathSpec</td><td class="desc">
-<p>FSSpec to the file. For passing to <a href="../ft2-mac_specific/#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a>.</p>
+<p>FSSpec to the file. For passing to <a href="../ft2-mac_specific/index.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a>.</p>
 </td></tr>
 <tr><td class="val" id="face_index">face_index</td><td class="desc">
-<p>Index of the face. For passing to <a href="../ft2-mac_specific/#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a>.</p>
+<p>Index of the face. For passing to <a href="../ft2-mac_specific/index.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a>.</p>
 </td></tr>
 </table>
 
@@ -1260,11 +1263,11 @@
 <p>Defined in FT_MAC_H (freetype/ftmac.h).</p>
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
   <b>FT_GetFilePath_From_Mac_ATS_Name</b>( <span class="keyword">const</span> <span class="keyword">char</span>*  fontName,
                                     UInt8*       path,
                                     UInt32       maxPathSize,
-                                    <a href="../ft2-basic_types/#ft_long">FT_Long</a>*     face_index )
+                                    <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>*     face_index )
                                   FT_DEPRECATED_ATTRIBUTE;
 </pre>
 </div>
@@ -1282,13 +1285,13 @@
 
 <table class="fields">
 <tr><td class="val" id="path">path</td><td class="desc">
-<p>Buffer to store pathname of the file. For passing to <a href="../ft2-base_interface/#ft_new_face">FT_New_Face</a>. The client must allocate this buffer before calling this function.</p>
+<p>Buffer to store pathname of the file. For passing to <a href="../ft2-base_interface/index.html#ft_new_face">FT_New_Face</a>. The client must allocate this buffer before calling this function.</p>
 </td></tr>
 <tr><td class="val" id="maxpathsize">maxPathSize</td><td class="desc">
 <p>Lengths of the buffer &lsquo;path&rsquo; that client allocated.</p>
 </td></tr>
 <tr><td class="val" id="face_index">face_index</td><td class="desc">
-<p>Index of the face. For passing to <a href="../ft2-base_interface/#ft_new_face">FT_New_Face</a>.</p>
+<p>Index of the face. For passing to <a href="../ft2-base_interface/index.html#ft_new_face">FT_New_Face</a>.</p>
 </td></tr>
 </table>
 
@@ -1301,11 +1304,11 @@
 <p>Defined in FT_MAC_H (freetype/ftmac.h).</p>
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_New_Face_From_FSSpec</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>     library,
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_New_Face_From_FSSpec</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>     library,
                            <span class="keyword">const</span> FSSpec  *spec,
-                           <a href="../ft2-basic_types/#ft_long">FT_Long</a>        face_index,
-                           <a href="../ft2-base_interface/#ft_face">FT_Face</a>       *aface )
+                           <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>        face_index,
+                           <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>       *aface )
                          FT_DEPRECATED_ATTRIBUTE;
 </pre>
 </div>
@@ -1343,18 +1346,18 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p><a href="../ft2-mac_specific/#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a> is identical to <a href="../ft2-base_interface/#ft_new_face">FT_New_Face</a> except it accepts an FSSpec instead of a path.</p>
+<p><a href="../ft2-mac_specific/index.html#ft_new_face_from_fsspec">FT_New_Face_From_FSSpec</a> is identical to <a href="../ft2-base_interface/index.html#ft_new_face">FT_New_Face</a> except it accepts an FSSpec instead of a path.</p>
 <hr>
 
 <h2 id="ft_new_face_from_fsref">FT_New_Face_From_FSRef<a class="headerlink" href="#ft_new_face_from_fsref" title="Permanent link">&para;</a></h2>
 <p>Defined in FT_MAC_H (freetype/ftmac.h).</p>
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_New_Face_From_FSRef</b>( <a href="../ft2-base_interface/#ft_library">FT_Library</a>    library,
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_New_Face_From_FSRef</b>( <a href="../ft2-base_interface/index.html#ft_library">FT_Library</a>    library,
                           <span class="keyword">const</span> FSRef  *ref,
-                          <a href="../ft2-basic_types/#ft_long">FT_Long</a>       face_index,
-                          <a href="../ft2-base_interface/#ft_face">FT_Face</a>      *aface )
+                          <a href="../ft2-basic_types/index.html#ft_long">FT_Long</a>       face_index,
+                          <a href="../ft2-base_interface/index.html#ft_face">FT_Face</a>      *aface )
                         FT_DEPRECATED_ATTRIBUTE;
 </pre>
 </div>
@@ -1392,7 +1395,7 @@
 <p>FreeType error code. 0&nbsp;means success.</p>
 <h4>note</h4>
 
-<p><a href="../ft2-mac_specific/#ft_new_face_from_fsref">FT_New_Face_From_FSRef</a> is identical to <a href="../ft2-base_interface/#ft_new_face">FT_New_Face</a> except it accepts an FSRef instead of a path.</p>
+<p><a href="../ft2-mac_specific/index.html#ft_new_face_from_fsref">FT_New_Face_From_FSRef</a> is identical to <a href="../ft2-base_interface/index.html#ft_new_face">FT_New_Face</a> except it accepts an FSRef instead of a path.</p>
 <hr>
                 
                   
@@ -1472,8 +1475,6 @@
       <script src="../assets/javascripts/application.a59e2a89.js"></script>
       
       <script>app.initialize({version:"0.17.4",url:{base:".."}})</script>
-      
-        <script src="../javascripts/jquery-3.3.1.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
       

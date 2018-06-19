@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="API Reference documentation for FreeType-2.9.1">
+      
       
       
         <meta name="author" content="FreeType Contributors">
@@ -34,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.8.0">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.1">
     
     
       
@@ -42,7 +44,8 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.e8ff00e1.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      
       
     
     
@@ -1236,7 +1239,7 @@
 </pre>
 </div>
 
-<p>A handle to a list record (see <a href="../ft2-list_processing/#ft_listrec">FT_ListRec</a>).</p>
+<p>A handle to a list record (see <a href="../ft2-list_processing/index.html#ft_listrec">FT_ListRec</a>).</p>
 <hr>
 
 <h2 id="ft_listnode">FT_ListNode<a class="headerlink" href="#ft_listnode" title="Permanent link">&para;</a></h2>
@@ -1247,7 +1250,7 @@
 </pre>
 </div>
 
-<p>Many elements and objects in FreeType are listed through an <a href="../ft2-list_processing/#ft_list">FT_List</a> record (see <a href="../ft2-list_processing/#ft_listrec">FT_ListRec</a>). As its name suggests, an FT_ListNode is a handle to a single list element.</p>
+<p>Many elements and objects in FreeType are listed through an <a href="../ft2-list_processing/index.html#ft_list">FT_List</a> record (see <a href="../ft2-list_processing/index.html#ft_listrec">FT_ListRec</a>). As its name suggests, an FT_ListNode is a handle to a single list element.</p>
 <hr>
 
 <h2 id="ft_listrec">FT_ListRec<a class="headerlink" href="#ft_listrec" title="Permanent link">&para;</a></h2>
@@ -1256,8 +1259,8 @@
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_ListRec_
   {
-    <a href="../ft2-list_processing/#ft_listnode">FT_ListNode</a>  head;
-    <a href="../ft2-list_processing/#ft_listnode">FT_ListNode</a>  tail;
+    <a href="../ft2-list_processing/index.html#ft_listnode">FT_ListNode</a>  head;
+    <a href="../ft2-list_processing/index.html#ft_listnode">FT_ListNode</a>  tail;
 
   } <b>FT_ListRec</b>;
 </pre>
@@ -1283,8 +1286,8 @@
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">struct</span>  FT_ListNodeRec_
   {
-    <a href="../ft2-list_processing/#ft_listnode">FT_ListNode</a>  prev;
-    <a href="../ft2-list_processing/#ft_listnode">FT_ListNode</a>  next;
+    <a href="../ft2-list_processing/index.html#ft_listnode">FT_ListNode</a>  prev;
+    <a href="../ft2-list_processing/index.html#ft_listnode">FT_ListNode</a>  next;
     <span class="keyword">void</span>*        data;
 
   } <b>FT_ListNodeRec</b>;
@@ -1313,8 +1316,8 @@
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_List_Add</b>( <a href="../ft2-list_processing/#ft_list">FT_List</a>      list,
-               <a href="../ft2-list_processing/#ft_listnode">FT_ListNode</a>  node );
+  <b>FT_List_Add</b>( <a href="../ft2-list_processing/index.html#ft_list">FT_List</a>      list,
+               <a href="../ft2-list_processing/index.html#ft_listnode">FT_ListNode</a>  node );
 </pre>
 </div>
 
@@ -1337,8 +1340,8 @@
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_List_Insert</b>( <a href="../ft2-list_processing/#ft_list">FT_List</a>      list,
-                  <a href="../ft2-list_processing/#ft_listnode">FT_ListNode</a>  node );
+  <b>FT_List_Insert</b>( <a href="../ft2-list_processing/index.html#ft_list">FT_List</a>      list,
+                  <a href="../ft2-list_processing/index.html#ft_listnode">FT_ListNode</a>  node );
 </pre>
 </div>
 
@@ -1360,8 +1363,8 @@
 <p>Defined in FT_LIST_H (freetype/ftlist.h).</p>
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-list_processing/#ft_listnode">FT_ListNode</a> )
-  <b>FT_List_Find</b>( <a href="../ft2-list_processing/#ft_list">FT_List</a>  list,
+  FT_EXPORT( <a href="../ft2-list_processing/index.html#ft_listnode">FT_ListNode</a> )
+  <b>FT_List_Find</b>( <a href="../ft2-list_processing/index.html#ft_list">FT_List</a>  list,
                 <span class="keyword">void</span>*    data );
 </pre>
 </div>
@@ -1388,8 +1391,8 @@
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_List_Remove</b>( <a href="../ft2-list_processing/#ft_list">FT_List</a>      list,
-                  <a href="../ft2-list_processing/#ft_listnode">FT_ListNode</a>  node );
+  <b>FT_List_Remove</b>( <a href="../ft2-list_processing/index.html#ft_list">FT_List</a>      list,
+                  <a href="../ft2-list_processing/index.html#ft_listnode">FT_ListNode</a>  node );
 </pre>
 </div>
 
@@ -1417,8 +1420,8 @@
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_List_Up</b>( <a href="../ft2-list_processing/#ft_list">FT_List</a>      list,
-              <a href="../ft2-list_processing/#ft_listnode">FT_ListNode</a>  node );
+  <b>FT_List_Up</b>( <a href="../ft2-list_processing/index.html#ft_list">FT_List</a>      list,
+              <a href="../ft2-list_processing/index.html#ft_listnode">FT_ListNode</a>  node );
 </pre>
 </div>
 
@@ -1440,9 +1443,9 @@
 <p>Defined in FT_LIST_H (freetype/ftlist.h).</p>
 <div class = "codehilite">
 <pre>
-  FT_EXPORT( <a href="../ft2-basic_types/#ft_error">FT_Error</a> )
-  <b>FT_List_Iterate</b>( <a href="../ft2-list_processing/#ft_list">FT_List</a>           list,
-                   <a href="../ft2-list_processing/#ft_list_iterator">FT_List_Iterator</a>  iterator,
+  FT_EXPORT( <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a> )
+  <b>FT_List_Iterate</b>( <a href="../ft2-list_processing/index.html#ft_list">FT_List</a>           list,
+                   <a href="../ft2-list_processing/index.html#ft_list_iterator">FT_List_Iterator</a>  iterator,
                    <span class="keyword">void</span>*             user );
 </pre>
 </div>
@@ -1471,13 +1474,13 @@
 <p>Defined in FT_LIST_H (freetype/ftlist.h).</p>
 <div class = "codehilite">
 <pre>
-  <span class="keyword">typedef</span> <a href="../ft2-basic_types/#ft_error">FT_Error</a>
-  (*<b>FT_List_Iterator</b>)( <a href="../ft2-list_processing/#ft_listnode">FT_ListNode</a>  node,
+  <span class="keyword">typedef</span> <a href="../ft2-basic_types/index.html#ft_error">FT_Error</a>
+  (*<b>FT_List_Iterator</b>)( <a href="../ft2-list_processing/index.html#ft_listnode">FT_ListNode</a>  node,
                        <span class="keyword">void</span>*        user );
 </pre>
 </div>
 
-<p>An FT_List iterator function that is called during a list parse by <a href="../ft2-list_processing/#ft_list_iterate">FT_List_Iterate</a>.</p>
+<p>An FT_List iterator function that is called during a list parse by <a href="../ft2-list_processing/index.html#ft_list_iterate">FT_List_Iterate</a>.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1485,7 +1488,7 @@
 <p>The current iteration list node.</p>
 </td></tr>
 <tr><td class="val" id="user">user</td><td class="desc">
-<p>A typeless pointer passed to <a href="../ft2-list_processing/#ft_list_iterate">FT_List_Iterate</a>. Can be used to point to the iteration's state.</p>
+<p>A typeless pointer passed to <a href="../ft2-list_processing/index.html#ft_list_iterate">FT_List_Iterate</a>. Can be used to point to the iteration's state.</p>
 </td></tr>
 </table>
 
@@ -1496,9 +1499,9 @@
 <div class = "codehilite">
 <pre>
   FT_EXPORT( <span class="keyword">void</span> )
-  <b>FT_List_Finalize</b>( <a href="../ft2-list_processing/#ft_list">FT_List</a>             list,
-                    <a href="../ft2-list_processing/#ft_list_destructor">FT_List_Destructor</a>  destroy,
-                    <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>           memory,
+  <b>FT_List_Finalize</b>( <a href="../ft2-list_processing/index.html#ft_list">FT_List</a>             list,
+                    <a href="../ft2-list_processing/index.html#ft_list_destructor">FT_List_Destructor</a>  destroy,
+                    <a href="../ft2-system_interface/index.html#ft_memory">FT_Memory</a>           memory,
                     <span class="keyword">void</span>*               user );
 </pre>
 </div>
@@ -1523,7 +1526,7 @@
 
 <h4>note</h4>
 
-<p>This function expects that all nodes added by <a href="../ft2-list_processing/#ft_list_add">FT_List_Add</a> or <a href="../ft2-list_processing/#ft_list_insert">FT_List_Insert</a> have been dynamically allocated.</p>
+<p>This function expects that all nodes added by <a href="../ft2-list_processing/index.html#ft_list_add">FT_List_Add</a> or <a href="../ft2-list_processing/index.html#ft_list_insert">FT_List_Insert</a> have been dynamically allocated.</p>
 <hr>
 
 <h2 id="ft_list_destructor">FT_List_Destructor<a class="headerlink" href="#ft_list_destructor" title="Permanent link">&para;</a></h2>
@@ -1531,13 +1534,13 @@
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (*<b>FT_List_Destructor</b>)( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>  memory,
+  (*<b>FT_List_Destructor</b>)( <a href="../ft2-system_interface/index.html#ft_memory">FT_Memory</a>  memory,
                          <span class="keyword">void</span>*      data,
                          <span class="keyword">void</span>*      user );
 </pre>
 </div>
 
-<p>An <a href="../ft2-list_processing/#ft_list">FT_List</a> iterator function that is called during a list finalization by <a href="../ft2-list_processing/#ft_list_finalize">FT_List_Finalize</a> to destroy all elements in a given list.</p>
+<p>An <a href="../ft2-list_processing/index.html#ft_list">FT_List</a> iterator function that is called during a list finalization by <a href="../ft2-list_processing/index.html#ft_list_finalize">FT_List_Finalize</a> to destroy all elements in a given list.</p>
 <h4>input</h4>
 
 <table class="fields">
@@ -1548,7 +1551,7 @@
 <p>The current object to destroy.</p>
 </td></tr>
 <tr><td class="val" id="user">user</td><td class="desc">
-<p>A typeless pointer passed to <a href="../ft2-list_processing/#ft_list_iterate">FT_List_Iterate</a>. It can be used to point to the iteration's state.</p>
+<p>A typeless pointer passed to <a href="../ft2-list_processing/index.html#ft_list_iterate">FT_List_Iterate</a>. It can be used to point to the iteration's state.</p>
 </td></tr>
 </table>
 
@@ -1631,8 +1634,6 @@
       <script src="../assets/javascripts/application.a59e2a89.js"></script>
       
       <script>app.initialize({version:"0.17.4",url:{base:".."}})</script>
-      
-        <script src="../javascripts/jquery-3.3.1.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
       

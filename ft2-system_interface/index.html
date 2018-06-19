@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="API Reference documentation for FreeType-2.9.1">
+      
       
       
         <meta name="author" content="FreeType Contributors">
@@ -34,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.8.0">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.1">
     
     
       
@@ -42,7 +44,8 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.e8ff00e1.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      
       
     
     
@@ -1194,7 +1197,7 @@
 </pre>
 </div>
 
-<p>A handle to a given memory manager object, defined with an <a href="../ft2-system_interface/#ft_memoryrec">FT_MemoryRec</a> structure.</p>
+<p>A handle to a given memory manager object, defined with an <a href="../ft2-system_interface/index.html#ft_memoryrec">FT_MemoryRec</a> structure.</p>
 <hr>
 
 <h2 id="ft_alloc_func">FT_Alloc_Func<a class="headerlink" href="#ft_alloc_func" title="Permanent link">&para;</a></h2>
@@ -1202,7 +1205,7 @@
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>*
-  (*<b>FT_Alloc_Func</b>)( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>  memory,
+  (*<b>FT_Alloc_Func</b>)( <a href="../ft2-system_interface/index.html#ft_memory">FT_Memory</a>  memory,
                     <span class="keyword">long</span>       size );
 </pre>
 </div>
@@ -1229,7 +1232,7 @@
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (*<b>FT_Free_Func</b>)( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>  memory,
+  (*<b>FT_Free_Func</b>)( <a href="../ft2-system_interface/index.html#ft_memory">FT_Memory</a>  memory,
                    <span class="keyword">void</span>*      block );
 </pre>
 </div>
@@ -1253,7 +1256,7 @@
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>*
-  (*<b>FT_Realloc_Func</b>)( <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>  memory,
+  (*<b>FT_Realloc_Func</b>)( <a href="../ft2-system_interface/index.html#ft_memory">FT_Memory</a>  memory,
                       <span class="keyword">long</span>       cur_size,
                       <span class="keyword">long</span>       new_size,
                       <span class="keyword">void</span>*      block );
@@ -1293,9 +1296,9 @@
   <span class="keyword">struct</span>  FT_MemoryRec_
   {
     <span class="keyword">void</span>*            user;
-    <a href="../ft2-system_interface/#ft_alloc_func">FT_Alloc_Func</a>    alloc;
-    <a href="../ft2-system_interface/#ft_free_func">FT_Free_Func</a>     free;
-    <a href="../ft2-system_interface/#ft_realloc_func">FT_Realloc_Func</a>  realloc;
+    <a href="../ft2-system_interface/index.html#ft_alloc_func">FT_Alloc_Func</a>    alloc;
+    <a href="../ft2-system_interface/index.html#ft_free_func">FT_Free_Func</a>     free;
+    <a href="../ft2-system_interface/index.html#ft_realloc_func">FT_Realloc_Func</a>  realloc;
   };
 </pre>
 </div>
@@ -1331,7 +1334,7 @@
 <p>A handle to an input stream.</p>
 <h4>also</h4>
 
-<p>See <a href="../ft2-system_interface/#ft_streamrec">FT_StreamRec</a> for the publicly accessible fields of a given stream object.</p>
+<p>See <a href="../ft2-system_interface/index.html#ft_streamrec">FT_StreamRec</a> for the publicly accessible fields of a given stream object.</p>
 <hr>
 
 <h2 id="ft_streamdesc">FT_StreamDesc<a class="headerlink" href="#ft_streamdesc" title="Permanent link">&para;</a></h2>
@@ -1355,7 +1358,7 @@
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span>
-  (*<b>FT_Stream_IoFunc</b>)( <a href="../ft2-system_interface/#ft_stream">FT_Stream</a>       stream,
+  (*<b>FT_Stream_IoFunc</b>)( <a href="../ft2-system_interface/index.html#ft_stream">FT_Stream</a>       stream,
                        <span class="keyword">unsigned</span> <span class="keyword">long</span>   offset,
                        <span class="keyword">unsigned</span> <span class="keyword">char</span>*  buffer,
                        <span class="keyword">unsigned</span> <span class="keyword">long</span>   count );
@@ -1393,7 +1396,7 @@
 <div class = "codehilite">
 <pre>
   <span class="keyword">typedef</span> <span class="keyword">void</span>
-  (*<b>FT_Stream_CloseFunc</b>)( <a href="../ft2-system_interface/#ft_stream">FT_Stream</a>  stream );
+  (*<b>FT_Stream_CloseFunc</b>)( <a href="../ft2-system_interface/index.html#ft_stream">FT_Stream</a>  stream );
 </pre>
 </div>
 
@@ -1418,12 +1421,12 @@
     <span class="keyword">unsigned</span> <span class="keyword">long</span>        size;
     <span class="keyword">unsigned</span> <span class="keyword">long</span>        pos;
 
-    <a href="../ft2-system_interface/#ft_streamdesc">FT_StreamDesc</a>        descriptor;
-    <a href="../ft2-system_interface/#ft_streamdesc">FT_StreamDesc</a>        pathname;
-    <a href="../ft2-system_interface/#ft_stream_iofunc">FT_Stream_IoFunc</a>     read;
-    <a href="../ft2-system_interface/#ft_stream_closefunc">FT_Stream_CloseFunc</a>  close;
+    <a href="../ft2-system_interface/index.html#ft_streamdesc">FT_StreamDesc</a>        descriptor;
+    <a href="../ft2-system_interface/index.html#ft_streamdesc">FT_StreamDesc</a>        pathname;
+    <a href="../ft2-system_interface/index.html#ft_stream_iofunc">FT_Stream_IoFunc</a>     read;
+    <a href="../ft2-system_interface/index.html#ft_stream_closefunc">FT_Stream_CloseFunc</a>  close;
 
-    <a href="../ft2-system_interface/#ft_memory">FT_Memory</a>            memory;
+    <a href="../ft2-system_interface/index.html#ft_memory">FT_Memory</a>            memory;
     <span class="keyword">unsigned</span> <span class="keyword">char</span>*       cursor;
     <span class="keyword">unsigned</span> <span class="keyword">char</span>*       limit;
 
@@ -1547,8 +1550,6 @@ In case of compressed streams where the size is unknown before actually doing th
       <script src="../assets/javascripts/application.a59e2a89.js"></script>
       
       <script>app.initialize({version:"0.17.4",url:{base:".."}})</script>
-      
-        <script src="../javascripts/jquery-3.3.1.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
       

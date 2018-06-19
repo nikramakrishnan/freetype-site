@@ -10,6 +10,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="API Reference documentation for FreeType-2.9.1">
+      
       
       
         <meta name="author" content="FreeType Contributors">
@@ -34,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.8.0">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.1">
     
     
       
@@ -42,7 +44,8 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.e8ff00e1.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.ba0fd1a6.css">
+      
       
     
     
@@ -1051,18 +1054,18 @@
 <p><strong>Error Message Strings</strong></p>
 <p>Error definitions are set up with special macros that allow client applications to build a table of error message strings. The strings are not included in a normal build of FreeType&nbsp;2 to save space (most client applications do not use them).</p>
 <p>To do so, you have to define the following macros before including this file.
-<div class="highlight"><pre><span></span>  FT_ERROR_START_LIST
+<div class="codehilite"><pre><span></span>  FT_ERROR_START_LIST
 </pre></div></p>
 <p>This macro is called before anything else to define the start of the error list. It is followed by several FT_ERROR_DEF calls.
-<div class="highlight"><pre><span></span>  FT_ERROR_DEF( e, v, s )
+<div class="codehilite"><pre><span></span>  FT_ERROR_DEF( e, v, s )
 </pre></div></p>
 <p>This macro is called to define one single error. &lsquo;e&rsquo; is the error code identifier (e.g., <code>Invalid_Argument</code>), &lsquo;v&rsquo; is the error's numerical value, and &lsquo;s&rsquo; is the corresponding error string.
-<div class="highlight"><pre><span></span>  FT_ERROR_END_LIST
+<div class="codehilite"><pre><span></span>  FT_ERROR_END_LIST
 </pre></div></p>
 <p>This macro ends the list.</p>
 <p>Additionally, you have to undefine <code>FTERRORS_H_</code> before #including this file.</p>
 <p>Here is a simple example.
-<div class="highlight"><pre><span></span>  #undef FTERRORS_H_
+<div class="codehilite"><pre><span></span>  #undef FTERRORS_H_
   #define FT_ERRORDEF( e, v, s )  { e, s },
   #define FT_ERROR_START_LIST     {
   #define FT_ERROR_END_LIST       { 0, NULL } };
@@ -1154,8 +1157,6 @@
       <script src="../assets/javascripts/application.a59e2a89.js"></script>
       
       <script>app.initialize({version:"0.17.4",url:{base:".."}})</script>
-      
-        <script src="../javascripts/jquery-3.3.1.min.js"></script>
       
         <script src="../javascripts/extra.js"></script>
       
