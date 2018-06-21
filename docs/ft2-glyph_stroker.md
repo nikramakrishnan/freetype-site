@@ -47,7 +47,7 @@ Defined in FT_STROKER_H (freetype/ftstroke.h).
 These values determine how two joining lines are rendered in a stroker.
 
 <h4>values</h4>
-<table class="fields">
+<table class="fields long">
 <tr><td class="val" id="ft_stroker_linejoin_round">FT_STROKER_LINEJOIN_ROUND</td><td class="desc">
 <p>Used to render rounded line joins. Circular arcs are used to join two lines smoothly.</p>
 </td></tr>

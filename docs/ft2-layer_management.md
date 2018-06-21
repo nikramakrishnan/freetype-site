@@ -85,8 +85,8 @@ The returned elements are ordered in the z&nbsp;direction from bottom to top; th
 <h4>output</h4>
 <table class="fields">
 <tr><td class="val" id="acolor_index">acolor_index</td><td class="desc">
-<p>The color index into the font face's color palette of the current layer. The value 0xFFFF is special; it doesn't reference a palette entry but indicates that the text foreground color should be used instead (to be set up by the application outside of FreeType).
-The color palette can be retrieved with <a href="../ft2-color_management/index.html#ft_palette_select">FT_Palette_Select</a>.</p>
+<p>The color index into the font face's color palette of the current layer. The value 0xFFFF is special; it doesn't reference a palette entry but indicates that the text foreground color should be used instead (to be set up by the application outside of FreeType).</p>
+<p>The color palette can be retrieved with <a href="../ft2-color_management/index.html#ft_palette_select">FT_Palette_Select</a>.</p>
 </td></tr>
 </table>
 

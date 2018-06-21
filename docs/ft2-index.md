@@ -278,4 +278,4 @@
 <tr><td><a href="../ft2-base_interface/index.html#ft_kerning_mode">FT_KERNING_DEFAULT</a></td><td><a href="../ft2-system_interface/index.html#ft_streamdesc">FT_StreamDesc</a></td><td><a href="../ft2-properties/index.html#warping">warping</a></td></tr>
 <tr><td><a href="../ft2-base_interface/index.html#ft_kerning_mode">FT_KERNING_UNFITTED</a></td><td><a href="../ft2-system_interface/index.html#ft_streamrec">FT_StreamRec</a></td><td></td></tr>
 </table>
-<div class="timestamp">generated on Tue Jun 19 11:21:41 2018 UTC</div>
+<div class="timestamp">generated on Thu Jun 21 12:40:19 2018 UTC</div>

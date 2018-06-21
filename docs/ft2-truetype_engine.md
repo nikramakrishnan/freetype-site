@@ -28,7 +28,7 @@ Defined in FT_MODULE_H (freetype/ftmodapi.h).
 A list of values describing which kind of TrueType bytecode engine is implemented in a given FT_Library instance. It is used by the <a href="../ft2-truetype_engine/index.html#ft_get_truetype_engine_type">FT_Get_TrueType_Engine_Type</a> function.
 
 <h4>values</h4>
-<table class="fields">
+<table class="fields long">
 <tr><td class="val" id="ft_truetype_engine_type_none">FT_TRUETYPE_ENGINE_TYPE_NONE</td><td class="desc">
 <p>The library doesn't implement any kind of bytecode interpreter.</p>
 </td></tr>
